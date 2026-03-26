@@ -329,6 +329,47 @@ def main():
                 print("✅ Текст на русском языке!")
                 print()
 
+            # ============================================
+            # ПРОВЕРКА НА ДУБЛИКАТЫ (КРИТИЧЕСКИ ВАЖНО!)
+            # ============================================
+            print("🔍 ПРОВЕРКА НА ДУБЛИКАТЫ...")
+            print()
+
+            # Добавляем путь к модулю
+            sys.path.insert(0, "/root/git/AI-journalist")
+            from check_duplicates import check_topic_duplicate, check_title_in_history
+
+            # Определяем категорию по первому хэштегу
+            news_category = hashtags[0] if hashtags else None
+
+            # Проверка 1: Дубликат темы
+            is_topic_dup, topic_reason = check_topic_duplicate(title, news_category)
+            if is_topic_dup:
+                print("🚫 ДУБЛИКАТ ТЕМЫ НАЙДЕН!")
+                print(f"   Причина: {topic_reason}")
+                print()
+                print("Публикация ЗАБЛОКИРОВАНА!")
+                print("Выберите другую тему или укажите 'обновление' в заголовке.")
+                return False
+            else:
+                print(f"✅ Тема уникальна (категория: {news_category or 'не указана'})")
+
+            # Проверка 2: Дубликат заголовка в истории
+            is_title_dup, title_reason = check_title_in_history(title, days=30)
+            if is_title_dup:
+                print("🚫 ДУБЛИКАТ ЗАГОЛОВКА В ИСТОРИИ!")
+                print(f"   Причина: {title_reason}")
+                print()
+                print("Публикация ЗАБЛОКИРОВАНА!")
+                print("Выберите другую тему.")
+                return False
+            else:
+                print("✅ Заголовок не найден в истории (за 30 дней)")
+
+            print()
+            print("✅ Все проверки на дубликаты пройдены!")
+            print()
+
             # Шаг 4: Публикация
             print("📢 Запуск публикации...")
             print()

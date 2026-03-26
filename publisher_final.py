@@ -702,7 +702,7 @@ def main():
     # Определяем эмодзи
     category = hashtags[0] if hashtags else "default"
     emoji = EMOJI_MAP.get(category, EMOJI_MAP.get("default"))
-    
+
     print("=" * 60)
     print("📰 ПУБЛИКАЦИЯ СТАТЬИ")
     print("=" * 60)
@@ -711,7 +711,45 @@ def main():
     print(f"🏷️ Хэштеги: {', '.join(hashtags)}")
     print(f"{'🤖' if 'ai' in category.lower() else '📌'} Категория: {category}")
     print("=" * 60)
-    
+
+    # ============================================
+    # ПРОВЕРКА НА ДУБЛИКАТЫ (КРИТИЧЕСКИ ВАЖНО!)
+    # ============================================
+    print()
+    print("🔍 ПРОВЕРКА НА ДУБЛИКАТЫ...")
+
+    # Добавляем путь к модулю
+    sys.path.insert(0, "/root/git/AI-journalist")
+    from check_duplicates import check_topic_duplicate, check_title_in_history
+
+    # Проверка 1: Дубликат темы
+    is_topic_dup, topic_reason = check_topic_duplicate(title, category)
+    if is_topic_dup:
+        print("🚫 ДУБЛИКАТ ТЕМЫ НАЙДЕН!")
+        print(f"   Причина: {topic_reason}")
+        print()
+        print("Публикация ЗАБЛОКИРОВАНА!")
+        print("Выберите другую тему или укажите 'обновление' в заголовке.")
+        sys.exit(1)
+    else:
+        print(f"✅ Тема уникальна (категория: {category})")
+
+    # Проверка 2: Дубликат заголовка в истории
+    is_title_dup, title_reason = check_title_in_history(title, days=30)
+    if is_title_dup:
+        print("🚫 ДУБЛИКАТ ЗАГОЛОВКА В ИСТОРИИ!")
+        print(f"   Причина: {title_reason}")
+        print()
+        print("Публикация ЗАБЛОКИРОВАНА!")
+        print("Выберите другую тему.")
+        sys.exit(1)
+    else:
+        print("✅ Заголовок не найден в истории (за 30 дней)")
+
+    print()
+    print("✅ Все проверки на дубликаты пройдены!")
+    print()
+
     telegraph_url = None
     telegram_message_id = None
     

@@ -772,6 +772,243 @@
 
 ---
 
+### [2026-03-26] Meta готовит Llama 4.5: новая архитектура MoE до конца 2026
+
+- **Категория:** ai
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** ai, llama, meta, opensource, machinelearning
+- **Источники:**
+  - Seeking Alpha: Meta Llama 4.5 Release
+  - Towards AI: Llama Roadmap 2026
+  - Gen AI Live: Meta Superintelligence Lab
+- **Telegra.ph URL:** https://telegra.ph/Meta-gotovit-Llama-45-novaya-arhitektura-MoE-do-konca-2026-03-26
+- **Telegram ID:** 63
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] GitHub усилил защиту: 28 новых детекторов секретов
+
+- **Категория:** github
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** github, security, devops, secretscanning, cybersecurity
+- **Источники:**
+  - GitHub Changelog — Secret Scanning Updates March 2026
+  - GitHub Docs — Secret Scanning Documentation
+- **Telegra.ph URL:** https://telegra.ph/GitHub-usilil-zashchitu-28-novyh-detektorov-sekretov-03-26
+- **Telegram ID:** 64
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Bun 1.2.0: встроенный тестировщик и поддержка WebSocket
+
+- **Категория:** bun
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** bun, javascript, typescript, webdev, performance
+- **Источники:**
+  - Bun 1.2.0 Release Notes
+  - Bun GitHub Repository
+  - Bun Documentation
+- **Telegra.ph URL:** https://telegra.ph/Bun-120-vstroennyj-testirovshchik-i-podderzhka-WebSocket-03-26
+- **Telegram ID:** 65
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Anthropic запустила Claude Computer Use для macOS
+
+- **Категория:** anthropic
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** anthropic, claude, ai, automation, macos
+- **Источники:**
+  - Anthropic
+  - TechStartups
+  - AI Tools Recap
+- **Telegra.ph URL:** https://telegra.ph/Anthropic-zapustila-Claude-Computer-Use-dlya-macOS-03-26
+- **Telegram ID:** 66
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Swift 6.3 вышел: новые возможности для разработчиков
+
+- **Категория:** swift
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** swift, apple, xcode, programming, ios
+- **Источники:**
+  - Swift.org Blog
+  - Swift Forums
+  - Xcode 26.4 Release Notes
+- **Telegra.ph URL:** https://telegra.ph/Swift-63-vyshel-novye-vozmozhnosti-dlya-razrabotchikov-03-26
+- **Telegram ID:** 67
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Rust 1.85: стабилизация async fn в трейтах
+
+- **Категория:** rust
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** rust, async, programming, backend
+- **Источники:**
+  - Rust Blog
+  - Rust Documentation
+  - GitHub
+- **Telegra.ph URL:** https://telegra.ph/Rust-185-stabilizaciya-async-fn-v-trejtah-03-26
+- **Telegram ID:** 68
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] GPT-5.4, Gemini 3.1 Pro, Claude 4.6: битва AI-гигантов в марте 2026
+
+- **Категория:** ai
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** ai, gpt5, gemini, claude, llama
+- **Источники:**
+  - OpenAI/Google/Anthropic/Meta AI Model Releases
+  - LLM Stats Comparison
+- **Telegra.ph URL:** https://telegra.ph/GPT-54-Gemini-31-Pro-Claude-46-bitva-AI-gigantov-v-marte-2026-03-26
+- **Telegram ID:** 69
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Go 1.26: new(expr), зелёный GC и постквантовая криптография
+
+- **Категория:** golang
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** golang, go, programming, backend, performance
+- **Источники:**
+  - Tony Bai: Go 1.26 Release Notes
+  - Go Official Blog
+  - Microsoft Build of Go
+- **Telegra.ph URL:** https://telegra.ph/Go-126-newexpr-zelyonyj-GC-i-postkvantovaya-kriptografiya-03-26
+- **Telegram ID:** 70
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Docker 27.0: новый движок контейнеризации и улучшенная безопасность
+
+- **Категория:** docker
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** docker, devops, containers, wasm, security
+- **Источники:**
+  - Docker Blog
+  - GitHub
+  - containerd.io
+- **Telegra.ph URL:** https://telegra.ph/Docker-270-novyj-dvizhok-kontejnerizacii-i-uluchshennaya-bezopasnost-03-26
+- **Telegram ID:** 71
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Redis 8.0: новый движок хранения и улучшенная кластеризация
+
+- **Категория:** redis
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** redis, databases, performance, security, backend
+- **Источники:**
+  - Redis Official Blog
+  - Redis Documentation
+  - GitHub Releases
+- **Telegra.ph URL:** https://telegra.ph/Redis-80-novyj-dvizhok-hraneniya-i-uluchshennaya-klasterizaciya-03-26
+- **Telegram ID:** 72
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Linux 6.14: новые возможности ядра для разработчиков
+
+- **Категория:** linux
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** linux, kernel, opensource, devops, programming
+- **Источники:**
+  - Linux Kernel Mailing List
+  - Phoronix
+  - KernelNewbies
+- **Telegra.ph URL:** https://telegra.ph/Linux-614-novye-vozmozhnosti-yadra-dlya-razrabotchikov-03-26
+- **Telegram ID:** 73
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Git 3.0 готовится к релизу: SHA-256, Rust и reftable
+
+- **Категория:** git
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** git, devops, opensource, security, rust
+- **Источники:**
+  - DeployHQ — Git 3.0 Analysis
+  - Git Project Roadmap 2026
+  - InfoWorld — Git 3.0 Preview
+- **Telegra.ph URL:** https://telegra.ph/Git-30-gotovitsya-k-relizu-SHA-256-Rust-i-reftable-03-26
+- **Telegram ID:** 74
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Samsung Browser для ПК получил AI-функции
+
+- **Категория:** samsung
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** samsung, browser, ai, windows, технологии
+- **Источники:**
+  - The Verge: Samsung Browser PC release
+  - Samsung Newsroom Official
+  - Windows Central: Samsung Browser AI features
+- **Telegra.ph URL:** https://telegra.ph/Samsung-Browser-dlya-PK-poluchil-AI-funkcii-03-26
+- **Telegram ID:** 75
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Bun 1.2: встроенный тестировщик и поддержка WebSocket
+
+- **Категория:** bun
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** bun, javascript, typescript, webdev, performance
+- **Источники:**
+  - Bun 1.2 Release Notes (https://bun.sh/blog/bun-v1.2)
+  - Bun GitHub Repository (https://github.com/oven-sh/bun)
+- **Telegra.ph URL:** https://telegra.ph/Bun-12-vstroennyj-testirovshchik-i-podderzhka-WebSocket-03-26
+- **Telegram ID:** 76
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества
+
+- **Категория:** google
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** google, ai, machinelearning, llm, технологии
+- **Источники:**
+  - Google Research Blog
+  - TechCrunch
+  - VentureBeat
+- **Telegra.ph URL:** https://telegra.ph/Google-predstavila-TurboQuant-szhatie-AI-modelej-v-6-raz-bez-poteri-kachestva-03-26-2
+- **Telegram ID:** 77
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Rust 1.86: стабилизация async fn в трейтах и новые возможности
+
+- **Категория:** rust
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** rust, programming, backend, opensource
+- **Источники:**
+  - Rust Official Blog
+  - GitHub Releases
+  - Rust Foundation
+- **Telegra.ph URL:** https://telegra.ph/Rust-186-stabilizaciya-async-fn-v-trejtah-i-novye-vozmozhnosti-03-26
+- **Telegram ID:** 78
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |
