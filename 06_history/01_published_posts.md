@@ -653,6 +653,36 @@
 
 ---
 
+### [2026-03-26] Node.js выпустил экстренные security-патчи для всех версий
+
+- **Категория:** nodejs
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** nodejs, security, javascript, cve, webdev
+- **Источники:**
+  - Node.js Security Announcement
+  - Node.js GitHub Repository
+  - CVE Details
+- **Telegra.ph URL:** https://telegra.ph/Nodejs-vypustil-ehkstrennye-security-patchi-dlya-vseh-versij-03-26
+- **Telegram ID:** 52
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Java 26 вышла: Project Leyden, HTTP/3 и новые возможности
+
+- **Категория:** java
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** java, jetbrains, intellijidea, jdk26, разработка
+- **Источники:**
+  - JetBrains Blog: Java 26 in IntelliJ IDEA
+  - Oracle Java Releases
+  - OpenJDK JEP Index
+- **Telegra.ph URL:** https://telegra.ph/Java-26-vyshla-Project-Leyden-HTTP3-i-novye-vozmozhnosti-03-26
+- **Telegram ID:** 53
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |
