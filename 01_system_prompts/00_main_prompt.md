@@ -34,32 +34,83 @@
 
 ## 🚀 Публикация постов
 
-### Команда для публикации
+### Централизованная библиотека (рекомендуется)
 
-```bash
-python3 /root/git/AI-journalist-bot/publisher.py "Текст поста"
+**Используй библиотеку `ai_journalist` для всех публикаций:**
+
+```python
+import sys
+sys.path.insert(0, '/root/git/AI-journalist/lib')
+
+from ai_journalist import TelegramClient, TelegraphClient, format_post
 ```
 
-### Форматирование (Markdown V2)
+**Преимущества:**
+- ✅ Автоматическое экранирование MarkdownV2
+- ✅ Проверенные функции (без ошибок форматирования)
+- ✅ Единый интерфейс для Telegram и Telegra.ph
+- ✅ Встроенная обработка ошибок
 
-**Обязательно экранируй символы:**
+### Публикация в Telegram
+
+```python
+from ai_journalist import TelegramClient, format_post
+
+tg = TelegramClient()
+
+# Вариант 1: Готовый пост с форматированием
+post = format_post(
+    title="Заголовок",
+    content="Текст новости",
+    hashtags=["теги"],
+    emoji="🔥"
+)
+result = tg.send_message(post)  # auto_escape=True по умолчанию
+
+# Вариант 2: Свой текст (с авто-экранированием)
+result = tg.send_message("Текст с #хэштегами и 8.4 версиями")
+```
+
+### Публикация на Telegra.ph
+
+```python
+from ai_journalist import TelegraphClient
+
+tph = TelegraphClient()
+
+result = tph.create_page(
+    title="Заголовок статьи",
+    content="Текст в Markdown"
+)
+```
+
+### Форматирование (MarkdownV2)
+
+**Библиотека автоматически экранирует символы:**
 ```
 _ * [ ] ( ) ~ ` > # + - = | { } . !
 ```
 
-**Пример экранирования:**
-- ❌ `PHP 8.4 > PHP 8.3` → ✅ `PHP 8\.4 \> PHP 8\.3`
-- ❌ `#тег` → ✅ `\#тег`
-- ❌ `AI-journalist` → ✅ `AI\-journalist`
+**Пример:**
+- ✅ `format_post(...)` — экранирование автоматическое
+- ✅ `tg.send_message(text, auto_escape=True)` — экранирование включено
+- ❌ Не нужно вручную вызывать `escape_markdown_v2()`
 
 ### Пример правильного поста
 
-```
-🔥 *PHP 8\.4\.0 released*
+```python
+from ai_journalist import TelegramClient, format_post
 
-Вышел финальный релиз PHP 8\.4\.
+tg = TelegramClient()
 
-\#php \#javascript
+post = format_post(
+    title="PHP 8.4.0 released",
+    content="Вышел финальный релиз PHP 8.4.",
+    hashtags=["php", "javascript"],
+    emoji="🔥"
+)
+
+result = tg.send_message(post)
 ```
 
 ## 📋 Рабочий процесс

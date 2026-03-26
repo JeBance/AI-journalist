@@ -43,6 +43,63 @@ python3 /root/git/AI-journalist-bot/publisher.py "Текст"
 
 ---
 
+### 2026-03-26: Автоматическая публикация или отправка на утверждение
+
+**Проблема:** AI должен публиковать новости автоматически или отправлять на утверждение пользователю.
+
+**Решение:** Используй централизованную библиотеку `ai_journalist`:
+
+**Импорт:**
+```python
+import sys
+sys.path.insert(0, '/root/git/AI-journalist/lib')
+
+from ai_journalist import TelegramClient, TelegraphClient, format_post
+```
+
+**Режим 1: Автоматическая публикация (рекомендуется)**
+```python
+from ai_journalist import TelegramClient, format_post
+
+tg = TelegramClient()
+
+# Форматирование с авто-экранированием
+post = format_post(
+    title="Node.js security релиз",
+    content="Исправлены 9 уязвимостей",
+    hashtags=["nodejs", "security"],
+    emoji="🔒"
+)
+
+# Публикация (auto_escape=True по умолчанию)
+result = tg.send_message(post)
+
+if result["success"]:
+    print(f"✅ Опубликовано! Message ID: {result['message_id']}")
+```
+
+**Режим 2: Отправка черновика пользователю**
+```python
+from ai_journalist import TelegramClient
+
+tg = TelegramClient()
+
+# Отправка черновика на утверждение
+result = tg.send_draft_for_approval(
+    user_id=5610580916,  # @JeBance
+    text="Текст черновика",
+    category="news"
+)
+```
+
+**Пользователь:**
+- Telegram: @JeBance
+- User ID: `5610580916`
+
+**Важно:** Библиотека `ai_journalist` автоматически экранирует все специальные символы MarkdownV2.
+
+---
+
 ### 2026-03-25: Структура инфраструктуры
 
 **Путь к инфраструктуре:** `/root/git/AI-journalist/`
