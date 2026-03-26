@@ -757,6 +757,21 @@
 
 ---
 
+### [2026-03-26] Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества
+
+- **Категория:** google
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** google, ai, machinelearning, llm, технологии
+- **Источники:**
+  - Google Research Blog
+  - TechCrunch
+  - VentureBeat
+- **Telegra.ph URL:** https://telegra.ph/Google-predstavila-TurboQuant-szhatie-AI-modelej-v-6-raz-bez-poteri-kachestva-03-26
+- **Telegram ID:** 62
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |
