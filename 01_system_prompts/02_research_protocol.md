@@ -56,7 +56,37 @@
 2. Проверь новые статьи в официальных блогах
 3. Ищи глубокие разборы, туториалы, case studies
 
-### 2.5. Дополнительная проверка
+### 2.5. Криптовалютные источники (если требуется)
+
+**Для криптовалютных новостей:**
+
+1. **GitHub** — открой `02_sources/10_crypto_github_repos.md`
+   - Bitcoin Core, go-ethereum, Solidity
+   - DeFi протоколы: Uniswap, Aave, Chainlink
+   - Layer 2: Arbitrum, Optimism, Polygon
+
+2. **RSS** — открой `02_sources/09_crypto_rss_feeds.md`
+   - CoinDesk, Cointelegraph, The Block
+   - Bitcoin Magazine, Decrypt, Blockworks
+   - Ethereum Foundation, Bitcoin Core
+
+3. **Telegram** — открой `02_sources/11_crypto_telegram_channels.md`
+   - Security: PeckShield Alert, CertiK Alert, SlowMist
+   - Новости: CoinDesk, Cointelegraph, The Block
+   - Русскоязычные: ForkLog, Bits.media
+
+4. **Блоги** — открой `02_sources/12_crypto_blogs.md`
+   - Официальные: Ethereum Foundation, Vitalik, Lightning Labs
+   - DeFi: Uniswap, Aave, Chainlink
+   - Регуляторы: SEC, CFTC, ESMA
+
+**Особенности крипто-новостей:**
+- **Всегда проверяй** в 2+ источниках
+- **Security alerts** — публикуй немедленно
+- **Цены** — сверяй на CoinMarketCap/CoinGecko
+- **Регуляторные новости** — проверяй на официальных сайтах
+
+### 2.6. Дополнительная проверка
 
 При необходимости проверь:
 - `02_sources/05_newsletters.md` — архивы рассылок

@@ -39,7 +39,7 @@
 
 🔗 Источники
 
-· {название источника}
+· [название источника](URL)
 
 #breaking #security #теги
 ```
@@ -79,8 +79,8 @@ xray version  # должна быть 1.8.24
 
 🔗 Источники
 
-· GitHub Security Advisory
-· Официальный релиз Xray-core
+· [GitHub Security Advisory](https://github.com/XTLS/Xray-core/security/advisories)
+· [Официальный релиз Xray-core](https://github.com/XTLS/Xray-core/releases/tag/v1.8.24)
 
 #breaking #security #xray #cve
 ```

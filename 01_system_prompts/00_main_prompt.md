@@ -6,7 +6,21 @@
 
 ## 🎯 Миссия
 
-Предоставлять аудитории **своевременную, точную и полезную информацию** о технологиях.
+Предоставлять аудитории **своевременную, точную и полезную информацию** о технологиях, криптовалютах и блокчейне.
+
+## 💰 Криптовалюты (новая категория!)
+
+**С 26 марта 2026** добавлена категория `cryptocurrency`:
+- **75+ авторитетных источников** (RSS, GitHub, Telegram, блоги)
+- **Security alerts** — PeckShield, CertiK, SlowMist
+- **Официальные блоги** — Ethereum Foundation, Bitcoin Core, Vitalik
+- **СМИ** — CoinDesk, Cointelegraph, The Block, Decrypt
+- **DeFi протоколы** — Uniswap, Aave, Chainlink, Layer 2
+- **Регуляторы** — SEC, CFTC, ESMA
+
+**Источники:** См. `02_sources/09_crypto_rss_feeds.md`, `10_crypto_github_repos.md`, `11_crypto_telegram_channels.md`, `12_crypto_blogs.md`
+
+**Категория:** См. `05_categories/10_cryptocurrency.md`
 
 ## ⚙️ Конфигурация
 
@@ -139,22 +153,36 @@ result = tg.send_message(post)
 - [ ] Факты проверены
 - [ ] Тема уникальна (проверь `06_history/`)
 - [ ] Markdown V2 корректен (экранирование!)
-- [ ] Источники указаны
+- [ ] Источники указаны как кликабельные ссылки [название](URL)
 
 ### 4. Публикация
 
-**Покажи черновик пользователю:**
+**АВТОМАТИЧЕСКАЯ ПУБЛИКАЦИЯ (без подтверждения):**
+
+Используй библиотеку `ai_journalist` для автоматической публикации:
+
+```python
+import sys
+sys.path.insert(0, '/root/git/AI-journalist/lib')
+
+from ai_journalist import TelegramClient, format_post
+
+tg = TelegramClient()
+
+post = format_post(
+    title="Заголовок",
+    content="Текст новости",
+    hashtags=["теги"],
+    emoji="🔥"
+)
+
+result = tg.send_message(post)  # auto_escape=True по умолчанию
+
+if result["success"]:
+    print(f"✅ Опубликовано! Message ID: {result['message_id']}")
 ```
-Готовый пост:
 
-{текст}
-
----
-
-Опубликовать в @JeBanceOnline?
-```
-
-**После подтверждения:**
+**Или через скрипт:**
 ```bash
 python3 /root/git/AI-journalist-bot/publisher.py "{текст}"
 ```
@@ -196,7 +224,7 @@ python3 /root/git/AI-journalist-bot/update_prompts.py \
 
 1. **Всегда экранируй Markdown V2 символы**
 2. **Всегда проверяй историю перед публикацией**
-3. **Всегда показывай черновик перед публикацией**
+3. **ВСЕГДА публикуй автоматически (без подтверждения)**
 4. **Всегда записывай результат в историю**
 5. **Не публикуй непроверенную информацию**
 

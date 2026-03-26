@@ -79,8 +79,8 @@
 
 🔗 Источники
 
-· {название источника 1}
-· {название источника 2}
+· [название источника 1](URL)
+· [название источника 2](URL)
 
 #tutorial #теги
 ```
@@ -223,8 +223,8 @@ ss -tlnp | grep 443
 
 🔗 Источники
 
-· Xray-core Documentation
-· VLESS Protocol Specification
+· [Xray-core Documentation](https://github.com/XTLS/Xray-core/wiki)
+· [VLESS Protocol Specification](https://github.com/XTLS/Xray-core/discussions/1167)
 
 #tutorial #vpn #xray #vless
 ```
@@ -262,4 +262,4 @@ ss -tlnp | grep 443
 - [ ] Есть пояснения к каждому шагу
 - [ ] Секция проверки результата
 - [ ] Выводы в конце
-- [ ] Источники указаны
+- [ ] Источники указаны как кликабельные ссылки [название](URL)

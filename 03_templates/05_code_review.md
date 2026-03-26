@@ -65,7 +65,7 @@
 
 🔗 Источники
 
-· {название источника}
+· [название источника](URL)
 
 #codereview #patterns #теги
 ```
@@ -168,8 +168,8 @@ class User {
 
 🔗 Источники
 
-· PHP 8.4 RFC: Property Hooks
-· PHP.net Documentation
+· [PHP 8.4 RFC: Property Hooks](https://wiki.php.net/rfc/property-hooks)
+· [PHP.net Documentation](https://www.php.net/manual/ru/language.oop5.property-hooks.php)
 
 #codereview #php #patterns
 ```
@@ -206,4 +206,4 @@ class User {
 - [ ] Указаны моменты для улучшения
 - [ ] Показана улучшенная версия
 - [ ] Есть раздел о применении в проекте
-- [ ] Источники указаны
+- [ ] Источники указаны как кликабельные ссылки [название](URL)

@@ -274,6 +274,50 @@ standard, asvs, owasp mobile application security verification standard,
 masvs, owasp software component verification standard, scvs
 ```
 
+## Cryptocurrency
+
+```
+bitcoin, btc, ethereum, eth, cryptocurrency, crypto, blockchain, defi, nft,
+web3, smart contracts, solidity, vyper, rust, go-ethereum, geth, bitcoin core,
+lightning network, layer 2, rollups, optimistic rollup, zksync, starknet,
+arbitrum, optimism, base, polygon, avalanche, solana, cardano, polkadot,
+cosmos, atom, substrate, tendermint, ibc, evm, eip, erc20, erc721, erc1155,
+uniswap, aave, compound, makerdao, curve, balancer, synthetix, yearn,
+convex, frax, lido, rocket pool, staking, liquid staking, eth2, proof of stake,
+proof of work, mining, halving, difficulty adjustment, hashrate, validators,
+consensus, finality, fork, hard fork, soft fork, genesis block, block reward,
+transaction fees, gas fees, mev, front-running, sandwich attack, flashbots,
+oracle, chainlink, band protocol, api3, cross-chain, bridge, wormhole,
+layerzero, chain abstraction, account abstraction, erc4337, paymaster,
+bundler, wallet, metamask, walletconnect, hardware wallet, ledger, trezor,
+cold storage, multisig, gnosis safe, dao, governance, voting, proposals,
+treasury, tokenomics, vesting, cliff, market cap, fully diluted valuation,
+circulating supply, max supply, token unlock, airdrop, faucet, testnet,
+mainnet, devnet, testnet tokens, faucet, explorer, etherscan, blockchair,
+mempool, rpc endpoint, infura, alchemy, quicknode, moralis, the graph,
+subgraphs, dune analytics, nansen, glassnode, cryptoquant, coinglass,
+defillama, token terminal, dapp radar, messari, coinmarketcap, coingecko,
+binance, coinbase, kraken, bybit, okx, kucoin, gate.io, huobi, bitfinex,
+gemini, bitstamp, dex, cex, amm, order book, liquidity pool, yield farming,
+liquidity mining, impermanent loss, slippage, price impact, swap, aggregator,
+1inch, paraswap, cowswap, matcha, limit order, stop loss, take profit,
+trading bot, market maker, arbitrage, funding rate, perpetual futures,
+options, derivatives, structured products, yield trading, fixed income,
+bonding curve, automated market maker, constant product, stableswap,
+crypto regulation, sec, cftc, esma, finma, bafin, fsa, pfsc, mica, travel rule,
+kyc, aml, cft, sanctions, ofac, fatf, securities law, commodities law,
+howey test, sufficient decentralization, safe harbor, regulatory clarity,
+enforcement action, cease and desist, settlement, fine, penalty, indictment,
+extradition, lawsuit, class action, securities fraud, wire fraud, money
+laundering, tax evasion, ransomware, darknet market, mixers, tumblers,
+privacy coins, monero, zcash, tornado cash, samourai wallet, wasabi wallet,
+coinjoin, ring signatures, zk-snarks, zk-starks, zero knowledge proofs,
+homomorphic encryption, fully homomorphic encryption, fhe, multi-party
+computation, mpc, threshold signatures, distributed key generation, dkg,
+secret sharing, shamir secret sharing, social recovery, account recovery,
+inheritance planning, dead man switch, timelock, multisig inheritance
+```
+
 ---
 
 ## 📊 Использование ключевых слов

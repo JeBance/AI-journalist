@@ -43,9 +43,9 @@ python3 /root/git/AI-journalist-bot/publisher.py "Текст"
 
 ---
 
-### 2026-03-26: Автоматическая публикация или отправка на утверждение
+### 2026-03-26: Автоматическая публикация (БЕЗ подтверждения)
 
-**Проблема:** AI должен публиковать новости автоматически или отправлять на утверждение пользователю.
+**Проблема:** AI должен публиковать новости автоматически, без вмешательства пользователя.
 
 **Решение:** Используй централизованную библиотеку `ai_journalist`:
 
@@ -57,7 +57,7 @@ sys.path.insert(0, '/root/git/AI-journalist/lib')
 from ai_journalist import TelegramClient, TelegraphClient, format_post
 ```
 
-**Режим 1: Автоматическая публикация (рекомендуется)**
+**АВТОМАТИЧЕСКАЯ ПУБЛИКАЦИЯ (всегда):**
 ```python
 from ai_journalist import TelegramClient, format_post
 
@@ -78,25 +78,14 @@ if result["success"]:
     print(f"✅ Опубликовано! Message ID: {result['message_id']}")
 ```
 
-**Режим 2: Отправка черновика пользователю**
-```python
-from ai_journalist import TelegramClient
-
-tg = TelegramClient()
-
-# Отправка черновика на утверждение
-result = tg.send_draft_for_approval(
-    user_id=5610580916,  # @JeBance
-    text="Текст черновика",
-    category="news"
-)
-```
-
 **Пользователь:**
 - Telegram: @JeBance
 - User ID: `5610580916`
 
-**Важно:** Библиотека `ai_journalist` автоматически экранирует все специальные символы MarkdownV2.
+**Важно:**
+- ✅ **ВСЕГДА публикуй автоматически** (без показа черновика)
+- ✅ **НЕ отправляй на утверждение** (если пользователь явно не попросил)
+- ✅ Библиотека `ai_journalist` автоматически экранирует MarkdownV2
 
 ---
 

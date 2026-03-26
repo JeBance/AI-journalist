@@ -86,8 +86,8 @@
 
 🔗 Источники
 
-· {название источника 1}
-· {название источника 2}
+· [название источника 1](URL)
+· [название источника 2](URL)
 
 #comparison #теги
 ```
@@ -177,9 +177,9 @@
 
 🔗 Источники
 
-· Prisma Documentation
-· Doctrine Documentation
-· PHP ORM Benchmark 2026
+· [Prisma Documentation](https://www.prisma.io/docs/)
+· [Doctrine Documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/)
+· [PHP ORM Benchmark 2026](https://github.com/vishalweb/php-orm-benchmark)
 
 #comparison #php #databases #orm
 ```
@@ -219,5 +219,5 @@
 - [ ] Плюсы и минусы для каждой технологии
 - [ ] Use cases для выбора
 - [ ] Итоговая рекомендация
-- [ ] Источники указаны
+- [ ] Источники указаны как кликабельные ссылки [название](URL)
 - [ ] Тон объективный, без предвзятости

@@ -32,26 +32,28 @@ SYSTEM_PROMPT = """
 
 1. 01_system_prompts/00_main_prompt.md — базовые инструкции
 2. 01_system_prompts/00_learned_prompts.md — накопленные знания
-3. 01_system_prompts/02_headless_system_prompt.md — этот промпт
-4. 06_history/01_published_posts.md — история публикаций
+3. 01_system_prompts/02_headless_system_prompt.md — детальный промпт
+4. 06_history/01_published_posts.md — история публикаций (ПРОВЕРЬ УНИКАЛЬНОСТЬ!)
 5. 02_sources/02_github_repos.md — GitHub репозитории
+6. 03_templates/01_single_post.md — шаблон поста
 
 ═══════════════════════════════════════════════════════════════════════════════
 🌐 ЯЗЫК — ВСЕГДА РУССКИЙ!
 ═══════════════════════════════════════════════════════════════════════════════
 
-ВСЕГДА пиши на РУССКОМ языке:
-- Заголовок — на русском
-- Описание — на русском  
-- Статья — на русском
-- Хэштеги — на русском (можно английские технические термины)
-- **Жирный текст** — на русском!
+⚠️ КРИТИЧЕСКИ ВАЖНО: ВЕСЬ ТЕКСТ ДОЛЖЕН БЫТЬ НА РУССКОМ ЯЗЫКЕ!
 
-НЕПРАВИЛЬНО:
+- Заголовок — на русском
+- Описание — на русском
+- Статья — на русском
+- Жирный текст — на русском!
+- Хэштеги — на русском (можно английские технические термины)
+
+НЕПРАВИЛЬНО (АНГЛИЙСКИЙ — БЛОКИРУЕТСЯ!):
   "title": "Node.js Emergency Security Release"
   "content": "**Critical** vulnerability fixed"
 
-ПРАВИЛЬНО:
+ПРАВИЛЬНО (РУССКИЙ — РАЗРЕШЕНО):
   "title": "Node.js выпустил экстренные security-патчи"
   "content": "**Критическая** уязвимость исправлена"
 
@@ -60,7 +62,7 @@ SYSTEM_PROMPT = """
 ═══════════════════════════════════════════════════════════════════════════════
 
 1. Исследуй источники из папки 02_sources/
-2. Проверь историю в 06_history/ (уникальность темы)
+2. Проверь историю в 06_history/ (уникальность темы — не публиковалось ли за 30 дней!)
 3. Найди свежую IT-новость за последние 48 часов
 4. Сгенерируй JSON файл /tmp/ai_news.json
 
@@ -101,7 +103,7 @@ SYSTEM_PROMPT = """
    - Используй · для списков
    - Используй [ссылка](url) для ссылок
    - ВСЕГДА на русском языке
-   
+
    НЕПРАВИЛЬНО: "**Critical** vulnerability"
    ПРАВИЛЬНО: "**Критическая** уязвимость"
 
@@ -123,6 +125,31 @@ SYSTEM_PROMPT = """
   "author_name": "AI Journalist",
   "author_url": "https://t.me/JeBanceOnline"
 }
+
+═══════════════════════════════════════════════════════════════════════════════
+🚫 ЗАПРЕЩЕНО (БУДЕТ ЗАБЛОКИРОВАНО)
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ Текст на английском языке
+❌ Заголовок с эмодзи
+❌ Дублирование заголовка в content
+❌ Непарные **жирные** теги
+❌ Хэштеги с символом #
+❌ Тема, опубликованная за последние 30 дней
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ ПРОВЕРКА ПЕРЕД ГЕНЕРАЦИЕЙ
+═══════════════════════════════════════════════════════════════════════════════
+
+Перед созданием JSON проверь:
+
+1. ✅ Тема уникальна (проверь 06_history/02_topics_covered.md)
+2. ✅ Весь текст на русском языке
+3. ✅ Заголовок без эмодзи и Markdown
+4. ✅ Content без заголовка в начале
+5. ✅ Все **жирные** теги парные
+6. ✅ Хэштеги без #
+7. ✅ Источники указаны (1-3)
 
 ═══════════════════════════════════════════════════════════════════════════════
 🚀 ГЕНЕРИРУЙ JSON ПРЯМО СЕЙЧАС!
@@ -192,7 +219,7 @@ def main():
             import json
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            
+
             print("=" * 70)
             print("📝 ПРЕВЬЮ СГЕНЕРИРОВАННЫХ ДАННЫХ")
             print("=" * 70)
@@ -202,15 +229,98 @@ def main():
             print(f"📊 Категория: {data.get('hashtags', ['НЕТ'])[0]}")
             print("=" * 70)
             print()
-            
-            # Проверяем язык
+
+            # ============================================
+            # ВАЛИДАЦИЯ КОНТЕНТА (КРИТИЧЕСКИ ВАЖНО!)
+            # ============================================
+            print("🔍 ВАЛИДАЦИЯ КОНТЕНТА...")
+            validation_errors = []
+
             title = data.get('title', '')
             description = data.get('description', '')
-            
-            # Простая проверка на русский (кириллица)
-            has_cyrillic = any('а' <= c.lower() <= 'я' or c == 'ё' for c in title + description)
-            
-            if not has_cyrillic:
+            content = data.get('content', '')
+            hashtags = data.get('hashtags', [])
+
+            # 1. Проверка на русский язык (кириллица)
+            has_cyrillic_title = any('а' <= c.lower() <= 'я' or c == 'ё' for c in title)
+            has_cyrillic_desc = any('а' <= c.lower() <= 'я' or c == 'ё' for c in description)
+
+            if not has_cyrillic_title:
+                validation_errors.append("❌ Заголовок на английском (должен быть на русском)")
+
+            if not has_cyrillic_desc:
+                validation_errors.append("❌ Описание на английском (должно быть на русском)")
+
+            # 2. Проверка заголовка на эмодзи
+            import re
+            emoji_pattern = re.compile("["
+                u"\U0001F600-\U0001F64F"  # emoticons
+                u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                u"\U0001F1E0-\U0001F1FF"  # flags
+                "]+", flags=re.UNICODE)
+
+            if emoji_pattern.search(title):
+                validation_errors.append("❌ Заголовок содержит эмодзи (запрещено)")
+
+            # 3. Проверка заголовка на Markdown символы
+            if title.startswith('#') or '**' in title or '_' in title:
+                validation_errors.append("❌ Заголовок содержит Markdown символы")
+
+            # 4. Проверка длины заголовка
+            if len(title) > 80:
+                validation_errors.append(f"❌ Заголовок слишком длинный ({len(title)} > 80 символов)")
+
+            # 5. Проверка content на дублирование заголовка в начале
+            if content.startswith(title[:50]):
+                validation_errors.append("❌ Content дублирует заголовок в начале")
+
+            # 6. Проверка content на наличие заголовка #
+            if content.strip().startswith('#'):
+                validation_errors.append("❌ Content начинается с # (запрещено)")
+
+            # 7. Проверка парности ** жирных тегов
+            bold_count = content.count('**')
+            if bold_count % 2 != 0:
+                validation_errors.append(f"❌ Непарные ** теги ({bold_count} штук)")
+
+            # 8. Проверка хэштегов на #
+            for tag in hashtags:
+                if tag.startswith('#'):
+                    validation_errors.append(f"❌ Хэштег начинается с #: {tag}")
+
+            # 9. Проверка количества хэштегов
+            if len(hashtags) < 3:
+                validation_errors.append(f"❌ Мало хэштегов ({len(hashtags)} < 3)")
+
+            if len(hashtags) > 5:
+                validation_errors.append(f"❌ Много хэштегов ({len(hashtags)} > 5)")
+
+            # 10. Проверка источников
+            sources = data.get('sources', [])
+            if len(sources) < 1:
+                validation_errors.append("❌ Нет источников (минимум 1)")
+
+            # ============================================
+            # РЕЗУЛЬТАТ ВАЛИДАЦИИ
+            # ============================================
+
+            if validation_errors:
+                print()
+                print("🚫 ВАЛИДАЦИЯ НЕ ПРОЙДЕНА!")
+                print()
+                for error in validation_errors:
+                    print(error)
+                print()
+                print("Публикация ЗАБЛОКИРОВАНА!")
+                print("Исправьте ошибки и запустите генерацию заново.")
+                return False
+            else:
+                print("✅ Все проверки пройдены!")
+                print()
+
+            # Проверяем язык (для совместимости)
+            if not has_cyrillic_title or not has_cyrillic_desc:
                 print("⚠️  ПРЕДУПРЕЖДЕНИЕ: Текст на английском!")
                 print("   AI не прочитал системный промпт.")
                 print("   Попробуйте запустить ещё раз.")
@@ -218,7 +328,7 @@ def main():
             else:
                 print("✅ Текст на русском языке!")
                 print()
-            
+
             # Шаг 4: Публикация
             print("📢 Запуск публикации...")
             print()

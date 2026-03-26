@@ -42,8 +42,8 @@
 
 🔗 Источники
 
-· {название источника 1}
-· {название источника 2} — если есть
+· [название источника 1](URL)
+· [название источника 2](URL) — если есть
 
 #теги {категория} #дополнительные_теги
 ```
@@ -94,8 +94,8 @@
 
 🔗 Источники
 
-· Официальный релиз на GitHub
-· Changelog
+· [Официальный релиз на GitHub](https://github.com/XTLS/Xray-core/releases/tag/v1.8.24)
+· [Changelog](https://github.com/XTLS/Xray-core/blob/master/CHANGELOG.md)
 
 #vpn #xray #vless #security
 ```

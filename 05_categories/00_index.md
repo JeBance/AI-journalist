@@ -18,6 +18,7 @@
 | `07_patterns.md` | `patterns` | Паттерны, архитектура, SOLID |
 | `08_databases.md` | `databases` | SQL, NoSQL, ORM |
 | `09_ai_tools.md` | `ai_tools` | AI для разработчиков |
+| `10_cryptocurrency.md` | `cryptocurrency` | **Криптовалюты, блокчейн, DeFi, NFT** |
 
 ## 🏷️ Система тегов
 

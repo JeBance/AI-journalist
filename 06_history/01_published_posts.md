@@ -683,6 +683,80 @@
 
 ---
 
+### [2026-03-26] Python 3.15 получит встроенный тип frozendict
+
+- **Категория:** python
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** python, frozendict, программирование, pep814, python315
+- **Источники:**
+  - Real Python: Python News March 2026
+  - PEP 814: frozendict Built-in Type
+  - Python.org Release Calendar
+- **Telegra.ph URL:** https://telegra.ph/Python-315-poluchit-vstroennyj-tip-frozendict-03-26
+- **Telegram ID:** 57
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] PostgreSQL выпустил срочные обновления 18.3–14.22
+
+- **Категория:** postgresql
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** postgresql, databases, security, sql, backend
+- **Источники:**
+  - PostgreSQL Official Announcement
+  - PostgreSQL Global Development Group
+- **Telegra.ph URL:** https://telegra.ph/PostgreSQL-vypustil-srochnye-obnovleniya-1831422-03-26
+- **Telegram ID:** 58
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] GitLab 18.9: self-hosted AI модели и автоисправление уязвимостей
+
+- **Категория:** gitlab
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** gitlab, ai, security, devops, cicd
+- **Источники:**
+  - GitLab 18.9 Release Announcement
+  - GitLab Duo AI Features
+  - GitLab Security Updates
+- **Telegra.ph URL:** https://telegra.ph/GitLab-189-self-hosted-AI-modeli-i-avtoispravlenie-uyazvimostej-03-26
+- **Telegram ID:** 59
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Apple объявила даты WWDC 2026: iOS 27, macOS 27 и новый Siri
+
+- **Категория:** apple
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** apple, wwdc2026, ios27, macos27, siri
+- **Источники:**
+  - Ars Technica: Apple WWDC 2026 announcement
+  - The Apple Post: WWDC 2026 expectations
+  - Apple official announcement
+- **Telegra.ph URL:** https://telegra.ph/Apple-obyavila-daty-WWDC-2026-iOS-27-macOS-27-i-novyj-Siri-03-26
+- **Telegram ID:** 60
+- **Статус:** опубликован
+
+---
+
+### [2026-03-26] Node.js выпустил экстренные security-патчи для всех версий
+
+- **Категория:** nodejs
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** nodejs, security, javascript, cve, webdev
+- **Источники:**
+  - Node.js Security Announcement (https://nodejs.org/uk/blog/vulnerability/march-2026-security-releases)
+  - Node.js GitHub Repository (https://github.com/nodejs/node)
+  - CVE Details (https://www.cvedetails.com/)
+- **Telegra.ph URL:** https://telegra.ph/Nodejs-vypustil-ehkstrennye-security-patchi-dlya-vseh-versij-03-26-2
+- **Telegram ID:** 61
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |

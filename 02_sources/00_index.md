@@ -16,6 +16,10 @@
 | `06_podcasts_and_videos.md` | Видео- и аудиоконтент | 5+ |
 | `07_forums_and_communities.md` | Reddit, Stack Overflow, Dev.to | 5+ |
 | `08_keywords.md` | Ключевые слова по категориям | 9 категорий |
+| `09_crypto_rss_feeds.md` | **Криптовалютные RSS** | 16+ |
+| `10_crypto_github_repos.md` | **Криптовалютные GitHub** | 23+ |
+| `11_crypto_telegram_channels.md` | **Крипто Telegram** | 14+ |
+| `12_crypto_blogs.md` | **Крипто блоги и сайты** | 22+ |
 
 ## 🔄 Порядок проверки
 
