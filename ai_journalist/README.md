@@ -407,8 +407,8 @@ article = format_telegraph_article(
 
 ```json
 {
-  "token": "8613698788:AAFAOroU0qtnUhS9ih96v_w2_lW7FssgH1E",
-  "channel_id": "-1003857597958"
+  "token": "ВАШ_ТОКЕН_БОТА",
+  "channel_id": "-100XXXXXXXXXX"
 }
 ```
 

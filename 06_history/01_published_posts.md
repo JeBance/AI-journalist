@@ -638,6 +638,21 @@
 
 ---
 
+### [2026-03-26] GitHub Copilot март 2026: агенты, CLI и метрики
+
+- **Категория:** github
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** github, copilot, ai, разработка, automations
+- **Источники:**
+  - GitHub Enterprise Roundup — March 2026
+  - GitHub Changelog: Copilot Improvements
+  - Microsoft AI Toolkit for VS Code — March 2026 Update
+- **Telegra.ph URL:** https://telegra.ph/GitHub-Copilot-mart-2026-agenty-CLI-i-metriki-03-26
+- **Telegram ID:** 51
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |
