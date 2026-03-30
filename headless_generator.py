@@ -280,20 +280,39 @@ def main():
             # Шаг 4: Публикация
             print("📢 Запуск публикации...")
             print()
-            
+
             pub_result = subprocess.run(
                 ["python3", "/root/git/AI-journalist/publisher_final.py", "--input", str(json_file)],
                 capture_output=True,
                 text=True,
                 timeout=60
             )
-            
+
             print(pub_result.stdout)
-            
+
             if pub_result.returncode != 0:
                 print(f"❌ Ошибка публикации: {pub_result.stderr}")
+                
+                # Отправка алерта об ошибке
+                print("\n📢 Отправка алерта об ошибке...")
+                alert_msg = f"❌ AI-journalist: ошибка публикации\n\n{pub_result.stderr[:500]}"
+                subprocess.run(
+                    ["python3", "/root/git/AI-journalist/send_report.py", alert_msg],
+                    capture_output=True,
+                    timeout=30
+                )
+                
                 return False
             
+            # Отправка отчёта об успешной публикации
+            print("\n📢 Отправка отчёта об успешной публикации...")
+            report_msg = f"✅ AI-journalist: публикация завершена\n\n{title}\nhttps://t.me/JeBanceOnline"
+            subprocess.run(
+                ["python3", "/root/git/AI-journalist/send_report.py", report_msg],
+                capture_output=True,
+                timeout=30
+            )
+
             return True
             
         else:

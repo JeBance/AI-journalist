@@ -105,39 +105,56 @@ def normalize_topic(topic: str) -> str:
     return normalized
 
 
-def topics_are_similar(topic1: str, topic2: str, threshold: float = 0.7) -> bool:
+def topics_are_similar(topic1: str, topic2: str, threshold: float = 0.8) -> bool:
     """
     Проверяет схожесть двух тем.
-    Использует простое сравнение по ключевым словам.
+    Использует сравнение по ключевым словам с порогом 0.8 (улучшено).
+    
+    Изменения в v2.1:
+    - Увеличен threshold с 0.7 до 0.8 для уменьшения ложных срабатываний
+    - Добавлена проверка на AI-generated дубликаты
     """
     norm1 = normalize_topic(topic1)
     norm2 = normalize_topic(topic2)
-    
+
     # Полное совпадение
     if norm1 == norm2:
         return True
+
+    # Проверка на AI-generated паттерны (критические дубликаты)
+    ai_patterns = [
+        r"2026.*год.*когда.*ии",
+        r"революция.*разработке.*технологий",
+        r"топ.*\d+.*ai.*инструмент",
+        r"ии.*пишет.*код.*лучше",
+        r"будущее.*разработки.*ии",
+    ]
     
+    for pattern in ai_patterns:
+        if re.search(pattern, norm1, re.IGNORECASE) and re.search(pattern, norm2, re.IGNORECASE):
+            return True  # AI-generated дубликаты всегда блокируем
+
     # Разбиваем на слова
     words1 = set(norm1.split())
     words2 = set(norm2.split())
-    
+
     # Удаляем стоп-слова
-    stop_words = {'и', 'в', 'на', 'с', 'для', 'из', 'о', 'об', 'по', 'при', 'под', 'над', 'через', 'а', 'но', 'или', 'что', 'это', 'как', 'the', 'a', 'an', 'and', 'or'}
+    stop_words = {'и', 'в', 'на', 'с', 'для', 'из', 'о', 'об', 'по', 'при', 'под', 'над', 'через', 'а', 'но', 'или', 'что', 'это', 'как', 'the', 'a', 'an', 'and', 'or', 'это', 'такой', 'такая', 'такое'}
     words1 = words1 - stop_words
     words2 = words2 - stop_words
-    
+
     if not words1 or not words2:
         return False
-    
+
     # Считаем пересечение
     intersection = words1 & words2
     union = words1 | words2
-    
+
     if not union:
         return False
-    
+
     similarity = len(intersection) / len(union)
-    
+
     return similarity >= threshold
 
 
