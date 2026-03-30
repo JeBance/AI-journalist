@@ -69,6 +69,76 @@
 - **Описание:** Интеграция LLM с данными (RAG)
 - **Что следить:** Releases, Data connectors
 
+### vLLM
+- **URL:** https://github.com/vllm-project/vllm
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Высокопроизводительный inference LLM
+- **Что следить:** Releases, Performance updates
+
+### Replicate
+- **URL:** https://github.com/replicate/replicate-python
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Запуск ML-моделей в облаке
+- **Что следить:** Releases, New models
+
+### ComfyUI
+- **URL:** https://github.com/comfyanonymous/ComfyUI
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Node-based Stable Diffusion UI
+- **Что следить:** Releases, Custom nodes
+
+### Automatic1111 SD WebUI
+- **URL:** https://github.com/AUTOMATIC1111/stable-diffusion-webui
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Web UI для Stable Diffusion
+- **Что следить:** Releases, Extensions
+
+### LM Studio
+- **URL:** https://github.com/lmstudio-ai/lmstudio
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Локальный запуск LLM с GUI
+- **Что следить:** Releases, Model support
+
+### GPT4All
+- **URL:** https://github.com/nomic-ai/gpt4all
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Локальные LLM экзерсайзы
+- **Что следить:** Releases, New models
+
+### Haystack
+- **URL:** https://github.com/deepset-ai/haystack
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** NLP пайплайны от deepset
+- **Что следить:** Releases, Integrations
+
+### Guidance
+- **URL:** https://github.com/microsoft/guidance
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Язык генерации от Microsoft
+- **Что следить:** Releases, Templates
+
+### Llama.cpp
+- **URL:** https://github.com/ggerganov/llama.cpp
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** C++ inference Llama
+- **Что следить:** Releases, Performance
+
+### Text Generation WebUI
+- **URL:** https://github.com/oobabooga/text-generation-webui
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Web UI для текстовых LLM
+- **Что следить:** Releases, Extensions
+
 ### TypeScript
 - **URL:** https://github.com/microsoft/TypeScript
 - **Приоритет:** Высокий
@@ -142,6 +212,92 @@
 - **Категория:** databases
 - **Описание:** ORM для TypeScript/Node.js
 - **Что следить:** Releases, New providers
+
+## ☁️ DevOps/Cloud (дополнительно)
+
+### Terraform
+- **URL:** https://github.com/hashicorp/terraform
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Infrastructure as Code
+- **Что следить:** Releases, Breaking changes, Providers
+
+### Ansible
+- **URL:** https://github.com/ansible/ansible
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Automation tool
+- **Что следить:** Releases, Modules
+
+### Prometheus
+- **URL:** https://github.com/prometheus/prometheus
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Monitoring system
+- **Что следить:** Releases, Integrations
+
+### Grafana
+- **URL:** https://github.com/grafana/grafana
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Observability platform
+- **Что следить:** Releases, New panels, Plugins
+
+### Istio
+- **URL:** https://github.com/istio/istio
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Service mesh
+- **Что следить:** Releases, Security patches
+
+### ArgoCD
+- **URL:** https://github.com/argoproj/argo-cd
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** GitOps continuous delivery
+- **Что следить:** Releases, Applications
+
+### Pulumi
+- **URL:** https://github.com/pulumi/pulumi
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Infrastructure as Code (код)
+- **Что следить:** Releases, Providers
+
+### Helm
+- **URL:** https://github.com/helm/helm
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Kubernetes package manager
+- **Что следить:** Releases, Charts
+
+### Flux CD
+- **URL:** https://github.com/fluxcd/flux2
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Continuous delivery для K8s
+- **Что следить:** Releases, Sources
+
+### Vault
+- **URL:** https://github.com/hashicorp/vault
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Secrets management
+- **Что следить:** Releases, Security features
+
+### Consul
+- **URL:** https://github.com/hashicorp/consul
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Service discovery
+- **Что следить:** Releases, Connect features
+
+### Nomad
+- **URL:** https://github.com/hashicorp/nomad
+- **Приоритет:** Высокий
+- **Категория:** devops
+- **Описание:** Workload orchestrator
+- **Что следить:** Releases, Integrations
 
 ### Docker
 - **URL:** https://github.com/docker/cli
@@ -231,10 +387,10 @@
 | Приоритет | Количество |
 |-----------|------------|
 | Критический | 6 |
-| Высокий | 11 |
+| Высокий | 23 |
 | Средний | 8 |
 | Низкий | 6 |
-| **Всего** | **31** |
+| **Всего** | **43** |
 
 ---
 
