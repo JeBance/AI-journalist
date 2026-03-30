@@ -58,7 +58,7 @@ AI делает:
 ### Публикация в Telegram
 
 ```bash
-python3 /root/git/AI-journalist-bot/publisher.py "Текст поста"
+python3 publisher_final.py --input article_data.json
 ```
 
 **Важно:** Экранируй Markdown V2 символы:
@@ -77,11 +77,7 @@ python3 publisher.py "🔥 *PHP 8\.4\.0 released*
 
 ### Публикация на Telegra.ph
 
-```bash
-python3 /root/git/AI-journalist-bot/telegraph_publisher.py \
-  "Заголовок статьи" \
-  "Содержание (Markdown)"
-```
+Используется publisher_final.py автоматически при наличии content в JSON.
 
 ### Публикация с анонсом (Python)
 
@@ -133,12 +129,6 @@ python3 update_prompts.py --show
     ├── 01_telegram_bot.md       # Telegram бот
     ├── 02_self_learning.md      # Самообучение
     └── 03_telegraph.md          # Telegra.ph
-
-/root/git/AI-journalist-bot/
-├── publisher.py                 # Публикация в Telegram
-├── telegraph_publisher.py       # Публикация на Telegra.ph
-├── update_prompts.py            # Обновление промтов
-└── config.json                  # Конфигурация бота
 ```
 
 ---
@@ -156,7 +146,7 @@ Qwen, выступи как главный редактор IT-канала @JeB
 4. Напиши пост по шаблону из 03_templates/01_single_post.md
 5. Покажи черновик
 6. После подтверждения опубликуй:
-   python3 /root/git/AI-journalist-bot/publisher.py "текст"
+   python3 publisher_final.py --input article_data.json
 7. Запиши в 06_history/01_published_posts.md
 ```
 
@@ -173,10 +163,9 @@ Qwen, выступи как технический журналист.
    - Проверь 02_sources/01_rss_feeds.md (PHP Weekly)
    - Проверь 02_sources/04_technical_blogs.md (PHP.net)
 3. Напиши подробную статью (1000+ слов)
-4. Опубликуй на Telegra.ph:
-   python3 /root/git/AI-journalist-bot/telegraph_publisher.py "Заголовок" "Содержание"
-5. Создай анонс и опубликуй в Telegram:
-   python3 /root/git/AI-journalist-bot/publisher.py "текст анонса"
+4. Создай JSON с данными статьи
+5. Опубликуй:
+   python3 publisher_final.py --input article_data.json
 6. Запиши результаты в историю
 ```
 
@@ -269,8 +258,8 @@ _ * [ ] ( ) ~ ` > # + - = | { } . !
 
 ## 📞 Контакты
 
-**Канал:** @JeBanceOnline  
-**Бот:** @JeBanceOnlineBot  
+**Канал:** @JeBanceOnline
+**Бот:** @JeBanceOnlineBot
 **Владелец:** @JeBance (ID: 5610580916)
 
 ---
@@ -280,10 +269,10 @@ _ * [ ] ( ) ~ ` > # + - = | { } . !
 - **Полная документация:** `README_FULL.md`
 - **Telegra.ph интеграция:** `10_integrations/03_telegraph.md`
 - **Самообучение:** `10_integrations/02_self_learning.md`
-- **Telegram бот:** `../AI-journalist-bot/README.md`
+- **Telegram бот:** `10_integrations/01_telegram_bot.md`
 
 ---
 
-**Версия:** 1.1  
-**Дата:** 2026-03-25  
+**Версия:** 1.2
+**Дата:** 2026-03-30
 **Для:** Qwen Code

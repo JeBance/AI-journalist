@@ -54,7 +54,7 @@ class TelegraphClient:
         if not self.access_token:
             raise ValueError(
                 "Access Token не найден в конфигурации!\n"
-                "Запустите: python3 /root/git/AI-journalist-bot/get_telegraph_token.py"
+                "Запустите: python3 get_telegraph_token.py"
             )
     
     def _load_config(self) -> Dict[str, Any]:

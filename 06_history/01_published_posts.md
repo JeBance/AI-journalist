@@ -2679,6 +2679,35 @@
 
 ---
 
+### [2026-03-30] Figma обновила десктопное приложение для macOS
+
+- **Категория:** figma
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** figma, design, macos, ui, ux
+- **Источники:**
+  - Figma Release Notes — March 2026 (https://releasebot.io/updates/figma)
+  - Figma Desktop App для macOS (https://figma.com/downloads)
+- **Telegra.ph URL:** https://telegra.ph/Figma-obnovila-desktopnoe-prilozhenie-dlya-macOS-03-30
+- **Telegram ID:** 226
+- **Статус:** опубликован
+
+---
+
+### [2026-03-30] .NET 10 и C# 14: новые возможности для разработчиков
+
+- **Категория:** dotnet
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** dotnet, csharp, microsoft, разработка, programming
+- **Источники:**
+  - InfoWorld: The best new features of C# 14 (https://www.infoworld.com/article/4131649/the-best-new-features-of-c-14.html)
+  - Fast-Report: Overview of .NET 10 (https://www.fast-report.com/blogs/overview-net-10)
+  - Microsoft .NET Documentation (https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-14)
+- **Telegra.ph URL:** https://telegra.ph/NET-10-i-C-14-novye-vozmozhnosti-dlya-razrabotchikov-03-30
+- **Telegram ID:** 227
+- **Статус:** опубликован
+
+---
+
 ## 📊 Статистика
 
 | Месяц | Количество постов |

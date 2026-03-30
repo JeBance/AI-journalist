@@ -356,8 +356,15 @@ def format_telegraph_article(
         lines.append("Источники:")
         lines.append("")
         for source in sources:
-            lines.append(f"· {source}")
-    
+            # Преобразуем "Название (URL)" → "[Название](URL)"
+            source_link = source.strip()
+            url_match = re.search(r'\((https?://[^)]+)\)$', source_link)
+            if url_match:
+                name = source_link[:url_match.start()].strip()
+                url = url_match.group(1)
+                source_link = f"[{name}]({url})"
+            lines.append(f"· {source_link}")
+
     return "\n".join(lines)
 
 

@@ -503,7 +503,7 @@ tg.send_message(text, auto_escape=True)
 
 **Решение:**
 ```bash
-python3 /root/git/AI-journalist-bot/get_telegraph_token.py
+python3 get_telegraph_token.py
 ```
 
 ### Ошибка: "Chat not found"

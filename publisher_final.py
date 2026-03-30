@@ -86,9 +86,9 @@ def load_telegraph_config() -> Dict[str, str]:
     with open(TELEGRAPH_CONFIG, "r", encoding="utf-8") as f:
         config = json.load(f)
         if "access_token" not in config:
-            raise ValueError(
+                raise ValueError(
                 "Access Token не найден!\n"
-                "Запустите: python3 /root/git/AI-journalist-bot/get_telegraph_token.py"
+                "Запустите: python3 get_telegraph_token.py"
             )
         return config
 
