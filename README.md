@@ -20,6 +20,49 @@
 
 ## 🎯 Быстрый старт
 
+### Настройка Telegram бота
+
+**1. Создать бота:**
+
+1. Откройте [@BotFather](https://t.me/BotFather)
+2. Отправьте `/newbot`
+3. Введите имя и username бота
+4. **Сохраните API Token**
+
+**2. Добавить бота в канал:**
+
+1. Откройте ваш канал → **Управление** → **Администраторы**
+2. Добавьте бота с правами на **публикацию сообщений**
+
+**3. Получить Chat ID канала:**
+
+1. Отправьте сообщение в канал
+2. Перешлите [@GetMyIDBot](https://t.me/GetMyIDBot)
+3. Получите Chat ID (начинается с `-100`)
+
+**4. Настроить конфигурацию:**
+
+```bash
+cd /root/git/AI-journalist
+cp config.json.example config.json
+nano config.json  # Вставьте токен и channel_id
+```
+
+**5. Проверить работу:**
+
+```bash
+python3 send_report.py "test"
+```
+
+### Настройка Telegra.ph
+
+```bash
+cd /root/git/AI-journalist
+cp telegraph_config.json.example telegraph_config.json
+python3 -c "import requests; r=requests.post('https://api.telegra.ph/createAccount', json={'short_name':'AI Journalist','author_name':'AI Journalist'}); print(r.json())"
+# Вставьте access_token в telegraph_config.json
+```
+
 ### Для AI-агента
 
 ```
@@ -33,8 +76,8 @@ Telegram-канал: @[название_канала]
 ### Для публикации статей
 
 ```bash
-cd /root/git/AI-journalist-bot
-python3 publish_article.py
+cd /root/git/AI-journalist
+python3 publisher_final.py --input article_data.json
 ```
 
 ## 📁 Структура
@@ -71,14 +114,14 @@ python3 publish_article.py
 Выполни сценарий daily_publication из workflows.
 
 Для публикации используй:
-python3 /root/git/AI-journalist-bot/publisher.py "текст"
+python3 /root/git/AI-journalist/publisher_final.py --input /tmp/ai_news.json
 ```
 
 ### Сценарий 2: Публикация статьи на Telegra.ph
 
 ```bash
-cd /root/git/AI-journalist-bot
-python3 publish_article.py
+cd /root/git/AI-journalist
+python3 publisher_final.py --input article_data.json
 ```
 
 **Результат:**
@@ -90,11 +133,11 @@ python3 publish_article.py
 
 | Метрика | Значение |
 |---------|----------|
-| **Файлов** | 67 |
-| **Строк кода** | 11,379 |
-| **Источников** | 100+ |
+| **Файлов** | 70+ |
+| **Строк кода** | 12,000+ |
+| **Источников** | 351+ |
 | **Шаблонов** | 6 |
-| **Категорий** | 9 |
+| **Категорий** | 10+ |
 | **Сценариев** | 4 |
 
 ## 🔗 Документация
@@ -105,12 +148,40 @@ python3 publish_article.py
 - **Интеграция с Telegra.ph:** [10_integrations/04_telegraph_guide.md](10_integrations/04_telegraph_guide.md)
 - **Формат анонсов:** [04_style/07_announcement_format.md](04_style/07_announcement_format.md)
 
+## 🐛 Решение проблем
+
+### Ошибка: "Chat not found"
+
+**Причина:** Бот не добавлен в администраторы канала
+
+**Решение:**
+1. Проверьте, что бот добавлен в канал
+2. Проверьте, что у бота есть права на публикацию
+3. Проверьте Chat ID (должен начинаться с `-100`)
+
+### Ошибка: "Unauthorized"
+
+**Причина:** Неверный токен бота
+
+**Решение:**
+1. Проверьте токен в `config.json`
+2. При необходимости получите новый токен у @BotFather
+
+### Ошибка: "Bad Request: can't parse entities"
+
+**Причина:** Ошибка в Markdown V2
+
+**Решение:**
+1. Проверьте экранирование спецсимволов (`_ * [ ] ( ) ~ ` > # + - = | { } . !`)
+2. Убедитесь, что все теги закрыты
+3. Используйте `parse_mode=None` для отключения форматирования
+
 ## 📄 Лицензия
 
 **MIT** — используйте, модифицируйте, улучшайте!
 
 ---
 
-**Версия инфраструктуры:** 1.1  
-**Дата:** 2026-03-25  
+**Версия инфраструктуры:** 1.2
+**Дата:** 2026-03-30
 **Концепция:** Zero-Infrastructure Approach to AI-Journalism
