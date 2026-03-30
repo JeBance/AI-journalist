@@ -20,6 +20,7 @@ AI-journalist Publisher
 import sys
 import json
 import argparse
+import re
 import requests
 from pathlib import Path
 from datetime import datetime
@@ -30,10 +31,10 @@ from typing import Optional, List, Dict, Any
 # КОНФИГУРАЦИЯ
 # ============================================================================
 
-TELEGRAM_CONFIG = Path("/root/git/AI-journalist-bot/config.json")
-TELEGRAPH_CONFIG = Path("/root/git/AI-journalist-bot/telegraph_config.json")
-HISTORY_FILE = Path("/root/git/AI-journalist/06_history/01_published_posts.md")
-TOPICS_FILE = Path("/root/git/AI-journalist/06_history/02_topics_covered.md")
+TELEGRAM_CONFIG = Path(__file__).parent / "config.json"
+TELEGRAPH_CONFIG = Path(__file__).parent / "telegraph_config.json"
+HISTORY_FILE = Path(__file__).parent / "06_history/01_published_posts.md"
+TOPICS_FILE = Path(__file__).parent / "06_history/02_topics_covered.md"
 
 # Эмодзи по категориям
 EMOJI_MAP = {
@@ -462,66 +463,66 @@ def escape_markdown_v2(text: str) -> str:
 
 def format_announcement(title: str, description: str, article_url: str, hashtags: List[str], emoji: str) -> str:
     """
-    Сформатировать анонс для Telegram в идеальном формате.
-    
+    Сформатировать анонс для Telegram в HTML формате.
+
     Формат:
     - Заголовок-ссылка (жирный)
     - Краткое описание (без обрезки)
     - Хэштеги
-    
+
     Telegram автоматически создаст превью статьи под сообщением.
     """
-    # Экранируем ВСЕ специальные символы для MarkdownV2
-    escaped_title = escape_markdown_v2(title)
-    escaped_url = escape_markdown_v2(article_url)
-    escaped_description = escape_markdown_v2(description)
-    
-    # Формируем пост
+    # HTML не требует экранирования большинства символов
+    # Экранируем только < и > для безопасности
+    safe_title = title.replace('<', '&lt;').replace('>', '&gt;')
+    safe_description = description.replace('<', '&lt;').replace('>', '&gt;')
+
+    # Формируем пост в HTML формате
     lines = [
-        f"{emoji} [{escaped_title}]({escaped_url})",
+        f"{emoji} <b><a href=\"{article_url}\">{safe_title}</a></b>",
         "",
-        escaped_description,
+        safe_description,
         ""
     ]
-    
-    # Добавляем хэштеги (экранируем #)
+
+    # Добавляем хэштеги (без экранирования)
     if hashtags:
-        hashtag_line = " ".join([f"\\#{tag}" for tag in hashtags])
+        hashtag_line = " ".join([f"#{tag}" for tag in hashtags])
         lines.append(hashtag_line)
-    
+
     return "\n".join(lines)
 
 
 def publish_to_telegram(text: str) -> Dict[str, Any]:
     """
     Опубликовать сообщение в Telegram канал.
-    
+
     Args:
-        text: Текст сообщения (MarkdownV2)
-    
+        text: Текст сообщения (HTML)
+
     Returns:
         Результат: {"success": True, "message_id": 123}
     """
     config = load_telegram_config()
     token = config["token"]
     channel_id = config["channel_id"]
-    
+
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     data = {
         "chat_id": channel_id,
         "text": text,
-        "parse_mode": "MarkdownV2",
+        "parse_mode": "HTML",
         "link_preview_options": {
             "is_enabled": True,
             "prefer_small_media": False,
             "prefer_large_media": True
         }
     }
-    
+
     try:
         response = requests.post(url, json=data, timeout=30)
         result = response.json()
-        
+
         if result.get("ok"):
             return {
                 "success": True,
@@ -533,7 +534,7 @@ def publish_to_telegram(text: str) -> Dict[str, Any]:
                 "success": False,
                 "error": result.get("description", "Неизвестная ошибка")
             }
-    
+
     except Exception as e:
         return {
             "success": False,
@@ -698,7 +699,28 @@ def main():
     if not content and not args.telegram_only:
         print("❌ Содержимое статьи обязательно!")
         sys.exit(1)
-    
+
+    # ============================================
+    # ДОБАВЛЯЕМ ИСТОЧНИКИ С ССЫЛКАМИ В CONTENT
+    # ============================================
+    if sources and content:
+        # Проверяем, есть ли уже раздел "Источники" в content
+        if "Источники:" not in content and "источники:" not in content.lower():
+            # Добавляем источники с Markdown-ссылками
+            sources_section = "\n\n---\n\nИсточники:\n"
+            for source in sources:
+                source = source.strip()
+                # Преобразуем "Название (URL)" → "[Название](URL)"
+                url_match = re.search(r'\((https?://[^)]+)\)$', source)
+                if url_match:
+                    name = source[:url_match.start()].strip()
+                    url = url_match.group(1)
+                    sources_section += f"· [{name}]({url})\n"
+                else:
+                    sources_section += f"· {source}\n"
+            content += sources_section
+            print("✅ Источники с ссылками добавлены в статью")
+
     # Определяем эмодзи
     category = hashtags[0] if hashtags else "default"
     emoji = EMOJI_MAP.get(category, EMOJI_MAP.get("default"))

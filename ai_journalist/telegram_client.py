@@ -27,13 +27,13 @@ class TelegramClient:
     def __init__(self, config_path: Optional[str] = None):
         """
         Инициализировать Telegram клиент.
-        
+
         Args:
-            config_path: Путь к файлу конфигурации. 
-                        По умолчанию: /root/git/AI-journalist-bot/config.json
+            config_path: Путь к файлу конфигурации.
+                        По умолчанию: config.json в текущей директории
         """
         if config_path is None:
-            config_path = "/root/git/AI-journalist-bot/config.json"
+            config_path = Path(__file__).parent.parent / "config.json"
         
         self.config_path = Path(config_path)
         self.config = self._load_config()

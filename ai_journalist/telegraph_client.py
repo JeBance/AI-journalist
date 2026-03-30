@@ -36,13 +36,13 @@ class TelegraphClient:
     def __init__(self, config_path: Optional[str] = None):
         """
         Инициализировать Telegra.ph клиент.
-        
+
         Args:
             config_path: Путь к файлу конфигурации.
-                        По умолчанию: /root/git/AI-journalist-bot/telegraph_config.json
+                        По умолчанию: telegraph_config.json в текущей директории
         """
         if config_path is None:
-            config_path = "/root/git/AI-journalist-bot/telegraph_config.json"
+            config_path = Path(__file__).parent.parent / "telegraph_config.json"
         
         self.config_path = Path(config_path)
         self.config = self._load_config()

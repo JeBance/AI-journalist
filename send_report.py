@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 # Конфигурация AI-journalist bot
-CONFIG_FILE = Path("/root/git/AI-journalist-bot/config.json")
+CONFIG_FILE = Path(__file__).parent / "config.json"
 
 # Загрузка конфига
 if CONFIG_FILE.exists():
