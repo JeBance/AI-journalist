@@ -2,6 +2,13 @@
 
 ## 🔝 Приоритет: Критический
 
+### Hugging Face Transformers
+- **URL:** https://github.com/huggingface/transformers
+- **Приоритет:** Критический
+- **Категория:** ai_tools
+- **Описание:** Библиотека трансформеров (#1 AI библиотека)
+- **Что следить:** Releases, New models, Breaking changes
+
 ### Xray-core
 - **URL:** https://github.com/XTLS/Xray-core
 - **Приоритет:** Критический
@@ -40,6 +47,27 @@
 ---
 
 ## 🔥 Приоритет: Высокий
+
+### LangChain
+- **URL:** https://github.com/langchain-ai/langchain
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Фреймворк для LLM-приложений
+- **Что следить:** Releases, Integrations, New chains
+
+### Ollama
+- **URL:** https://github.com/ollama/ollama
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Локальный запуск LLM
+- **Что следить:** Releases, New models, Performance
+
+### LlamaIndex
+- **URL:** https://github.com/run-llama/llama_index
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Интеграция LLM с данными (RAG)
+- **Что следить:** Releases, Data connectors
 
 ### TypeScript
 - **URL:** https://github.com/microsoft/TypeScript
@@ -202,11 +230,11 @@
 
 | Приоритет | Количество |
 |-----------|------------|
-| Критический | 5 |
-| Высокий | 8 |
+| Критический | 6 |
+| Высокий | 11 |
 | Средний | 8 |
 | Низкий | 6 |
-| **Всего** | **27** |
+| **Всего** | **31** |
 
 ---
 

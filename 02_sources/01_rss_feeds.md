@@ -2,6 +2,20 @@
 
 ## 🔝 Приоритет: Критический
 
+### OpenAI Blog
+- **URL:** https://openai.com/blog/rss
+- **Тип:** RSS
+- **Приоритет:** Критический
+- **Категория:** ai_tools
+- **Описание:** Официальный блог OpenAI (GPT, Sora, DALL-E)
+
+### Anthropic News
+- **URL:** https://www.anthropic.com/news/rss
+- **Тип:** RSS
+- **Приоритет:** Критический
+- **Категория:** ai_tools
+- **Описание:** Новости от создателей Claude
+
 ### PHP Weekly
 - **URL:** https://phpweekly.com/
 - **Тип:** RSS
@@ -33,6 +47,34 @@
 ---
 
 ## 🔥 Приоритет: Высокий
+
+### Hugging Face Blog
+- **URL:** https://huggingface.co/blog/feed.xml
+- **Тип:** RSS
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** AI модели, датасеты, инструменты
+
+### Google AI Blog
+- **URL:** https://ai.google/blog/rss
+- **Тип:** RSS
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Исследования Google AI
+
+### Import AI (Jack Clark)
+- **URL:** https://jack-clark.net/feed/
+- **Тип:** RSS
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Еженедельный дайджест AI-новостей
+
+### The Batch (DeepLearning.AI)
+- **URL:** https://www.deeplearning.ai/the-batch/feed/
+- **Тип:** RSS
+- **Приоритет:** Высокий
+- **Категория:** ai_tools
+- **Описание:** Еженедельная рассылка от Эндрю Ына
 
 ### PHP.net Releases
 - **URL:** https://www.php.net/feed.atom
@@ -153,11 +195,11 @@
 
 | Приоритет | Количество |
 |-----------|------------|
-| Критический | 4 |
-| Высокий | 5 |
+| Критический | 6 |
+| Высокий | 9 |
 | Средний | 7 |
 | Низкий | 3 |
-| **Всего** | **19** |
+| **Всего** | **25** |
 
 ---
 
