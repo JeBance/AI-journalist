@@ -26,6 +26,9 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional, List, Dict, Any
 
+# Импортируем HistoryManager для работы с месячными архивами
+from ai_journalist.history_manager import HistoryManager
+
 
 # ============================================================================
 # КОНФИГУРАЦИЯ
@@ -33,8 +36,10 @@ from typing import Optional, List, Dict, Any
 
 TELEGRAM_CONFIG = Path(__file__).parent / "config.json"
 TELEGRAPH_CONFIG = Path(__file__).parent / "telegraph_config.json"
-HISTORY_FILE = Path(__file__).parent / "06_history/01_published_posts.md"
-TOPICS_FILE = Path(__file__).parent / "06_history/02_topics_covered.md"
+HISTORY_DIR = Path(__file__).parent / "06_history"
+
+# HistoryManager для работы с месячными архивами
+history_manager = HistoryManager(str(HISTORY_DIR))
 
 # Эмодзи по категориям
 EMOJI_MAP = {
@@ -547,68 +552,21 @@ def publish_to_telegram(text: str) -> Dict[str, Any]:
 # ============================================================================
 
 def write_to_history(title: str, telegraph_url: str, telegram_message_id: int, hashtags: List[str], sources: List[str]):
-    """Записать публикацию в историю."""
-    today = datetime.now().strftime("%Y-%m-%d")
-    
-    # Формируем новую запись
+    """Записать публикацию в историю с использованием HistoryManager."""
     category = hashtags[0] if hashtags else "general"
     
-    new_entry = f"""### [{today}] {title}
-
-- **Категория:** {category}
-- **Шаблон:** telegra.ph article
-- **Ключевые темы:** {", ".join(hashtags)}
-- **Источники:**
-"""
+    # Используем HistoryManager для добавления поста в месячный файл
+    monthly_file = history_manager.add_post(
+        title=title,
+        category=category,
+        hashtags=hashtags,
+        sources=sources,
+        telegraph_url=telegraph_url,
+        telegram_message_id=str(telegram_message_id)
+    )
     
-    for source in sources:
-        new_entry += f"  - {source}\n"
-    
-    new_entry += f"""- **Telegra.ph URL:** {telegraph_url}
-- **Telegram ID:** {telegram_message_id}
-- **Статус:** опубликован
-
----
-
-"""
-    
-    # Читаем историю
-    if HISTORY_FILE.exists():
-        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-            history = f.read()
-    else:
-        history = "# Архив опубликованных постов\n\n"
-    
-    # Вставляем новую запись перед статистикой
-    if "## 📊 Статистика" in history:
-        history = history.replace("## 📊 Статистика", new_entry + "## 📊 Статистика")
-    else:
-        history += new_entry
-    
-    # Записываем
-    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        f.write(history)
-    
-    # Обновляем topics_covered.md
-    if TOPICS_FILE.exists():
-        with open(TOPICS_FILE, "r", encoding="utf-8") as f:
-            topics = f.read()
-    else:
-        topics = "# Уникальные темы\n\n"
-    
-    # Добавляем тему
-    repeat_date = datetime.now().strftime("%Y-%m-%d")
-    topic_entry = f"- **Тема:** {title} | **Дата публикации:** {repeat_date} | **Повторять можно не ранее:** {repeat_date}\n\n"
-    
-    # Находим категорию
-    category_section = f"## {category}"
-    if category_section in topics:
-        topics = topics.replace(category_section, f"{category_section}\n{topic_entry}")
-    else:
-        topics += f"\n{category_section}\n{topic_entry}"
-    
-    with open(TOPICS_FILE, "w", encoding="utf-8") as f:
-        f.write(topics)
+    # Добавляем тему в topics_covered.md
+    history_manager.add_topic(title, category)
 
 
 # ============================================================================

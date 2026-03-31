@@ -18,9 +18,12 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Tuple, Optional, List, Dict
 
+# Используем HistoryManager для работы с месячными архивами
+from ai_journalist.history_manager import HistoryManager
 
+HISTORY_DIR = Path("/root/git/AI-journalist/06_history")
+history_manager = HistoryManager(str(HISTORY_DIR))
 TOPICS_FILE = Path("/root/git/AI-journalist/06_history/02_topics_covered.md")
-HISTORY_FILE = Path("/root/git/AI-journalist/06_history/01_published_posts.md")
 
 
 def parse_topics_file() -> Dict[str, List[Dict]]:
@@ -201,43 +204,37 @@ def check_topic_duplicate(topic: str, category: str = None) -> Tuple[bool, Optio
 def check_title_in_history(title: str, days: int = 30) -> Tuple[bool, Optional[str]]:
     """
     Проверяет, публиковался ли заголовок в истории за последние N дней.
-    
+
     Args:
         title: Заголовок для проверки
         days: Количество дней для проверки
-    
+
     Returns:
         (is_duplicate, reason)
     """
-    if not HISTORY_FILE.exists():
-        return False, None
-    
-    with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
-    
-    # Ищем записи вида: ### [YYYY-MM-DD] Заголовок
-    pattern = re.compile(r'###\s+\[(\d{4}-\d{2}-\d{2})\]\s+(.+?)(?:\n|$)')
-    
+    # Получаем все посты из месячных файлов
+    all_posts = history_manager.get_all_posts()
+
     today = datetime.now()
     cutoff_date = today - timedelta(days=days)
-    
-    for match in pattern.finditer(content):
-        pub_date_str = match.group(1)
-        pub_title = match.group(2).strip()
-        
+
+    for post in all_posts:
+        pub_date_str = post['date']
+        pub_title = post['title'].strip()
+
         try:
             pub_date = datetime.strptime(pub_date_str, "%Y-%m-%d")
-            
+
             # Проверяем дату
             if pub_date < cutoff_date:
                 continue
-            
+
             # Проверяем схожесть заголовков
             if topics_are_similar(title, pub_title, threshold=0.6):
                 return True, f"Заголовок '{pub_title}' опубликован {pub_date.strftime('%Y-%m-%d')} (менее {days} дней назад)"
         except ValueError:
             pass
-    
+
     return False, None
 
 
