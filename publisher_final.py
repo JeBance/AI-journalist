@@ -321,7 +321,7 @@ def process_inline_formatting(text: str) -> List:
     
     # Начинаем с текста
     parts = [text]
-    
+
     # Обрабатываем жирный (может быть несколько раз)
     new_parts = []
     for part in parts:
@@ -333,8 +333,31 @@ def process_inline_formatting(text: str) -> List:
             else:
                 new_parts.append(part)
     parts = new_parts
-    
-    # Обрабатываем курсив (может быть внутри жирного!)
+
+    # Обрабатываем ссылки — ОБРАБАТЫВАЕМ ДО КУРСИВА!
+    # Это критично: если обрабатывать курсив до ссылок, то символы '_'
+    # внутри URL (напр., the_end_of_kubernetes) будут приняты за курсив,
+    # что сломает структуру ссылки.
+    new_parts = []
+    for part in parts:
+        if isinstance(part, dict):
+            if 'children' in part:
+                new_children = []
+                for child in part['children']:
+                    if isinstance(child, str) and '[' in child and '](' in child:
+                        new_children.extend(process_links(child))
+                    else:
+                        new_children.append(child)
+                part['children'] = new_children
+            new_parts.append(part)
+        else:
+            if '[' in part and '](' in part:
+                new_parts.extend(process_links(part))
+            else:
+                new_parts.append(part)
+    parts = new_parts
+
+    # Обрабатываем курсив — после ссылок, чтобы '_' внутри URL не триггерили курсив
     new_parts = []
     for part in parts:
         if isinstance(part, dict):
@@ -354,7 +377,7 @@ def process_inline_formatting(text: str) -> List:
             else:
                 new_parts.append(part)
     parts = new_parts
-    
+
     # Обрабатываем код
     new_parts = []
     for part in parts:
@@ -374,27 +397,7 @@ def process_inline_formatting(text: str) -> List:
             else:
                 new_parts.append(part)
     parts = new_parts
-    
-    # Обрабатываем ссылки
-    new_parts = []
-    for part in parts:
-        if isinstance(part, dict):
-            if 'children' in part:
-                new_children = []
-                for child in part['children']:
-                    if isinstance(child, str) and '[' in child and '](' in child:
-                        new_children.extend(process_links(child))
-                    else:
-                        new_children.append(child)
-                part['children'] = new_children
-            new_parts.append(part)
-        else:
-            if '[' in part and '](' in part:
-                new_parts.extend(process_links(part))
-            else:
-                new_parts.append(part)
-    parts = new_parts
-    
+
     return parts
 
 
@@ -659,11 +662,47 @@ def main():
         sys.exit(1)
 
     # ============================================
+    # УДАЛЯЕМ ХЭШТЕГИ ИЗ CONTENT (если есть)
+    # ============================================
+    # Хэштеги должны быть только в анонсе Telegram, не в статье Telegra.ph
+    if content:
+        # Паттерны для поиска хэштегов в конце статьи
+        hashtag_patterns = [
+            r'\n---\n\n((?:#[а-яa-z0-9_]+[\s,]*)+)$',  # "---\n\n#тег1 #тег2"
+            r'\n\n((?:#[а-яa-z0-9_]+[\s,]*)+)$',       # "\n\n#тег1 #тег2" в конце
+            r'\n((?:#[а-яa-z0-9_]+[\s,]*)+)$',         # "\n#тег1 #тег2" в конце
+        ]
+        
+        original_content = content
+        for pattern in hashtag_patterns:
+            content = re.sub(pattern, '', content, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # Удаляем одиночные хэштеги в конце (после всех разделов)
+        content = re.sub(r'\n+#[а-яa-z0-9_]+\s*$', '', content, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # Удаляем лишние пустые строки в конце
+        content = re.sub(r'\n{3,}$', '\n', content)
+        
+        if content != original_content:
+            print("ℹ️ Хэштеги удалены из content (остались только в JSON)")
+        else:
+            print("✅ Хэштегов в content нет")
+
+    # ============================================
     # ДОБАВЛЯЕМ ИСТОЧНИКИ С ССЫЛКАМИ В CONTENT
     # ============================================
     if sources and content:
         # Проверяем, есть ли уже раздел "Источники" в content
-        if "Источники:" not in content and "источники:" not in content.lower():
+        # Учитываем разные варианты: "Источники:", "🔗 Источники", "### Источники", и т.д.
+        sources_patterns = [
+            r'источники:',           # "Источники:"
+            r'🔗\s*источники',       # "🔗 Источники"
+            r'#{1,3}\s*источники',   # "### Источники", "## Источники", "# Источники"
+            r'---\n\nисточники',     # "---\n\nИсточники"
+        ]
+        has_sources = any(re.search(pattern, content, re.IGNORECASE) for pattern in sources_patterns)
+
+        if not has_sources:
             # Добавляем источники с Markdown-ссылками
             sources_section = "\n\n---\n\nИсточники:\n"
             for source in sources:
@@ -673,11 +712,13 @@ def main():
                 if url_match:
                     name = source[:url_match.start()].strip()
                     url = url_match.group(1)
-                    sources_section += f"· [{name}]({url})\n"
+                    sources_section += f"• [{name}]({url})\n"
                 else:
-                    sources_section += f"· {source}\n"
+                    sources_section += f"• {source}\n"
             content += sources_section
             print("✅ Источники с ссылками добавлены в статью")
+        else:
+            print("ℹ️ Раздел 'Источники' уже есть в content")
 
     # Определяем эмодзи
     category = hashtags[0] if hashtags else "default"

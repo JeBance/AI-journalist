@@ -374,7 +374,7 @@ class TelegraphClient:
             Список текстовых строк и узлов форматирования
         """
         parts = [text]
-        
+
         # Жирный **текст**
         new_parts = []
         for part in parts:
@@ -393,46 +393,11 @@ class TelegraphClient:
                 else:
                     new_parts.append(part)
         parts = new_parts if new_parts else parts
-        
-        # Курсив _текст_
-        new_parts = []
-        for part in parts:
-            if isinstance(part, dict):
-                new_parts.append(part)
-            else:
-                if '_' in part:
-                    last_end = 0
-                    for match in re.finditer(r'_(.+?)_', part):
-                        if match.start() > last_end:
-                            new_parts.append(part[last_end:match.start()])
-                        new_parts.append({"tag": "i", "children": [match.group(1)]})
-                        last_end = match.end()
-                    if last_end < len(part):
-                        new_parts.append(part[last_end:])
-                else:
-                    new_parts.append(part)
-        parts = new_parts if new_parts else parts
-        
-        # Код `текст`
-        new_parts = []
-        for part in parts:
-            if isinstance(part, dict):
-                new_parts.append(part)
-            else:
-                if '`' in part:
-                    last_end = 0
-                    for match in re.finditer(r'`(.+?)`', part):
-                        if match.start() > last_end:
-                            new_parts.append(part[last_end:match.start()])
-                        new_parts.append({"tag": "code", "children": [match.group(1)]})
-                        last_end = match.end()
-                    if last_end < len(part):
-                        new_parts.append(part[last_end:])
-                else:
-                    new_parts.append(part)
-        parts = new_parts if new_parts else parts
-        
-        # Ссылки [текст](url)
+
+        # Ссылки [текст](url) — ОБРАБАТЫВАЕМ ДО КУРСИВА!
+        # Это критично: если обрабатывать курсив до ссылок, то символы '_'
+        # внутри URL (напр., the_end_of_kubernetes) будут приняты за курсив,
+        # что сломает структуру ссылки.
         new_parts = []
         for part in parts:
             if isinstance(part, dict):
@@ -454,7 +419,45 @@ class TelegraphClient:
                 else:
                     new_parts.append(part)
         parts = new_parts if new_parts else parts
-        
+
+        # Курсив _текст_ — после ссылок, чтобы '_' внутри URL не триггерили курсив
+        new_parts = []
+        for part in parts:
+            if isinstance(part, dict):
+                new_parts.append(part)
+            else:
+                if '_' in part:
+                    last_end = 0
+                    for match in re.finditer(r'_(.+?)_', part):
+                        if match.start() > last_end:
+                            new_parts.append(part[last_end:match.start()])
+                        new_parts.append({"tag": "i", "children": [match.group(1)]})
+                        last_end = match.end()
+                    if last_end < len(part):
+                        new_parts.append(part[last_end:])
+                else:
+                    new_parts.append(part)
+        parts = new_parts if new_parts else parts
+
+        # Код `текст`
+        new_parts = []
+        for part in parts:
+            if isinstance(part, dict):
+                new_parts.append(part)
+            else:
+                if '`' in part:
+                    last_end = 0
+                    for match in re.finditer(r'`(.+?)`', part):
+                        if match.start() > last_end:
+                            new_parts.append(part[last_end:match.start()])
+                        new_parts.append({"tag": "code", "children": [match.group(1)]})
+                        last_end = match.end()
+                    if last_end < len(part):
+                        new_parts.append(part[last_end:])
+                else:
+                    new_parts.append(part)
+        parts = new_parts if new_parts else parts
+
         return parts
     
     def create_page(
