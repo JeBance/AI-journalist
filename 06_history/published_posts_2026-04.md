@@ -1879,3 +1879,79 @@ Claude для Word — часть единой экосистемы надстр
 
 ---
 
+### [2026-04-14] SoftBank, Sony и Honda создали компанию по разработке триллионного ИИ
+
+- **Category:** ai
+- **Template:** telegra.ph article
+- **Key topics:** ai, japan, softbank, robotics, physical_ai
+- **Sources:**
+  - Intellectia (https://intellectia.ai/news/stock/sources-softbank-sony-honda-and-six-other-japanese-companies-launch-a-new-ai-company-to-develop-a-1tparameter-foundation-model-for-physical-ai-by-2030-natsuki-yamamotonikkei-asia)
+  - Finexus (https://api.finexus.net/api/news/events/3ff76ad7-761c-41b8-9a22-a53f8e343e0c/html)
+  - RootData (https://www.rootdata.com/news/606882)
+  - BigGo Finance (https://finance.biggo.com/news/NFbCf50BvthpMgHByw7S)
+- **Telegra.ph URL:** https://telegra.ph/SoftBank-Sony-i-Honda-sozdali-kompaniyu-po-razrabotke-trillionnogo-II-04-14
+- **Telegram ID:** 486
+- **Status:** published
+
+<!-- CONTENT_START -->
+12 апреля 2026 года ведущие промышленные корпорации Японии объявили о создании совместного предприятия **«Japan AI Infrastructure Model Development»** — национальной ИИ-компании, нацеленной на разработку суверенной модели с **триллионом параметров** к 2030 году.
+
+## Участники проекта
+
+Четыре ключевых участника получили доли более 10%:
+
+· **SoftBank** — инфраструктура и инвестиции (2 трлн иен в ИИ-дата-центры)
+· **Sony Group** — гуманоидные роботы, игровые системы и потребительская электроника
+· **Honda Motor** — автономное вождение и мобильные роботизированные платформы
+· **NEC** — промышленная автоматизация и корпоративные решения
+
+Миноритарные акционеры: **Nippon Steel**, **MUFG Bank**, **Sumitomo Mitsui Banking Corporation**, **Mizuho Bank**. К разработке также привлечена команда **Preferred Networks** — одного из лидеров японского ИИ-сектора.
+
+## Технологическая цель
+
+Проект фокусируется на создании **фундаментальной модели (foundation model)** объёмом около **1 триллиона параметров**, оптимизированной для задач Physical AI:
+
+· **Автономные системы** — интеграция с физическими устройствами в реальном времени
+· **Робототехника** — управление гуманоидными и промышленными роботами
+· **Автономное вождение** — модели для транспортных платформ Honda
+· **Интерактивные сервисы** — AI-агенты для потребительских устройств Sony
+
+Обучение модели будет проходить на новых высокопроизводительных **ИИ-кластерах SoftBank**, развёрнутых в рамках национальной программы инфраструктуры.
+
+## Финансирование
+
+Проект интегрирован в государственную стратегию Японии по развитию ИИ:
+
+· **SoftBank** инвестирует 2 трлн иен (~$13 млрд) в ИИ-дата-центры
+· **NEDO** (Agence по новым промышленным технологиям) выделит 1 трлн иен в течение 5 лет
+· Общий объём национальной программы — **3 трлн иен**
+· На старте проекта задействовано около **100 инженеров**
+
+## Зачем Японии собственный ИИ
+
+Альянс преследует стратегическую цель — **технологический суверенитет**. В условиях доминирования американских (OpenAI, Google, Anthropic) и китайских (DeepSeek, Alibaba, Baidu) ИИ-платформ, Япония стремится создать собственную модель, оптимизированную под специфические потребности национальной промышленности и робототехники.
+
+Ключевое преимущество — глубокая интеграция с **физическими системами**. Если большинство западных моделей фокусируется на текстовых и мультимодальных задачах, японский проект нацелен на прямое управление устройствами: от заводских конвейеров до гуманоидных роботов и автомобилей.
+
+## Почему это важно
+
+· Япония занимает ведущие позиции в робототехнике, но отстаёт в ИИ-моделях
+· Проект объединяет промышленные корпорации с государственным финансированием
+· Фокус на Physical AI — уникальная ниша, которую не покрывают западные модели
+· Триллион параметров ставит модель в один ряд с Gemini, Claude и GPT
+
+## Что дальше
+
+Разработка начата в апреле 2026 года. Первые результаты ожидаются в течение 2-3 лет, а полноценная модель с триллионом параметров — к **2030 году**. Проект также включает программу расширения ИИ-дата-центров и усиления кибербезопасности на период 2026-2029 годов.
+
+---
+
+Источники:
+· [Intellectia — Japanese Firms Establish New AI Company](https://intellectia.ai/news/stock/sources-softbank-sony-honda-and-six-other-japanese-companies-launch-a-new-ai-company-to-develop-a-1tparameter-foundation-model-for-physical-ai-by-2030-natsuki-yamamotonikkei-asia)
+· [Finexus — SoftBank, NEC, Sony, Honda Launch National AI Venture](https://api.finexus.net/api/news/events/3ff76ad7-761c-41b8-9a22-a53f8e343e0c/html)
+· [RootData — SoftBank NEC Honda Sony AI Company](https://www.rootdata.com/news/606882)
+· [BigGo Finance — Japanese Corporate Alliance Establishes Domestic AI Development](https://finance.biggo.com/news/NFbCf50BvthpMgHByw7S)
+<!-- CONTENT_END -->
+
+---
+
