@@ -243,3 +243,19 @@
 
 ---
 
+### [2026-04-14] Linux 7.0: квантовая защита, самовосстановление XFS и PCIe 6.0
+
+- **Категория:** linux
+- **Шаблон:** telegra.ph article
+- **Ключевые темы:** linux, kernel, quantum_security, xfs, opensource
+- **Источники:**
+  - Linux Kernel 7.0 Release (https://medium.com/@ajaymaurya73130/linux-kernel-7-0-release-bug-fixes-stability-improvements-hardware-enhancements-explained-438dc28682d2)
+  - Linux Journal (https://www.linuxjournal.com/content/linux-70-coming-what-expect-next-major-kernel-release)
+  - Phoronix (https://www.phoronix.com/)
+  - Kernel Newbies (https://kernelnewbies.org/LinuxChanges)
+- **Telegra.ph URL:** https://telegra.ph/Linux-70-kvantovaya-zashchita-samovosstanovlenie-XFS-i-PCIe-60-04-14
+- **Telegram ID:** 475
+- **Статус:** опубликован
+
+---
+
