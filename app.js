@@ -427,7 +427,8 @@ function formatDate(dateStr) {
     return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }
 
-function updateArticleCount() { document.getElementById('article-count').textContent = filteredArticles.length; }
+function declension(n) { var w = ['статья','статьи','статей']; var m = n % 100, s = n % 10; if (m > 10 && m < 20) return w[2]; if (s > 1 && s < 5) return w[1]; if (s == 1) return w[0]; return w[2]; }
+function updateArticleCount() { var n = filteredArticles.length; document.getElementById('article-count').textContent = n; var label = document.getElementById('article-count-label'); if (label) label.textContent = declension(n); }
 
 function updateLastUpdated() {
     if (allArticles.length > 0) document.getElementById('last-updated').textContent = formatDate(allArticles[0].date);
