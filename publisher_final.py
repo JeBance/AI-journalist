@@ -22,6 +22,7 @@ import json
 import argparse
 import re
 import requests
+import subprocess
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, List, Dict, Any
@@ -573,6 +574,74 @@ def write_to_history(title: str, telegraph_url: str, telegram_message_id: int, h
 
 
 # ============================================================================
+
+# ==============================================
+# GIT PUSH НА GITHUB
+# ==============================================
+
+def git_push_to_github(title="auto"):
+    """Добавить изменения в git и запушить на GitHub."""
+    repo_dir = Path(__file__).parent
+    
+    try:
+        # Генерируем articles.json перед коммитом
+        generate_script = repo_dir / "generate_json.py"
+        if generate_script.exists():
+            print("
+🔄 Генерация articles.json...")
+            subprocess.run(
+                ["python3", str(generate_script)],
+                cwd=str(repo_dir),
+                capture_output=True, text=True, timeout=60
+            )
+            print("✅ articles.json обновлён")
+        
+        # git add
+        subprocess.run(
+            ["git", "add", "06_history/", "articles.json"],
+            cwd=str(repo_dir),
+            capture_output=True, text=True, timeout=30
+        )
+        
+        # git commit
+        result = subprocess.run(
+            ["git", "commit", "-m", f"feat: new article — {title}"],
+            cwd=str(repo_dir),
+            capture_output=True, text=True, timeout=30
+        )
+        
+        if "nothing to commit" in result.stdout.lower() or "nothing to commit" in result.stderr.lower():
+            print("🏉 Нет изменений для коммита")
+            return True
+        
+        if result.returncode != 0:
+            print(f"⚠ Ошибка коммита: {result.stderr.strip()}")
+            return False
+        
+        print("✅ Коммит создан")
+        
+        # git push
+        print("
+🚀 Push в GitHub...")
+        result = subprocess.run(
+            ["git", "push", "origin", "gh-pages"],
+            cwd=str(repo_dir),
+            capture_output=True, text=True, timeout=120
+        )
+        
+        if result.returncode == 0:
+            print("✅ Запушено в GitHub!")
+            return True
+        else:
+            print(f"❌ Ошибка push: {result.stderr.strip()}")
+            return False
+            
+    except Exception as e:
+        print(f"❌ Ошибка git: {e}")
+        return False
+
+
+
 # ГЛАВНАЯ ФУНКЦИЯ
 # ============================================================================
 
@@ -815,6 +884,11 @@ def main():
         print("\n📝 Запись в историю...")
         write_to_history(title, telegraph_url, telegram_message_id, hashtags, sources)
         print("✅ История обновлена!")
+        
+        # Push в GitHub
+        print("
+💾 Сохранение в GitHub...")
+        git_push_to_github(title)
     
     print("\n" + "=" * 60)
     print("🎉 ПУБЛИКАЦИЯ ЗАВЕРШЕНА!")
