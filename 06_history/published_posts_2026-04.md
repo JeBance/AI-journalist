@@ -313,3 +313,62 @@
 
 ---
 
+### [2026-04-14] Cloudflare запустил Agent Cloud: платформа для ИИ-агентов с интеграцией OpenAI
+
+- **Category:** cloudflare
+- **Template:** telegra.ph article
+- **Key topics:** cloudflare, ai_agents, openai, developer_tools, cloud
+- **Sources:**
+  - Cloudflare Press Release (https://www.cloudflare.com/press/press-releases/2026/cloudflare-expands-its-agent-cloud-to-power-the-next-generation-of-agents/)
+  - SiliconANGLE (https://siliconangle.com/2026/04/13/cloudflare-expands-agent-cloud-new-tools-build-scale-ai-agents/)
+  - OpenAI Blog (https://openai.com/index/cloudflare-openai-agent-cloud/)
+- **Telegra.ph URL:** https://telegra.ph/Cloudflare-zapustil-Agent-Cloud-platforma-dlya-II-agentov-s-integraciej-OpenAI-04-14
+- **Telegram ID:** 477
+- **Status:** published
+
+<!-- CONTENT_START -->
+Компания Cloudflare объявила о масштабном расширении платформы **Agent Cloud**, предназначенной для разработки production-готовых ИИ-агентов. Обновление включает несколько ключевых компонентов, которые позволяют разработчикам создавать автономных агентов, способных работать в глобальной сети Cloudflare с безопасностью по умолчанию.
+
+## Dynamic Workers
+
+Новая среда выполнения на основе изолятов обеспечивает запуск кода, сгенерированного ИИ, за миллисекунды без периода «прогрева». Dynamic Workers обеспечивают уровень изоляции, сопоставимый с контейнерами, но работают в **100 раз быстрее** и стоят лишь долю их цены.
+
+## Sandboxes стали общедоступными
+
+Изолированные Linux-окружения вышли в статус **General Availability**. Каждая песочница предоставляет:
+
+· Полноценную оболочку и файловую систему
+· Поддержку фоновых процессов
+· Возможность клонирования репозиториев и установки пакетов
+· Запуск сборок и итеративную отладку
+
+## Artifacts и Think
+
+Новый примитив хранилища **Artifacts** полностью совместим с Git и позволяет создавать миллионы репозиториев для агентов. Фреймворк **Think** в составе Agents SDK обеспечивает персистентность — сохранение состояния между шагами многошаговых задач.
+
+## Интеграция с OpenAI
+
+Платформа получила официальную поддержку моделей **GPT-5.4** и **Codex** от OpenAI. После приобретения Replicate Cloudflare создала единый каталог ИИ-моделей, позволяющий переключаться между вендорами изменением одной строки кода.
+
+## Масштабирование
+
+Платформа поддерживает до **миллионов одновременных выполнений**. Агенты способны выполнять API-вызовы, преобразование данных и цепочки вызовов инструментов в масштабах enterprise.
+
+## Позиция рынка
+
+Мэтью Принс, сооснователь и CEO Cloudflare:
+
+> «Способ создания ПО фундаментально меняется. Мы вступаем в мир, где код пишут и выполняют сами агенты. Сегодня мы делаем Cloudflare определяющей платформой для агентного веба».
+
+Рохан Варма из OpenAI отметил, что облачные агенты становятся фундаментальным элементом организации работы.
+
+---
+
+Источники:
+· [Cloudflare Press Release — Agent Cloud Expansion](https://www.cloudflare.com/press/press-releases/2026/cloudflare-expands-its-agent-cloud-to-power-the-next-generation-of-agents/)
+· [SiliconANGLE — Cloudflare Expands Agent Cloud](https://siliconangle.com/2026/04/13/cloudflare-expands-agent-cloud-new-tools-build-scale-ai-agents/)
+· [OpenAI — Cloudflare OpenAI Agent Cloud](https://openai.com/index/cloudflare-openai-agent-cloud/)
+<!-- CONTENT_END -->
+
+---
+

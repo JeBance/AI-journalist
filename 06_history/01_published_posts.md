@@ -11,7 +11,7 @@ Archive split into monthly files:
 ### April 2026
 
 - **File:** `published_posts_2026-04.md`
-- **Posts:** 18
+- **Posts:** 19
 
 ### March 2026
 
@@ -22,7 +22,7 @@ Archive split into monthly files:
 
 | Month | File | Posts |
 |-------|------|-------|
-| April 2026 | `published_posts_2026-04.md` | 18 |
+| April 2026 | `published_posts_2026-04.md` | 19 |
 | March 2026 | `published_posts_2026-03.md` | 210 |
 
 ---
