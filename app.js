@@ -1,6 +1,5 @@
 /* ============================================
    AI Journalist — Логика приложения
-   Адаптивный: sidebar (десктоп) / drawer (мобильный)
    ============================================ */
 
 var ARTICLES_URL = '/articles.json';
@@ -55,14 +54,9 @@ function setupFilterDrawer() {
     var btn = document.getElementById('filter-toggle-btn');
     var closeBtn = document.getElementById('filter-close-btn');
     var overlay = document.getElementById('filter-overlay');
-
     if (btn) btn.addEventListener('click', openFilterDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeFilterDrawer);
-    if (overlay) {
-        overlay.addEventListener('click', function(e) {
-            if (e.target === overlay) closeFilterDrawer();
-        });
-    }
+    if (overlay) overlay.addEventListener('click', function(e) { if (e.target === overlay) closeFilterDrawer(); });
 }
 
 // ====== ИНИЦИАЛИЗАЦИЯ ======
@@ -70,14 +64,11 @@ function setupFilterDrawer() {
 async function init() {
     initTheme();
     setupFilterDrawer();
-
     try {
         var response = await fetch(ARTICLES_URL);
         if (!response.ok) throw new Error('Не удалось загрузить статьи');
-
         allArticles = await response.json();
         filteredArticles = allArticles.slice();
-
         updateArticleCount();
         renderFilters();
         renderBatch();
@@ -85,7 +76,6 @@ async function init() {
         setupSearch();
         updateLastUpdated();
         registerServiceWorker();
-
     } catch (error) {
         document.getElementById('articles-grid').innerHTML =
             '<div class="no-results"><p>Ошибка загрузки. Обновите страницу.</p></div>';
@@ -98,106 +88,70 @@ function renderArticleCard(article) {
     var tagsHtml = article.tags.slice(0, 3).map(function(tag) {
         return '<span class="card-tag">' + escapeHtml(tag) + '</span>';
     }).join('');
-
     var card = document.createElement('article');
     card.className = 'article-card';
     card.dataset.id = article.id;
-
     var header = document.createElement('div');
     header.className = 'card-header';
-
     var emoji = document.createElement('span');
     emoji.className = 'card-emoji';
     emoji.textContent = article.emoji;
-
     var h3 = document.createElement('h3');
     h3.className = 'card-title';
     h3.textContent = article.title;
-
     header.appendChild(emoji);
     header.appendChild(h3);
-
     var meta = document.createElement('div');
     meta.className = 'card-meta';
-
     var dateSpan = document.createElement('span');
     dateSpan.textContent = formatDate(article.date);
-
     var catSpan = document.createElement('span');
     catSpan.className = 'card-category';
     catSpan.textContent = article.category;
-
     meta.appendChild(dateSpan);
     meta.appendChild(catSpan);
-
     var desc = document.createElement('p');
     desc.className = 'card-description';
     desc.textContent = article.description;
-
     var tagsDiv = document.createElement('div');
     tagsDiv.className = 'card-tags';
     tagsDiv.innerHTML = tagsHtml;
-
     card.appendChild(header);
     card.appendChild(meta);
     card.appendChild(desc);
     card.appendChild(tagsDiv);
-
     card.addEventListener('click', function() { openArticle(article.id); });
-
     return card;
 }
 
 function renderBatch() {
     if (isLoading) return;
     isLoading = true;
-
     var grid = document.getElementById('articles-grid');
-
-    if (displayedCount === 0) {
-        grid.innerHTML = '';
-    }
-
+    if (displayedCount === 0) grid.innerHTML = '';
     var end = Math.min(displayedCount + BATCH_SIZE, filteredArticles.length);
-
     for (var i = displayedCount; i < end; i++) {
         grid.appendChild(renderArticleCard(filteredArticles[i]));
     }
-
     displayedCount = end;
     isLoading = false;
-
     var footer = document.getElementById('end-message');
-    if (displayedCount >= filteredArticles.length) {
-        footer.style.display = 'block';
-    } else {
-        footer.style.display = 'none';
-    }
+    footer.style.display = displayedCount >= filteredArticles.length ? 'block' : 'none';
 }
 
 // ====== ФИЛЬТРЫ ======
 
 function buildFilterButtons() {
     var categories = {};
-
     allArticles.forEach(function(article) {
         var cat = article.category;
         categories[cat] = (categories[cat] || 0) + 1;
     });
-
     var sorted = Object.entries(categories).sort(function(a, b) { return b[1] - a[1]; });
-    var allCount = allArticles.length;
-
-    var html = '<button class="filter-btn active" data-category="all">' +
-        '<span>Все</span><span class="count">' + allCount + '</span></button>';
-
+    var html = '<button class="filter-btn active" data-category="all"><span>Все</span><span class="count">' + allArticles.length + '</span></button>';
     sorted.forEach(function(entry) {
-        var cat = entry[0];
-        var count = entry[1];
-        html += '<button class="filter-btn" data-category="' + escapeHtml(cat) + '">' +
-            '<span>' + escapeHtml(cat) + '</span><span class="count">' + count + '</span></button>';
+        html += '<button class="filter-btn" data-category="' + escapeHtml(entry[0]) + '"><span>' + escapeHtml(entry[0]) + '</span><span class="count">' + entry[1] + '</span></button>';
     });
-
     return html;
 }
 
@@ -205,15 +159,11 @@ function setupFilterEvents(container) {
     if (!container) return;
     container.querySelectorAll('.filter-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            var cat = btn.dataset.category;
-            setFilter(cat);
-
-            // Sync all containers
+            currentFilter = btn.dataset.category;
+            applyFilters();
             document.querySelectorAll('.filter-btn').forEach(function(b) {
-                b.classList.toggle('active', b.dataset.category === cat);
+                b.classList.toggle('active', b.dataset.category === currentFilter);
             });
-
-            // Close drawer on mobile
             closeFilterDrawer();
         });
     });
@@ -221,34 +171,17 @@ function setupFilterEvents(container) {
 
 function renderFilters() {
     var html = buildFilterButtons();
-
-    // Desktop sidebar
     var desktop = document.getElementById('filters-desktop');
-    if (desktop) {
-        desktop.innerHTML = html;
-        setupFilterEvents(desktop);
-    }
-
-    // Mobile drawer
+    if (desktop) { desktop.innerHTML = html; setupFilterEvents(desktop); }
     var drawer = document.getElementById('filters-drawer');
-    if (drawer) {
-        drawer.innerHTML = html;
-        setupFilterEvents(drawer);
-    }
-}
-
-function setFilter(category) {
-    currentFilter = category;
-    applyFilters();
+    if (drawer) { drawer.innerHTML = html; setupFilterEvents(drawer); }
 }
 
 function applyFilters() {
     filteredArticles = allArticles.slice();
-
     if (currentFilter !== 'all') {
         filteredArticles = filteredArticles.filter(function(a) { return a.category === currentFilter; });
     }
-
     if (searchQuery) {
         var q = searchQuery.toLowerCase();
         filteredArticles = filteredArticles.filter(function(a) {
@@ -259,10 +192,8 @@ function applyFilters() {
                 (a.content && a.content.toLowerCase().indexOf(q) !== -1);
         });
     }
-
     displayedCount = 0;
     document.getElementById('articles-grid').innerHTML = '';
-
     if (filteredArticles.length === 0) {
         document.getElementById('articles-grid').innerHTML =
             '<div class="no-results"><p>Ничего не найдено</p><p>Попробуйте изменить фильтры или запрос</p></div>';
@@ -270,19 +201,13 @@ function applyFilters() {
     } else {
         renderBatch();
     }
-
     updateArticleCount();
 }
 
 // ====== ПОИСК ======
 
 function setupSearch() {
-    var inputs = [
-        document.getElementById('search-desktop'),
-        document.getElementById('search-mobile'),
-        document.getElementById('search-drawer')
-    ];
-
+    var inputs = [document.getElementById('search-desktop'), document.getElementById('search-mobile'), document.getElementById('search-drawer')];
     inputs.forEach(function(input) {
         if (!input) return;
         var debounceTimer;
@@ -290,10 +215,7 @@ function setupSearch() {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(function() {
                 searchQuery = e.target.value.trim();
-                // Sync all search inputs
-                inputs.forEach(function(other) {
-                    if (other && other !== input) other.value = searchQuery;
-                });
+                inputs.forEach(function(other) { if (other && other !== input) other.value = searchQuery; });
                 applyFilters();
             }, 250);
         });
@@ -307,14 +229,9 @@ function setupInfiniteScroll() {
     sentinel.id = 'scroll-sentinel';
     sentinel.style.height = '1px';
     document.getElementById('articles-grid').after(sentinel);
-
-    var observer = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting && displayedCount < filteredArticles.length) {
-            renderBatch();
-        }
-    }, { rootMargin: '400px' });
-
-    observer.observe(sentinel);
+    new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && displayedCount < filteredArticles.length) renderBatch();
+    }, { rootMargin: '400px' }).observe(sentinel);
 }
 
 // ====== МОДАЛЬНОЕ ОКНО ======
@@ -322,10 +239,8 @@ function setupInfiniteScroll() {
 function openArticle(id) {
     var article = allArticles.find(function(a) { return a.id === id; });
     if (!article) return;
-
     var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
-
     if (article.content) {
         renderArticleFromContent(article);
     } else if (article.telegraph_url) {
@@ -335,10 +250,7 @@ function openArticle(id) {
     } else {
         renderArticleFallback(article);
     }
-
-    if (!document.getElementById('article-modal').open) {
-        modal.showModal();
-    }
+    if (!document.getElementById('article-modal').open) modal.showModal();
 }
 
 async function loadFromTelegraph(article) {
@@ -348,109 +260,66 @@ async function loadFromTelegraph(article) {
         var apiUrl = 'https://api.telegra.ph/getPage/' + path + '?return_content=true';
         var response = await fetch(apiUrl);
         var data = await response.json();
-
         if (data.ok && data.result && data.result.content) {
             renderArticleContent(article, data.result.content);
         } else {
             renderArticleFallback(article);
         }
-    } catch (e) {
-        renderArticleFallback(article);
-    }
+    } catch (e) { renderArticleFallback(article); }
+}
+
+function buildModalActions(article) {
+    var actions = '<div class="modal-actions">';
+    if (article.telegraph_url) actions += '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Telegra.ph</a>';
+    actions += '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>';
+    actions += '</div>';
+    return actions;
 }
 
 function renderArticleFromContent(article) {
     var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
-
     var html = markdownToHtml(article.content);
-    var sourcesHtml = buildSourcesHtml(article);
-
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
-            '<div class="modal-meta">' +
-                '<span>📅 ' + formatDate(article.date) + '</span>' +
-                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
-            '</div>' +
+            '<div class="modal-meta"><span>📅 ' + formatDate(article.date) + '</span><span>📂 ' + escapeHtml(article.category) + '</span></div>' +
         '</div>' +
         '<div class="modal-body">' + html + '</div>' +
-        sourcesHtml +
-        '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
-        '</div>';
-
+        buildModalActions(article);
     modal.showModal();
 }
 
 function renderArticleContent(article, content) {
     var body = document.getElementById('modal-body');
     var htmlContent = '';
-
     if (Array.isArray(content)) {
-        content.forEach(function(node) {
-            htmlContent += telegraphNodeToHtml(node);
-        });
+        content.forEach(function(node) { htmlContent += telegraphNodeToHtml(node); });
     }
-
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
-            '<div class="modal-meta">' +
-                '<span>📅 ' + formatDate(article.date) + '</span>' +
-                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
-            '</div>' +
+            '<div class="modal-meta"><span>📅 ' + formatDate(article.date) + '</span><span>📂 ' + escapeHtml(article.category) + '</span></div>' +
         '</div>' +
         '<div class="modal-body">' + htmlContent + '</div>' +
-        buildSourcesHtml(article) +
-        '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
-        '</div>';
+        buildModalActions(article);
 }
 
 function renderArticleFallback(article) {
     var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
-
     var tagsHtml = article.tags.map(function(tag) {
         return '<span class="card-tag" style="display:inline-block;margin:0.25rem;">' + escapeHtml(tag) + '</span>';
     }).join('');
-
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
-            '<div class="modal-meta">' +
-                '<span>📅 ' + formatDate(article.date) + '</span>' +
-                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
-            '</div>' +
+            '<div class="modal-meta"><span>📅 ' + formatDate(article.date) + '</span><span>📂 ' + escapeHtml(article.category) + '</span></div>' +
             '<div class="card-tags" style="margin-top:0.75rem;">' + tagsHtml + '</div>' +
         '</div>' +
-        '<div class="modal-body">' +
-            '<p>' + escapeHtml(article.description) + '</p>' +
-            '<p>Полная статья доступна по ссылке ниже.</p>' +
-        '</div>' +
-        buildSourcesHtml(article) +
-        '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Читать на Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
-        '</div>';
-
+        '<div class="modal-body"><p>' + escapeHtml(article.description) + '</p><p>Полная статья доступна по ссылке ниже.</p></div>' +
+        buildModalActions(article);
     modal.showModal();
-}
-
-function buildSourcesHtml(article) {
-    if (!article.sources || article.sources.length === 0) return '';
-    return '<div class="modal-sources"><h3>📚 Источники</h3><ul>' +
-        article.sources.map(function(s) {
-            var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
-            if (urlMatch) {
-                var name = s.replace(/\s*\(.*\)/, '');
-                return '<li><a href="' + escapeHtml(urlMatch[1]) + '" target="_blank" rel="noopener">' + escapeHtml(name || s) + '</a></li>';
-            }
-            return '<li>' + escapeHtml(s) + '</li>';
-        }).join('') + '</ul></div>';
 }
 
 // ====== MARKDOWN В HTML ======
@@ -461,7 +330,6 @@ function markdownToHtml(md) {
     var html = '';
     var inList = false;
     var inOl = false;
-
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
         if (line.match(/^#{1,3}\s+/)) {
@@ -512,16 +380,12 @@ function telegraphNodeToHtml(node) {
         case 'h3': case 'h4': return '<h2>' + processNodeContent(node.children || node) + '</h2>';
         case 'ul':
             if (Array.isArray(node.children)) {
-                return '<ul>' + node.children.map(function(c) {
-                    return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : '';
-                }).join('') + '</ul>';
+                return '<ul>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ul>';
             }
             return '<ul>' + processNodeContent(node) + '</ul>';
         case 'ol':
             if (Array.isArray(node.children)) {
-                return '<ol>' + node.children.map(function(c) {
-                    return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : '';
-                }).join('') + '</ol>';
+                return '<ol>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ol>';
             }
             return '<ol>' + processNodeContent(node) + '</ol>';
         case 'a': return '<a href="' + escapeHtml((node.attrs && node.attrs.href) || '#') + '" target="_blank" rel="noopener">' + processNodeContent(node.children || node) + '</a>';
@@ -563,7 +427,6 @@ document.getElementById('article-modal').addEventListener('click', function(e) {
     }
 });
 
-// Переключатель темы
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
 // ====== ВСПОМОГАТЕЛЬНЫЕ ======
@@ -597,7 +460,5 @@ function registerServiceWorker() {
             .catch(function(err) { console.log('SW ошибка:', err); });
     }
 }
-
-// ====== СТАРТ ======
 
 document.addEventListener('DOMContentLoaded', init);
