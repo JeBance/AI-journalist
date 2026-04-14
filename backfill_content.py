@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Backfill content from Telegra.ph API.
-Directly updates articles.json and markdown files.
-Fuzzy title matching to handle emoji/title differences.
+Backfill article content from Telegra.ph API.
+Fixed pre/code block conversion to Markdown.
 """
 
 import re
@@ -17,6 +16,7 @@ DELAY = 1.0
 
 
 def fetch_content(telegraph_url):
+    """Fetch article content from Telegra.ph API using curl."""
     try:
         path = telegraph_url.replace("https://telegra.ph/", "")
         url = f"https://api.telegra.ph/getPage/{path}?return_content=true"
@@ -35,31 +35,55 @@ def fetch_content(telegraph_url):
 
 
 def telegraph_nodes_to_markdown(nodes):
+    """Convert Telegraph nodes array to Markdown text. Fixed pre/code handling."""
     if not isinstance(nodes, list):
         return ""
+
     md = []
     for node in nodes:
         tag = node.get("tag", "")
         children = node.get("children", [])
-        text = _nodes_to_text(children)
+
         if tag == "p":
-            md.append(text)
+            text = _nodes_to_text(children)
+            if text.strip():
+                md.append(text)
         elif tag in ("h3", "h4"):
-            md.append(f"## {text}")
+            text = _nodes_to_text(children)
+            if text.strip():
+                md.append(f"## {text}")
         elif tag == "h1":
-            md.append(f"# {text}")
+            text = _nodes_to_text(children)
+            if text.strip():
+                md.append(f"# {text}")
         elif tag == "ul":
+            items = []
             for child in children:
                 if child.get("tag") == "li":
-                    md.append(f"- {_nodes_to_text(child.get('children', []))}")
+                    text = _nodes_to_text(child.get("children", []))
+                    if text.strip():
+                        items.append(f"- {text}")
+            if items:
+                md.append("\n".join(items))
         elif tag == "ol":
+            items = []
             for i, child in enumerate(children, 1):
                 if child.get("tag") == "li":
-                    md.append(f"{i}. {_nodes_to_text(child.get('children', []))}")
-        elif tag == "blockquote":
-            md.append(f"> {text}")
+                    text = _nodes_to_text(child.get("children", []))
+                    if text.strip():
+                        items.append(f"{i}. {text}")
+            if items:
+                md.append("\n".join(items))
         elif tag == "pre":
-            md.append(f"```\n{text}\n```")
+            # Telegraph pre blocks: usually pre > code > text nodes
+            # Or pre with direct children that are text nodes
+            code_text = _extract_code_from_pre(node)
+            if code_text.strip():
+                md.append(f"```\n{code_text}\n```")
+        elif tag == "blockquote":
+            text = _nodes_to_text(children)
+            if text.strip():
+                md.append(f"> {text}")
         elif tag == "figure":
             src = node.get("attrs", {}).get("src", "")
             if src:
@@ -67,33 +91,120 @@ def telegraph_nodes_to_markdown(nodes):
                 md.append(f"![{caption}]({src})")
         elif tag == "hr":
             md.append("---")
+        elif tag == "a":
+            # Standalone link (rare)
+            href = node.get("attrs", {}).get("href", "")
+            text = _nodes_to_text(children)
+            if text and href:
+                md.append(f"[{text}]({href})")
+
     return "\n\n".join(md)
 
 
-def _nodes_to_text(children):
-    if not children:
-        return ""
-    if isinstance(children, str):
-        return children
+def _extract_code_from_pre(pre_node):
+    """Extract code text from a Telegraph <pre> node.
+    
+    Telegraph can structure pre blocks as:
+    - pre > code > [text nodes]
+    - pre > [text nodes]
+    - pre > code > [code, text, etc.]
+    """
+    children = pre_node.get("children", [])
+    
+    # Case 1: pre > code > content
+    if len(children) == 1 and children[0].get("tag") == "code":
+        return _extract_plain_text(children[0])
+    
+    # Case 2: pre > multiple children (mixed)
+    # Join all text content
     parts = []
     for child in children:
         if isinstance(child, str):
             parts.append(child)
         elif isinstance(child, dict):
-            sub = _nodes_to_text(child.get("children", []))
-            tag = child.get("tag", "")
-            if tag == "a":
-                href = child.get("attrs", {}).get("href", "")
-                parts.append(f"[{sub}]({href})" if sub else "")
-            elif tag == "strong":
-                parts.append(f"**{sub}**")
-            elif tag == "em":
-                parts.append(f"_{sub}_")
-            elif tag == "code":
-                parts.append(f"`{sub}`")
-            else:
+            text = _extract_plain_text(child)
+            if text:
+                parts.append(text)
+    
+    result = "".join(parts)
+    # Clean up: remove leading/trailing newlines but keep internal formatting
+    return result
+
+
+def _extract_plain_text(node):
+    """Extract plain text from any Telegraph node, preserving newlines."""
+    if isinstance(node, str):
+        return node
+    if isinstance(node, dict):
+        tag = node.get("tag", "")
+        children = node.get("children", [])
+        
+        if tag == "br":
+            return "\n"
+        elif tag == "code":
+            # Inside pre/code, just get raw text
+            return _extract_plain_text_from_children(children)
+        elif tag == "a":
+            href = node.get("attrs", {}).get("href", "")
+            text = _extract_plain_text_from_children(children)
+            return f"{text} ({href})" if href else text
+        elif tag == "strong" or tag == "b":
+            return _extract_plain_text_from_children(children)
+        elif tag == "em" or tag == "i":
+            return _extract_plain_text_from_children(children)
+        else:
+            return _extract_plain_text_from_children(children)
+    return ""
+
+
+def _extract_plain_text_from_children(children):
+    """Extract plain text from children array."""
+    if not children:
+        return ""
+    if isinstance(children, str):
+        return children
+    
+    parts = []
+    for child in children:
+        parts.append(_extract_plain_text(child))
+    return "".join(parts)
+
+
+def _nodes_to_text(children):
+    """Convert children array to formatted text (for non-pre contexts)."""
+    if not children:
+        return ""
+    if isinstance(children, str):
+        return children
+    
+    parts = []
+    for child in children:
+        if isinstance(child, str):
+            parts.append(child)
+        elif isinstance(child, dict):
+            sub = _inline_format(child)
+            if sub:
                 parts.append(sub)
     return "".join(parts)
+
+
+def _inline_format(child):
+    """Format inline Telegraph node to Markdown."""
+    tag = child.get("tag", "")
+    children = child.get("children", [])
+    text = _nodes_to_text(children)
+    
+    if tag == "strong" or tag == "b":
+        return f"**{text}**"
+    elif tag == "em" or tag == "i":
+        return f"_{text}_"
+    elif tag == "code":
+        return f"`{text}`"
+    elif tag == "a":
+        href = child.get("attrs", {}).get("href", "")
+        return f"[{text}]({href})" if text else ""
+    else:
+        return text
 
 
 def load_monthly_files():
@@ -109,12 +220,9 @@ def load_monthly_files():
 
 def find_article_in_content(file_content, date_str, title):
     """Find article position in file content using fuzzy matching."""
-    # Try exact date+title first
     patterns = [
         rf"### \[{re.escape(date_str)}\] {re.escape(title)}",
-        # Try without leading emoji
         rf"### \[{re.escape(date_str)}\] .{{0,5}}{re.escape(title[15:])}",
-        # Try matching just the last 40 chars of title
         rf"### \[{re.escape(date_str)}\] .*{re.escape(title[-40:])}" if len(title) > 40 else None,
     ]
     patterns = [p for p in patterns if p]
@@ -128,21 +236,24 @@ def find_article_in_content(file_content, date_str, title):
 
 def inject_content(file_content, match_pos, title, content):
     """Inject content into file content at the position after title."""
-    # Find the "---" after this article entry
     after_title = file_content[match_pos.end():]
     sep_match = re.search(r"\n---\n", after_title)
 
     if sep_match:
         insert_pos = match_pos.end() + sep_match.start()
-        # Check if content block already exists
         existing = re.search(r"<!-- CONTENT_START -->.*?<!-- CONTENT_END -->",
                            file_content[match_pos.end():insert_pos], re.DOTALL)
         if existing:
-            return file_content  # Already has content
-
-        new_content = (file_content[:insert_pos] +
-                       "\n<!-- CONTENT_START -->\n" + content + "\n<!-- CONTENT_END -->" +
-                       file_content[insert_pos:])
+            # Replace existing content
+            existing_end = match_pos.end() + existing.end()
+            new_content = (file_content[:match_pos.end() + existing.start()] +
+                          "\n<!-- CONTENT_START -->\n" + content + "\n<!-- CONTENT_END -->" +
+                          file_content[existing_end:])
+            return new_content
+        else:
+            new_content = (file_content[:insert_pos] +
+                          "\n<!-- CONTENT_START -->\n" + content + "\n<!-- CONTENT_END -->" +
+                          file_content[insert_pos:])
     else:
         new_content = file_content + "\n<!-- CONTENT_START -->\n" + content + "\n<!-- CONTENT_END -->\n\n---\n"
 
@@ -151,7 +262,7 @@ def inject_content(file_content, match_pos, title, content):
 
 def main():
     print("=" * 60)
-    print("Backfilling content from Telegra.ph (v3 - fuzzy match)")
+    print("Backfilling content from Telegra.ph (v4 - fixed pre/code)")
     print("=" * 60)
 
     with open(ARTICLES_FILE, "r", encoding="utf-8") as f:
@@ -161,7 +272,6 @@ def main():
     print(f"Articles to fetch: {len(to_fetch)}")
     print()
 
-    # Load all monthly files
     monthly_files = load_monthly_files()
     print(f"Loaded {len(monthly_files)} monthly files")
 
@@ -177,10 +287,8 @@ def main():
 
         content = fetch_content(url)
         if content and len(content) > 20:
-            # Update articles.json
             article["content"] = content
 
-            # Find and update monthly file
             month = date[:7]
             target_file = None
             for fp in monthly_files:
@@ -208,16 +316,14 @@ def main():
         if i < len(to_fetch) - 1:
             time.sleep(DELAY)
 
-        # Save progress every 10
         if (i + 1) % 10 == 0:
             with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
                 json.dump(articles, f, indent=2, ensure_ascii=False)
+            print(f"  [Saved progress: {success + failed}/{len(to_fetch)}]")
 
-    # Save articles.json
     with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
 
-    # Save updated monthly files
     for fp, content in monthly_files.items():
         with open(fp, "w", encoding="utf-8") as f:
             f.write(content)
