@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Journalist -- IT news</title>
-    <meta name="description" content="IT news from AI-journalist. Fresh publications about technology, development and AI.">
+    <title>AI Journalist — IT новости</title>
+    <meta name="description" content="IT новости от AI-journalist. Свежие публикации о технологиях, разработке и ИИ.">
     <meta name="theme-color" content="#1a1a2e">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles.css">
@@ -14,45 +14,46 @@
     <header>
         <div class="header-content">
             <h1>AI Journalist</h1>
-            <p class="subtitle">IT news and reviews</p>
+            <p class="subtitle">IT-новости и обзоры</p>
         </div>
-        <div class="header-stats">
-            <span id="article-count">0</span> articles
+        <div class="header-right">
+            <div class="header-stats">
+                <span id="article-count">0</span> статей
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">🌙</button>
         </div>
     </header>
 
     <div class="controls">
         <div class="search-box">
-            <input type="text" id="search" placeholder="Search titles and tags..." autocomplete="off">
+            <input type="text" id="search" placeholder="Поиск по заголовкам и тегам..." autocomplete="off">
         </div>
         <div class="filters" id="filters">
-            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn active" data-category="all">Все</button>
         </div>
     </div>
 
     <main id="articles-grid" class="articles-grid">
         <div class="loading">
             <div class="spinner"></div>
-            <p>Loading articles...</p>
+            <p>Загрузка статей...</p>
         </div>
     </main>
 
-    <div id="end-message" class="end-message" style="display:none;">
-        <p>All articles loaded</p>
+    <div id="end-message">
+        <p>Все статьи загружены</p>
     </div>
 
-    <!-- Article modal -->
+    <!-- Модальное окно статьи -->
     <dialog id="article-modal">
         <div class="modal-content">
-            <button id="close-modal" class="close-btn" aria-label="Close">&#x2715;</button>
-            <div id="modal-body">
-                <!-- Article content loaded dynamically -->
-            </div>
+            <button id="close-modal" class="close-btn" aria-label="Закрыть">✕</button>
+            <div id="modal-body"></div>
         </div>
     </dialog>
 
     <footer>
-        <p>AI Journalist -- <a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener">Telegram channel</a> -- Updated: <span id="last-updated">--</span></p>
+        <p>AI Journalist — <a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener">Telegram канал</a> — Обновлено: <span id="last-updated">—</span></p>
     </footer>
 
     <script src="/app.js"></script>

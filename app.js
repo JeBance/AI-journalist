@@ -1,7 +1,5 @@
 /* ============================================
-   AI Journalist -- Application Logic
-   Shows full article content from JSON
-   Fixed infinite scroll
+   AI Journalist — Логика приложения
    ============================================ */
 
 var ARTICLES_URL = '/articles.json';
@@ -14,12 +12,40 @@ var currentFilter = 'all';
 var searchQuery = '';
 var isLoading = false;
 
-// ====== INITIALIZATION ======
+// ====== ТЕМА ======
+
+function initTheme() {
+    var saved = localStorage.getItem('theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+    }
+    updateThemeIcon();
+}
+
+function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    btn.textContent = isLight ? '🌙' : '☀️';
+    btn.title = isLight ? 'Включить тёмную тему' : 'Включить светлую тему';
+}
+
+// ====== ИНИЦИАЛИЗАЦИЯ ======
 
 async function init() {
+    initTheme();
+
     try {
         var response = await fetch(ARTICLES_URL);
-        if (!response.ok) throw new Error('Failed to load articles');
+        if (!response.ok) throw new Error('Не удалось загрузить статьи');
 
         allArticles = await response.json();
         filteredArticles = allArticles.slice();
@@ -34,11 +60,11 @@ async function init() {
 
     } catch (error) {
         document.getElementById('articles-grid').innerHTML =
-            '<div class="no-results"><p>Error loading articles. Please refresh.</p></div>';
+            '<div class="no-results"><p>Ошибка загрузки. Обновите страницу.</p></div>';
     }
 }
 
-// ====== RENDERING ======
+// ====== РЕНДЕР КАРТОЧЕК ======
 
 function renderArticleCard(article) {
     var tagsHtml = article.tags.slice(0, 3).map(function(tag) {
@@ -113,7 +139,6 @@ function renderBatch() {
     displayedCount = end;
     isLoading = false;
 
-    // Update footer message
     var footer = document.getElementById('end-message');
     if (displayedCount >= filteredArticles.length) {
         footer.style.display = 'block';
@@ -122,7 +147,7 @@ function renderBatch() {
     }
 }
 
-// ====== FILTERS ======
+// ====== ФИЛЬТРЫ ======
 
 function renderFilters() {
     var categories = {};
@@ -135,7 +160,7 @@ function renderFilters() {
     var sorted = Object.entries(categories).sort(function(a, b) { return b[1] - a[1]; });
 
     var container = document.getElementById('filters');
-    container.innerHTML = '<button class="filter-btn active" data-category="all">All (' + allArticles.length + ')</button>';
+    container.innerHTML = '<button class="filter-btn active" data-category="all">Все (' + allArticles.length + ')</button>';
 
     sorted.forEach(function(entry) {
         var cat = entry[0];
@@ -181,7 +206,7 @@ function applyFilters() {
 
     if (filteredArticles.length === 0) {
         document.getElementById('articles-grid').innerHTML =
-            '<div class="no-results"><p>No results found</p><p>Try changing filters</p></div>';
+            '<div class="no-results"><p>Ничего не найдено</p><p>Попробуйте изменить фильтры или запрос</p></div>';
         document.getElementById('end-message').style.display = 'none';
     } else {
         renderBatch();
@@ -190,7 +215,7 @@ function applyFilters() {
     updateArticleCount();
 }
 
-// ====== SEARCH ======
+// ====== ПОИСК ======
 
 function setupSearch() {
     var input = document.getElementById('search');
@@ -205,10 +230,9 @@ function setupSearch() {
     });
 }
 
-// ====== INFINITE SCROLL (fixed) ======
+// ====== БЕСКОНЕЧНЫЙ СКРОЛЛ ======
 
 function setupInfiniteScroll() {
-    // Observe the grid itself -- load more when bottom enters viewport
     var sentinel = document.createElement('div');
     sentinel.id = 'scroll-sentinel';
     sentinel.style.height = '1px';
@@ -223,7 +247,7 @@ function setupInfiniteScroll() {
     observer.observe(sentinel);
 }
 
-// ====== ARTICLE MODAL ======
+// ====== МОДАЛЬНОЕ ОКНО ======
 
 function openArticle(id) {
     var article = allArticles.find(function(a) { return a.id === id; });
@@ -235,7 +259,7 @@ function openArticle(id) {
     if (article.content) {
         renderArticleFromContent(article);
     } else if (article.telegraph_url) {
-        body.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading from Telegra.ph...</p></div>';
+        body.innerHTML = '<div class="loading"><div class="spinner"></div><p>Загрузка с Telegra.ph...</p></div>';
         modal.showModal();
         loadFromTelegraph(article);
     } else {
@@ -276,15 +300,15 @@ function renderArticleFromContent(article) {
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
             '<div class="modal-meta">' +
-                '<span>' + formatDate(article.date) + '</span>' +
-                '<span>' + escapeHtml(article.category) + '</span>' +
+                '<span>📅 ' + formatDate(article.date) + '</span>' +
+                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
             '</div>' +
         '</div>' +
         '<div class="modal-body">' + html + '</div>' +
         sourcesHtml +
         '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
+            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Telegra.ph</a>' : '') +
+            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
         '</div>';
 
     modal.showModal();
@@ -304,15 +328,15 @@ function renderArticleContent(article, content) {
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
             '<div class="modal-meta">' +
-                '<span>' + formatDate(article.date) + '</span>' +
-                '<span>' + escapeHtml(article.category) + '</span>' +
+                '<span>📅 ' + formatDate(article.date) + '</span>' +
+                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
             '</div>' +
         '</div>' +
         '<div class="modal-body">' + htmlContent + '</div>' +
         buildSourcesHtml(article) +
         '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
+            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Telegra.ph</a>' : '') +
+            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
         '</div>';
 }
 
@@ -328,19 +352,19 @@ function renderArticleFallback(article) {
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
             '<div class="modal-meta">' +
-                '<span>' + formatDate(article.date) + '</span>' +
-                '<span>' + escapeHtml(article.category) + '</span>' +
+                '<span>📅 ' + formatDate(article.date) + '</span>' +
+                '<span>📂 ' + escapeHtml(article.category) + '</span>' +
             '</div>' +
             '<div class="card-tags" style="margin-top:0.75rem;">' + tagsHtml + '</div>' +
         '</div>' +
         '<div class="modal-body">' +
             '<p>' + escapeHtml(article.description) + '</p>' +
-            '<p>Full article available via link below.</p>' +
+            '<p>Полная статья доступна по ссылке ниже.</p>' +
         '</div>' +
         buildSourcesHtml(article) +
         '<div class="modal-actions">' +
-            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
-            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
+            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">📰 Читать на Telegra.ph</a>' : '') +
+            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">💬 Telegram канал</a>' +
         '</div>';
 
     modal.showModal();
@@ -348,7 +372,7 @@ function renderArticleFallback(article) {
 
 function buildSourcesHtml(article) {
     if (!article.sources || article.sources.length === 0) return '';
-    return '<div class="modal-sources"><h3>Sources</h3><ul>' +
+    return '<div class="modal-sources"><h3>📚 Источники</h3><ul>' +
         article.sources.map(function(s) {
             var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
             if (urlMatch) {
@@ -359,7 +383,7 @@ function buildSourcesHtml(article) {
         }).join('') + '</ul></div>';
 }
 
-// ====== MARKDOWN TO HTML ======
+// ====== MARKDOWN В HTML ======
 
 function markdownToHtml(md) {
     if (!md) return '';
@@ -409,7 +433,7 @@ function inlineFormat(text) {
     return text;
 }
 
-// ====== TELEGRAPH NODE TO HTML ======
+// ====== TELEGRAPH NODE В HTML ======
 
 function telegraphNodeToHtml(node) {
     if (!node || !node.tag) return '';
@@ -457,7 +481,7 @@ function processNodeContent(node) {
     return String(node || '');
 }
 
-// ====== CLOSE MODAL ======
+// ====== ЗАКРЫТЬ МОДАЛКУ ======
 
 document.getElementById('close-modal').addEventListener('click', function() {
     document.getElementById('article-modal').close();
@@ -469,7 +493,10 @@ document.getElementById('article-modal').addEventListener('click', function(e) {
     }
 });
 
-// ====== HELPERS ======
+// Переключатель темы
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+// ====== ВСПОМОГАТЕЛЬНЫЕ ======
 
 function escapeHtml(text) {
     var div = document.createElement('div');
@@ -478,7 +505,7 @@ function escapeHtml(text) {
 }
 
 function formatDate(dateStr) {
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
     var date = new Date(dateStr);
     return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }
@@ -496,9 +523,11 @@ function updateLastUpdated() {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
-            .then(function() { console.log('SW registered'); })
-            .catch(function(err) { console.log('SW registration failed:', err); });
+            .then(function() { console.log('SW зарегистрирован'); })
+            .catch(function(err) { console.log('SW ошибка:', err); });
     }
 }
+
+// ====== СТАРТ ======
 
 document.addEventListener('DOMContentLoaded', init);
