@@ -1398,3 +1398,76 @@ CEO SiFive Патрик Литтл заявил, что Series G станет **
 
 ---
 
+### [2026-04-14] Axios взломан: supply chain атака через npm доставила RAT на все платформы
+
+- **Category:** npm
+- **Template:** telegra.ph article
+- **Key topics:** npm, security, axios, javascript, supply_chain
+- **Sources:**
+  - GitHub — axios post-mortem (https://github.com/axios/axios/issues/10636)
+  - Cisco Talos Blog (https://blog.talosintelligence.com/axois-npm-supply-chain-incident/)
+  - Elastic Security Labs (https://www.elastic.co/security-labs/axios-one-rat-to-rule-them-all)
+  - Malwarebytes (https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust)
+  - The Hacker News (https://thehackernews.com/2026/03/axios-supply-chain-attack-pushes-cross.html)
+- **Telegra.ph URL:** https://telegra.ph/Axios-vzloman-supply-chain-ataka-cherez-npm-dostavila-RAT-na-vse-platformy-04-14
+- **Telegram ID:** 479
+- **Status:** published
+
+<!-- CONTENT_START -->
+Один из самых популярных HTTP-клиентов для JavaScript — **Axios** (более 60 млн еженедельных загрузок на npm) — стал жертвой серьёзной атаки на цепочку поставок. 31 марта 2026 года ведущий мейнтейнер Джейсон Сааман подтвердил компрометацию своей учётной записи и публикацию двух вредоносных версий пакета.
+
+## Что произошло
+
+Злоумышленники провели целевую атаку через социальную инженерию, установив RAT-малварь на компьютер мейнтейнера. Получив доступ к учётным данным npm-аккаунта, атакующие опубликовали версии **axios@1.14.1** и **axios@0.30.4** с внедрённой зависимостью `plain-crypto-js@4.2.1`.
+
+## Механизм атаки
+
+Вредоносная зависимость работала как загрузчик (dropper):
+
+· При установке пакета на систему загружался и исполнялся **троян удалённого доступа (RAT)**
+· Поддержка **трёх платформ**: macOS, Windows и Linux
+· Атакующие установили серверы командного управления на домене `sfrclak[.]com` и IP `142.11.206.73:8000`
+
+## Как проверить свой проект
+
+Выполните поиск в файлах блокировки зависимостей:
+
+```
+grep -E "axios@(1\.14\.1|0\.30\.4)|plain-crypto-js" package-lock.json yarn.lock
+```
+
+Если найдены совпадения — **считайте систему скомпрометированной** и выполните действия по восстановлению.
+
+## Шаги по устранению
+
+· **Откатитесь** до безопасных версий: `axios@1.14.0` или `axios@0.30.3` для ветки 0.x
+· **Удалите** `node_modules/plain-crypto-js/`
+· **Ротируйте все секреты** — API-ключи, токены, учётные данные на затронутой машине
+· **Проверьте сетевые логи** на подключения к домену `sfrclak[.]com`
+· Если атака затронула **CI-раннер** — смените все секреты, доступные в момент сборки
+
+## Рекомендации по превенции
+
+Атака на Axios — напоминание о хрупкости экосистемы npm. Ведущий мейнтейнер призвал сообщество:
+
+· Перейти на публикацию пакетов через **OIDC-поток** (OpenID Connect)
+· Настроить **immutable-релизы** — запрет на перезапись опубликованных версий
+· Обновить **GitHub Actions** в соответствии с лучшими практиками безопасности
+· Внедрить мониторинг целостности пакетов в CI/CD-пайплайны
+
+## Контекст
+
+Это не первый случай компрометации npm-пакетов в 2026 году. Ранее группировка TeamPCP атаковала Trivy, Checkmarx KICS и более 66 npm-пакетов, украв сотни гигабайт данных. Инцидент с Axios подчёркивает необходимость многоуровневой защиты open-source экосистемы.
+
+---
+
+Источники:
+· [GitHub — axios post-mortem #10636](https://github.com/axios/axios/issues/10636)
+· [Cisco Talos — Axios NPM supply chain incident](https://blog.talosintelligence.com/axois-npm-supply-chain-incident/)
+· [Elastic Security Labs — One RAT to rule them all](https://www.elastic.co/security-labs/axios-one-rat-to-rule-them-all)
+· [Malwarebytes — Axios supply chain attack](https://www.malwarebytes.com/blog/news/2026/03/axios-supply-chain-attack-chops-away-at-npm-trust)
+· [The Hacker News — Axios supply chain attack](https://thehackernews.com/2026/03/axios-supply-chain-attack-pushes-cross.html)
+<!-- CONTENT_END -->
+
+---
+
