@@ -1,5 +1,6 @@
 /* ============================================
    AI Journalist — Логика приложения
+   С IndexedDB кэшированием
    ============================================ */
 
 var ARTICLES_URL = '/articles.json';
@@ -16,9 +17,7 @@ var isLoading = false;
 
 function initTheme() {
     var saved = localStorage.getItem('theme');
-    if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-    }
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
     updateThemeIcon();
 }
 
@@ -64,22 +63,36 @@ function setupFilterDrawer() {
 async function init() {
     initTheme();
     setupFilterDrawer();
-    try {
-        var response = await fetch(ARTICLES_URL);
-        if (!response.ok) throw new Error('Не удалось загрузить статьи');
-        allArticles = await response.json();
-        filteredArticles = allArticles.slice();
-        updateArticleCount();
-        renderFilters();
-        renderBatch();
-        setupInfiniteScroll();
-        setupSearch();
-        updateLastUpdated();
-        registerServiceWorker();
-    } catch (error) {
-        document.getElementById('articles-grid').innerHTML =
-            '<div class="no-results"><p>Ошибка загрузки. Обновите страницу.</p></div>';
+
+    // Показываем статус загрузки
+    var grid = document.getElementById('articles-grid');
+    grid.innerHTML = '<div class="loading"><div class="spinner"></div><p>Загрузка статей...</p></div>';
+
+    // Загружаем статьи (IndexedDB → сеть)
+    var result = await loadArticles();
+
+    if (result.source === 'error') {
+        grid.innerHTML = '<div class="no-results"><p>Ошибка загрузки. Обновите страницу.</p></div>';
+        return;
     }
+
+    allArticles = result.articles;
+    filteredArticles = allArticles.slice();
+
+    // Показываем откуда загрузили
+    if (result.source === 'cache' && result.fresh) {
+        console.log('📦 Загружено из кэша IndexedDB (' + allArticles.length + ' статей)');
+    } else if (result.source === 'network') {
+        console.log('🌐 Загружено с сервера (' + allArticles.length + ' статей)');
+    }
+
+    updateArticleCount();
+    renderFilters();
+    renderBatch();
+    setupInfiniteScroll();
+    setupSearch();
+    updateLastUpdated();
+    registerServiceWorker();
 }
 
 // ====== РЕНДЕР КАРТОЧЕК ======
@@ -135,18 +148,13 @@ function renderBatch() {
     }
     displayedCount = end;
     isLoading = false;
-    var footer = document.getElementById('end-message');
-    footer.style.display = displayedCount >= filteredArticles.length ? 'block' : 'none';
 }
 
 // ====== ФИЛЬТРЫ ======
 
 function buildFilterButtons() {
     var categories = {};
-    allArticles.forEach(function(article) {
-        var cat = article.category;
-        categories[cat] = (categories[cat] || 0) + 1;
-    });
+    allArticles.forEach(function(article) { categories[article.category] = (categories[article.category] || 0) + 1; });
     var sorted = Object.entries(categories).sort(function(a, b) { return b[1] - a[1]; });
     var html = '<button class="filter-btn active" data-category="all"><span>Все</span><span class="count">' + allArticles.length + '</span></button>';
     sorted.forEach(function(entry) {
@@ -179,9 +187,7 @@ function renderFilters() {
 
 function applyFilters() {
     filteredArticles = allArticles.slice();
-    if (currentFilter !== 'all') {
-        filteredArticles = filteredArticles.filter(function(a) { return a.category === currentFilter; });
-    }
+    if (currentFilter !== 'all') filteredArticles = filteredArticles.filter(function(a) { return a.category === currentFilter; });
     if (searchQuery) {
         var q = searchQuery.toLowerCase();
         filteredArticles = filteredArticles.filter(function(a) {
@@ -195,9 +201,7 @@ function applyFilters() {
     displayedCount = 0;
     document.getElementById('articles-grid').innerHTML = '';
     if (filteredArticles.length === 0) {
-        document.getElementById('articles-grid').innerHTML =
-            '<div class="no-results"><p>Ничего не найдено</p><p>Попробуйте изменить фильтры или запрос</p></div>';
-        document.getElementById('end-message').style.display = 'none';
+        document.getElementById('articles-grid').innerHTML = '<div class="no-results"><p>Ничего не найдено</p><p>Попробуйте изменить фильтры или запрос</p></div>';
     } else {
         renderBatch();
     }
@@ -293,9 +297,7 @@ function renderArticleFromContent(article) {
 function renderArticleContent(article, content) {
     var body = document.getElementById('modal-body');
     var htmlContent = '';
-    if (Array.isArray(content)) {
-        content.forEach(function(node) { htmlContent += telegraphNodeToHtml(node); });
-    }
+    if (Array.isArray(content)) content.forEach(function(node) { htmlContent += telegraphNodeToHtml(node); });
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
@@ -379,14 +381,10 @@ function telegraphNodeToHtml(node) {
         case 'p': return '<p>' + processNodeContent(node.children || node) + '</p>';
         case 'h3': case 'h4': return '<h2>' + processNodeContent(node.children || node) + '</h2>';
         case 'ul':
-            if (Array.isArray(node.children)) {
-                return '<ul>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ul>';
-            }
+            if (Array.isArray(node.children)) return '<ul>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ul>';
             return '<ul>' + processNodeContent(node) + '</ul>';
         case 'ol':
-            if (Array.isArray(node.children)) {
-                return '<ol>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ol>';
-            }
+            if (Array.isArray(node.children)) return '<ol>' + node.children.map(function(c) { return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : ''; }).join('') + '</ol>';
             return '<ol>' + processNodeContent(node) + '</ol>';
         case 'a': return '<a href="' + escapeHtml((node.attrs && node.attrs.href) || '#') + '" target="_blank" rel="noopener">' + processNodeContent(node.children || node) + '</a>';
         case 'strong': case 'b': return '<strong>' + processNodeContent(node.children || node) + '</strong>';
@@ -409,33 +407,19 @@ function processNodeContent(node) {
     if (typeof node === 'string') return node;
     if (Array.isArray(node)) return node.map(processNodeContent).join('');
     if (node && node.children) return node.children.map(processNodeContent).join('');
-    if (typeof node === 'object' && node !== null) {
-        return Object.values(node).filter(function(v) { return typeof v === 'string'; }).join(' ');
-    }
+    if (typeof node === 'object' && node !== null) return Object.values(node).filter(function(v) { return typeof v === 'string'; }).join(' ');
     return String(node || '');
 }
 
 // ====== ЗАКРЫТЬ МОДАЛКУ ======
 
-document.getElementById('close-modal').addEventListener('click', function() {
-    document.getElementById('article-modal').close();
-});
-
-document.getElementById('article-modal').addEventListener('click', function(e) {
-    if (e.target === document.getElementById('article-modal')) {
-        document.getElementById('article-modal').close();
-    }
-});
-
+document.getElementById('close-modal').addEventListener('click', function() { document.getElementById('article-modal').close(); });
+document.getElementById('article-modal').addEventListener('click', function(e) { if (e.target === document.getElementById('article-modal')) document.getElementById('article-modal').close(); });
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
 // ====== ВСПОМОГАТЕЛЬНЫЕ ======
 
-function escapeHtml(text) {
-    var div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+function escapeHtml(text) { var div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
 
 function formatDate(dateStr) {
     var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
@@ -443,14 +427,10 @@ function formatDate(dateStr) {
     return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }
 
-function updateArticleCount() {
-    document.getElementById('article-count').textContent = filteredArticles.length;
-}
+function updateArticleCount() { document.getElementById('article-count').textContent = filteredArticles.length; }
 
 function updateLastUpdated() {
-    if (allArticles.length > 0) {
-        document.getElementById('last-updated').textContent = formatDate(allArticles[0].date);
-    }
+    if (allArticles.length > 0) document.getElementById('last-updated').textContent = formatDate(allArticles[0].date);
 }
 
 function registerServiceWorker() {
