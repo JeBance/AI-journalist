@@ -1471,3 +1471,59 @@ grep -E "axios@(1\.14\.1|0\.30\.4)|plain-crypto-js" package-lock.json yarn.lock
 
 ---
 
+### [2026-04-14] Аренда GPU NVIDIA Blackwell выросла на 48% на фоне острейшего дефицита за 5 лет
+
+- **Category:** nvidia
+- **Template:** telegra.ph article
+- **Key topics:** nvidia, gpu, ai_infrastructure, cloud_computing, hardware
+- **Sources:**
+  - Kucoin News (https://www.kucoin.com/news/flash/nvidia-gpu-rental-prices-surge-48-in-two-months-amid-ai-industry-s-worst-compute-shortage-in-five-years)
+  - SemiAnalysis — The Great GPU Shortage (https://www.instagram.com/p/DWndYGpkjeF/)
+  - Seeking Alpha (https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)
+  - TechStartups (https://techstartups.com/2026/04/13/top-tech-news-today-april-13-2026/)
+- **Telegra.ph URL:** https://telegra.ph/Arenda-GPU-NVIDIA-Blackwell-vyrosla-na-48-na-fone-ostrejshego-deficita-za-5-let-04-14
+- **Telegram ID:** 480
+- **Status:** published
+
+<!-- CONTENT_START -->
+Облачные провайдеры зафиксировали рекордный рост цен на аренду GPU нового поколения **NVIDIA Blackwell**. Спотовая стоимость увеличилась на **48%** — с $2,75 до **$4,08 в час** — за последние два месяца. По данным индекса Ornn's Compute Price Index (интегрирован в Bloomberg Terminal), это самый серьёзный дефицит вычислительных ресурсов в ИИ-индустрии за пять лет.
+
+## Причины кризиса
+
+CEO Vultr Дж. Дж. Кардвелл подтвердил: все доступные электрические мощности для дата-центров на 2026 год уже полностью зарезервированы. Циклы строительства новых центров обработки данных слишком длительны и не успевают за взрывным ростом спроса на обучение и инференс ИИ-моделей.
+
+Аналитики **Bank of America** прогнозируют сохранение дисбаланса спроса и предложения минимум до **2029 года**.
+
+## Кто пострадал
+
+Крупнейшие ИИ-компании уже ощутили последствия дефицита:
+
+· **Anthropic** ограничила потребление токенов в будние часы (5:00–11:00 PT). Аптайм Claude API упал до **98,95%** при отраслевом стандарте 99,99%. Клиенты уходят к конкурентам из-за частых простоев
+
+· **OpenAI** обрабатывает **15 млрд токенов в минуту** (рост с 6 млрд в октябре). Компания приостановила работу видеогенератора Sora, чтобы перераспределить чипы на программирование и корпоративные продукты. Финансовый директор Сара Фрайер подтвердила закрытие некоторых проектов из-за нехватки ресурсов
+
+· **CoreWeave** повысил цены более чем на **20%** и изменил условия контрактов для малого и среднего бизнеса — срок аренды увеличен с 1 года до **3 лет**
+
+## Экономический контекст
+
+Выручка Anthropic выросла экспоненциально: $9 млрд (конец 2025) → $14 млрд (февраль 2026) → **$30 млрд (апрель 2026)**. Однако инфраструктура не успевает за коммерческим ростом.
+
+Параллельно аренда GPU предыдущего поколения **H100** также подорожала почти на **40%** за шесть месяцев — до $2,35 в час по годовому контракту. Это указывает на системный характер проблемы: дефицит затрагивает весь спектр ускорителей.
+
+## Что значит для отрасли
+
+Рост стоимости вычислений создаёт серьёзные барьеры для стартапов и исследователей. Крупные игроки с собственными дата-центрами получают стратегическое преимущество, тогда как малые команды вынуждены оптимизировать модели или искать альтернативы.
+
+Эксперты отмечают, что кризис ускорит переход к **энергоэффективным архитектурам** ИИ и стимулирует инвестиции в инфраструктуру возобновляемой энергетики для дата-центров.
+
+---
+
+Источники:
+· [Kucoin News — NVIDIA GPU rental prices surge 48%](https://www.kucoin.com/news/flash/nvidia-gpu-rental-prices-surge-48-in-two-months-amid-ai-industry-s-worst-compute-shortage-in-five-years)
+· [SemiAnalysis — The Great GPU Shortage](https://www.instagram.com/p/DWndYGpkjeF/)
+· [Seeking Alpha — Nvidia H100 GPU rental prices surge](https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)
+· [TechStartups — AI compute rationing](https://techstartups.com/2026/04/13/top-tech-news-today-april-13-2026/)
+<!-- CONTENT_END -->
+
+---
+

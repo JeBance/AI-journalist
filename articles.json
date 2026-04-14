@@ -172,6 +172,31 @@
   },
   {
     "id": 8,
+    "date": "2026-04-14",
+    "title": "Аренда GPU NVIDIA Blackwell выросла на 48% на фоне острейшего дефицита за 5 лет",
+    "category": "nvidia",
+    "tags": [
+      "nvidia",
+      "gpu",
+      "ai_infrastructure",
+      "cloud_computing",
+      "hardware"
+    ],
+    "description": "nvidia: nvidia, gpu, ai_infrastructure, cloud_computing, hardware",
+    "content": "Облачные провайдеры зафиксировали рекордный рост цен на аренду GPU нового поколения **NVIDIA Blackwell**. Спотовая стоимость увеличилась на **48%** — с $2,75 до **$4,08 в час** — за последние два месяца. По данным индекса Ornn's Compute Price Index (интегрирован в Bloomberg Terminal), это самый серьёзный дефицит вычислительных ресурсов в ИИ-индустрии за пять лет.\n\n## Причины кризиса\n\nCEO Vultr Дж. Дж. Кардвелл подтвердил: все доступные электрические мощности для дата-центров на 2026 год уже полностью зарезервированы. Циклы строительства новых центров обработки данных слишком длительны и не успевают за взрывным ростом спроса на обучение и инференс ИИ-моделей.\n\nАналитики **Bank of America** прогнозируют сохранение дисбаланса спроса и предложения минимум до **2029 года**.\n\n## Кто пострадал\n\nКрупнейшие ИИ-компании уже ощутили последствия дефицита:\n\n· **Anthropic** ограничила потребление токенов в будние часы (5:00–11:00 PT). Аптайм Claude API упал до **98,95%** при отраслевом стандарте 99,99%. Клиенты уходят к конкурентам из-за частых простоев\n\n· **OpenAI** обрабатывает **15 млрд токенов в минуту** (рост с 6 млрд в октябре). Компания приостановила работу видеогенератора Sora, чтобы перераспределить чипы на программирование и корпоративные продукты. Финансовый директор Сара Фрайер подтвердила закрытие некоторых проектов из-за нехватки ресурсов\n\n· **CoreWeave** повысил цены более чем на **20%** и изменил условия контрактов для малого и среднего бизнеса — срок аренды увеличен с 1 года до **3 лет**\n\n## Экономический контекст\n\nВыручка Anthropic выросла экспоненциально: $9 млрд (конец 2025) → $14 млрд (февраль 2026) → **$30 млрд (апрель 2026)**. Однако инфраструктура не успевает за коммерческим ростом.\n\nПараллельно аренда GPU предыдущего поколения **H100** также подорожала почти на **40%** за шесть месяцев — до $2,35 в час по годовому контракту. Это указывает на системный характер проблемы: дефицит затрагивает весь спектр ускорителей.\n\n## Что значит для отрасли\n\nРост стоимости вычислений создаёт серьёзные барьеры для стартапов и исследователей. Крупные игроки с собственными дата-центрами получают стратегическое преимущество, тогда как малые команды вынуждены оптимизировать модели или искать альтернативы.\n\nЭксперты отмечают, что кризис ускорит переход к **энергоэффективным архитектурам** ИИ и стимулирует инвестиции в инфраструктуру возобновляемой энергетики для дата-центров.\n\n---\n\nИсточники:\n· [Kucoin News — NVIDIA GPU rental prices surge 48%](https://www.kucoin.com/news/flash/nvidia-gpu-rental-prices-surge-48-in-two-months-amid-ai-industry-s-worst-compute-shortage-in-five-years)\n· [SemiAnalysis — The Great GPU Shortage](https://www.instagram.com/p/DWndYGpkjeF/)\n· [Seeking Alpha — Nvidia H100 GPU rental prices surge](https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)\n· [TechStartups — AI compute rationing](https://techstartups.com/2026/04/13/top-tech-news-today-april-13-2026/)",
+    "telegraph_url": "https://telegra.ph/Arenda-GPU-NVIDIA-Blackwell-vyrosla-na-48-na-fone-ostrejshego-deficita-za-5-let-04-14",
+    "telegram_id": 480,
+    "status": "published",
+    "sources": [
+      "Kucoin News (https://www.kucoin.com/news/flash/nvidia-gpu-rental-prices-surge-48-in-two-months-amid-ai-industry-s-worst-compute-shortage-in-five-years)",
+      "SemiAnalysis — The Great GPU Shortage (https://www.instagram.com/p/DWndYGpkjeF/)",
+      "Seeking Alpha (https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)",
+      "TechStartups (https://techstartups.com/2026/04/13/top-tech-news-today-april-13-2026/)"
+    ],
+    "emoji": "🟩"
+  },
+  {
+    "id": 9,
     "date": "2026-04-13",
     "title": "Google выпустила Gemma 4: открытая модель уровня Gemini 3.1 Pro",
     "category": "google",
@@ -194,7 +219,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 9,
+    "id": 10,
     "date": "2026-04-13",
     "title": "Claude Code захватил 4% коммитов на GitHub и получил 6 новых функций",
     "category": "anthropic",
@@ -219,7 +244,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 10,
+    "id": 11,
     "date": "2026-04-13",
     "title": "Servo появился на crates.io: браузерный движок на Rust получил LTS-релиз",
     "category": "rust",
@@ -242,7 +267,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 11,
+    "id": 12,
     "date": "2026-04-13",
     "title": "Google выпустила LiteRT-LM: движок ИИ-инференса для мобильных устройств",
     "category": "google",
@@ -266,7 +291,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 12,
+    "id": 13,
     "date": "2026-04-13",
     "title": "ФБР извлекло удалённые сообщения Signal через уведомления iPhone",
     "category": "security",
@@ -291,7 +316,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 13,
+    "id": 14,
     "date": "2026-04-13",
     "title": "Anthropic запустила Project Glasswing: Claude Mythos для киберзащиты",
     "category": "security",
@@ -315,7 +340,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 14,
+    "id": 15,
     "date": "2026-04-13",
     "title": "Telegram выпустил апрельское обновление: ИИ-редактор текста и живые фото",
     "category": "telegram",
@@ -339,7 +364,7 @@
     "emoji": "✈️"
   },
   {
-    "id": 15,
+    "id": 16,
     "date": "2026-04-13",
     "title": "MemPalace: AI-память с архитектурой дворца памяти улучшила поиск на 34%",
     "category": "ai_tools",
@@ -362,7 +387,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 16,
+    "id": 17,
     "date": "2026-04-13",
     "title": "Adobe экстренно устранила zero-day уязвимость в Acrobat Reader",
     "category": "security",
@@ -387,7 +412,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 17,
+    "id": 18,
     "date": "2026-04-13",
     "title": "Rockstar Games подтвердила утечку данных через взлом стороннего сервиса",
     "category": "security",
@@ -411,7 +436,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 18,
+    "id": 19,
     "date": "2026-04-13",
     "title": "Kubernetes v1.36: удаление уязвимых компонентов и новая работа с GPU",
     "category": "kubernetes",
@@ -434,7 +459,7 @@
     "emoji": "⎈️"
   },
   {
-    "id": 19,
+    "id": 20,
     "date": "2026-04-13",
     "title": "OpenAI отозвала сертификаты macOS после атаки на цепочку поставок",
     "category": "security",
@@ -459,7 +484,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 20,
+    "id": 21,
     "date": "2026-04-13",
     "title": "Apple тестирует несколько дизайнов ИИ-очков для конкуренции с Meta Ray-Ban",
     "category": "apple",
@@ -482,7 +507,7 @@
     "emoji": "🍎"
   },
   {
-    "id": 21,
+    "id": 22,
     "date": "2026-04-13",
     "title": "Cursor 3: редактор кода стал консолью управления ИИ-агентами",
     "category": "developer_tools",
@@ -506,7 +531,7 @@
     "emoji": "🛠️"
   },
   {
-    "id": 22,
+    "id": 23,
     "date": "2026-03-31",
     "title": "Kubernetes v1.36: депрекация externalIPs и новые возможности",
     "category": "kubernetes",
@@ -530,7 +555,7 @@
     "emoji": "⎈️"
   },
   {
-    "id": 23,
+    "id": 24,
     "date": "2026-03-31",
     "title": "Nous Research Hermes-Agent: адаптивный ИИ-агент нового поколения",
     "category": "ai",
@@ -554,7 +579,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 24,
+    "id": 25,
     "date": "2026-03-31",
     "title": "PixVerse V6: AI-видео с нативным аудио и контролем камеры",
     "category": "ai",
@@ -577,7 +602,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 25,
+    "id": 26,
     "date": "2026-03-31",
     "title": "Rider 2026.1: AI-агенты, C# 15 и новые возможности для .NET",
     "category": "jetbrains",
@@ -599,7 +624,7 @@
     "emoji": "💡"
   },
   {
-    "id": 26,
+    "id": 27,
     "date": "2026-03-31",
     "title": "Ollama v0.19.0: MLX на Apple Silicon и новые возможности",
     "category": "ollama",
@@ -623,7 +648,7 @@
     "emoji": "🦙"
   },
   {
-    "id": 27,
+    "id": 28,
     "date": "2026-03-31",
     "title": "GitHub Copilot получил интеграцию со Slack",
     "category": "github",
@@ -645,7 +670,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 28,
+    "id": 29,
     "date": "2026-03-31",
     "title": "Hugging Face Transformers 5.4.0: Mistral 4 и новые модели",
     "category": "huggingface",
@@ -668,7 +693,7 @@
     "emoji": "🤗"
   },
   {
-    "id": 29,
+    "id": 30,
     "date": "2026-03-31",
     "title": "Godot 4.7 dev3: революция в GUI и новые возможности",
     "category": "godot",
@@ -692,7 +717,7 @@
     "emoji": "👾"
   },
   {
-    "id": 30,
+    "id": 31,
     "date": "2026-03-31",
     "title": "WebStorm 2026.1: AI-агенты, TypeScript 6 и новые возможности",
     "category": "javascript",
@@ -716,7 +741,7 @@
     "emoji": "🟨"
   },
   {
-    "id": 31,
+    "id": 32,
     "date": "2026-03-30",
     "title": "Anthropic: платные подписки Claude удвоились в 2026 году",
     "category": "anthropic",
@@ -738,7 +763,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 32,
+    "id": 33,
     "date": "2026-03-30",
     "title": "Xray-core v26.3.27: Hysteria 2 и новые методы обфускации",
     "category": "vpn_security",
@@ -761,7 +786,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 33,
+    "id": 34,
     "date": "2026-03-30",
     "title": "Anthropic подтвердила утечку модели, Meta выпустила brain AI",
     "category": "ai",
@@ -785,7 +810,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 34,
+    "id": 35,
     "date": "2026-03-30",
     "title": "VS Code 1.111: еженедельные релизы и автономный режим Autopilot",
     "category": "vscode",
@@ -809,7 +834,7 @@
     "emoji": "💻"
   },
   {
-    "id": 35,
+    "id": 36,
     "date": "2026-03-30",
     "title": "WASI 0.3: нативный async/await для WebAssembly",
     "category": "webassembly",
@@ -833,7 +858,7 @@
     "emoji": "📦"
   },
   {
-    "id": 36,
+    "id": 37,
     "date": "2026-03-30",
     "title": "Bluesky запустила Attie AI для создания персональных лент",
     "category": "bluesky",
@@ -857,7 +882,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 37,
+    "id": 38,
     "date": "2026-03-30",
     "title": "OpenAI выпустила GPT-5.3 Garlic: в 6 раз больше знаний на байт",
     "category": "openai",
@@ -881,7 +906,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 38,
+    "id": 39,
     "date": "2026-03-30",
     "title": "VS Code 1.114: TypeScript 6.0 и новые функции чата",
     "category": "vscode",
@@ -904,7 +929,7 @@
     "emoji": "💻"
   },
   {
-    "id": 39,
+    "id": 40,
     "date": "2026-03-30",
     "title": "Linux 7.0-rc5: стабильность растёт перед апрельским релизом",
     "category": "linux",
@@ -928,7 +953,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 40,
+    "id": 41,
     "date": "2026-03-30",
     "title": "Figma обновила десктопное приложение для macOS",
     "category": "figma",
@@ -951,7 +976,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 41,
+    "id": 42,
     "date": "2026-03-30",
     "title": ".NET 10 и C# 14: новые возможности для разработчиков",
     "category": "dotnet",
@@ -975,7 +1000,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 42,
+    "id": 43,
     "date": "2026-03-30",
     "title": "Rails 8: онлайн-миграции схем и ускорение сборки Docker",
     "category": "ruby",
@@ -999,7 +1024,7 @@
     "emoji": "💎"
   },
   {
-    "id": 43,
+    "id": 44,
     "date": "2026-03-30",
     "title": "Cohere выпустила открытую voice-модель для транскрипции",
     "category": "cohere",
@@ -1023,7 +1048,7 @@
     "emoji": "🎙️"
   },
   {
-    "id": 44,
+    "id": 45,
     "date": "2026-03-30",
     "title": "Cohere выпустила открытую голосовую модель Transcribe",
     "category": "ai",
@@ -1047,7 +1072,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 45,
+    "id": 46,
     "date": "2026-03-30",
     "title": "Figma запустила AI-агентов для работы с дизайн-файлами",
     "category": "figma",
@@ -1071,7 +1096,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 46,
+    "id": 47,
     "date": "2026-03-30",
     "title": "Meilisearch v1.36–v1.37: новые правила ранжирования и реплицируемый шардинг",
     "category": "meilisearch",
@@ -1095,7 +1120,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 47,
+    "id": 48,
     "date": "2026-03-30",
     "title": "Kotlin 2.3.20: упрощение Maven и новая деструктуризация",
     "category": "kotlin",
@@ -1118,7 +1143,7 @@
     "emoji": "🟠"
   },
   {
-    "id": 48,
+    "id": 49,
     "date": "2026-03-30",
     "title": "SQLite 3.53.0: самовосстанавливающиеся индексы и исправление критического бага",
     "category": "sqlite",
@@ -1142,7 +1167,7 @@
     "emoji": "📑"
   },
   {
-    "id": 49,
+    "id": 50,
     "date": "2026-03-30",
     "title": "Cloudflare открыл Client-Side Security для всех",
     "category": "cloudflare",
@@ -1166,7 +1191,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 50,
+    "id": 51,
     "date": "2026-03-30",
     "title": "FFmpeg 8.1 Hoare: D3D12 кодирование и новые кодеки",
     "category": "ffmpeg",
@@ -1190,7 +1215,7 @@
     "emoji": "🎬"
   },
   {
-    "id": 51,
+    "id": 52,
     "date": "2026-03-30",
     "title": "CADSmith: multi-agent ИИ для генерации CAD-моделей из текста",
     "category": "ai",
@@ -1214,7 +1239,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 52,
+    "id": 53,
     "date": "2026-03-30",
     "title": "Figma расширила AI-инструменты для работы с изображениями",
     "category": "figma",
@@ -1237,7 +1262,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 53,
+    "id": 54,
     "date": "2026-03-29",
     "title": "VS Code перешёл на еженедельные релизы: версия 1.111",
     "category": "vscode",
@@ -1261,7 +1286,7 @@
     "emoji": "💻"
   },
   {
-    "id": 54,
+    "id": 55,
     "date": "2026-03-29",
     "title": "Symfony 8.0.7: исправления ошибок и стабильность",
     "category": "symfony",
@@ -1284,7 +1309,7 @@
     "emoji": "🎵"
   },
   {
-    "id": 55,
+    "id": 56,
     "date": "2026-03-29",
     "title": "GitHub Copilot CLI и AI Toolkit: март 2026",
     "category": "github",
@@ -1308,7 +1333,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 56,
+    "id": 57,
     "date": "2026-03-29",
     "title": "Kubernetes 1.35 Timbernetes: революция в управлении контейнерами",
     "category": "kubernetes",
@@ -1333,7 +1358,7 @@
     "emoji": "⎈️"
   },
   {
-    "id": 57,
+    "id": 58,
     "date": "2026-03-29",
     "title": "Microsoft внедряет 100+ AI-агентов в цепочку поставок",
     "category": "microsoft",
@@ -1356,7 +1381,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 58,
+    "id": 59,
     "date": "2026-03-29",
     "title": "Next.js: критическая уязвимость HTTP Request Smuggling",
     "category": "nextjs",
@@ -1381,7 +1406,7 @@
     "emoji": "▲"
   },
   {
-    "id": 59,
+    "id": 60,
     "date": "2026-03-29",
     "title": "IntelliJ IDEA 2026.1: AI-агенты, Java 26 и Kotlin 2.3",
     "category": "intellij",
@@ -1404,7 +1429,7 @@
     "emoji": "💡"
   },
   {
-    "id": 60,
+    "id": 61,
     "date": "2026-03-29",
     "title": "Bun 1.3.11: cron-задачи OS-уровня и оптимизация размера",
     "category": "bun",
@@ -1427,7 +1452,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 61,
+    "id": 62,
     "date": "2026-03-29",
     "title": "GitHub Actions 2026: новый уровень безопасности CI/CD",
     "category": "github",
@@ -1450,7 +1475,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 62,
+    "id": 63,
     "date": "2026-03-29",
     "title": "Valkey: открытая альтернатива Redis от Linux Foundation",
     "category": "valkey",
@@ -1474,7 +1499,7 @@
     "emoji": "🔑"
   },
   {
-    "id": 63,
+    "id": 64,
     "date": "2026-03-29",
     "title": "Prisma 7.6.0: команда для Prisma Postgres и улучшения Studio",
     "category": "prisma",
@@ -1497,7 +1522,7 @@
     "emoji": "🔮"
   },
   {
-    "id": 64,
+    "id": 65,
     "date": "2026-03-29",
     "title": "Разработчик декомпилировал новое приложение Белого дома",
     "category": "security",
@@ -1520,7 +1545,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 65,
+    "id": 66,
     "date": "2026-03-29",
     "title": "pnpm 10.32: флаг --all и новая эра безопасности пакетов",
     "category": "pnpm",
@@ -1545,7 +1570,7 @@
     "emoji": "📦"
   },
   {
-    "id": 66,
+    "id": 67,
     "date": "2026-03-29",
     "title": "Google Gemini 3.1 Flash: голосовой ИИ в поиске",
     "category": "google",
@@ -1568,7 +1593,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 67,
+    "id": 68,
     "date": "2026-03-29",
     "title": "AMD представила Ryzen 9 9950X3D2 с двухсторонним 3D V-Cache",
     "category": "hardware",
@@ -1591,7 +1616,7 @@
     "emoji": "💻"
   },
   {
-    "id": 68,
+    "id": 69,
     "date": "2026-03-29",
     "title": "Deno 2.7.9: безопасность, совместимость и производительность",
     "category": "deno",
@@ -1614,7 +1639,7 @@
     "emoji": "🦕"
   },
   {
-    "id": 69,
+    "id": 70,
     "date": "2026-03-29",
     "title": "Anthropic случайно раскрыла секретную модель Claude Mythos",
     "category": "ai",
@@ -1638,7 +1663,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 70,
+    "id": 71,
     "date": "2026-03-29",
     "title": "phpMyAdmin 6.0: крупное обновление с TypeScript и новым интерфейсом",
     "category": "phpmyadmin",
@@ -1662,7 +1687,7 @@
     "emoji": "🐘"
   },
   {
-    "id": 71,
+    "id": 72,
     "date": "2026-03-29",
     "title": "Discord Developer News: новый портал, модерация и лимиты команд",
     "category": "discord",
@@ -1686,7 +1711,7 @@
     "emoji": "🎮"
   },
   {
-    "id": 72,
+    "id": 73,
     "date": "2026-03-28",
     "title": "Svelte март 2026: createContext, TrustedHTML и новые возможности",
     "category": "svelte",
@@ -1710,7 +1735,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 73,
+    "id": 74,
     "date": "2026-03-28",
     "title": "TeamPCP атаковала PyPI: малварь в WAV-файлах пакета Telnyx",
     "category": "python",
@@ -1734,7 +1759,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 74,
+    "id": 75,
     "date": "2026-03-28",
     "title": "Svelte и SvelteKit 2026 обновление: новые возможности",
     "category": "svelte",
@@ -1757,7 +1782,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 75,
+    "id": 76,
     "date": "2026-03-28",
     "title": "GitHub Actions: среда без авто-деплоя и часовые пояса",
     "category": "github",
@@ -1780,7 +1805,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 76,
+    "id": 77,
     "date": "2026-03-28",
     "title": "Nuxt 4.4: vue-router v5, типизированные лейауты и профилирование сборки",
     "category": "nuxt",
@@ -1804,7 +1829,7 @@
     "emoji": "🞩"
   },
   {
-    "id": 77,
+    "id": 78,
     "date": "2026-03-28",
     "title": "Anthropic запустила управление компьютером Mac через Claude",
     "category": "ai",
@@ -1829,7 +1854,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 78,
+    "id": 79,
     "date": "2026-03-28",
     "title": "Google предупредила о квантовой угрозе: Q-Day наступит в 2029",
     "category": "security",
@@ -1853,7 +1878,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 79,
+    "id": 80,
     "date": "2026-03-28",
     "title": "Cloudflare переписал Next.js на AI за неделю",
     "category": "cloudflare",
@@ -1877,7 +1902,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 80,
+    "id": 81,
     "date": "2026-03-28",
     "title": "OpenAI заработала $100 млн на рекламе в ChatGPT за 2 месяца",
     "category": "openai",
@@ -1900,7 +1925,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 81,
+    "id": 82,
     "date": "2026-03-28",
     "title": "Syncfusion для Visual Studio: 1600+ компонентов бесплатно для подписчиков",
     "category": "visualstudio",
@@ -1924,7 +1949,7 @@
     "emoji": "💻"
   },
   {
-    "id": 82,
+    "id": 83,
     "date": "2026-03-28",
     "title": "Shield AI привлекла $2 млрд на разработку автономного ИИ-пилота",
     "category": "ai",
@@ -1947,7 +1972,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 83,
+    "id": 84,
     "date": "2026-03-28",
     "title": "JetBrains закрывает Code With Me — конец эры совместной разработки",
     "category": "jetbrains",
@@ -1970,7 +1995,7 @@
     "emoji": "💡"
   },
   {
-    "id": 84,
+    "id": 85,
     "date": "2026-03-28",
     "title": "AMD выпустила процессор Ryzen 9 9950X3D2 с двойным 3D V-Cache",
     "category": "amd",
@@ -1994,7 +2019,7 @@
     "emoji": "🔴"
   },
   {
-    "id": 85,
+    "id": 86,
     "date": "2026-03-28",
     "title": "OpenAI Codex получил плагины и новые возможности агентов",
     "category": "openai",
@@ -2018,7 +2043,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 86,
+    "id": 87,
     "date": "2026-03-28",
     "title": "Google представила Gemini 3.1 Flash Live для голосовых диалогов",
     "category": "google",
@@ -2041,7 +2066,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 87,
+    "id": 88,
     "date": "2026-03-28",
     "title": "Lucid Software и Revenium представили AI-агенты для автоматизации workflows",
     "category": "ai_tools",
@@ -2065,7 +2090,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 88,
+    "id": 89,
     "date": "2026-03-28",
     "title": "GitHub усилил безопасность: API отзыва учётных данных для OAuth и Apps",
     "category": "github",
@@ -2089,7 +2114,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 89,
+    "id": 90,
     "date": "2026-03-28",
     "title": "GitHub тренды 27 марта: OpenClaw и новые AI-инструменты",
     "category": "github",
@@ -2112,7 +2137,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 90,
+    "id": 91,
     "date": "2026-03-28",
     "title": "Elasticsearch 9.3.2: bfloat16 векторы и GPU-ускорение",
     "category": "elasticsearch",
@@ -2137,7 +2162,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 91,
+    "id": 92,
     "date": "2026-03-28",
     "title": "JetBrains Air: новая среда для AI-агентов в разработке",
     "category": "ai",
@@ -2161,7 +2186,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 92,
+    "id": 93,
     "date": "2026-03-28",
     "title": "iOS 26.4: AI-плейлисты, 8 новых эмодзи и защита от кражи",
     "category": "apple",
@@ -2186,7 +2211,7 @@
     "emoji": "🍎"
   },
   {
-    "id": 93,
+    "id": 94,
     "date": "2026-03-28",
     "title": "SolidJS 2.0: новые возможности и SolidStart 1.3.0",
     "category": "solidjs",
@@ -2210,7 +2235,7 @@
     "emoji": "🧊"
   },
   {
-    "id": 94,
+    "id": 95,
     "date": "2026-03-28",
     "title": "AMD Ryzen 9 9950X3D2: первый процессор с 3D V-Cache на обоих чиплетах",
     "category": "hardware",
@@ -2234,7 +2259,7 @@
     "emoji": "💻"
   },
   {
-    "id": 95,
+    "id": 96,
     "date": "2026-03-28",
     "title": "35 уязвимостей в марте: AI-код стал угрозой безопасности",
     "category": "security",
@@ -2258,7 +2283,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 96,
+    "id": 97,
     "date": "2026-03-27",
     "title": "Zig 2026: революция в компиляторе перед релизом 1.0",
     "category": "zig",
@@ -2281,7 +2306,7 @@
     "emoji": "💥"
   },
   {
-    "id": 97,
+    "id": 98,
     "date": "2026-03-27",
     "title": "Android March 2026: критические патчи для 100+ уязвимостей",
     "category": "android",
@@ -2304,7 +2329,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 98,
+    "id": 99,
     "date": "2026-03-27",
     "title": "Next.js 16.2: ускорение сборки и поддержка AI-агентов",
     "category": "nextjs",
@@ -2328,7 +2353,7 @@
     "emoji": "▲"
   },
   {
-    "id": 99,
+    "id": 100,
     "date": "2026-03-27",
     "title": "Cloudflare запустила AI-шлюз для защиты корпоративных данных",
     "category": "cloudflare",
@@ -2351,7 +2376,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 100,
+    "id": 101,
     "date": "2026-03-27",
     "title": "MiniMax M2.5: открытая модель уровня Claude Opus за 1/20 цены",
     "category": "ai",
@@ -2375,7 +2400,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 101,
+    "id": 102,
     "date": "2026-03-27",
     "title": "Svelte 5.4: реактивность нового поколения и Runes API",
     "category": "svelte",
@@ -2398,7 +2423,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 102,
+    "id": 103,
     "date": "2026-03-27",
     "title": "Cloudflare Workers AI добавил поддержку Kimi K2.5 с контекстом 256k",
     "category": "cloudflare",
@@ -2422,7 +2447,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 103,
+    "id": 104,
     "date": "2026-03-27",
     "title": "VS Code 1.112: встроенная отладка браузера и новые AI-функции Copilot",
     "category": "vscode",
@@ -2446,7 +2471,7 @@
     "emoji": "💻"
   },
   {
-    "id": 104,
+    "id": 105,
     "date": "2026-03-27",
     "title": "Nginx 1.29.6: нативная поддержка sticky sessions",
     "category": "nginx",
@@ -2468,7 +2493,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 105,
+    "id": 106,
     "date": "2026-03-27",
     "title": "Intel представила процессоры Core Ultra 200S для десктопов",
     "category": "intel",
@@ -2491,7 +2516,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 106,
+    "id": 107,
     "date": "2026-03-27",
     "title": "VS Code 1.113: MCP-серверы, форки сессий и новый редактор чата",
     "category": "vscode",
@@ -2514,7 +2539,7 @@
     "emoji": "💻"
   },
   {
-    "id": 107,
+    "id": 108,
     "date": "2026-03-27",
     "title": "Grafana Labs и AWS заключили стратегическое партнёрство на 5 лет",
     "category": "grafana",
@@ -2537,7 +2562,7 @@
     "emoji": "📊"
   },
   {
-    "id": 108,
+    "id": 109,
     "date": "2026-03-27",
     "title": "Ethereum готовит Glamsterdam: крупнейшее обновление с момента The Merge",
     "category": "ethereum",
@@ -2561,7 +2586,7 @@
     "emoji": "💰"
   },
   {
-    "id": 109,
+    "id": 110,
     "date": "2026-03-27",
     "title": "NVIDIA GTC 2026: $1 трлн заказов и новая эра AI-суперкомпьютеров",
     "category": "nvidia",
@@ -2585,7 +2610,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 110,
+    "id": 111,
     "date": "2026-03-27",
     "title": "Hugging Face Diffusers 0.37.1: новое поколение генерации изображений",
     "category": "huggingface",
@@ -2609,7 +2634,7 @@
     "emoji": "🤗"
   },
   {
-    "id": 111,
+    "id": 112,
     "date": "2026-03-27",
     "title": "Canonical вошла в Rust Foundation: Ubuntu делает ставку на Rust",
     "category": "rust",
@@ -2632,7 +2657,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 112,
+    "id": 113,
     "date": "2026-03-27",
     "title": "Mistral выпустила открытый TTS-модель Voxtral для голосовых ассистентов",
     "category": "mistral",
@@ -2656,7 +2681,7 @@
     "emoji": "🌫️"
   },
   {
-    "id": 113,
+    "id": 114,
     "date": "2026-03-27",
     "title": "Nginx 1.29.7: критические security-патчи и новые возможности",
     "category": "nginx",
@@ -2680,7 +2705,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 114,
+    "id": 115,
     "date": "2026-03-27",
     "title": "Terraform 1.15.0 beta: Windows ARM64 и новые возможности",
     "category": "terraform",
@@ -2704,7 +2729,7 @@
     "emoji": "🏗️"
   },
   {
-    "id": 115,
+    "id": 116,
     "date": "2026-03-27",
     "title": "Microsoft запустила общий доступ к Copilot Vision в VS Code",
     "category": "vscode",
@@ -2728,7 +2753,7 @@
     "emoji": "💻"
   },
   {
-    "id": 116,
+    "id": 117,
     "date": "2026-03-27",
     "title": "Docker Desktop март 2026: Gordon AI, SLSA v1 и MCP Toolkit",
     "category": "docker",
@@ -2752,7 +2777,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 117,
+    "id": 118,
     "date": "2026-03-27",
     "title": "AWS и Cerebras объединились для ускорения AI-инференса",
     "category": "aws",
@@ -2775,7 +2800,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 118,
+    "id": 119,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке: 5 технологий, которые изменят индустрию в 2026 году",
     "category": "ai_generated",
@@ -2792,7 +2817,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 119,
+    "id": 120,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ перестал быть «фичей» и стал средой разработки",
     "category": "ai_generated",
@@ -2809,7 +2834,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 120,
+    "id": 121,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ стал вашим тимлидом",
     "category": "ai_generated",
@@ -2826,7 +2851,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 121,
+    "id": 122,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ начал писать код за нас",
     "category": "ai_generated",
@@ -2843,7 +2868,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 122,
+    "id": 123,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке ПО: 5 технологии, которые меняют индустрию в 2026 году",
     "category": "ai_generated",
@@ -2860,7 +2885,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 123,
+    "id": 124,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ написал половину кода в мире",
     "category": "ai_generated",
@@ -2877,7 +2902,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 124,
+    "id": 125,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке: 5 технологии, которые изменят код в 2026 году",
     "category": "ai_generated",
@@ -2894,7 +2919,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 125,
+    "id": 126,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке: 5 технологии, которые изменят код в 2026 году",
     "category": "ai_generated",
@@ -2911,7 +2936,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 126,
+    "id": 127,
     "date": "2026-03-26",
     "title": "🚀 2026: Год, когда ИИ написал код за нас",
     "category": "ai_generated",
@@ -2928,7 +2953,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 127,
+    "id": 128,
     "date": "2026-03-26",
     "title": "🔥 5 главных трендов в разработке ПО, которые изменят 2026 год",
     "category": "ai_generated",
@@ -2945,7 +2970,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 128,
+    "id": 129,
     "date": "2026-03-26",
     "title": "🔒 Node.js: критические security-релизы v20–v25",
     "category": "security",
@@ -2969,7 +2994,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 129,
+    "id": 130,
     "date": "2026-03-26",
     "title": "Node.js Emergency Security Release Fixes 9 Vulnerabilities",
     "category": "NodeJS",
@@ -2992,7 +3017,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 130,
+    "id": 131,
     "date": "2026-03-26",
     "title": "Chrome 146 выпустил критические security-патчи",
     "category": "chrome",
@@ -3014,7 +3039,7 @@
     "emoji": "🌐"
   },
   {
-    "id": 131,
+    "id": 132,
     "date": "2026-03-26",
     "title": "Тестовая статья с жирным текстом",
     "category": "тест",
@@ -3033,7 +3058,7 @@
     "emoji": "📖"
   },
   {
-    "id": 132,
+    "id": 133,
     "date": "2026-03-26",
     "title": "Тест жирного в списках",
     "category": "тест",
@@ -3052,7 +3077,7 @@
     "emoji": "📖"
   },
   {
-    "id": 133,
+    "id": 134,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: финальный релиз с новыми настройками по умолчанию",
     "category": "typescript",
@@ -3074,7 +3099,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 134,
+    "id": 135,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: финальный релиз с новыми настройками по умолчанию",
     "category": "typescript",
@@ -3097,7 +3122,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 135,
+    "id": 136,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: строгий режим по умолчанию и подготовка к 7.0 на Go",
     "category": "typescript",
@@ -3121,7 +3146,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 136,
+    "id": 137,
     "date": "2026-03-26",
     "title": "Тест жирного в списках",
     "category": "тест",
@@ -3140,7 +3165,7 @@
     "emoji": "📖"
   },
   {
-    "id": 137,
+    "id": 138,
     "date": "2026-03-26",
     "title": "OpenAI готовится к IPO и закрывает приложение Sora",
     "category": "openai",
@@ -3164,7 +3189,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 138,
+    "id": 139,
     "date": "2026-03-26",
     "title": "GitHub Copilot март 2026: агенты, CLI и метрики",
     "category": "github",
@@ -3188,7 +3213,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 139,
+    "id": 140,
     "date": "2026-03-26",
     "title": "Node.js выпустил экстренные security-патчи для всех версий",
     "category": "nodejs",
@@ -3212,7 +3237,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 140,
+    "id": 141,
     "date": "2026-03-26",
     "title": "Java 26 вышла: Project Leyden, HTTP/3 и новые возможности",
     "category": "java",
@@ -3236,7 +3261,7 @@
     "emoji": "☕"
   },
   {
-    "id": 141,
+    "id": 142,
     "date": "2026-03-26",
     "title": "Python 3.15 получит встроенный тип frozendict",
     "category": "python",
@@ -3260,7 +3285,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 142,
+    "id": 143,
     "date": "2026-03-26",
     "title": "PostgreSQL выпустил срочные обновления 18.3–14.22",
     "category": "postgresql",
@@ -3283,7 +3308,7 @@
     "emoji": "🐘"
   },
   {
-    "id": 143,
+    "id": 144,
     "date": "2026-03-26",
     "title": "GitLab 18.9: self-hosted AI модели и автоисправление уязвимостей",
     "category": "gitlab",
@@ -3307,7 +3332,7 @@
     "emoji": "🦊"
   },
   {
-    "id": 144,
+    "id": 145,
     "date": "2026-03-26",
     "title": "Apple объявила даты WWDC 2026: iOS 27, macOS 27 и новый Siri",
     "category": "apple",
@@ -3331,7 +3356,7 @@
     "emoji": "🍎"
   },
   {
-    "id": 145,
+    "id": 146,
     "date": "2026-03-26",
     "title": "Node.js выпустил экстренные security-патчи для всех версий",
     "category": "nodejs",
@@ -3355,7 +3380,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 146,
+    "id": 147,
     "date": "2026-03-26",
     "title": "Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества",
     "category": "google",
@@ -3379,7 +3404,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 147,
+    "id": 148,
     "date": "2026-03-26",
     "title": "Meta готовит Llama 4.5: новая архитектура MoE до конца 2026",
     "category": "ai",
@@ -3403,7 +3428,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 148,
+    "id": 149,
     "date": "2026-03-26",
     "title": "GitHub усилил защиту: 28 новых детекторов секретов",
     "category": "github",
@@ -3426,7 +3451,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 149,
+    "id": 150,
     "date": "2026-03-26",
     "title": "Bun 1.2.0: встроенный тестировщик и поддержка WebSocket",
     "category": "bun",
@@ -3450,7 +3475,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 150,
+    "id": 151,
     "date": "2026-03-26",
     "title": "Anthropic запустила Claude Computer Use для macOS",
     "category": "anthropic",
@@ -3474,7 +3499,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 151,
+    "id": 152,
     "date": "2026-03-26",
     "title": "Swift 6.3 вышел: новые возможности для разработчиков",
     "category": "swift",
@@ -3498,7 +3523,7 @@
     "emoji": "🕊️"
   },
   {
-    "id": 152,
+    "id": 153,
     "date": "2026-03-26",
     "title": "Rust 1.85: стабилизация async fn в трейтах",
     "category": "rust",
@@ -3521,7 +3546,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 153,
+    "id": 154,
     "date": "2026-03-26",
     "title": "GPT-5.4, Gemini 3.1 Pro, Claude 4.6: битва AI-гигантов в марте 2026",
     "category": "ai",
@@ -3544,7 +3569,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 154,
+    "id": 155,
     "date": "2026-03-26",
     "title": "Go 1.26: new(expr), зелёный GC и постквантовая криптография",
     "category": "golang",
@@ -3568,7 +3593,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 155,
+    "id": 156,
     "date": "2026-03-26",
     "title": "Docker 27.0: новый движок контейнеризации и улучшенная безопасность",
     "category": "docker",
@@ -3592,7 +3617,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 156,
+    "id": 157,
     "date": "2026-03-26",
     "title": "Redis 8.0: новый движок хранения и улучшенная кластеризация",
     "category": "redis",
@@ -3616,7 +3641,7 @@
     "emoji": "🔴"
   },
   {
-    "id": 157,
+    "id": 158,
     "date": "2026-03-26",
     "title": "Linux 6.14: новые возможности ядра для разработчиков",
     "category": "linux",
@@ -3640,7 +3665,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 158,
+    "id": 159,
     "date": "2026-03-26",
     "title": "Git 3.0 готовится к релизу: SHA-256, Rust и reftable",
     "category": "git",
@@ -3664,7 +3689,7 @@
     "emoji": "📉"
   },
   {
-    "id": 159,
+    "id": 160,
     "date": "2026-03-26",
     "title": "Samsung Browser для ПК получил AI-функции",
     "category": "samsung",
@@ -3688,7 +3713,7 @@
     "emoji": "📱"
   },
   {
-    "id": 160,
+    "id": 161,
     "date": "2026-03-26",
     "title": "Bun 1.2: встроенный тестировщик и поддержка WebSocket",
     "category": "bun",
@@ -3711,7 +3736,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 161,
+    "id": 162,
     "date": "2026-03-26",
     "title": "Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества",
     "category": "google",
@@ -3735,7 +3760,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 162,
+    "id": 163,
     "date": "2026-03-26",
     "title": "Rust 1.86: стабилизация async fn в трейтах и новые возможности",
     "category": "rust",
@@ -3758,7 +3783,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 163,
+    "id": 164,
     "date": "2026-03-26",
     "title": "Cloudflare R2 SQL получил 190+ новых функций для аналитики",
     "category": "cloudflare",
@@ -3781,7 +3806,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 164,
+    "id": 165,
     "date": "2026-03-26",
     "title": "Vite 6.2: ускоренная сборка и новые плагины",
     "category": "vite",
@@ -3805,7 +3830,7 @@
     "emoji": "⚡"
   },
   {
-    "id": 165,
+    "id": 166,
     "date": "2026-03-26",
     "title": "OpenAI закрывает Sora и отменяет сделку с Disney на $1 млрд",
     "category": "openai",
@@ -3829,7 +3854,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 166,
+    "id": 167,
     "date": "2026-03-26",
     "title": "Laravel 13 вышел: AI SDK, Passkeys и нулевые breaking changes",
     "category": "laravel",
@@ -3853,7 +3878,7 @@
     "emoji": "🔺"
   },
   {
-    "id": 167,
+    "id": 168,
     "date": "2026-03-26",
     "title": "VS Code 1.113: редактор чат-агентов и поддержка MCP",
     "category": "vscode",
@@ -3876,7 +3901,7 @@
     "emoji": "💻"
   },
   {
-    "id": 168,
+    "id": 169,
     "date": "2026-03-26",
     "title": "Linux 7.0: Линус Торвальдс анонсировал первый релиз-кандидат",
     "category": "linux",
@@ -3899,7 +3924,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 169,
+    "id": 170,
     "date": "2026-03-26",
     "title": "Laravel 13: AI SDK, Passkeys и Reverb без Redis",
     "category": "laravel",
@@ -3923,7 +3948,7 @@
     "emoji": "🔺"
   },
   {
-    "id": 170,
+    "id": 171,
     "date": "2026-03-26",
     "title": "React 19.1: автоматическое batching и новые хуки",
     "category": "react",
@@ -3945,7 +3970,7 @@
     "emoji": "⚛️"
   },
   {
-    "id": 171,
+    "id": 172,
     "date": "2026-03-26",
     "title": "IntelliJ IDEA 2026.1: полная поддержка Java 26 и новые фичи",
     "category": "intellijidea",
@@ -3968,7 +3993,7 @@
     "emoji": "💡"
   },
   {
-    "id": 172,
+    "id": 173,
     "date": "2026-03-26",
     "title": "Docker Desktop 4.66.0: ускорение сборки и новые фичи Gordon",
     "category": "docker",
@@ -3991,7 +4016,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 173,
+    "id": 174,
     "date": "2026-03-26",
     "title": "VS Code 1.112: новые возможности для разработчиков и AI-агентов",
     "category": "vscode",
@@ -4014,7 +4039,7 @@
     "emoji": "💻"
   },
   {
-    "id": 174,
+    "id": 175,
     "date": "2026-03-26",
     "title": "Ubuntu 26.04 LTS beta: Linux 6.20 и новые возможности",
     "category": "ubuntu",
@@ -4037,7 +4062,7 @@
     "emoji": "🟧"
   },
   {
-    "id": 175,
+    "id": 176,
     "date": "2026-03-26",
     "title": "AWS S3 изменил правила имён бакетов: региональные namespace",
     "category": "aws",
@@ -4060,7 +4085,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 176,
+    "id": 177,
     "date": "2026-03-26",
     "title": "Fedora 44 Beta: GNOME 50, Plasma 6.6 и новые возможности",
     "category": "fedora",
@@ -4083,7 +4108,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 177,
+    "id": 178,
     "date": "2026-03-26",
     "title": "GitHub ввёл обязательную 2FA для всех разработчиков",
     "category": "github",
@@ -4106,7 +4131,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 178,
+    "id": 179,
     "date": "2026-03-26",
     "title": "Chandra OCR 2: революция в распознавании текста с поддержкой 90+ языков",
     "category": "ocr",
@@ -4129,7 +4154,7 @@
     "emoji": "📝"
   },
   {
-    "id": 179,
+    "id": 180,
     "date": "2026-03-26",
     "title": "ARM выпустила первый собственный процессор AGI CPU для ИИ-дата-центров",
     "category": "arm",
@@ -4153,7 +4178,7 @@
     "emoji": "🔧"
   },
   {
-    "id": 180,
+    "id": 181,
     "date": "2026-03-26",
     "title": "Microsoft Patch Tuesday март 2026: 2 zero-day и 79 уязвимостей",
     "category": "microsoft",
@@ -4177,7 +4202,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 181,
+    "id": 182,
     "date": "2026-03-26",
     "title": "Европарламент ограничил Chat Control 1.0: победа приватности",
     "category": "privacy",
@@ -4200,7 +4225,7 @@
     "emoji": "🕶️"
   },
   {
-    "id": 182,
+    "id": 183,
     "date": "2026-03-26",
     "title": "Microsoft выпустила экстренные патчи для Exchange Server",
     "category": "microsoft",
@@ -4224,7 +4249,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 183,
+    "id": 184,
     "date": "2026-03-26",
     "title": "130K+ загрузок: вредоносные пакеты в npm атакуют React Native",
     "category": "npm",
@@ -4247,7 +4272,7 @@
     "emoji": "📦"
   },
   {
-    "id": 184,
+    "id": 185,
     "date": "2026-03-26",
     "title": "DeepSeek V4: триллион параметров и новые возможности",
     "category": "ai",
@@ -4271,7 +4296,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 185,
+    "id": 186,
     "date": "2026-03-26",
     "title": "GitHub Copilot научился разрешать merge-конфликты в pull request",
     "category": "github",
@@ -4294,7 +4319,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 186,
+    "id": 187,
     "date": "2026-03-26",
     "title": ".NET MAUI 10.0.51 SR5.1: уведомления-бейджи и новые фичи",
     "category": "dotnet",
@@ -4318,7 +4343,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 187,
+    "id": 188,
     "date": "2026-03-26",
     "title": "Критическая уязвимость в Nginx UI: утечка бэкапов и ключей шифрования",
     "category": "nginx",
@@ -4342,7 +4367,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 188,
+    "id": 189,
     "date": "2026-03-26",
     "title": "Vue.js 3.5: реактивность нового поколения и ускоренный рендеринг",
     "category": "vuejs",
@@ -4366,7 +4391,7 @@
     "emoji": "🞩"
   },
   {
-    "id": 189,
+    "id": 190,
     "date": "2026-03-26",
     "title": "OpenTelemetry Profiles вышел в public alpha",
     "category": "opentelemetry",
@@ -4389,7 +4414,7 @@
     "emoji": "💡"
   },
   {
-    "id": 190,
+    "id": 191,
     "date": "2026-03-26",
     "title": "Flutter 3.29: новая система рендеринга и улучшения производительности",
     "category": "flutter",
@@ -4413,7 +4438,7 @@
     "emoji": "🦋"
   },
   {
-    "id": 191,
+    "id": 192,
     "date": "2026-03-26",
     "title": "AI-стартапы собрали $220 млрд за два месяца 2026 года",
     "category": "ai",
@@ -4437,7 +4462,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 192,
+    "id": 193,
     "date": "2026-03-26",
     "title": "Go 1.26: новый GC, post-quantum криптография и упрощение кода",
     "category": "golang",
@@ -4461,7 +4486,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 193,
+    "id": 194,
     "date": "2026-03-26",
     "title": "Firefox 149: встроенный VPN, Split View и новые возможности",
     "category": "firefox",
@@ -4485,7 +4510,7 @@
     "emoji": "🦊"
   },
   {
-    "id": 194,
+    "id": 195,
     "date": "2026-03-26",
     "title": "Cloudflare запустила Dynamic Workers в open beta для AI-агентов",
     "category": "cloudflare",
@@ -4508,7 +4533,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 195,
+    "id": 196,
     "date": "2026-03-26",
     "title": "VS Code 1.112: агент Copilot, отладка в браузере и песочница MCP",
     "category": "vscode",
@@ -4531,7 +4556,7 @@
     "emoji": "💻"
   },
   {
-    "id": 196,
+    "id": 197,
     "date": "2026-03-26",
     "title": "Vite 8.0: революция в сборке с Rolldown",
     "category": "vite",
@@ -4554,7 +4579,7 @@
     "emoji": "⚡"
   },
   {
-    "id": 197,
+    "id": 198,
     "date": "2026-03-26",
     "title": "Cloudflare Markdown for Agents: сокращение токенов на 80%",
     "category": "cloudflare",
@@ -4577,7 +4602,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 198,
+    "id": 199,
     "date": "2026-03-26",
     "title": "LiteLLM взломан: бэкдор в PyPI пакете украл ключи разработчиков",
     "category": "python",
@@ -4601,7 +4626,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 199,
+    "id": 200,
     "date": "2026-03-26",
     "title": "WebAssembly 2.0: революция в производительности веб-приложений",
     "category": "webassembly",
@@ -4625,7 +4650,7 @@
     "emoji": "📦"
   },
   {
-    "id": 200,
+    "id": 201,
     "date": "2026-03-26",
     "title": "Flutter 4.0: революция в кроссплатформенной разработке",
     "category": "flutter",
@@ -4649,7 +4674,7 @@
     "emoji": "🦋"
   },
   {
-    "id": 201,
+    "id": 202,
     "date": "2026-03-26",
     "title": "Svelte март 2026: createContext, TrustedHTML и Vite 8",
     "category": "svelte",
@@ -4673,7 +4698,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 202,
+    "id": 203,
     "date": "2026-03-26",
     "title": "Microsoft запустила Copilot Vision: ИИ теперь видит ваш экран",
     "category": "microsoft",
@@ -4697,7 +4722,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 203,
+    "id": 204,
     "date": "2026-03-26",
     "title": "Astro 6.0: экспериментальный Rust-компилятор и новый dev-сервер",
     "category": "astro",
@@ -4720,7 +4745,7 @@
     "emoji": "✨"
   },
   {
-    "id": 204,
+    "id": 205,
     "date": "2026-03-26",
     "title": "Критическая уязвимость Nginx UI: хакеры крадут бэкапы и ключи шифрования",
     "category": "nginx",
@@ -4743,7 +4768,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 205,
+    "id": 206,
     "date": "2026-03-26",
     "title": "Deno 2.7.6: поддержка Windows ARM, Temporal API и npm overrides",
     "category": "deno",
@@ -4766,7 +4791,7 @@
     "emoji": "🦕"
   },
   {
-    "id": 206,
+    "id": 207,
     "date": "2026-03-26",
     "title": "Supabase март 2026: ускорение Storage в 14.8 раз и Log Drains для Pro",
     "category": "supabase",
@@ -4789,7 +4814,7 @@
     "emoji": "🟢"
   },
   {
-    "id": 207,
+    "id": 208,
     "date": "2026-03-26",
     "title": "PyPI атака: вредоносные пакеты-шпионы украли данные разработчиков",
     "category": "python",
@@ -4812,7 +4837,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 208,
+    "id": 209,
     "date": "2026-03-26",
     "title": "IntelliJ IDEA 2026.1: веб-разработка стала бесплатной",
     "category": "jetbrains",
@@ -4835,7 +4860,7 @@
     "emoji": "💡"
   },
   {
-    "id": 209,
+    "id": 210,
     "date": "2026-03-26",
     "title": "GitHub Copilot научился показывать статус агентов в Issues и Projects",
     "category": "github",
@@ -4856,7 +4881,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 210,
+    "id": 211,
     "date": "2026-03-26",
     "title": "Rust 1.94.1: экстренный security-релиз с исправлением CVE-2026-33056",
     "category": "rust",
@@ -4879,7 +4904,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 211,
+    "id": 212,
     "date": "2026-03-26",
     "title": "GlassWorm: новая атака на Python-репозитории через украденные GitHub-токены",
     "category": "security",
@@ -4903,7 +4928,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 212,
+    "id": 213,
     "date": "2026-03-25",
     "title": "Революция ИИ в журналистике",
     "category": "ai_tools",
@@ -4926,7 +4951,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 213,
+    "id": 214,
     "date": "2026-03-25",
     "title": "Первая статья канала (тестовая, заменена)",
     "category": "ai_tools",
@@ -4943,7 +4968,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 214,
+    "id": 215,
     "date": "2026-03-25",
     "title": "PHP 8.4.0 released: property hooks и без скобок для new",
     "category": "php",
@@ -4965,7 +4990,7 @@
     "emoji": "🐘"
   },
   {
-    "id": 215,
+    "id": 216,
     "date": "2026-03-25",
     "title": "10 ситуаций, где ИИ уже работает: практическое руководство",
     "category": "ai_tools",
@@ -4988,7 +5013,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 216,
+    "id": 217,
     "date": "2026-03-25",
     "title": "10 ситуаций, где ИИ уже работает: практическое руководство",
     "category": "ai_tools",
@@ -5011,7 +5036,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 217,
+    "id": 218,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 1)",
     "category": "ai_tools",
@@ -5031,7 +5056,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 218,
+    "id": 219,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 2)",
     "category": "ai_tools",
@@ -5052,7 +5077,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 219,
+    "id": 220,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 3)",
     "category": "ai_tools",
@@ -5073,7 +5098,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 220,
+    "id": 221,
     "date": "2026-03-24",
     "title": "10 ситуаций, где ИИ уже работает",
     "category": "ai_tools",
@@ -5096,7 +5121,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 221,
+    "id": 222,
     "date": "2026-03-24",
     "title": "Xray-core 1.8.24: улучшенная обфускация VLESS",
     "category": "vpn_security",
@@ -5117,7 +5142,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 222,
+    "id": 223,
     "date": "2026-03-23",
     "title": "Tailwind CSS v4.0: новинки и миграция с v3",
     "category": "css",
@@ -5139,7 +5164,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 223,
+    "id": 224,
     "date": "2026-03-22",
     "title": "Дайджест за 22 марта 2026",
     "category": "javascript",
@@ -5162,7 +5187,7 @@
     "emoji": "🟨"
   },
   {
-    "id": 224,
+    "id": 225,
     "date": "2026-03-21",
     "title": "PostgreSQL 17: новые возможности",
     "category": "databases",
@@ -5183,7 +5208,7 @@
     "emoji": "🗄️"
   },
   {
-    "id": 225,
+    "id": 226,
     "date": "2026-03-20",
     "title": "Kubernetes 1.30: что нового",
     "category": "devops",
@@ -5204,7 +5229,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 226,
+    "id": 227,
     "date": "2026-03-19",
     "title": "SOLID принципы на примерах PHP",
     "category": "patterns",
@@ -5226,7 +5251,7 @@
     "emoji": "📐"
   },
   {
-    "id": 227,
+    "id": 228,
     "date": "2026-03-18",
     "title": "MacBook Pro M4: обзор для разработчика",
     "category": "hardware",
@@ -5248,7 +5273,7 @@
     "emoji": "💻"
   },
   {
-    "id": 228,
+    "id": 229,
     "date": "2026-03-17",
     "title": "Cursor 2.0: AI-first IDE",
     "category": "ai_tools",
@@ -5269,7 +5294,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 229,
+    "id": 230,
     "date": "2026-03-15",
     "title": "TypeScript 5.8: новые фичи",
     "category": "javascript",
