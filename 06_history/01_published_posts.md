@@ -1,34 +1,34 @@
-# Архив опубликованных постов
+# Published Posts Archive
 
-## 📋 О структуре
+## Structure
 
-Архив разбит на месячные файлы для удобства работы:
-- `published_posts_YYYY-MM.md` — публикации за конкретный месяц
-- Этот файл (01_published_posts.md) — индекс с ссылками на архивы
+Archive split into monthly files:
+- `published_posts_YYYY-MM.md` -- publications for a specific month
+- This file (01_published_posts.md) -- index with links to archives
 
-## 📁 Месячные архивы
+## Monthly Archives
 
-### Апрель 2026
+### April 2026
 
-- **Файл:** `published_posts_2026-04.md`
-- **Постов:** 17
+- **File:** `published_posts_2026-04.md`
+- **Posts:** 18
 
-### Март 2026
+### March 2026
 
-- **Файл:** `published_posts_2026-03.md`
-- **Постов:** 210
+- **File:** `published_posts_2026-03.md`
+- **Posts:** 210
 
-## 📊 Общая статистика
+## Statistics
 
-| Месяц | Файл | Постов |
-|-------|------|--------|
-| Апрель 2026 | `published_posts_2026-04.md` | 17 |
-| Март 2026 | `published_posts_2026-03.md` | 210 |
+| Month | File | Posts |
+|-------|------|-------|
+| April 2026 | `published_posts_2026-04.md` | 18 |
+| March 2026 | `published_posts_2026-03.md` | 210 |
 
 ---
 
-## 📝 Правила добавления
+## Rules
 
-1. **Посты добавляются автоматически** через `publisher_final.py`
-2. **Не редактируй месячные файлы вручную** — используйте HistoryManager
-3. **Проверяй дубликаты** через `check_duplicates.py` перед публикацией
+1. **Posts added automatically** via `publisher_final.py`
+2. **Do not edit monthly files manually** -- use HistoryManager
+3. **Check duplicates** via `check_duplicates.py` before publishing

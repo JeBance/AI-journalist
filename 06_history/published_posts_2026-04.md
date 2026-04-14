@@ -259,3 +259,57 @@
 
 ---
 
+### [2026-04-14] Vercel готовится к IPO: ИИ-агенты обеспечили рост выручки в 3 раза
+
+- **Category:** vercel
+- **Template:** telegra.ph article
+- **Key topics:** vercel, ipo, ai_agents, разработка, облачные_технологии
+- **Sources:**
+  - TechCrunch (https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/)
+  - CryptoRank (https://cryptorank.io/news/feed/655db-vercel-ipo-ai-agents-revenue)
+  - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/vercel-ceo-guillermo-rauch-signals-152229505.html)
+- **Telegra.ph URL:** https://telegra.ph/Vercel-gotovitsya-k-IPO-II-agenty-obespechili-rost-vyruchki-v-3-raza-04-14
+- **Telegram ID:** 476
+- **Status:** published
+
+<!-- CONTENT_START -->
+Платформа Vercel, созданная для развёртывания веб-приложений, приблизилась к выходу на фондовый рынок. Генеральный директор **Гильермо Раух** в интервью TechCrunch заявил, что компания «полностью готова» к IPO, хотя конкретных сроков не назвал.
+
+## Финансовые показатели
+
+Выручка Vercel по модели **ARR** (годовой регулярный доход) выросла более чем в **3 раза** за последние два года:
+
+· Начало 2024 — $100 млн ARR
+· Февраль 2026 — $340 млн ARR
+· Сентябрь 2025 — оценка $9,3 млрд после раунда Series F ($300 млн от Accel)
+
+## Влияние ИИ-агентов
+
+Ключевой драйвер роста — распространение **ИИ-агентов** для генерации кода. По данным компании:
+
+· **30%** приложений на Vercel уже развёрнуты ИИ-агентами
+· Агенты ускоряют создание кастомных приложений, делая разработку проще, чем покупку готового ПО
+· Раух: «Агенты чрезвычайно продуктивны в развёртывании. Всё это ПО должно где-то работать — мы считаем, что это будет Vercel»
+
+## Рынок без потолка
+
+Раух подчеркнул, что **адресуемый рынок инфраструктуры** больше не имеет ограничений:
+
+> «Когда я начинал эту компанию, развёртывание было доступно лишь десяткам миллионов людей. Теперь каждый в мире может создать приложение»
+
+Несмотря на текущее охлаждение рынка IPO в секторе ПО, вызванное опасениями по поводу ИИ-дисрапции, Vercel чувствует себя уверенно. Компания позиционирует себя как основную платформу хостинга для приложений, генерируемых ИИ-агентами.
+
+## Что дальше
+
+Точная дата IPO не раскрыта. Раух отметил: «Нет идеального таймлайна или квартала. Компания готова и становится ещё готовее с каждым днём». Выход на биржу ожидается в ближайшем будущем.
+
+---
+
+Источники:
+· [TechCrunch — Vercel CEO Signals IPO Readiness](https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/)
+· [CryptoRank — Vercel IPO: 240% Revenue Growth](https://cryptorank.io/news/feed/655db-vercel-ipo-ai-agents-revenue)
+· [Yahoo Finance — Vercel CEO Guillermo Rauch](https://finance.yahoo.com/markets/stocks/articles/vercel-ceo-guillermo-rauch-signals-152229505.html)
+<!-- CONTENT_END -->
+
+---
+
