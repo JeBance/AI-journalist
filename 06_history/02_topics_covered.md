@@ -821,3 +821,7 @@ _tools
 ## vercel
 - **Topic:** Vercel готовится к IPO: ИИ-агенты обеспечили рост выручки в 3 раза | **Published:** 2026-04-14 | **Repeat after:** 2026-04-14
 
+
+## windows
+- **Topic:** Windows 11 April 2026: умный контроль приложений и облачный AI для диктора | **Published:** 2026-04-14 | **Repeat after:** 2026-04-14
+
