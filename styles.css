@@ -537,3 +537,7 @@ footer a:hover {
     font-size: 0.875rem;
     margin-top: 0.5rem;
 }
+
+#end-message { display: none; text-align: center; padding: 2rem 1rem; color: var(--text-muted); }
+#scroll-sentinel { height: 1px; }
+

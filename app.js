@@ -1,16 +1,18 @@
 /* ============================================
    AI Journalist -- Application Logic
    Shows full article content from JSON
+   Fixed infinite scroll
    ============================================ */
 
 var ARTICLES_URL = '/articles.json';
-var BATCH_SIZE = 20;
+var BATCH_SIZE = 30;
 
 var allArticles = [];
 var filteredArticles = [];
 var displayedCount = 0;
 var currentFilter = 'all';
 var searchQuery = '';
+var isLoading = false;
 
 // ====== INITIALIZATION ======
 
@@ -93,6 +95,9 @@ function renderArticleCard(article) {
 }
 
 function renderBatch() {
+    if (isLoading) return;
+    isLoading = true;
+
     var grid = document.getElementById('articles-grid');
 
     if (displayedCount === 0) {
@@ -106,12 +111,14 @@ function renderBatch() {
     }
 
     displayedCount = end;
+    isLoading = false;
 
-    var endMessage = document.getElementById('end-message');
+    // Update footer message
+    var footer = document.getElementById('end-message');
     if (displayedCount >= filteredArticles.length) {
-        endMessage.style.display = 'block';
+        footer.style.display = 'block';
     } else {
-        endMessage.style.display = 'none';
+        footer.style.display = 'none';
     }
 }
 
@@ -198,18 +205,22 @@ function setupSearch() {
     });
 }
 
-// ====== INFINITE SCROLL ======
+// ====== INFINITE SCROLL (fixed) ======
 
 function setupInfiniteScroll() {
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting && displayedCount < filteredArticles.length) {
-                renderBatch();
-            }
-        });
-    }, { rootMargin: '200px' });
+    // Observe the grid itself -- load more when bottom enters viewport
+    var sentinel = document.createElement('div');
+    sentinel.id = 'scroll-sentinel';
+    sentinel.style.height = '1px';
+    document.getElementById('articles-grid').after(sentinel);
 
-    observer.observe(document.getElementById('end-message'));
+    var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && displayedCount < filteredArticles.length) {
+            renderBatch();
+        }
+    }, { rootMargin: '400px' });
+
+    observer.observe(sentinel);
 }
 
 // ====== ARTICLE MODAL ======
@@ -221,11 +232,9 @@ function openArticle(id) {
     var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
 
-    // Show content from JSON if available
     if (article.content) {
         renderArticleFromContent(article);
     } else if (article.telegraph_url) {
-        // Fallback: try Telegra.ph API
         body.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading from Telegra.ph...</p></div>';
         modal.showModal();
         loadFromTelegraph(article);
@@ -242,7 +251,7 @@ async function loadFromTelegraph(article) {
     var body = document.getElementById('modal-body');
     try {
         var path = article.telegraph_url.replace('https://telegra.ph/', '');
-        var apiUrl = 'https://telegra.ph/api/getPage/' + path + '?return_content=true';
+        var apiUrl = 'https://api.telegra.ph/getPage/' + path + '?return_content=true';
         var response = await fetch(apiUrl);
         var data = await response.json();
 
@@ -261,19 +270,7 @@ function renderArticleFromContent(article) {
     var body = document.getElementById('modal-body');
 
     var html = markdownToHtml(article.content);
-
-    var sourcesHtml = '';
-    if (article.sources && article.sources.length > 0) {
-        sourcesHtml = '<div class="modal-sources"><h3>Sources</h3><ul>' +
-            article.sources.map(function(s) {
-                var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
-                if (urlMatch) {
-                    var name = s.replace(/\s*\(.*\)/, '');
-                    return '<li><a href="' + escapeHtml(urlMatch[1]) + '" target="_blank" rel="noopener">' + escapeHtml(name || s) + '</a></li>';
-                }
-                return '<li>' + escapeHtml(s) + '</li>';
-            }).join('') + '</ul></div>';
-    }
+    var sourcesHtml = buildSourcesHtml(article);
 
     body.innerHTML =
         '<div class="modal-header">' +
@@ -303,8 +300,6 @@ function renderArticleContent(article, content) {
         });
     }
 
-    var sourcesHtml = buildSourcesHtml(article);
-
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
@@ -314,7 +309,7 @@ function renderArticleContent(article, content) {
             '</div>' +
         '</div>' +
         '<div class="modal-body">' + htmlContent + '</div>' +
-        sourcesHtml +
+        buildSourcesHtml(article) +
         '<div class="modal-actions">' +
             (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
             '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
@@ -329,8 +324,6 @@ function renderArticleFallback(article) {
         return '<span class="card-tag" style="display:inline-block;margin:0.25rem;">' + escapeHtml(tag) + '</span>';
     }).join('');
 
-    var sourcesHtml = buildSourcesHtml(article);
-
     body.innerHTML =
         '<div class="modal-header">' +
             '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
@@ -344,7 +337,7 @@ function renderArticleFallback(article) {
             '<p>' + escapeHtml(article.description) + '</p>' +
             '<p>Full article available via link below.</p>' +
         '</div>' +
-        sourcesHtml +
+        buildSourcesHtml(article) +
         '<div class="modal-actions">' +
             (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
             '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
@@ -366,11 +359,10 @@ function buildSourcesHtml(article) {
         }).join('') + '</ul></div>';
 }
 
-// ====== MARKDOWN TO HTML (simple) ======
+// ====== MARKDOWN TO HTML ======
 
 function markdownToHtml(md) {
     if (!md) return '';
-
     var lines = md.split('\n');
     var html = '';
     var inList = false;
@@ -378,59 +370,41 @@ function markdownToHtml(md) {
 
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
-
-        // Headings
         if (line.match(/^#{1,3}\s+/)) {
-            if (inList) { html += inOl ? '</ol>' : '</ul>'; inList = false; inOl = false; }
+            if (inList) { html += '</ul>'; inList = false; }
+            if (inOl) { html += '</ol>'; inOl = false; }
             var level = line.match(/^(#{1,3})/)[1].length;
-            var tag = 'h' + (level + 1);
-            html += '<' + tag + '>' + inlineFormat(line.replace(/^#{1,3}\s+/, '')) + '</' + tag + '>';
-        }
-        // Unordered list
-        else if (line.match(/^[-*]\s+/)) {
+            html += '<h' + (level + 1) + '>' + inlineFormat(line.replace(/^#{1,3}\s+/, '')) + '</h' + (level + 1) + '>';
+        } else if (line.match(/^[-*]\s+/)) {
             if (inOl) { html += '</ol>'; inOl = false; }
             if (!inList) { html += '<ul>'; inList = true; }
             html += '<li>' + inlineFormat(line.replace(/^[-*]\s+/, '')) + '</li>';
-        }
-        // Ordered list
-        else if (line.match(/^\d+\.\s+/)) {
+        } else if (line.match(/^\d+\.\s+/)) {
             if (inList) { html += '</ul>'; inList = false; }
             if (!inOl) { html += '<ol>'; inOl = true; }
             html += '<li>' + inlineFormat(line.replace(/^\d+\.\s+/, '')) + '</li>';
-        }
-        // Horizontal rule
-        else if (line.match(/^---+$/)) {
+        } else if (line.match(/^---+$/)) {
             if (inList) { html += '</ul>'; inList = false; }
             if (inOl) { html += '</ol>'; inOl = false; }
             html += '<hr>';
-        }
-        // Empty line
-        else if (line.trim() === '') {
+        } else if (line.trim() === '') {
             if (inList) { html += '</ul>'; inList = false; }
             if (inOl) { html += '</ol>'; inOl = false; }
-        }
-        // Paragraph
-        else {
+        } else {
             if (inList) { html += '</ul>'; inList = false; }
             if (inOl) { html += '</ol>'; inOl = false; }
             html += '<p>' + inlineFormat(line) + '</p>';
         }
     }
-
     if (inList) html += '</ul>';
     if (inOl) html += '</ol>';
-
     return html;
 }
 
 function inlineFormat(text) {
-    // Bold
     text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    // Italic
     text = text.replace(/_(.+?)_/g, '<em>$1</em>');
-    // Inline code
     text = text.replace(/`(.+?)`/g, '<code>$1</code>');
-    // Links
     text = text.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
     return text;
 }
@@ -439,13 +413,9 @@ function inlineFormat(text) {
 
 function telegraphNodeToHtml(node) {
     if (!node || !node.tag) return '';
-
     switch (node.tag) {
-        case 'p':
-            return '<p>' + processNodeContent(node.children || node) + '</p>';
-        case 'h3':
-        case 'h4':
-            return '<h2>' + processNodeContent(node.children || node) + '</h2>';
+        case 'p': return '<p>' + processNodeContent(node.children || node) + '</p>';
+        case 'h3': case 'h4': return '<h2>' + processNodeContent(node.children || node) + '</h2>';
         case 'ul':
             if (Array.isArray(node.children)) {
                 return '<ul>' + node.children.map(function(c) {
@@ -460,30 +430,20 @@ function telegraphNodeToHtml(node) {
                 }).join('') + '</ol>';
             }
             return '<ol>' + processNodeContent(node) + '</ol>';
-        case 'a':
-            return '<a href="' + escapeHtml((node.attrs && node.attrs.href) || '#') + '" target="_blank" rel="noopener">' + processNodeContent(node.children || node) + '</a>';
-        case 'strong':
-        case 'b':
-            return '<strong>' + processNodeContent(node.children || node) + '</strong>';
-        case 'em':
-        case 'i':
-            return '<em>' + processNodeContent(node.children || node) + '</em>';
-        case 'code':
-            return '<code>' + escapeHtml(processNodeContent(node.children || node)) + '</code>';
-        case 'pre':
-            return '<pre><code>' + escapeHtml(processNodeContent(node.children || node)) + '</code></pre>';
-        case 'br':
-            return '<br>';
-        case 'blockquote':
-            return '<blockquote>' + processNodeContent(node.children || node) + '</blockquote>';
+        case 'a': return '<a href="' + escapeHtml((node.attrs && node.attrs.href) || '#') + '" target="_blank" rel="noopener">' + processNodeContent(node.children || node) + '</a>';
+        case 'strong': case 'b': return '<strong>' + processNodeContent(node.children || node) + '</strong>';
+        case 'em': case 'i': return '<em>' + processNodeContent(node.children || node) + '</em>';
+        case 'code': return '<code>' + escapeHtml(processNodeContent(node.children || node)) + '</code>';
+        case 'pre': return '<pre><code>' + escapeHtml(processNodeContent(node.children || node)) + '</code></pre>';
+        case 'br': return '<br>';
+        case 'blockquote': return '<blockquote>' + processNodeContent(node.children || node) + '</blockquote>';
         case 'figure':
             if (node.attrs && node.attrs.src) {
                 var caption = node.children ? processNodeContent(node.children) : '';
                 return '<figure><img src="' + escapeHtml(node.attrs.src) + '" alt="' + escapeHtml(caption) + '" loading="lazy">' + (caption ? '<figcaption>' + caption + '</figcaption>' : '') + '</figure>';
             }
             return processNodeContent(node.children || node);
-        default:
-            return processNodeContent(node.children || node);
+        default: return processNodeContent(node.children || node);
     }
 }
 
@@ -533,8 +493,6 @@ function updateLastUpdated() {
     }
 }
 
-// ====== SERVICE WORKER ======
-
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
@@ -542,7 +500,5 @@ function registerServiceWorker() {
             .catch(function(err) { console.log('SW registration failed:', err); });
     }
 }
-
-// ====== START ======
 
 document.addEventListener('DOMContentLoaded', init);
