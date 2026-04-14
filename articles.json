@@ -12,6 +12,7 @@
       "cve"
     ],
     "description": "python: python, security, release, opensource, cve",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Python-3144-i-31313-kriticheskie-security-patchi-i-ispravleniya-04-14",
     "telegram_id": 473,
     "status": "опубликован",
@@ -35,6 +36,7 @@
       "nvidia"
     ],
     "description": "hardware: hardware, riscv, ai_chips, datacenter, nvidia",
+    "content": "",
     "telegraph_url": "https://telegra.ph/SiFive-privlekla-400-mln-na-razvitie-RISC-V-processorov-dlya-II-data-centrov-04-14",
     "telegram_id": 474,
     "status": "опубликован",
@@ -58,6 +60,7 @@
       "opensource"
     ],
     "description": "linux: linux, kernel, quantum_security, xfs, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Linux-70-kvantovaya-zashchita-samovosstanovlenie-XFS-i-PCIe-60-04-14",
     "telegram_id": 475,
     "status": "опубликован",
@@ -82,6 +85,7 @@
       "облачные_технологии"
     ],
     "description": "vercel: vercel, ipo, ai_agents, разработка, облачные_технологии",
+    "content": "Платформа Vercel, созданная для развёртывания веб-приложений, приблизилась к выходу на фондовый рынок. Генеральный директор **Гильермо Раух** в интервью TechCrunch заявил, что компания «полностью готова» к IPO, хотя конкретных сроков не назвал.\n\n## Финансовые показатели\n\nВыручка Vercel по модели **ARR** (годовой регулярный доход) выросла более чем в **3 раза** за последние два года:\n\n· Начало 2024 — $100 млн ARR\n· Февраль 2026 — $340 млн ARR\n· Сентябрь 2025 — оценка $9,3 млрд после раунда Series F ($300 млн от Accel)\n\n## Влияние ИИ-агентов\n\nКлючевой драйвер роста — распространение **ИИ-агентов** для генерации кода. По данным компании:\n\n· **30%** приложений на Vercel уже развёрнуты ИИ-агентами\n· Агенты ускоряют создание кастомных приложений, делая разработку проще, чем покупку готового ПО\n· Раух: «Агенты чрезвычайно продуктивны в развёртывании. Всё это ПО должно где-то работать — мы считаем, что это будет Vercel»\n\n## Рынок без потолка\n\nРаух подчеркнул, что **адресуемый рынок инфраструктуры** больше не имеет ограничений:\n\n> «Когда я начинал эту компанию, развёртывание было доступно лишь десяткам миллионов людей. Теперь каждый в мире может создать приложение»\n\nНесмотря на текущее охлаждение рынка IPO в секторе ПО, вызванное опасениями по поводу ИИ-дисрапции, Vercel чувствует себя уверенно. Компания позиционирует себя как основную платформу хостинга для приложений, генерируемых ИИ-агентами.\n\n## Что дальше\n\nТочная дата IPO не раскрыта. Раух отметил: «Нет идеального таймлайна или квартала. Компания готова и становится ещё готовее с каждым днём». Выход на биржу ожидается в ближайшем будущем.\n\n---\n\nИсточники:\n· [TechCrunch — Vercel CEO Signals IPO Readiness](https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/)\n· [CryptoRank — Vercel IPO: 240% Revenue Growth](https://cryptorank.io/news/feed/655db-vercel-ipo-ai-agents-revenue)\n· [Yahoo Finance — Vercel CEO Guillermo Rauch](https://finance.yahoo.com/markets/stocks/articles/vercel-ceo-guillermo-rauch-signals-152229505.html)",
     "telegraph_url": "https://telegra.ph/Vercel-gotovitsya-k-IPO-II-agenty-obespechili-rost-vyruchki-v-3-raza-04-14",
     "telegram_id": 476,
     "status": "published",
@@ -105,6 +109,7 @@
       "llm"
     ],
     "description": "google: google, ai, gemini, opensource, llm",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-vypustila-Gemma-4-otkrytaya-model-urovnya-Gemini-31-Pro-04-13",
     "telegram_id": 459,
     "status": "опубликован",
@@ -127,6 +132,7 @@
       "automation"
     ],
     "description": "anthropic: anthropic, ai, github, developer_tools, automation",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Claude-Code-zahvatil-4-kommitov-na-GitHub-i-poluchil-6-novyh-funkcij-04-13",
     "telegram_id": 460,
     "status": "опубликован",
@@ -151,6 +157,7 @@
       "opensource"
     ],
     "description": "rust: rust, browser_engine, servo, embedded, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Servo-poyavilsya-na-cratesio-brauzernyj-dvizhok-na-Rust-poluchil-LTS-reliz-04-13",
     "telegram_id": 461,
     "status": "опубликован",
@@ -173,6 +180,7 @@
       "edge_computing"
     ],
     "description": "google: google, ai, mobile, opensource, edge_computing",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-vypustila-LiteRT-LM-dvizhok-II-inferensa-dlya-mobilnyh-ustrojstv-04-13",
     "telegram_id": 462,
     "status": "опубликован",
@@ -196,6 +204,7 @@
       "ios"
     ],
     "description": "security: security, privacy, signal, iphone, ios",
+    "content": "",
     "telegraph_url": "https://telegra.ph/FBR-izvleklo-udalyonnye-soobshcheniya-Signal-cherez-uvedomleniya-iPhone-04-13",
     "telegram_id": 463,
     "status": "опубликован",
@@ -220,6 +229,7 @@
       "opensource"
     ],
     "description": "security: security, anthropic, ai, cybersecurity, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-zapustila-Project-Glasswing-Claude-Mythos-dlya-kiberzashchity-04-13",
     "telegram_id": 464,
     "status": "опубликован",
@@ -243,6 +253,7 @@
       "privacy"
     ],
     "description": "telegram: telegram, messaging, ai_editor, mobile, privacy",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Telegram-vypustil-aprelskoe-obnovlenie-II-redaktor-teksta-i-zhivye-foto-04-13",
     "telegram_id": 465,
     "status": "опубликован",
@@ -266,6 +277,7 @@
       "llm"
     ],
     "description": "ai_tools: ai_tools, memory, opensource, mcp, llm",
+    "content": "",
     "telegraph_url": "https://telegra.ph/MemPalace-AI-pamyat-s-arhitekturoj-dvorca-pamyati-uluchshila-poisk-na-34-04-13",
     "telegram_id": 466,
     "status": "опубликован",
@@ -288,6 +300,7 @@
       "cybersecurity"
     ],
     "description": "security: security, adobe, zero_day, pdf, cybersecurity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Adobe-ehkstrenno-ustranila-zero-day-uyazvimost-v-Acrobat-Reader-04-13",
     "telegram_id": 467,
     "status": "опубликован",
@@ -312,6 +325,7 @@
       "snowflake"
     ],
     "description": "security: security, кибербезопасность, утечка_данных, supply_chain, snowflake",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rockstar-Games-podtverdila-utechku-dannyh-cherez-vzlom-storonnego-servisa-04-13",
     "telegram_id": 468,
     "status": "опубликован",
@@ -335,6 +349,7 @@
       "cloud"
     ],
     "description": "kubernetes: kubernetes, devops, containers, security, cloud",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kubernetes-v136-udalenie-uyazvimyh-komponentov-i-novaya-rabota-s-GPU-04-13",
     "telegram_id": 469,
     "status": "опубликован",
@@ -357,6 +372,7 @@
       "cybersecurity"
     ],
     "description": "security: security, openai, npm, supply_chain, cybersecurity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-otozvala-sertifikaty-macOS-posle-ataki-na-cepochku-postavok-04-13",
     "telegram_id": 470,
     "status": "опубликован",
@@ -381,6 +397,7 @@
       "технологии"
     ],
     "description": "apple: apple, ai_glasses, wearables, meta, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Apple-testiruet-neskolko-dizajnov-II-ochkov-dlya-konkurencii-s-Meta-Ray-Ban-04-13",
     "telegram_id": 471,
     "status": "опубликован",
@@ -403,6 +420,7 @@
       "ide"
     ],
     "description": "developer_tools: developer_tools, ai, cursor, coding, ide",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cursor-3-redaktor-koda-stal-konsolyu-upravleniya-II-agentami-04-13",
     "telegram_id": 472,
     "status": "опубликован",
@@ -426,6 +444,7 @@
       "dra"
     ],
     "description": "kubernetes: kubernetes, devops, security, containers, dra",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kubernetes-v136-deprekaciya-externalIPs-i-novye-vozmozhnosti-03-31",
     "telegram_id": 239,
     "status": "опубликован",
@@ -449,6 +468,7 @@
       "технологии"
     ],
     "description": "ai: ai, нейросети, агенты, opensource, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nous-Research-Hermes-Agent-adaptivnyj-II-agent-novogo-pokoleniya-03-31",
     "telegram_id": 240,
     "status": "опубликован",
@@ -472,6 +492,7 @@
       "генерация"
     ],
     "description": "ai: ai, video, pixverse, нейросети, генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/PixVerse-V6-AI-video-s-nativnym-audio-i-kontrolem-kamery-03-31",
     "telegram_id": 241,
     "status": "опубликован",
@@ -494,6 +515,7 @@
       "gamedev"
     ],
     "description": "jetbrains: jetbrains, rider, dotnet, csharp, gamedev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rider-20261-AI-agenty-C-15-i-novye-vozmozhnosti-dlya-NET-03-31",
     "telegram_id": 242,
     "status": "опубликован",
@@ -515,6 +537,7 @@
       "lokalnie_modeli"
     ],
     "description": "ollama: ollama, ai, ml, apple, lokalnie_modeli",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Ollama-v0190-MLX-na-Apple-Silicon-i-novye-vozmozhnosti-03-31",
     "telegram_id": 243,
     "status": "опубликован",
@@ -538,6 +561,7 @@
       "разработка"
     ],
     "description": "github: github, copilot, slack, ai_tools, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Copilot-poluchil-integraciyu-so-Slack-03-31",
     "telegram_id": 244,
     "status": "опубликован",
@@ -559,6 +583,7 @@
       "opensource"
     ],
     "description": "huggingface: huggingface, transformers, ai, machinelearning, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Hugging-Face-Transformers-540-Mistral-4-i-novye-modeli-03-31",
     "telegram_id": 245,
     "status": "опубликован",
@@ -581,6 +606,7 @@
       "разработка"
     ],
     "description": "godot: godot, gamedev, opensource, gameengine, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Godot-47-dev3-revolyuciya-v-GUI-i-novye-vozmozhnosti-03-31",
     "telegram_id": 246,
     "status": "опубликован",
@@ -604,6 +630,7 @@
       "frontend"
     ],
     "description": "javascript: javascript, typescript, webstorm, jetbrains, frontend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/WebStorm-20261-AI-agenty-TypeScript-6-i-novye-vozmozhnosti-03-31",
     "telegram_id": 247,
     "status": "опубликован",
@@ -616,29 +643,6 @@
   },
   {
     "id": 28,
-    "date": "2026-03-31",
-    "title": "Temporal API достиг Stage 4: замена Date в JavaScript",
-    "category": "javascript",
-    "tags": [
-      "javascript",
-      "temporal",
-      "ecmascript",
-      "tc39",
-      "webdev"
-    ],
-    "description": "javascript: javascript, temporal, ecmascript, tc39, webdev",
-    "telegraph_url": "https://telegra.ph/Temporal-API-dostig-Stage-4-zamena-Date-v-JavaScript-03-31",
-    "telegram_id": 248,
-    "status": "опубликован",
-    "sources": [
-      "Igalia: Temporal Reaches Stage 4 (https://www.igalia.com/2026/03/13/Temporal-Reaches-Stage-4.html)",
-      "TC39 March 2026 Meeting Notes (https://github.com/tc39/proposals)",
-      "Socket.dev: TC39 Advances Temporal (https://socket.dev/blog/tc39-advances-temporal-to-stage-4)"
-    ],
-    "emoji": "🟨"
-  },
-  {
-    "id": 29,
     "date": "2026-03-30",
     "title": "Anthropic: платные подписки Claude удвоились в 2026 году",
     "category": "anthropic",
@@ -650,6 +654,7 @@
       "технологии"
     ],
     "description": "anthropic: anthropic, claude, ai, нейросети, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-platnye-podpiski-Claude-udvoilis-v-2026-godu-03-30",
     "telegram_id": 214,
     "status": "опубликован",
@@ -659,7 +664,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 30,
+    "id": 29,
     "date": "2026-03-30",
     "title": "Xray-core v26.3.27: Hysteria 2 и новые методы обфускации",
     "category": "vpn_security",
@@ -671,6 +676,7 @@
       "vless"
     ],
     "description": "vpn_security: vpn_security, xray, proxy, security, vless",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Xray-core-v26327-Hysteria-2-i-novye-metody-obfuskacii-03-30",
     "telegram_id": 216,
     "status": "опубликован",
@@ -681,7 +687,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 31,
+    "id": 30,
     "date": "2026-03-30",
     "title": "Anthropic подтвердила утечку модели, Meta выпустила brain AI",
     "category": "ai",
@@ -693,6 +699,7 @@
       "meta"
     ],
     "description": "ai: ai, нейросети, anthropic, google, meta",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-podtverdila-utechku-modeli-Meta-vypustila-brain-AI-03-30",
     "telegram_id": 217,
     "status": "опубликован",
@@ -704,7 +711,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 32,
+    "id": 31,
     "date": "2026-03-30",
     "title": "VS Code 1.111: еженедельные релизы и автономный режим Autopilot",
     "category": "vscode",
@@ -716,6 +723,7 @@
       "автономность"
     ],
     "description": "vscode: vscode, ai, microsoft, разработка, автономность",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1111-ezhenedelnye-relizy-i-avtonomnyj-rezhim-Autopilot-03-30",
     "telegram_id": 218,
     "status": "опубликован",
@@ -727,7 +735,7 @@
     "emoji": "💻"
   },
   {
-    "id": 33,
+    "id": 32,
     "date": "2026-03-30",
     "title": "WASI 0.3: нативный async/await для WebAssembly",
     "category": "webassembly",
@@ -739,6 +747,7 @@
       "opensource"
     ],
     "description": "webassembly: webassembly, wasi, javascript, backend, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/WASI-03-nativnyj-asyncawait-dlya-WebAssembly-03-30",
     "telegram_id": 219,
     "status": "опубликован",
@@ -750,7 +759,7 @@
     "emoji": "📦"
   },
   {
-    "id": 34,
+    "id": 33,
     "date": "2026-03-30",
     "title": "Bluesky запустила Attie AI для создания персональных лент",
     "category": "bluesky",
@@ -762,6 +771,7 @@
       "claude"
     ],
     "description": "bluesky: bluesky, ai, socialmedia, atproto, claude",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Bluesky-zapustila-Attie-AI-dlya-sozdaniya-personalnyh-lent-03-30",
     "telegram_id": 220,
     "status": "опубликован",
@@ -773,7 +783,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 35,
+    "id": 34,
     "date": "2026-03-30",
     "title": "OpenAI выпустила GPT-5.3 Garlic: в 6 раз больше знаний на байт",
     "category": "openai",
@@ -785,6 +795,7 @@
       "machinelearning"
     ],
     "description": "openai: openai, gpt5, ai, нейросети, machinelearning",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-vypustila-GPT-53-Garlic-v-6-raz-bolshe-znanij-na-bajt-03-30",
     "telegram_id": 223,
     "status": "опубликован",
@@ -796,7 +807,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 36,
+    "id": 35,
     "date": "2026-03-30",
     "title": "VS Code 1.114: TypeScript 6.0 и новые функции чата",
     "category": "vscode",
@@ -808,6 +819,7 @@
       "webdev"
     ],
     "description": "vscode: vscode, typescript, javascript, react, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1114-TypeScript-60-i-novye-funkcii-chata-03-30",
     "telegram_id": 224,
     "status": "опубликован",
@@ -818,7 +830,7 @@
     "emoji": "💻"
   },
   {
-    "id": 37,
+    "id": 36,
     "date": "2026-03-30",
     "title": "Linux 7.0-rc5: стабильность растёт перед апрельским релизом",
     "category": "linux",
@@ -830,6 +842,7 @@
       "security"
     ],
     "description": "linux: linux, opensource, kernel, devops, security",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Linux-70-rc5-stabilnost-rastyot-pered-aprelskim-relizom-03-30",
     "telegram_id": 225,
     "status": "опубликован",
@@ -841,7 +854,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 38,
+    "id": 37,
     "date": "2026-03-30",
     "title": "Figma обновила десктопное приложение для macOS",
     "category": "figma",
@@ -853,6 +866,7 @@
       "ux"
     ],
     "description": "figma: figma, design, macos, ui, ux",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Figma-obnovila-desktopnoe-prilozhenie-dlya-macOS-03-30",
     "telegram_id": 226,
     "status": "опубликован",
@@ -863,7 +877,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 39,
+    "id": 38,
     "date": "2026-03-30",
     "title": ".NET 10 и C# 14: новые возможности для разработчиков",
     "category": "dotnet",
@@ -875,6 +889,7 @@
       "programming"
     ],
     "description": "dotnet: dotnet, csharp, microsoft, разработка, programming",
+    "content": "",
     "telegraph_url": "https://telegra.ph/NET-10-i-C-14-novye-vozmozhnosti-dlya-razrabotchikov-03-30",
     "telegram_id": 227,
     "status": "опубликован",
@@ -886,7 +901,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 40,
+    "id": 39,
     "date": "2026-03-30",
     "title": "Rails 8: онлайн-миграции схем и ускорение сборки Docker",
     "category": "ruby",
@@ -898,6 +913,7 @@
       "postgresql"
     ],
     "description": "ruby: ruby, rails, backend, docker, postgresql",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rails-8-onlajn-migracii-shem-i-uskorenie-sborki-Docker-03-30",
     "telegram_id": 228,
     "status": "опубликован",
@@ -909,7 +925,7 @@
     "emoji": "💎"
   },
   {
-    "id": 41,
+    "id": 40,
     "date": "2026-03-30",
     "title": "Cohere выпустила открытую voice-модель для транскрипции",
     "category": "cohere",
@@ -921,6 +937,7 @@
       "voicespeech"
     ],
     "description": "cohere: cohere, asr, opensource, транскрипция, voicespeech",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cohere-vypustila-otkrytuyu-voice-model-dlya-transkripcii-03-30",
     "telegram_id": 229,
     "status": "опубликован",
@@ -932,7 +949,7 @@
     "emoji": "🎙️"
   },
   {
-    "id": 42,
+    "id": 41,
     "date": "2026-03-30",
     "title": "Cohere выпустила открытую голосовую модель Transcribe",
     "category": "ai",
@@ -944,6 +961,7 @@
       "cohere"
     ],
     "description": "ai: ai, opensource, speech, transcription, cohere",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cohere-vypustila-otkrytuyu-golosovuyu-model-Transcribe-03-30",
     "telegram_id": 230,
     "status": "опубликован",
@@ -955,7 +973,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 43,
+    "id": 42,
     "date": "2026-03-30",
     "title": "Figma запустила AI-агентов для работы с дизайн-файлами",
     "category": "figma",
@@ -967,6 +985,7 @@
       "n8n"
     ],
     "description": "figma: figma, ai, design, mcp, n8n",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Figma-zapustila-AI-agentov-dlya-raboty-s-dizajn-fajlami-03-30",
     "telegram_id": 231,
     "status": "опубликован",
@@ -978,7 +997,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 44,
+    "id": 43,
     "date": "2026-03-30",
     "title": "Meilisearch v1.36–v1.37: новые правила ранжирования и реплицируемый шардинг",
     "category": "meilisearch",
@@ -990,6 +1009,7 @@
       "database"
     ],
     "description": "meilisearch: meilisearch, search, opensource, backend, database",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Meilisearch-v136v137-novye-pravila-ranzhirovaniya-i-repliciruemyj-sharding-03-30",
     "telegram_id": 232,
     "status": "опубликован",
@@ -1001,7 +1021,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 45,
+    "id": 44,
     "date": "2026-03-30",
     "title": "Kotlin 2.3.20: упрощение Maven и новая деструктуризация",
     "category": "kotlin",
@@ -1013,6 +1033,7 @@
       "разработка"
     ],
     "description": "kotlin: kotlin, programming, jetbrains, jvm, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kotlin-2320-uproshchenie-Maven-i-novaya-destrukturizaciya-03-30",
     "telegram_id": 233,
     "status": "опубликован",
@@ -1023,7 +1044,7 @@
     "emoji": "🟠"
   },
   {
-    "id": 46,
+    "id": 45,
     "date": "2026-03-30",
     "title": "SQLite 3.53.0: самовосстанавливающиеся индексы и исправление критического бага",
     "category": "sqlite",
@@ -1035,6 +1056,7 @@
       "backend"
     ],
     "description": "sqlite: sqlite, базыданных, security, релиз, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/SQLite-3530-samovosstanavlivayushchiesya-indeksy-i-ispravlenie-kriticheskogo-baga-03-30",
     "telegram_id": 234,
     "status": "опубликован",
@@ -1046,7 +1068,7 @@
     "emoji": "📑"
   },
   {
-    "id": 47,
+    "id": 46,
     "date": "2026-03-30",
     "title": "Cloudflare открыл Client-Side Security для всех",
     "category": "cloudflare",
@@ -1058,6 +1080,7 @@
       "кибербезопасность"
     ],
     "description": "cloudflare: cloudflare, security, webdev, javascript, кибербезопасность",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-otkryl-Client-Side-Security-dlya-vseh-03-30",
     "telegram_id": 235,
     "status": "опубликован",
@@ -1069,7 +1092,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 48,
+    "id": 47,
     "date": "2026-03-30",
     "title": "FFmpeg 8.1 Hoare: D3D12 кодирование и новые кодеки",
     "category": "ffmpeg",
@@ -1081,6 +1104,7 @@
       "codec"
     ],
     "description": "ffmpeg: ffmpeg, video, multimedia, opensource, codec",
+    "content": "",
     "telegraph_url": "https://telegra.ph/FFmpeg-81-Hoare-D3D12-kodirovanie-i-novye-kodeki-03-30",
     "telegram_id": 236,
     "status": "опубликован",
@@ -1092,7 +1116,7 @@
     "emoji": "🎬"
   },
   {
-    "id": 49,
+    "id": 48,
     "date": "2026-03-30",
     "title": "CADSmith: multi-agent ИИ для генерации CAD-моделей из текста",
     "category": "ai",
@@ -1104,6 +1128,7 @@
       "automation"
     ],
     "description": "ai: ai, cad, multi-agent, инженерия, automation",
+    "content": "",
     "telegraph_url": "https://telegra.ph/CADSmith-multi-agent-II-dlya-generacii-CAD-modelej-iz-teksta-03-30",
     "telegram_id": 237,
     "status": "опубликован",
@@ -1115,7 +1140,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 50,
+    "id": 49,
     "date": "2026-03-30",
     "title": "Figma расширила AI-инструменты для работы с изображениями",
     "category": "figma",
@@ -1127,6 +1152,7 @@
       "инструменты"
     ],
     "description": "figma: figma, design, ai, ui, инструменты",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Figma-rasshirila-AI-instrumenty-dlya-raboty-s-izobrazheniyami-03-30",
     "telegram_id": 238,
     "status": "опубликован",
@@ -1137,7 +1163,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 51,
+    "id": 50,
     "date": "2026-03-29",
     "title": "VS Code перешёл на еженедельные релизы: версия 1.111",
     "category": "vscode",
@@ -1149,6 +1175,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, microsoft, ai, agents, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-pereshyol-na-ezhenedelnye-relizy-versiya-1111-03-29",
     "telegram_id": 193,
     "status": "опубликован",
@@ -1160,7 +1187,7 @@
     "emoji": "💻"
   },
   {
-    "id": 52,
+    "id": 51,
     "date": "2026-03-29",
     "title": "Symfony 8.0.7: исправления ошибок и стабильность",
     "category": "symfony",
@@ -1172,6 +1199,7 @@
       "backend"
     ],
     "description": "symfony: symfony, php, framework, webdev, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Symfony-807-ispravleniya-oshibok-i-stabilnost-03-29",
     "telegram_id": 194,
     "status": "опубликован",
@@ -1182,7 +1210,7 @@
     "emoji": "🎵"
   },
   {
-    "id": 53,
+    "id": 52,
     "date": "2026-03-29",
     "title": "GitHub Copilot CLI и AI Toolkit: март 2026",
     "category": "github",
@@ -1194,6 +1222,7 @@
       "разработка"
     ],
     "description": "github: github, copilot, ai, vscode, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Copilot-CLI-i-AI-Toolkit-mart-2026-03-29",
     "telegram_id": 195,
     "status": "опубликован",
@@ -1205,7 +1234,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 54,
+    "id": 53,
     "date": "2026-03-29",
     "title": "Kubernetes 1.35 Timbernetes: революция в управлении контейнерами",
     "category": "kubernetes",
@@ -1217,6 +1246,7 @@
       "k8s"
     ],
     "description": "kubernetes: kubernetes, devops, containers, cloudnative, k8s",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kubernetes-135-Timbernetes-revolyuciya-v-upravlenii-kontejnerami-03-29",
     "telegram_id": 196,
     "status": "опубликован",
@@ -1229,7 +1259,7 @@
     "emoji": "⎈️"
   },
   {
-    "id": 55,
+    "id": 54,
     "date": "2026-03-29",
     "title": "Microsoft внедряет 100+ AI-агентов в цепочку поставок",
     "category": "microsoft",
@@ -1241,6 +1271,7 @@
       "логистика"
     ],
     "description": "microsoft: microsoft, ai, агенты, supplychain, логистика",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Microsoft-vnedryaet-100-AI-agentov-v-cepochku-postavok-03-29",
     "telegram_id": 197,
     "status": "опубликован",
@@ -1251,7 +1282,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 56,
+    "id": 55,
     "date": "2026-03-29",
     "title": "Next.js: критическая уязвимость HTTP Request Smuggling",
     "category": "nextjs",
@@ -1263,6 +1294,7 @@
       "cve"
     ],
     "description": "nextjs: nextjs, security, javascript, vercel, cve",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nextjs-kriticheskaya-uyazvimost-HTTP-Request-Smuggling-03-29",
     "telegram_id": 198,
     "status": "опубликован",
@@ -1275,7 +1307,7 @@
     "emoji": "▲"
   },
   {
-    "id": 57,
+    "id": 56,
     "date": "2026-03-29",
     "title": "IntelliJ IDEA 2026.1: AI-агенты, Java 26 и Kotlin 2.3",
     "category": "intellij",
@@ -1287,6 +1319,7 @@
       "ai"
     ],
     "description": "intellij: intellij, jetbrains, java, kotlin, ai",
+    "content": "",
     "telegraph_url": "https://telegra.ph/IntelliJ-IDEA-20261-AI-agenty-Java-26-i-Kotlin-23-03-29",
     "telegram_id": 199,
     "status": "опубликован",
@@ -1297,7 +1330,7 @@
     "emoji": "💡"
   },
   {
-    "id": 58,
+    "id": 57,
     "date": "2026-03-29",
     "title": "Bun 1.3.11: cron-задачи OS-уровня и оптимизация размера",
     "category": "bun",
@@ -1309,6 +1342,7 @@
       "performance"
     ],
     "description": "bun: bun, javascript, typescript, webdev, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Bun-1311-cron-zadachi-OS-urovnya-i-optimizaciya-razmera-03-29",
     "telegram_id": 200,
     "status": "опубликован",
@@ -1319,7 +1353,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 59,
+    "id": 58,
     "date": "2026-03-29",
     "title": "GitHub Actions 2026: новый уровень безопасности CI/CD",
     "category": "github",
@@ -1331,6 +1365,7 @@
       "actions"
     ],
     "description": "github: github, security, devops, cicd, actions",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Actions-2026-novyj-uroven-bezopasnosti-CICD-03-29",
     "telegram_id": 201,
     "status": "опубликован",
@@ -1341,7 +1376,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 60,
+    "id": 59,
     "date": "2026-03-29",
     "title": "Valkey: открытая альтернатива Redis от Linux Foundation",
     "category": "valkey",
@@ -1353,6 +1388,7 @@
       "backend"
     ],
     "description": "valkey: valkey, databases, opensource, redis, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Valkey-otkrytaya-alternativa-Redis-ot-Linux-Foundation-03-29",
     "telegram_id": 202,
     "status": "опубликован",
@@ -1364,7 +1400,7 @@
     "emoji": "🔑"
   },
   {
-    "id": 61,
+    "id": 60,
     "date": "2026-03-29",
     "title": "Prisma 7.6.0: команда для Prisma Postgres и улучшения Studio",
     "category": "prisma",
@@ -1376,6 +1412,7 @@
       "orm"
     ],
     "description": "prisma: prisma, typescript, backend, database, orm",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Prisma-760-komanda-dlya-Prisma-Postgres-i-uluchsheniya-Studio-03-29",
     "telegram_id": 203,
     "status": "опубликован",
@@ -1386,7 +1423,7 @@
     "emoji": "🔮"
   },
   {
-    "id": 62,
+    "id": 61,
     "date": "2026-03-29",
     "title": "Разработчик декомпилировал новое приложение Белого дома",
     "category": "security",
@@ -1398,6 +1435,7 @@
       "opensource"
     ],
     "description": "security: security, mobile, декомпиляция, governance, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Razrabotchik-dekompiliroval-novoe-prilozhenie-Belogo-doma-03-29",
     "telegram_id": 206,
     "status": "опубликован",
@@ -1408,7 +1446,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 63,
+    "id": 62,
     "date": "2026-03-29",
     "title": "pnpm 10.32: флаг --all и новая эра безопасности пакетов",
     "category": "pnpm",
@@ -1420,6 +1458,7 @@
       "devops"
     ],
     "description": "pnpm: pnpm, javascript, security, npm, devops",
+    "content": "",
     "telegraph_url": "https://telegra.ph/pnpm-1032-flag---all-i-novaya-ehra-bezopasnosti-paketov-03-29",
     "telegram_id": 207,
     "status": "опубликован",
@@ -1432,7 +1471,7 @@
     "emoji": "📦"
   },
   {
-    "id": 64,
+    "id": 63,
     "date": "2026-03-29",
     "title": "Google Gemini 3.1 Flash: голосовой ИИ в поиске",
     "category": "google",
@@ -1444,6 +1483,7 @@
       "технологии"
     ],
     "description": "google: google, ai, gemini, нейросети, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-Gemini-31-Flash-golosovoj-II-v-poiske-03-29",
     "telegram_id": 208,
     "status": "опубликован",
@@ -1454,7 +1494,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 65,
+    "id": 64,
     "date": "2026-03-29",
     "title": "AMD представила Ryzen 9 9950X3D2 с двухсторонним 3D V-Cache",
     "category": "hardware",
@@ -1466,6 +1506,7 @@
       "игры"
     ],
     "description": "hardware: hardware, amd, ryzen, процессоры, игры",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AMD-predstavila-Ryzen-9-9950X3D2-s-dvuhstoronnim-3D-V-Cache-03-29",
     "telegram_id": 209,
     "status": "опубликован",
@@ -1476,7 +1517,7 @@
     "emoji": "💻"
   },
   {
-    "id": 66,
+    "id": 65,
     "date": "2026-03-29",
     "title": "Deno 2.7.9: безопасность, совместимость и производительность",
     "category": "deno",
@@ -1488,6 +1529,7 @@
       "performance"
     ],
     "description": "deno: deno, javascript, typescript, security, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Deno-279-bezopasnost-sovmestimost-i-proizvoditelnost-03-29",
     "telegram_id": 210,
     "status": "опубликован",
@@ -1498,7 +1540,7 @@
     "emoji": "🦕"
   },
   {
-    "id": 67,
+    "id": 66,
     "date": "2026-03-29",
     "title": "Anthropic случайно раскрыла секретную модель Claude Mythos",
     "category": "ai",
@@ -1510,6 +1552,7 @@
       "технологии"
     ],
     "description": "ai: ai, anthropic, claude, нейросети, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-sluchajno-raskryla-sekretnuyu-model-Claude-Mythos-03-29",
     "telegram_id": 211,
     "status": "опубликован",
@@ -1521,7 +1564,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 68,
+    "id": 67,
     "date": "2026-03-29",
     "title": "phpMyAdmin 6.0: крупное обновление с TypeScript и новым интерфейсом",
     "category": "phpmyadmin",
@@ -1533,6 +1576,7 @@
       "webdev"
     ],
     "description": "phpmyadmin: phpmyadmin, php, databases, opensource, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/phpMyAdmin-60-krupnoe-obnovlenie-s-TypeScript-i-novym-interfejsom-03-29",
     "telegram_id": 212,
     "status": "опубликован",
@@ -1544,7 +1588,7 @@
     "emoji": "🐘"
   },
   {
-    "id": 69,
+    "id": 68,
     "date": "2026-03-29",
     "title": "Discord Developer News: новый портал, модерация и лимиты команд",
     "category": "discord",
@@ -1556,6 +1600,7 @@
       "devtools"
     ],
     "description": "discord: discord, api, разработка, gamedev, devtools",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Discord-Developer-News-novyj-portal-moderaciya-i-limity-komand-03-29",
     "telegram_id": 213,
     "status": "опубликован",
@@ -1567,7 +1612,7 @@
     "emoji": "🎮"
   },
   {
-    "id": 70,
+    "id": 69,
     "date": "2026-03-28",
     "title": "Svelte март 2026: createContext, TrustedHTML и новые возможности",
     "category": "svelte",
@@ -1579,6 +1624,7 @@
       "opensource"
     ],
     "description": "svelte: svelte, javascript, frontend, webdev, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Svelte-mart-2026-createContext-TrustedHTML-i-novye-vozmozhnosti-03-28",
     "telegram_id": 166,
     "status": "опубликован",
@@ -1590,7 +1636,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 71,
+    "id": 70,
     "date": "2026-03-28",
     "title": "TeamPCP атаковала PyPI: малварь в WAV-файлах пакета Telnyx",
     "category": "python",
@@ -1602,6 +1648,7 @@
       "malware"
     ],
     "description": "python: python, security, pypi, supplychain, malware",
+    "content": "",
     "telegraph_url": "https://telegra.ph/TeamPCP-atakovala-PyPI-malvar-v-WAV-fajlah-paketa-Telnyx-03-28",
     "telegram_id": 167,
     "status": "опубликован",
@@ -1613,7 +1660,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 72,
+    "id": 71,
     "date": "2026-03-28",
     "title": "Svelte и SvelteKit 2026 обновление: новые возможности",
     "category": "svelte",
@@ -1625,6 +1672,7 @@
       "webdev"
     ],
     "description": "svelte: svelte, sveltekit, javascript, frontend, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Svelte-i-SvelteKit-2026-obnovlenie-novye-vozmozhnosti-03-28",
     "telegram_id": 168,
     "status": "опубликован",
@@ -1635,7 +1683,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 73,
+    "id": 72,
     "date": "2026-03-28",
     "title": "GitHub Actions: среда без авто-деплоя и часовые пояса",
     "category": "github",
@@ -1647,6 +1695,7 @@
       "automation"
     ],
     "description": "github: github, actions, cicd, devops, automation",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Actions-sreda-bez-avto-deploya-i-chasovye-poyasa-03-28",
     "telegram_id": 169,
     "status": "опубликован",
@@ -1656,7 +1705,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 74,
+    "id": 73,
     "date": "2026-03-28",
     "title": "Nuxt 4.4: vue-router v5, типизированные лейауты и профилирование сборки",
     "category": "nuxt",
@@ -1668,6 +1717,7 @@
       "webdev"
     ],
     "description": "nuxt: nuxt, vue, javascript, frontend, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nuxt-44-vue-router-v5-tipizirovannye-lejauty-i-profilirovanie-sborki-03-28",
     "telegram_id": 170,
     "status": "опубликован",
@@ -1679,7 +1729,7 @@
     "emoji": "🞩"
   },
   {
-    "id": 75,
+    "id": 74,
     "date": "2026-03-28",
     "title": "Anthropic запустила управление компьютером Mac через Claude",
     "category": "ai",
@@ -1691,6 +1741,7 @@
       "automation"
     ],
     "description": "ai: ai, anthropic, claude, macos, automation",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-zapustila-upravlenie-kompyuterom-Mac-cherez-Claude-03-28",
     "telegram_id": 171,
     "status": "опубликован",
@@ -1703,7 +1754,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 76,
+    "id": 75,
     "date": "2026-03-28",
     "title": "Google предупредила о квантовой угрозе: Q-Day наступит в 2029",
     "category": "security",
@@ -1715,6 +1766,7 @@
       "технологии"
     ],
     "description": "security: security, quantum, cryptography, google, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-predupredila-o-kvantovoj-ugroze-Q-Day-nastupit-v-2029-03-28",
     "telegram_id": 172,
     "status": "опубликован",
@@ -1726,7 +1778,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 77,
+    "id": 76,
     "date": "2026-03-28",
     "title": "Cloudflare переписал Next.js на AI за неделю",
     "category": "cloudflare",
@@ -1738,6 +1790,7 @@
       "webdev"
     ],
     "description": "cloudflare: cloudflare, nextjs, vinext, ai, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-perepisal-Nextjs-na-AI-za-nedelyu-03-28",
     "telegram_id": 173,
     "status": "опубликован",
@@ -1749,7 +1802,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 78,
+    "id": 77,
     "date": "2026-03-28",
     "title": "OpenAI заработала $100 млн на рекламе в ChatGPT за 2 месяца",
     "category": "openai",
@@ -1761,6 +1814,7 @@
       "монетизация"
     ],
     "description": "openai: openai, chatgpt, реклама, ai, монетизация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-zarabotala-100-mln-na-reklame-v-ChatGPT-za-2-mesyaca-03-28",
     "telegram_id": 174,
     "status": "опубликован",
@@ -1771,7 +1825,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 79,
+    "id": 78,
     "date": "2026-03-28",
     "title": "Syncfusion для Visual Studio: 1600+ компонентов бесплатно для подписчиков",
     "category": "visualstudio",
@@ -1783,6 +1837,7 @@
       "ide"
     ],
     "description": "visualstudio: visualstudio, syncfusion, dotnet, разработка, ide",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Syncfusion-dlya-Visual-Studio-1600-komponentov-besplatno-dlya-podpischikov-03-28",
     "telegram_id": 176,
     "status": "опубликован",
@@ -1794,7 +1849,7 @@
     "emoji": "💻"
   },
   {
-    "id": 80,
+    "id": 79,
     "date": "2026-03-28",
     "title": "Shield AI привлекла $2 млрд на разработку автономного ИИ-пилота",
     "category": "ai",
@@ -1806,6 +1861,7 @@
       "startups"
     ],
     "description": "ai: ai, defense_tech, инвестиции, автономные_системы, startups",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Shield-AI-privlekla-2-mlrd-na-razrabotku-avtonomnogo-II-pilota-03-28",
     "telegram_id": 177,
     "status": "опубликован",
@@ -1816,7 +1872,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 81,
+    "id": 80,
     "date": "2026-03-28",
     "title": "JetBrains закрывает Code With Me — конец эры совместной разработки",
     "category": "jetbrains",
@@ -1828,6 +1884,7 @@
       "opensource"
     ],
     "description": "jetbrains: jetbrains, codewithme, ide, разработка, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/JetBrains-zakryvaet-Code-With-Me--konec-ehry-sovmestnoj-razrabotki-03-28",
     "telegram_id": 178,
     "status": "опубликован",
@@ -1838,7 +1895,7 @@
     "emoji": "💡"
   },
   {
-    "id": 82,
+    "id": 81,
     "date": "2026-03-28",
     "title": "AMD выпустила процессор Ryzen 9 9950X3D2 с двойным 3D V-Cache",
     "category": "amd",
@@ -1850,6 +1907,7 @@
       "zen5"
     ],
     "description": "amd: amd, ryzen, processor, hardware, zen5",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AMD-vypustila-processor-Ryzen-9-9950X3D2-s-dvojnym-3D-V-Cache-03-28",
     "telegram_id": 180,
     "status": "опубликован",
@@ -1861,7 +1919,7 @@
     "emoji": "🔴"
   },
   {
-    "id": 83,
+    "id": 82,
     "date": "2026-03-28",
     "title": "OpenAI Codex получил плагины и новые возможности агентов",
     "category": "openai",
@@ -1873,6 +1931,7 @@
       "разработка"
     ],
     "description": "openai: openai, codex, ai, chatgpt, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-Codex-poluchil-plaginy-i-novye-vozmozhnosti-agentov-03-28",
     "telegram_id": 182,
     "status": "опубликован",
@@ -1884,7 +1943,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 84,
+    "id": 83,
     "date": "2026-03-28",
     "title": "Google представила Gemini 3.1 Flash Live для голосовых диалогов",
     "category": "google",
@@ -1896,6 +1955,7 @@
       "machinelearning"
     ],
     "description": "google: google, ai, gemini, voice, machinelearning",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-predstavila-Gemini-31-Flash-Live-dlya-golosovyh-dialogov-03-28",
     "telegram_id": 183,
     "status": "опубликован",
@@ -1906,7 +1966,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 85,
+    "id": 84,
     "date": "2026-03-28",
     "title": "Lucid Software и Revenium представили AI-агенты для автоматизации workflows",
     "category": "ai_tools",
@@ -1918,6 +1978,7 @@
       "ROI"
     ],
     "description": "ai_tools: ai_tools, automation, enterprise, MCP, ROI",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Lucid-Software-i-Revenium-predstavili-AI-agenty-dlya-avtomatizacii-workflows-03-28",
     "telegram_id": 184,
     "status": "опубликован",
@@ -1929,7 +1990,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 86,
+    "id": 85,
     "date": "2026-03-28",
     "title": "GitHub усилил безопасность: API отзыва учётных данных для OAuth и Apps",
     "category": "github",
@@ -1941,6 +2002,7 @@
       "devops"
     ],
     "description": "github: github, security, oauth, api, devops",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-usilil-bezopasnost-API-otzyva-uchyotnyh-dannyh-dlya-OAuth-i-Apps-03-28",
     "telegram_id": 185,
     "status": "опубликован",
@@ -1952,7 +2014,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 87,
+    "id": 86,
     "date": "2026-03-28",
     "title": "GitHub тренды 27 марта: OpenClaw и новые AI-инструменты",
     "category": "github",
@@ -1964,6 +2026,7 @@
       "trending"
     ],
     "description": "github: github, ai, opensource, automation, trending",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-trendy-27-marta-OpenClaw-i-novye-AI-instrumenty-03-28",
     "telegram_id": 186,
     "status": "опубликован",
@@ -1974,7 +2037,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 88,
+    "id": 87,
     "date": "2026-03-28",
     "title": "Elasticsearch 9.3.2: bfloat16 векторы и GPU-ускорение",
     "category": "elasticsearch",
@@ -1986,6 +2049,7 @@
       "базыданных"
     ],
     "description": "elasticsearch: elasticsearch, vectorsearch, ai, gpu, базыданных",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Elasticsearch-932-bfloat16-vektory-i-GPU-uskorenie-03-28",
     "telegram_id": 187,
     "status": "опубликован",
@@ -1998,7 +2062,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 89,
+    "id": 88,
     "date": "2026-03-28",
     "title": "JetBrains Air: новая среда для AI-агентов в разработке",
     "category": "ai",
@@ -2010,6 +2074,7 @@
       "ai_agents"
     ],
     "description": "ai: ai, jetbrains, ide, разработка, ai_agents",
+    "content": "",
     "telegraph_url": "https://telegra.ph/JetBrains-Air-novaya-sreda-dlya-AI-agentov-v-razrabotke-03-28",
     "telegram_id": 188,
     "status": "опубликован",
@@ -2021,7 +2086,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 90,
+    "id": 89,
     "date": "2026-03-28",
     "title": "iOS 26.4: AI-плейлисты, 8 новых эмодзи и защита от кражи",
     "category": "apple",
@@ -2033,6 +2098,7 @@
       "security"
     ],
     "description": "apple: apple, ios, iphone, ai, security",
+    "content": "",
     "telegraph_url": "https://telegra.ph/iOS-264-AI-plejlisty-8-novyh-ehmodzi-i-zashchita-ot-krazhi-03-28",
     "telegram_id": 189,
     "status": "опубликован",
@@ -2045,7 +2111,7 @@
     "emoji": "🍎"
   },
   {
-    "id": 91,
+    "id": 90,
     "date": "2026-03-28",
     "title": "SolidJS 2.0: новые возможности и SolidStart 1.3.0",
     "category": "solidjs",
@@ -2057,6 +2123,7 @@
       "opensource"
     ],
     "description": "solidjs: solidjs, javascript, frontend, webdev, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/SolidJS-20-novye-vozmozhnosti-i-SolidStart-130-03-28",
     "telegram_id": 190,
     "status": "опубликован",
@@ -2068,7 +2135,7 @@
     "emoji": "🧊"
   },
   {
-    "id": 92,
+    "id": 91,
     "date": "2026-03-28",
     "title": "AMD Ryzen 9 9950X3D2: первый процессор с 3D V-Cache на обоих чиплетах",
     "category": "hardware",
@@ -2080,6 +2147,7 @@
       "ryzen"
     ],
     "description": "hardware: hardware, amd, процессоры, 3dvcache, ryzen",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AMD-Ryzen-9-9950X3D2-pervyj-processor-s-3D-V-Cache-na-oboih-chipletah-03-28",
     "telegram_id": 191,
     "status": "опубликован",
@@ -2091,7 +2159,7 @@
     "emoji": "💻"
   },
   {
-    "id": 93,
+    "id": 92,
     "date": "2026-03-28",
     "title": "35 уязвимостей в марте: AI-код стал угрозой безопасности",
     "category": "security",
@@ -2103,6 +2171,7 @@
       "разработка"
     ],
     "description": "security: security, ai, cve, claude, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/35-uyazvimostej-v-marte-AI-kod-stal-ugrozoj-bezopasnosti-03-28",
     "telegram_id": 192,
     "status": "опубликован",
@@ -2114,7 +2183,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 94,
+    "id": 93,
     "date": "2026-03-27",
     "title": "Zig 2026: революция в компиляторе перед релизом 1.0",
     "category": "zig",
@@ -2126,6 +2195,7 @@
       "opensource"
     ],
     "description": "zig: zig, programming, systems, compiler, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Zig-2026-revolyuciya-v-kompilyatore-pered-relizom-10-03-27",
     "telegram_id": 130,
     "status": "опубликован",
@@ -2136,7 +2206,7 @@
     "emoji": "💥"
   },
   {
-    "id": 95,
+    "id": 94,
     "date": "2026-03-27",
     "title": "Android March 2026: критические патчи для 100+ уязвимостей",
     "category": "android",
@@ -2148,6 +2218,7 @@
       "mobile"
     ],
     "description": "android: android, security, google, cve, mobile",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Android-March-2026-kriticheskie-patchi-dlya-100-uyazvimostej-03-27",
     "telegram_id": 131,
     "status": "опубликован",
@@ -2158,7 +2229,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 96,
+    "id": 95,
     "date": "2026-03-27",
     "title": "Next.js 16.2: ускорение сборки и поддержка AI-агентов",
     "category": "nextjs",
@@ -2170,6 +2241,7 @@
       "webdev"
     ],
     "description": "nextjs: nextjs, react, javascript, vercel, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nextjs-162-uskorenie-sborki-i-podderzhka-AI-agentov-03-27",
     "telegram_id": 132,
     "status": "опубликован",
@@ -2181,7 +2253,7 @@
     "emoji": "▲"
   },
   {
-    "id": 97,
+    "id": 96,
     "date": "2026-03-27",
     "title": "Cloudflare запустила AI-шлюз для защиты корпоративных данных",
     "category": "cloudflare",
@@ -2193,6 +2265,7 @@
       "zerotrust"
     ],
     "description": "cloudflare: cloudflare, ai, security, dlp, zerotrust",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-zapustila-AI-shlyuz-dlya-zashchity-korporativnyh-dannyh-03-27",
     "telegram_id": 133,
     "status": "опубликован",
@@ -2203,7 +2276,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 98,
+    "id": 97,
     "date": "2026-03-27",
     "title": "MiniMax M2.5: открытая модель уровня Claude Opus за 1/20 цены",
     "category": "ai",
@@ -2215,6 +2288,7 @@
       "нейросети"
     ],
     "description": "ai: ai, minimax, opensource, llm, нейросети",
+    "content": "",
     "telegraph_url": "https://telegra.ph/MiniMax-M25-otkrytaya-model-urovnya-Claude-Opus-za-120-ceny-03-27",
     "telegram_id": 136,
     "status": "опубликован",
@@ -2226,7 +2300,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 99,
+    "id": 98,
     "date": "2026-03-27",
     "title": "Svelte 5.4: реактивность нового поколения и Runes API",
     "category": "svelte",
@@ -2238,6 +2312,7 @@
       "reactivity"
     ],
     "description": "svelte: svelte, javascript, frontend, webdev, reactivity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Svelte-54-reaktivnost-novogo-pokoleniya-i-Runes-API-03-27",
     "telegram_id": 137,
     "status": "опубликован",
@@ -2248,7 +2323,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 100,
+    "id": 99,
     "date": "2026-03-27",
     "title": "Cloudflare Workers AI добавил поддержку Kimi K2.5 с контекстом 256k",
     "category": "cloudflare",
@@ -2260,6 +2335,7 @@
       "llm"
     ],
     "description": "cloudflare: cloudflare, ai, workers, kimi, llm",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-Workers-AI-dobavil-podderzhku-Kimi-K25-s-kontekstom-256k-03-27",
     "telegram_id": 138,
     "status": "опубликован",
@@ -2271,7 +2347,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 101,
+    "id": 100,
     "date": "2026-03-27",
     "title": "VS Code 1.112: встроенная отладка браузера и новые AI-функции Copilot",
     "category": "vscode",
@@ -2283,6 +2359,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, microsoft, ai, copilot, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1112-vstroennaya-otladka-brauzera-i-novye-AI-funkcii-Copilot-03-27",
     "telegram_id": 139,
     "status": "опубликован",
@@ -2294,7 +2371,7 @@
     "emoji": "💻"
   },
   {
-    "id": 102,
+    "id": 101,
     "date": "2026-03-27",
     "title": "Nginx 1.29.6: нативная поддержка sticky sessions",
     "category": "nginx",
@@ -2305,6 +2382,7 @@
       "webserver"
     ],
     "description": "nginx: nginx, devops, loadbalancing, webserver",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nginx-1296-nativnaya-podderzhka-sticky-sessions-03-27",
     "telegram_id": 140,
     "status": "опубликован",
@@ -2315,7 +2393,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 103,
+    "id": 102,
     "date": "2026-03-27",
     "title": "Intel представила процессоры Core Ultra 200S для десктопов",
     "category": "intel",
@@ -2327,6 +2405,7 @@
       "desktop"
     ],
     "description": "intel: intel, hardware, cpu, arrowlake, desktop",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Intel-predstavila-processory-Core-Ultra-200S-dlya-desktopov-03-27",
     "telegram_id": 141,
     "status": "опубликован",
@@ -2337,7 +2416,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 104,
+    "id": 103,
     "date": "2026-03-27",
     "title": "VS Code 1.113: MCP-серверы, форки сессий и новый редактор чата",
     "category": "vscode",
@@ -2349,6 +2428,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, ai, copilot, microsoft, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1113-MCP-servery-forki-sessij-i-novyj-redaktor-chata-03-27",
     "telegram_id": 142,
     "status": "опубликован",
@@ -2359,7 +2439,7 @@
     "emoji": "💻"
   },
   {
-    "id": 105,
+    "id": 104,
     "date": "2026-03-27",
     "title": "Grafana Labs и AWS заключили стратегическое партнёрство на 5 лет",
     "category": "grafana",
@@ -2371,6 +2451,7 @@
       "cloud"
     ],
     "description": "grafana: grafana, aws, observability, devops, cloud",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Grafana-Labs-i-AWS-zaklyuchili-strategicheskoe-partnyorstvo-na-5-let-03-27",
     "telegram_id": 143,
     "status": "опубликован",
@@ -2381,7 +2462,7 @@
     "emoji": "📊"
   },
   {
-    "id": 106,
+    "id": 105,
     "date": "2026-03-27",
     "title": "Ethereum готовит Glamsterdam: крупнейшее обновление с момента The Merge",
     "category": "ethereum",
@@ -2393,6 +2474,7 @@
       "eth"
     ],
     "description": "ethereum: ethereum, cryptocurrency, blockchain, defi, eth",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Ethereum-gotovit-Glamsterdam-krupnejshee-obnovlenie-s-momenta-The-Merge-03-27",
     "telegram_id": 144,
     "status": "опубликован",
@@ -2404,7 +2486,7 @@
     "emoji": "💰"
   },
   {
-    "id": 107,
+    "id": 106,
     "date": "2026-03-27",
     "title": "NVIDIA GTC 2026: $1 трлн заказов и новая эра AI-суперкомпьютеров",
     "category": "nvidia",
@@ -2416,6 +2498,7 @@
       "hardware"
     ],
     "description": "nvidia: nvidia, gpu, ai, gtc2026, hardware",
+    "content": "",
     "telegraph_url": "https://telegra.ph/NVIDIA-GTC-2026-1-trln-zakazov-i-novaya-ehra-AI-superkompyuterov-03-27",
     "telegram_id": 145,
     "status": "опубликован",
@@ -2427,7 +2510,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 108,
+    "id": 107,
     "date": "2026-03-27",
     "title": "Hugging Face Diffusers 0.37.1: новое поколение генерации изображений",
     "category": "huggingface",
@@ -2439,6 +2522,7 @@
       "генерация"
     ],
     "description": "huggingface: huggingface, diffusers, ai, machinelearning, генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Hugging-Face-Diffusers-0371-novoe-pokolenie-generacii-izobrazhenij-03-27",
     "telegram_id": 146,
     "status": "опубликован",
@@ -2450,7 +2534,7 @@
     "emoji": "🤗"
   },
   {
-    "id": 109,
+    "id": 108,
     "date": "2026-03-27",
     "title": "Canonical вошла в Rust Foundation: Ubuntu делает ставку на Rust",
     "category": "rust",
@@ -2462,6 +2546,7 @@
       "opensource"
     ],
     "description": "rust: rust, ubuntu, linux, canonical, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Canonical-voshla-v-Rust-Foundation-Ubuntu-delaet-stavku-na-Rust-03-27",
     "telegram_id": 147,
     "status": "опубликован",
@@ -2472,7 +2557,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 110,
+    "id": 109,
     "date": "2026-03-27",
     "title": "Mistral выпустила открытый TTS-модель Voxtral для голосовых ассистентов",
     "category": "mistral",
@@ -2484,6 +2569,7 @@
       "voice"
     ],
     "description": "mistral: mistral, ai, tts, opensource, voice",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Mistral-vypustila-otkrytyj-TTS-model-Voxtral-dlya-golosovyh-assistentov-03-27",
     "telegram_id": 150,
     "status": "опубликован",
@@ -2495,7 +2581,7 @@
     "emoji": "🌫️"
   },
   {
-    "id": 111,
+    "id": 110,
     "date": "2026-03-27",
     "title": "Nginx 1.29.7: критические security-патчи и новые возможности",
     "category": "nginx",
@@ -2507,6 +2593,7 @@
       "cve"
     ],
     "description": "nginx: nginx, security, devops, webserver, cve",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nginx-1297-kriticheskie-security-patchi-i-novye-vozmozhnosti-03-27",
     "telegram_id": 151,
     "status": "опубликован",
@@ -2518,7 +2605,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 112,
+    "id": 111,
     "date": "2026-03-27",
     "title": "Terraform 1.15.0 beta: Windows ARM64 и новые возможности",
     "category": "terraform",
@@ -2530,6 +2617,7 @@
       "iac"
     ],
     "description": "terraform: terraform, devops, infrastructure, hashicorp, iac",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Terraform-1150-beta-Windows-ARM64-i-novye-vozmozhnosti-03-27",
     "telegram_id": 152,
     "status": "опубликован",
@@ -2541,7 +2629,7 @@
     "emoji": "🏗️"
   },
   {
-    "id": 113,
+    "id": 112,
     "date": "2026-03-27",
     "title": "Microsoft запустила общий доступ к Copilot Vision в VS Code",
     "category": "vscode",
@@ -2553,6 +2641,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, copilot, ai, microsoft, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Microsoft-zapustila-obshchij-dostup-k-Copilot-Vision-v-VS-Code-03-27",
     "telegram_id": 153,
     "status": "опубликован",
@@ -2564,7 +2653,7 @@
     "emoji": "💻"
   },
   {
-    "id": 114,
+    "id": 113,
     "date": "2026-03-27",
     "title": "Docker Desktop март 2026: Gordon AI, SLSA v1 и MCP Toolkit",
     "category": "docker",
@@ -2576,6 +2665,7 @@
       "supplychain"
     ],
     "description": "docker: docker, devops, security, ai, supplychain",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Docker-Desktop-mart-2026-Gordon-AI-SLSA-v1-i-MCP-Toolkit-03-27",
     "telegram_id": 154,
     "status": "опубликован",
@@ -2587,7 +2677,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 115,
+    "id": 114,
     "date": "2026-03-27",
     "title": "AWS и Cerebras объединились для ускорения AI-инференса",
     "category": "aws",
@@ -2599,6 +2689,7 @@
       "cerebras"
     ],
     "description": "aws: aws, ai, cloud, machinelearning, cerebras",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AWS-i-Cerebras-obedinilis-dlya-uskoreniya-AI-inferensa-03-27",
     "telegram_id": 157,
     "status": "опубликован",
@@ -2609,7 +2700,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 116,
+    "id": 115,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке: 5 технологий, которые изменят индустрию в 2026 году",
     "category": "ai_generated",
@@ -2618,6 +2709,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-5-tehnologij-kotorye-izmenyat-industriyu-v-2026-godu-03-26",
     "telegram_id": 38,
     "status": "опубликовано (AI-generated)",
@@ -2625,7 +2717,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 117,
+    "id": 116,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ перестал быть «фичей» и стал средой разработки",
     "category": "ai_generated",
@@ -2634,6 +2726,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/2026-God-kogda-II-perestal-byt-fichej-i-stal-sredoj-razrabotki-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
@@ -2641,7 +2734,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 118,
+    "id": 117,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ стал вашим тимлидом",
     "category": "ai_generated",
@@ -2650,6 +2743,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/2026-God-kogda-II-stal-vashim-timlidom-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
@@ -2657,7 +2751,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 119,
+    "id": 118,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ начал писать код за нас",
     "category": "ai_generated",
@@ -2666,6 +2760,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/2026-God-kogda-II-nachal-pisat-kod-za-nas-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
@@ -2673,7 +2768,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 120,
+    "id": 119,
     "date": "2026-03-26",
     "title": "🔥 Революция в разработке ПО: 5 технологии, которые меняют индустрию в 2026 году",
     "category": "ai_generated",
@@ -2682,6 +2777,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-PO-5-tehnologii-kotorye-menyayut-industriyu-v-2026-godu-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
@@ -2689,7 +2785,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 121,
+    "id": 120,
     "date": "2026-03-26",
     "title": "🔥 2026: Год, когда ИИ написал половину кода в мире",
     "category": "ai_generated",
@@ -2698,7 +2794,25 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/2026-God-kogda-II-napisal-polovinu-koda-v-mire-03-26",
+    "telegram_id": 0,
+    "status": "опубликовано (AI-generated)",
+    "sources": [],
+    "emoji": "🤖"
+  },
+  {
+    "id": 121,
+    "date": "2026-03-26",
+    "title": "🔥 Революция в разработке: 5 технологии, которые изменят код в 2026 году",
+    "category": "ai_generated",
+    "tags": [
+      "AI",
+      "автоматическая генерация"
+    ],
+    "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
+    "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-5-tehnologii-kotorye-izmenyat-kod-v-2026-godu-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
@@ -2714,7 +2828,8 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
-    "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-5-tehnologii-kotorye-izmenyat-kod-v-2026-godu-03-26",
+    "content": "",
+    "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-5-tehnologii-kotorye-izmenyat-kod-v-2026-godu-03-26-2",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
@@ -2723,14 +2838,15 @@
   {
     "id": 123,
     "date": "2026-03-26",
-    "title": "🔥 Революция в разработке: 5 технологии, которые изменят код в 2026 году",
+    "title": "🚀 2026: Год, когда ИИ написал код за нас",
     "category": "ai_generated",
     "tags": [
       "AI",
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
-    "telegraph_url": "https://telegra.ph/Revolyuciya-v-razrabotke-5-tehnologii-kotorye-izmenyat-kod-v-2026-godu-03-26-2",
+    "content": "",
+    "telegraph_url": "https://telegra.ph/2026-God-kogda-II-napisal-kod-za-nas-03-26",
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
@@ -2739,22 +2855,6 @@
   {
     "id": 124,
     "date": "2026-03-26",
-    "title": "🚀 2026: Год, когда ИИ написал код за нас",
-    "category": "ai_generated",
-    "tags": [
-      "AI",
-      "автоматическая генерация"
-    ],
-    "description": "ai_generated: AI, автоматическая генерация",
-    "telegraph_url": "https://telegra.ph/2026-God-kogda-II-napisal-kod-za-nas-03-26",
-    "telegram_id": 0,
-    "status": "опубликовано (AI-generated)",
-    "sources": [],
-    "emoji": "🤖"
-  },
-  {
-    "id": 125,
-    "date": "2026-03-26",
     "title": "🔥 5 главных трендов в разработке ПО, которые изменят 2026 год",
     "category": "ai_generated",
     "tags": [
@@ -2762,6 +2862,7 @@
       "автоматическая генерация"
     ],
     "description": "ai_generated: AI, автоматическая генерация",
+    "content": "",
     "telegraph_url": "https://telegra.ph/5-glavnyh-trendov-v-razrabotke-PO-kotorye-izmenyat-2026-god-03-26",
     "telegram_id": 40,
     "status": "опубликовано (AI-generated)",
@@ -2769,7 +2870,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 126,
+    "id": 125,
     "date": "2026-03-26",
     "title": "🔒 Node.js: критические security-релизы v20–v25",
     "category": "security",
@@ -2781,6 +2882,7 @@
       "dos"
     ],
     "description": "security: nodejs, javascript, security, cve, dos",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 41,
     "status": "опубликован",
@@ -2792,7 +2894,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 127,
+    "id": 126,
     "date": "2026-03-26",
     "title": "Node.js Emergency Security Release Fixes 9 Vulnerabilities",
     "category": "NodeJS",
@@ -2804,6 +2906,7 @@
       "WebDev"
     ],
     "description": "NodeJS: NodeJS, Security, JavaScript, CyberSecurity, WebDev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nodejs-Emergency-Security-Release-Fixes-9-Vulnerabilities-03-26-2",
     "telegram_id": 42,
     "status": "опубликован",
@@ -2814,7 +2917,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 128,
+    "id": 127,
     "date": "2026-03-26",
     "title": "Chrome 146 выпустил критические security-патчи",
     "category": "chrome",
@@ -2825,6 +2928,7 @@
       "google"
     ],
     "description": "chrome: chrome, security, browser, google",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Chrome-146-vypustil-kriticheskie-security-patchi-03-26",
     "telegram_id": 43,
     "status": "опубликован",
@@ -2835,7 +2939,7 @@
     "emoji": "🌐"
   },
   {
-    "id": 129,
+    "id": 128,
     "date": "2026-03-26",
     "title": "Тестовая статья с жирным текстом",
     "category": "тест",
@@ -2844,16 +2948,17 @@
       "проверка"
     ],
     "description": "тест: тест, проверка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Testovaya-statya-s-zhirnym-tekstom-03-26",
     "telegram_id": 44,
     "status": "опубликован",
     "sources": [
       "Тест"
     ],
-    "emoji": "🧪"
+    "emoji": "📖"
   },
   {
-    "id": 130,
+    "id": 129,
     "date": "2026-03-26",
     "title": "Тест жирного в списках",
     "category": "тест",
@@ -2862,16 +2967,17 @@
       "проверка"
     ],
     "description": "тест: тест, проверка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Test-zhirnogo-v-spiskah-03-26",
     "telegram_id": 45,
     "status": "опубликован",
     "sources": [
       "Тест"
     ],
-    "emoji": "🧪"
+    "emoji": "📖"
   },
   {
-    "id": 131,
+    "id": 130,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: финальный релиз с новыми настройками по умолчанию",
     "category": "typescript",
@@ -2882,6 +2988,7 @@
       "programming"
     ],
     "description": "typescript: typescript, javascript, webdev, programming",
+    "content": "",
     "telegraph_url": "https://telegra.ph/TypeScript-60-finalnyj-reliz-s-novymi-nastrojkami-po-umolchaniyu-03-26",
     "telegram_id": 46,
     "status": "опубликован",
@@ -2892,7 +2999,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 132,
+    "id": 131,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: финальный релиз с новыми настройками по умолчанию",
     "category": "typescript",
@@ -2904,6 +3011,7 @@
       "frontend"
     ],
     "description": "typescript: typescript, javascript, webdev, programming, frontend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/TypeScript-60-finalnyj-reliz-s-novymi-nastrojkami-po-umolchaniyu-03-26-2",
     "telegram_id": 47,
     "status": "опубликован",
@@ -2914,7 +3022,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 133,
+    "id": 132,
     "date": "2026-03-26",
     "title": "TypeScript 6.0: строгий режим по умолчанию и подготовка к 7.0 на Go",
     "category": "typescript",
@@ -2926,6 +3034,7 @@
       "microsoft"
     ],
     "description": "typescript: typescript, javascript, webdev, programming, microsoft",
+    "content": "",
     "telegraph_url": "https://telegra.ph/TypeScript-60-strogij-rezhim-po-umolchaniyu-i-podgotovka-k-70-na-Go-03-26",
     "telegram_id": 48,
     "status": "опубликован",
@@ -2937,7 +3046,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 134,
+    "id": 133,
     "date": "2026-03-26",
     "title": "Тест жирного в списках",
     "category": "тест",
@@ -2946,16 +3055,17 @@
       "проверка"
     ],
     "description": "тест: тест, проверка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Test-zhirnogo-v-spiskah-03-26-2",
     "telegram_id": 49,
     "status": "опубликован",
     "sources": [
       "Тест"
     ],
-    "emoji": "🧪"
+    "emoji": "📖"
   },
   {
-    "id": 135,
+    "id": 134,
     "date": "2026-03-26",
     "title": "OpenAI готовится к IPO и закрывает приложение Sora",
     "category": "openai",
@@ -2967,6 +3077,7 @@
       "технологии"
     ],
     "description": "openai: openai, ipo, sora, ai, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-gotovitsya-k-IPO-i-zakryvaet-prilozhenie-Sora-03-26",
     "telegram_id": 50,
     "status": "опубликован",
@@ -2978,7 +3089,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 136,
+    "id": 135,
     "date": "2026-03-26",
     "title": "GitHub Copilot март 2026: агенты, CLI и метрики",
     "category": "github",
@@ -2990,6 +3101,7 @@
       "automations"
     ],
     "description": "github: github, copilot, ai, разработка, automations",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Copilot-mart-2026-agenty-CLI-i-metriki-03-26",
     "telegram_id": 51,
     "status": "опубликован",
@@ -3001,7 +3113,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 137,
+    "id": 136,
     "date": "2026-03-26",
     "title": "Node.js выпустил экстренные security-патчи для всех версий",
     "category": "nodejs",
@@ -3013,6 +3125,7 @@
       "webdev"
     ],
     "description": "nodejs: nodejs, security, javascript, cve, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nodejs-vypustil-ehkstrennye-security-patchi-dlya-vseh-versij-03-26",
     "telegram_id": 52,
     "status": "опубликован",
@@ -3024,7 +3137,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 138,
+    "id": 137,
     "date": "2026-03-26",
     "title": "Java 26 вышла: Project Leyden, HTTP/3 и новые возможности",
     "category": "java",
@@ -3036,6 +3149,7 @@
       "разработка"
     ],
     "description": "java: java, jetbrains, intellijidea, jdk26, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Java-26-vyshla-Project-Leyden-HTTP3-i-novye-vozmozhnosti-03-26",
     "telegram_id": 53,
     "status": "опубликован",
@@ -3047,7 +3161,7 @@
     "emoji": "☕"
   },
   {
-    "id": 139,
+    "id": 138,
     "date": "2026-03-26",
     "title": "Python 3.15 получит встроенный тип frozendict",
     "category": "python",
@@ -3059,6 +3173,7 @@
       "python315"
     ],
     "description": "python: python, frozendict, программирование, pep814, python315",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Python-315-poluchit-vstroennyj-tip-frozendict-03-26",
     "telegram_id": 57,
     "status": "опубликован",
@@ -3070,7 +3185,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 140,
+    "id": 139,
     "date": "2026-03-26",
     "title": "PostgreSQL выпустил срочные обновления 18.3–14.22",
     "category": "postgresql",
@@ -3082,6 +3197,7 @@
       "backend"
     ],
     "description": "postgresql: postgresql, databases, security, sql, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/PostgreSQL-vypustil-srochnye-obnovleniya-1831422-03-26",
     "telegram_id": 58,
     "status": "опубликован",
@@ -3092,7 +3208,7 @@
     "emoji": "🐘"
   },
   {
-    "id": 141,
+    "id": 140,
     "date": "2026-03-26",
     "title": "GitLab 18.9: self-hosted AI модели и автоисправление уязвимостей",
     "category": "gitlab",
@@ -3104,6 +3220,7 @@
       "cicd"
     ],
     "description": "gitlab: gitlab, ai, security, devops, cicd",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitLab-189-self-hosted-AI-modeli-i-avtoispravlenie-uyazvimostej-03-26",
     "telegram_id": 59,
     "status": "опубликован",
@@ -3115,7 +3232,7 @@
     "emoji": "🦊"
   },
   {
-    "id": 142,
+    "id": 141,
     "date": "2026-03-26",
     "title": "Apple объявила даты WWDC 2026: iOS 27, macOS 27 и новый Siri",
     "category": "apple",
@@ -3127,6 +3244,7 @@
       "siri"
     ],
     "description": "apple: apple, wwdc2026, ios27, macos27, siri",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Apple-obyavila-daty-WWDC-2026-iOS-27-macOS-27-i-novyj-Siri-03-26",
     "telegram_id": 60,
     "status": "опубликован",
@@ -3138,7 +3256,7 @@
     "emoji": "🍎"
   },
   {
-    "id": 143,
+    "id": 142,
     "date": "2026-03-26",
     "title": "Node.js выпустил экстренные security-патчи для всех версий",
     "category": "nodejs",
@@ -3150,6 +3268,7 @@
       "webdev"
     ],
     "description": "nodejs: nodejs, security, javascript, cve, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Nodejs-vypustil-ehkstrennye-security-patchi-dlya-vseh-versij-03-26-2",
     "telegram_id": 61,
     "status": "опубликован",
@@ -3161,7 +3280,7 @@
     "emoji": "🟩"
   },
   {
-    "id": 144,
+    "id": 143,
     "date": "2026-03-26",
     "title": "Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества",
     "category": "google",
@@ -3173,6 +3292,7 @@
       "технологии"
     ],
     "description": "google: google, ai, machinelearning, llm, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-predstavila-TurboQuant-szhatie-AI-modelej-v-6-raz-bez-poteri-kachestva-03-26",
     "telegram_id": 62,
     "status": "опубликован",
@@ -3184,7 +3304,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 145,
+    "id": 144,
     "date": "2026-03-26",
     "title": "Meta готовит Llama 4.5: новая архитектура MoE до конца 2026",
     "category": "ai",
@@ -3196,6 +3316,7 @@
       "machinelearning"
     ],
     "description": "ai: ai, llama, meta, opensource, machinelearning",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Meta-gotovit-Llama-45-novaya-arhitektura-MoE-do-konca-2026-03-26",
     "telegram_id": 63,
     "status": "опубликован",
@@ -3207,7 +3328,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 146,
+    "id": 145,
     "date": "2026-03-26",
     "title": "GitHub усилил защиту: 28 новых детекторов секретов",
     "category": "github",
@@ -3219,6 +3340,7 @@
       "cybersecurity"
     ],
     "description": "github: github, security, devops, secretscanning, cybersecurity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-usilil-zashchitu-28-novyh-detektorov-sekretov-03-26",
     "telegram_id": 64,
     "status": "опубликован",
@@ -3229,7 +3351,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 147,
+    "id": 146,
     "date": "2026-03-26",
     "title": "Bun 1.2.0: встроенный тестировщик и поддержка WebSocket",
     "category": "bun",
@@ -3241,6 +3363,7 @@
       "performance"
     ],
     "description": "bun: bun, javascript, typescript, webdev, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Bun-120-vstroennyj-testirovshchik-i-podderzhka-WebSocket-03-26",
     "telegram_id": 65,
     "status": "опубликован",
@@ -3252,7 +3375,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 148,
+    "id": 147,
     "date": "2026-03-26",
     "title": "Anthropic запустила Claude Computer Use для macOS",
     "category": "anthropic",
@@ -3264,6 +3387,7 @@
       "macos"
     ],
     "description": "anthropic: anthropic, claude, ai, automation, macos",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Anthropic-zapustila-Claude-Computer-Use-dlya-macOS-03-26",
     "telegram_id": 66,
     "status": "опубликован",
@@ -3275,7 +3399,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 149,
+    "id": 148,
     "date": "2026-03-26",
     "title": "Swift 6.3 вышел: новые возможности для разработчиков",
     "category": "swift",
@@ -3287,6 +3411,7 @@
       "ios"
     ],
     "description": "swift: swift, apple, xcode, programming, ios",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Swift-63-vyshel-novye-vozmozhnosti-dlya-razrabotchikov-03-26",
     "telegram_id": 67,
     "status": "опубликован",
@@ -3298,7 +3423,7 @@
     "emoji": "🕊️"
   },
   {
-    "id": 150,
+    "id": 149,
     "date": "2026-03-26",
     "title": "Rust 1.85: стабилизация async fn в трейтах",
     "category": "rust",
@@ -3309,6 +3434,7 @@
       "backend"
     ],
     "description": "rust: rust, async, programming, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rust-185-stabilizaciya-async-fn-v-trejtah-03-26",
     "telegram_id": 68,
     "status": "опубликован",
@@ -3320,7 +3446,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 151,
+    "id": 150,
     "date": "2026-03-26",
     "title": "GPT-5.4, Gemini 3.1 Pro, Claude 4.6: битва AI-гигантов в марте 2026",
     "category": "ai",
@@ -3332,6 +3458,7 @@
       "llama"
     ],
     "description": "ai: ai, gpt5, gemini, claude, llama",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GPT-54-Gemini-31-Pro-Claude-46-bitva-AI-gigantov-v-marte-2026-03-26",
     "telegram_id": 69,
     "status": "опубликован",
@@ -3342,7 +3469,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 152,
+    "id": 151,
     "date": "2026-03-26",
     "title": "Go 1.26: new(expr), зелёный GC и постквантовая криптография",
     "category": "golang",
@@ -3354,6 +3481,7 @@
       "performance"
     ],
     "description": "golang: golang, go, programming, backend, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Go-126-newexpr-zelyonyj-GC-i-postkvantovaya-kriptografiya-03-26",
     "telegram_id": 70,
     "status": "опубликован",
@@ -3365,7 +3493,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 153,
+    "id": 152,
     "date": "2026-03-26",
     "title": "Docker 27.0: новый движок контейнеризации и улучшенная безопасность",
     "category": "docker",
@@ -3377,6 +3505,7 @@
       "security"
     ],
     "description": "docker: docker, devops, containers, wasm, security",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Docker-270-novyj-dvizhok-kontejnerizacii-i-uluchshennaya-bezopasnost-03-26",
     "telegram_id": 71,
     "status": "опубликован",
@@ -3388,7 +3517,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 154,
+    "id": 153,
     "date": "2026-03-26",
     "title": "Redis 8.0: новый движок хранения и улучшенная кластеризация",
     "category": "redis",
@@ -3400,6 +3529,7 @@
       "backend"
     ],
     "description": "redis: redis, databases, performance, security, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Redis-80-novyj-dvizhok-hraneniya-i-uluchshennaya-klasterizaciya-03-26",
     "telegram_id": 72,
     "status": "опубликован",
@@ -3411,7 +3541,7 @@
     "emoji": "🔴"
   },
   {
-    "id": 155,
+    "id": 154,
     "date": "2026-03-26",
     "title": "Linux 6.14: новые возможности ядра для разработчиков",
     "category": "linux",
@@ -3423,6 +3553,7 @@
       "programming"
     ],
     "description": "linux: linux, kernel, opensource, devops, programming",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Linux-614-novye-vozmozhnosti-yadra-dlya-razrabotchikov-03-26",
     "telegram_id": 73,
     "status": "опубликован",
@@ -3434,7 +3565,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 156,
+    "id": 155,
     "date": "2026-03-26",
     "title": "Git 3.0 готовится к релизу: SHA-256, Rust и reftable",
     "category": "git",
@@ -3446,6 +3577,7 @@
       "rust"
     ],
     "description": "git: git, devops, opensource, security, rust",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Git-30-gotovitsya-k-relizu-SHA-256-Rust-i-reftable-03-26",
     "telegram_id": 74,
     "status": "опубликован",
@@ -3457,7 +3589,7 @@
     "emoji": "📉"
   },
   {
-    "id": 157,
+    "id": 156,
     "date": "2026-03-26",
     "title": "Samsung Browser для ПК получил AI-функции",
     "category": "samsung",
@@ -3469,6 +3601,7 @@
       "технологии"
     ],
     "description": "samsung: samsung, browser, ai, windows, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Samsung-Browser-dlya-PK-poluchil-AI-funkcii-03-26",
     "telegram_id": 75,
     "status": "опубликован",
@@ -3480,7 +3613,7 @@
     "emoji": "📱"
   },
   {
-    "id": 158,
+    "id": 157,
     "date": "2026-03-26",
     "title": "Bun 1.2: встроенный тестировщик и поддержка WebSocket",
     "category": "bun",
@@ -3492,6 +3625,7 @@
       "performance"
     ],
     "description": "bun: bun, javascript, typescript, webdev, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Bun-12-vstroennyj-testirovshchik-i-podderzhka-WebSocket-03-26",
     "telegram_id": 76,
     "status": "опубликован",
@@ -3502,7 +3636,7 @@
     "emoji": "🍞"
   },
   {
-    "id": 159,
+    "id": 158,
     "date": "2026-03-26",
     "title": "Google представила TurboQuant: сжатие AI-моделей в 6 раз без потери качества",
     "category": "google",
@@ -3514,6 +3648,7 @@
       "технологии"
     ],
     "description": "google: google, ai, machinelearning, llm, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Google-predstavila-TurboQuant-szhatie-AI-modelej-v-6-raz-bez-poteri-kachestva-03-26-2",
     "telegram_id": 77,
     "status": "опубликован",
@@ -3525,7 +3660,7 @@
     "emoji": "🔍"
   },
   {
-    "id": 160,
+    "id": 159,
     "date": "2026-03-26",
     "title": "Rust 1.86: стабилизация async fn в трейтах и новые возможности",
     "category": "rust",
@@ -3536,6 +3671,7 @@
       "opensource"
     ],
     "description": "rust: rust, programming, backend, opensource",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rust-186-stabilizaciya-async-fn-v-trejtah-i-novye-vozmozhnosti-03-26",
     "telegram_id": 78,
     "status": "опубликован",
@@ -3547,7 +3683,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 161,
+    "id": 160,
     "date": "2026-03-26",
     "title": "Cloudflare R2 SQL получил 190+ новых функций для аналитики",
     "category": "cloudflare",
@@ -3559,6 +3695,7 @@
       "serverless"
     ],
     "description": "cloudflare: cloudflare, r2, sql, analytics, serverless",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-R2-SQL-poluchil-190-novyh-funkcij-dlya-analitiki-03-26",
     "telegram_id": 79,
     "status": "опубликован",
@@ -3569,7 +3706,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 162,
+    "id": 161,
     "date": "2026-03-26",
     "title": "Vite 6.2: ускоренная сборка и новые плагины",
     "category": "vite",
@@ -3581,6 +3718,7 @@
       "build"
     ],
     "description": "vite: vite, javascript, frontend, webdev, build",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Vite-62-uskorennaya-sborka-i-novye-plaginy-03-26",
     "telegram_id": 80,
     "status": "опубликован",
@@ -3592,7 +3730,7 @@
     "emoji": "⚡"
   },
   {
-    "id": 163,
+    "id": 162,
     "date": "2026-03-26",
     "title": "OpenAI закрывает Sora и отменяет сделку с Disney на $1 млрд",
     "category": "openai",
@@ -3604,6 +3742,7 @@
       "технологии"
     ],
     "description": "openai: openai, sora, ai, disney, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenAI-zakryvaet-Sora-i-otmenyaet-sdelku-s-Disney-na-1-mlrd-03-26",
     "telegram_id": 81,
     "status": "опубликован",
@@ -3615,7 +3754,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 164,
+    "id": 163,
     "date": "2026-03-26",
     "title": "Laravel 13 вышел: AI SDK, Passkeys и нулевые breaking changes",
     "category": "laravel",
@@ -3627,6 +3766,7 @@
       "ai"
     ],
     "description": "laravel: laravel, php, webdev, backend, ai",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Laravel-13-vyshel-AI-SDK-Passkeys-i-nulevye-breaking-changes-03-26",
     "telegram_id": 82,
     "status": "опубликован",
@@ -3638,7 +3778,7 @@
     "emoji": "🔺"
   },
   {
-    "id": 165,
+    "id": 164,
     "date": "2026-03-26",
     "title": "VS Code 1.113: редактор чат-агентов и поддержка MCP",
     "category": "vscode",
@@ -3650,6 +3790,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, microsoft, ai, copilot, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1113-redaktor-chat-agentov-i-podderzhka-MCP-03-26",
     "telegram_id": 83,
     "status": "опубликован",
@@ -3660,7 +3801,7 @@
     "emoji": "💻"
   },
   {
-    "id": 166,
+    "id": 165,
     "date": "2026-03-26",
     "title": "Linux 7.0: Линус Торвальдс анонсировал первый релиз-кандидат",
     "category": "linux",
@@ -3672,6 +3813,7 @@
       "sysadmin"
     ],
     "description": "linux: linux, kernel, opensource, devops, sysadmin",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Linux-70-Linus-Torvalds-anonsiroval-pervyj-reliz-kandidat-03-26",
     "telegram_id": 84,
     "status": "опубликован",
@@ -3682,7 +3824,7 @@
     "emoji": "🐧"
   },
   {
-    "id": 167,
+    "id": 166,
     "date": "2026-03-26",
     "title": "Laravel 13: AI SDK, Passkeys и Reverb без Redis",
     "category": "laravel",
@@ -3694,6 +3836,7 @@
       "webdev"
     ],
     "description": "laravel: laravel, php, ai, passkeys, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Laravel-13-AI-SDK-Passkeys-i-Reverb-bez-Redis-03-26",
     "telegram_id": 85,
     "status": "опубликован",
@@ -3705,7 +3848,7 @@
     "emoji": "🔺"
   },
   {
-    "id": 168,
+    "id": 167,
     "date": "2026-03-26",
     "title": "React 19.1: автоматическое batching и новые хуки",
     "category": "react",
@@ -3716,6 +3859,7 @@
       "webdev"
     ],
     "description": "react: react, javascript, frontend, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/React-191-avtomaticheskoe-batching-i-novye-huki-03-26",
     "telegram_id": 86,
     "status": "опубликован",
@@ -3726,7 +3870,7 @@
     "emoji": "⚛️"
   },
   {
-    "id": 169,
+    "id": 168,
     "date": "2026-03-26",
     "title": "IntelliJ IDEA 2026.1: полная поддержка Java 26 и новые фичи",
     "category": "intellijidea",
@@ -3738,6 +3882,7 @@
       "разработка"
     ],
     "description": "intellijidea: intellijidea, java, jetbrains, ide, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/IntelliJ-IDEA-20261-polnaya-podderzhka-Java-26-i-novye-fichi-03-26",
     "telegram_id": 87,
     "status": "опубликован",
@@ -3748,7 +3893,7 @@
     "emoji": "💡"
   },
   {
-    "id": 170,
+    "id": 169,
     "date": "2026-03-26",
     "title": "Docker Desktop 4.66.0: ускорение сборки и новые фичи Gordon",
     "category": "docker",
@@ -3760,6 +3905,7 @@
       "nvidia"
     ],
     "description": "docker: docker, devops, containers, kubernetes, nvidia",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Docker-Desktop-4660-uskorenie-sborki-i-novye-fichi-Gordon-03-26",
     "telegram_id": 88,
     "status": "опубликован",
@@ -3770,7 +3916,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 171,
+    "id": 170,
     "date": "2026-03-26",
     "title": "VS Code 1.112: новые возможности для разработчиков и AI-агентов",
     "category": "vscode",
@@ -3782,6 +3928,7 @@
       "copilot"
     ],
     "description": "vscode: vscode, microsoft, разработка, ai, copilot",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1112-novye-vozmozhnosti-dlya-razrabotchikov-i-AI-agentov-03-26",
     "telegram_id": 89,
     "status": "опубликован",
@@ -3792,7 +3939,7 @@
     "emoji": "💻"
   },
   {
-    "id": 172,
+    "id": 171,
     "date": "2026-03-26",
     "title": "Ubuntu 26.04 LTS beta: Linux 6.20 и новые возможности",
     "category": "ubuntu",
@@ -3803,6 +3950,7 @@
       "devops"
     ],
     "description": "ubuntu: ubuntu, linux, opensource, devops",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Ubuntu-2604-LTS-beta-Linux-620-i-novye-vozmozhnosti-03-26",
     "telegram_id": 90,
     "status": "опубликован",
@@ -3814,7 +3962,7 @@
     "emoji": "🟧"
   },
   {
-    "id": 173,
+    "id": 172,
     "date": "2026-03-26",
     "title": "AWS S3 изменил правила имён бакетов: региональные namespace",
     "category": "aws",
@@ -3826,6 +3974,7 @@
       "infrastructure"
     ],
     "description": "aws: aws, s3, cloud, devops, infrastructure",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AWS-S3-izmenil-pravila-imyon-baketov-regionalnye-namespace-03-26",
     "telegram_id": 91,
     "status": "опубликован",
@@ -3836,7 +3985,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 174,
+    "id": 173,
     "date": "2026-03-26",
     "title": "Fedora 44 Beta: GNOME 50, Plasma 6.6 и новые возможности",
     "category": "fedora",
@@ -3848,6 +3997,7 @@
       "kde"
     ],
     "description": "fedora: fedora, linux, opensource, gnome, kde",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Fedora-44-Beta-GNOME-50-Plasma-66-i-novye-vozmozhnosti-03-26",
     "telegram_id": 92,
     "status": "опубликован",
@@ -3858,7 +4008,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 175,
+    "id": 174,
     "date": "2026-03-26",
     "title": "GitHub ввёл обязательную 2FA для всех разработчиков",
     "category": "github",
@@ -3870,6 +4020,7 @@
       "devops"
     ],
     "description": "github: github, security, 2fa, opensource, devops",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-vvyol-obyazatelnuyu-2FA-dlya-vseh-razrabotchikov-03-26",
     "telegram_id": 93,
     "status": "опубликован",
@@ -3880,7 +4031,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 176,
+    "id": 175,
     "date": "2026-03-26",
     "title": "Chandra OCR 2: революция в распознавании текста с поддержкой 90+ языков",
     "category": "ocr",
@@ -3892,6 +4043,7 @@
       "python"
     ],
     "description": "ocr: ocr, opensource, ai, machinelearning, python",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Chandra-OCR-2-revolyuciya-v-raspoznavanii-teksta-s-podderzhkoj-90-yazykov-03-26",
     "telegram_id": 94,
     "status": "опубликован",
@@ -3902,7 +4054,7 @@
     "emoji": "📝"
   },
   {
-    "id": 177,
+    "id": 176,
     "date": "2026-03-26",
     "title": "ARM выпустила первый собственный процессор AGI CPU для ИИ-дата-центров",
     "category": "arm",
@@ -3914,6 +4066,7 @@
       "semiconductor"
     ],
     "description": "arm: arm, ai, datacenter, cpu, semiconductor",
+    "content": "",
     "telegraph_url": "https://telegra.ph/ARM-vypustila-pervyj-sobstvennyj-processor-AGI-CPU-dlya-II-data-centrov-03-26",
     "telegram_id": 95,
     "status": "опубликован",
@@ -3925,7 +4078,7 @@
     "emoji": "🔧"
   },
   {
-    "id": 178,
+    "id": 177,
     "date": "2026-03-26",
     "title": "Microsoft Patch Tuesday март 2026: 2 zero-day и 79 уязвимостей",
     "category": "microsoft",
@@ -3937,6 +4090,7 @@
       "zeroday"
     ],
     "description": "microsoft: microsoft, windows, security, patchtuesday, zeroday",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Microsoft-Patch-Tuesday-mart-2026-2-zero-day-i-79-uyazvimostej-03-26",
     "telegram_id": 96,
     "status": "опубликован",
@@ -3948,7 +4102,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 179,
+    "id": 178,
     "date": "2026-03-26",
     "title": "Европарламент ограничил Chat Control 1.0: победа приватности",
     "category": "privacy",
@@ -3960,6 +4114,7 @@
       "security"
     ],
     "description": "privacy: privacy, encryption, eu, chatcontrol, security",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Evroparlament-ogranichil-Chat-Control-10-pobeda-privatnosti-03-26",
     "telegram_id": 97,
     "status": "опубликован",
@@ -3970,7 +4125,7 @@
     "emoji": "🕶️"
   },
   {
-    "id": 180,
+    "id": 179,
     "date": "2026-03-26",
     "title": "Microsoft выпустила экстренные патчи для Exchange Server",
     "category": "microsoft",
@@ -3982,6 +4137,7 @@
       "sysadmin"
     ],
     "description": "microsoft: microsoft, exchange, security, patch, sysadmin",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Microsoft-vypustila-ehkstrennye-patchi-dlya-Exchange-Server-03-26",
     "telegram_id": 99,
     "status": "опубликован",
@@ -3993,7 +4149,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 181,
+    "id": 180,
     "date": "2026-03-26",
     "title": "130K+ загрузок: вредоносные пакеты в npm атакуют React Native",
     "category": "npm",
@@ -4005,6 +4161,7 @@
       "кибербезопасность"
     ],
     "description": "npm: npm, security, reactnative, javascript, кибербезопасность",
+    "content": "",
     "telegraph_url": "https://telegra.ph/130K-zagruzok-vredonosnye-pakety-v-npm-atakuyut-React-Native-03-26",
     "telegram_id": 100,
     "status": "опубликован",
@@ -4015,7 +4172,7 @@
     "emoji": "📦"
   },
   {
-    "id": 182,
+    "id": 181,
     "date": "2026-03-26",
     "title": "DeepSeek V4: триллион параметров и новые возможности",
     "category": "ai",
@@ -4027,6 +4184,7 @@
       "machinelearning"
     ],
     "description": "ai: ai, deepseek, llm, нейросети, machinelearning",
+    "content": "",
     "telegraph_url": "https://telegra.ph/DeepSeek-V4-trillion-parametrov-i-novye-vozmozhnosti-03-26",
     "telegram_id": 102,
     "status": "опубликован",
@@ -4038,7 +4196,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 183,
+    "id": 182,
     "date": "2026-03-26",
     "title": "GitHub Copilot научился разрешать merge-конфликты в pull request",
     "category": "github",
@@ -4050,6 +4208,7 @@
       "merge"
     ],
     "description": "github: github, copilot, ai, devtools, merge",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Copilot-nauchilsya-razreshat-merge-konflikty-v-pull-request-03-26",
     "telegram_id": 103,
     "status": "опубликован",
@@ -4060,7 +4219,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 184,
+    "id": 183,
     "date": "2026-03-26",
     "title": ".NET MAUI 10.0.51 SR5.1: уведомления-бейджи и новые фичи",
     "category": "dotnet",
@@ -4072,6 +4231,7 @@
       "microsoft"
     ],
     "description": "dotnet: dotnet, maui, mobile, development, microsoft",
+    "content": "",
     "telegraph_url": "https://telegra.ph/NET-MAUI-10051-SR51-uvedomleniya-bejdzhi-i-novye-fichi-03-26",
     "telegram_id": 104,
     "status": "опубликован",
@@ -4083,7 +4243,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 185,
+    "id": 184,
     "date": "2026-03-26",
     "title": "Критическая уязвимость в Nginx UI: утечка бэкапов и ключей шифрования",
     "category": "nginx",
@@ -4095,6 +4255,7 @@
       "cybersecurity"
     ],
     "description": "nginx: nginx, security, devops, webdev, cybersecurity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kriticheskaya-uyazvimost-v-Nginx-UI-utechka-behkapov-i-klyuchej-shifrovaniya-03-26",
     "telegram_id": 105,
     "status": "опубликован",
@@ -4106,7 +4267,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 186,
+    "id": 185,
     "date": "2026-03-26",
     "title": "Vue.js 3.5: реактивность нового поколения и ускоренный рендеринг",
     "category": "vuejs",
@@ -4118,6 +4279,7 @@
       "reactivity"
     ],
     "description": "vuejs: vuejs, javascript, frontend, webdev, reactivity",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Vuejs-35-reaktivnost-novogo-pokoleniya-i-uskorennyj-rendering-03-26",
     "telegram_id": 106,
     "status": "опубликован",
@@ -4129,7 +4291,7 @@
     "emoji": "🞩"
   },
   {
-    "id": 187,
+    "id": 186,
     "date": "2026-03-26",
     "title": "OpenTelemetry Profiles вышел в public alpha",
     "category": "opentelemetry",
@@ -4141,6 +4303,7 @@
       "monitoring"
     ],
     "description": "opentelemetry: opentelemetry, observability, profiling, devops, monitoring",
+    "content": "",
     "telegraph_url": "https://telegra.ph/OpenTelemetry-Profiles-vyshel-v-public-alpha-03-26",
     "telegram_id": 107,
     "status": "опубликован",
@@ -4151,7 +4314,7 @@
     "emoji": "💡"
   },
   {
-    "id": 188,
+    "id": 187,
     "date": "2026-03-26",
     "title": "Flutter 3.29: новая система рендеринга и улучшения производительности",
     "category": "flutter",
@@ -4163,6 +4326,7 @@
       "ios"
     ],
     "description": "flutter: flutter, dart, mobile, android, ios",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Flutter-329-novaya-sistema-renderinga-i-uluchsheniya-proizvoditelnosti-03-26",
     "telegram_id": 108,
     "status": "опубликован",
@@ -4174,7 +4338,7 @@
     "emoji": "🦋"
   },
   {
-    "id": 189,
+    "id": 188,
     "date": "2026-03-26",
     "title": "AI-стартапы собрали $220 млрд за два месяца 2026 года",
     "category": "ai",
@@ -4186,6 +4350,7 @@
       "венчурныйкапитал"
     ],
     "description": "ai: ai, стартапы, инвестиции, технологии, венчурныйкапитал",
+    "content": "",
     "telegraph_url": "https://telegra.ph/AI-startapy-sobrali-220-mlrd-za-dva-mesyaca-2026-goda-03-26",
     "telegram_id": 109,
     "status": "опубликован",
@@ -4197,7 +4362,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 190,
+    "id": 189,
     "date": "2026-03-26",
     "title": "Go 1.26: новый GC, post-quantum криптография и упрощение кода",
     "category": "golang",
@@ -4209,6 +4374,7 @@
       "backend"
     ],
     "description": "golang: golang, go126, programming, security, backend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Go-126-novyj-GC-post-quantum-kriptografiya-i-uproshchenie-koda-03-26",
     "telegram_id": 110,
     "status": "опубликован",
@@ -4220,7 +4386,7 @@
     "emoji": "🔵"
   },
   {
-    "id": 191,
+    "id": 190,
     "date": "2026-03-26",
     "title": "Firefox 149: встроенный VPN, Split View и новые возможности",
     "category": "firefox",
@@ -4232,6 +4398,7 @@
       "security"
     ],
     "description": "firefox: firefox, browser, mozilla, vpn, security",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Firefox-149-vstroennyj-VPN-Split-View-i-novye-vozmozhnosti-03-26",
     "telegram_id": 111,
     "status": "опубликован",
@@ -4243,7 +4410,7 @@
     "emoji": "🦊"
   },
   {
-    "id": 192,
+    "id": 191,
     "date": "2026-03-26",
     "title": "Cloudflare запустила Dynamic Workers в open beta для AI-агентов",
     "category": "cloudflare",
@@ -4255,6 +4422,7 @@
       "edge"
     ],
     "description": "cloudflare: cloudflare, workers, ai, serverless, edge",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-zapustila-Dynamic-Workers-v-open-beta-dlya-AI-agentov-03-26",
     "telegram_id": 112,
     "status": "опубликован",
@@ -4265,7 +4433,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 193,
+    "id": 192,
     "date": "2026-03-26",
     "title": "VS Code 1.112: агент Copilot, отладка в браузере и песочница MCP",
     "category": "vscode",
@@ -4277,6 +4445,7 @@
       "разработка"
     ],
     "description": "vscode: vscode, microsoft, ai, copilot, разработка",
+    "content": "",
     "telegraph_url": "https://telegra.ph/VS-Code-1112-agent-Copilot-otladka-v-brauzere-i-pesochnica-MCP-03-26",
     "telegram_id": 113,
     "status": "опубликован",
@@ -4287,7 +4456,7 @@
     "emoji": "💻"
   },
   {
-    "id": 194,
+    "id": 193,
     "date": "2026-03-26",
     "title": "Vite 8.0: революция в сборке с Rolldown",
     "category": "vite",
@@ -4299,6 +4468,7 @@
       "rust"
     ],
     "description": "vite: vite, javascript, frontend, rolldown, rust",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Vite-80-revolyuciya-v-sborke-s-Rolldown-03-26",
     "telegram_id": 114,
     "status": "опубликован",
@@ -4309,7 +4479,7 @@
     "emoji": "⚡"
   },
   {
-    "id": 195,
+    "id": 194,
     "date": "2026-03-26",
     "title": "Cloudflare Markdown for Agents: сокращение токенов на 80%",
     "category": "cloudflare",
@@ -4321,6 +4491,7 @@
       "webdev"
     ],
     "description": "cloudflare: cloudflare, ai, markdown, agents, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Cloudflare-Markdown-for-Agents-sokrashchenie-tokenov-na-80-03-26",
     "telegram_id": 115,
     "status": "опубликован",
@@ -4331,7 +4502,7 @@
     "emoji": "☁️"
   },
   {
-    "id": 196,
+    "id": 195,
     "date": "2026-03-26",
     "title": "LiteLLM взломан: бэкдор в PyPI пакете украл ключи разработчиков",
     "category": "python",
@@ -4343,6 +4514,7 @@
       "кибербезопасность"
     ],
     "description": "python: python, security, pypi, devops, кибербезопасность",
+    "content": "",
     "telegraph_url": "https://telegra.ph/LiteLLM-vzloman-behkdor-v-PyPI-pakete-ukral-klyuchi-razrabotchikov-03-26",
     "telegram_id": 116,
     "status": "опубликован",
@@ -4354,7 +4526,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 197,
+    "id": 196,
     "date": "2026-03-26",
     "title": "WebAssembly 2.0: революция в производительности веб-приложений",
     "category": "webassembly",
@@ -4366,6 +4538,7 @@
       "performance"
     ],
     "description": "webassembly: webassembly, wasm, javascript, browser, performance",
+    "content": "",
     "telegraph_url": "https://telegra.ph/WebAssembly-20-revolyuciya-v-proizvoditelnosti-veb-prilozhenij-03-26",
     "telegram_id": 117,
     "status": "опубликован",
@@ -4377,7 +4550,7 @@
     "emoji": "📦"
   },
   {
-    "id": 198,
+    "id": 197,
     "date": "2026-03-26",
     "title": "Flutter 4.0: революция в кроссплатформенной разработке",
     "category": "flutter",
@@ -4389,6 +4562,7 @@
       "google"
     ],
     "description": "flutter: flutter, dart, mobile, webassembly, google",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Flutter-40-revolyuciya-v-krossplatformennoj-razrabotke-03-26",
     "telegram_id": 118,
     "status": "опубликован",
@@ -4400,7 +4574,7 @@
     "emoji": "🦋"
   },
   {
-    "id": 199,
+    "id": 198,
     "date": "2026-03-26",
     "title": "Svelte март 2026: createContext, TrustedHTML и Vite 8",
     "category": "svelte",
@@ -4412,6 +4586,7 @@
       "sveltekit"
     ],
     "description": "svelte: svelte, javascript, frontend, webdev, sveltekit",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Svelte-mart-2026-createContext-TrustedHTML-i-Vite-8-03-26",
     "telegram_id": 119,
     "status": "опубликован",
@@ -4423,7 +4598,7 @@
     "emoji": "🔥"
   },
   {
-    "id": 200,
+    "id": 199,
     "date": "2026-03-26",
     "title": "Microsoft запустила Copilot Vision: ИИ теперь видит ваш экран",
     "category": "microsoft",
@@ -4435,6 +4610,7 @@
       "технологии"
     ],
     "description": "microsoft: microsoft, copilot, ai, windows, технологии",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Microsoft-zapustila-Copilot-Vision-II-teper-vidit-vash-ehkran-03-26",
     "telegram_id": 120,
     "status": "опубликован",
@@ -4446,7 +4622,7 @@
     "emoji": "🗓️"
   },
   {
-    "id": 201,
+    "id": 200,
     "date": "2026-03-26",
     "title": "Astro 6.0: экспериментальный Rust-компилятор и новый dev-сервер",
     "category": "astro",
@@ -4458,6 +4634,7 @@
       "frontend"
     ],
     "description": "astro: astro, javascript, rust, webdev, frontend",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Astro-60-ehksperimentalnyj-Rust-kompilyator-i-novyj-dev-server-03-26",
     "telegram_id": 121,
     "status": "опубликован",
@@ -4468,7 +4645,7 @@
     "emoji": "✨"
   },
   {
-    "id": 202,
+    "id": 201,
     "date": "2026-03-26",
     "title": "Критическая уязвимость Nginx UI: хакеры крадут бэкапы и ключи шифрования",
     "category": "nginx",
@@ -4480,6 +4657,7 @@
       "vulnerability"
     ],
     "description": "nginx: nginx, security, cybersecurity, devops, vulnerability",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Kriticheskaya-uyazvimost-Nginx-UI-hakery-kradut-behkapy-i-klyuchi-shifrovaniya-03-26",
     "telegram_id": 122,
     "status": "опубликован",
@@ -4490,7 +4668,7 @@
     "emoji": "🛡️"
   },
   {
-    "id": 203,
+    "id": 202,
     "date": "2026-03-26",
     "title": "Deno 2.7.6: поддержка Windows ARM, Temporal API и npm overrides",
     "category": "deno",
@@ -4502,6 +4680,7 @@
       "webdev"
     ],
     "description": "deno: deno, javascript, typescript, nodejs, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Deno-276-podderzhka-Windows-ARM-Temporal-API-i-npm-overrides-03-26",
     "telegram_id": 123,
     "status": "опубликован",
@@ -4512,7 +4691,7 @@
     "emoji": "🦕"
   },
   {
-    "id": 204,
+    "id": 203,
     "date": "2026-03-26",
     "title": "Supabase март 2026: ускорение Storage в 14.8 раз и Log Drains для Pro",
     "category": "supabase",
@@ -4524,6 +4703,7 @@
       "devtools"
     ],
     "description": "supabase: supabase, postgres, database, backend, devtools",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Supabase-mart-2026-uskorenie-Storage-v-148-raz-i-Log-Drains-dlya-Pro-03-26",
     "telegram_id": 124,
     "status": "опубликован",
@@ -4534,7 +4714,7 @@
     "emoji": "🟢"
   },
   {
-    "id": 205,
+    "id": 204,
     "date": "2026-03-26",
     "title": "PyPI атака: вредоносные пакеты-шпионы украли данные разработчиков",
     "category": "python",
@@ -4546,6 +4726,7 @@
       "malware"
     ],
     "description": "python: python, security, pypi, supplychain, malware",
+    "content": "",
     "telegraph_url": "https://telegra.ph/PyPI-ataka-vredonosnye-pakety-shpiony-ukrali-dannye-razrabotchikov-03-26",
     "telegram_id": 125,
     "status": "опубликован",
@@ -4556,7 +4737,7 @@
     "emoji": "🐍"
   },
   {
-    "id": 206,
+    "id": 205,
     "date": "2026-03-26",
     "title": "IntelliJ IDEA 2026.1: веб-разработка стала бесплатной",
     "category": "jetbrains",
@@ -4568,6 +4749,7 @@
       "webdev"
     ],
     "description": "jetbrains: jetbrains, intellijidea, javascript, typescript, webdev",
+    "content": "",
     "telegraph_url": "https://telegra.ph/IntelliJ-IDEA-20261-veb-razrabotka-stala-besplatnoj-03-26",
     "telegram_id": 126,
     "status": "опубликован",
@@ -4578,7 +4760,7 @@
     "emoji": "💡"
   },
   {
-    "id": 207,
+    "id": 206,
     "date": "2026-03-26",
     "title": "GitHub Copilot научился показывать статус агентов в Issues и Projects",
     "category": "github",
@@ -4589,6 +4771,7 @@
       "devtools"
     ],
     "description": "github: github, copilot, ai, devtools",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GitHub-Copilot-nauchilsya-pokazyvat-status-agentov-v-Issues-i-Projects-03-26",
     "telegram_id": 127,
     "status": "опубликован",
@@ -4598,7 +4781,7 @@
     "emoji": "🐱"
   },
   {
-    "id": 208,
+    "id": 207,
     "date": "2026-03-26",
     "title": "Rust 1.94.1: экстренный security-релиз с исправлением CVE-2026-33056",
     "category": "rust",
@@ -4610,6 +4793,7 @@
       "programming"
     ],
     "description": "rust: rust, security, cargo, cve, programming",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Rust-1941-ehkstrennyj-security-reliz-s-ispravleniem-CVE-2026-33056-03-26",
     "telegram_id": 128,
     "status": "опубликован",
@@ -4620,7 +4804,7 @@
     "emoji": "🦀"
   },
   {
-    "id": 209,
+    "id": 208,
     "date": "2026-03-26",
     "title": "GlassWorm: новая атака на Python-репозитории через украденные GitHub-токены",
     "category": "security",
@@ -4632,6 +4816,7 @@
       "malware"
     ],
     "description": "security: security, github, python, supplychain, malware",
+    "content": "",
     "telegraph_url": "https://telegra.ph/GlassWorm-novaya-ataka-na-Python-repozitorii-cherez-ukradennye-GitHub-tokeny-03-26",
     "telegram_id": 129,
     "status": "опубликован",
@@ -4643,7 +4828,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 210,
+    "id": 209,
     "date": "2026-03-25",
     "title": "Революция ИИ в журналистике",
     "category": "ai_tools",
@@ -4654,6 +4839,7 @@
       "нейросети"
     ],
     "description": "ai_tools: AI, журналистика, автоматизация, нейросети",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Revolyuciya-II-v-zhurnalistike-kak-nejroseti-menyayut-mediaindustriyu-03-25-3",
     "telegram_id": 9,
     "status": "опубликован (финальная версия, правильное форматирование ul>li)",
@@ -4665,7 +4851,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 211,
+    "id": 210,
     "date": "2026-03-25",
     "title": "Первая статья канала (тестовая, заменена)",
     "category": "ai_tools",
@@ -4674,6 +4860,7 @@
       "журналистика"
     ],
     "description": "ai_tools: AI, журналистика",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Revolyuciya-II-v-zhurnalistike-03-25",
     "telegram_id": 4,
     "status": "заменено (см. выше)",
@@ -4681,7 +4868,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 212,
+    "id": 211,
     "date": "2026-03-25",
     "title": "PHP 8.4.0 released: property hooks и без скобок для new",
     "category": "php",
@@ -4692,6 +4879,7 @@
       "asymmetric visibility"
     ],
     "description": "php: php84, property hooks, new without parentheses, asymmetric visibility",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12345,
     "status": "опубликован",
@@ -4700,6 +4888,29 @@
       "PHP Weekly (https://phpweekly.com/issue/2026-03-24/)"
     ],
     "emoji": "🐘"
+  },
+  {
+    "id": 212,
+    "date": "2026-03-25",
+    "title": "10 ситуаций, где ИИ уже работает: практическое руководство",
+    "category": "ai_tools",
+    "tags": [
+      "AI",
+      "практическое применение",
+      "нейросети",
+      "инструменты"
+    ],
+    "description": "ai_tools: AI, практическое применение, нейросети, инструменты",
+    "content": "",
+    "telegraph_url": "https://telegra.ph/10-situacij-gde-II-uzhe-rabotaet-prakticheskoe-rukovodstvo-03-25-8",
+    "telegram_id": 15,
+    "status": "опубликован",
+    "sources": [
+      "MIT Technology Review: The AI 100",
+      "Stanford HAI: AI Index Report 2026",
+      "Harvard Business Review: How AI Is Used in Business Today"
+    ],
+    "emoji": "🤖"
   },
   {
     "id": 213,
@@ -4713,28 +4924,7 @@
       "инструменты"
     ],
     "description": "ai_tools: AI, практическое применение, нейросети, инструменты",
-    "telegraph_url": "https://telegra.ph/10-situacij-gde-II-uzhe-rabotaet-prakticheskoe-rukovodstvo-03-25-8",
-    "telegram_id": 15,
-    "status": "опубликован",
-    "sources": [
-      "MIT Technology Review: The AI 100",
-      "Stanford HAI: AI Index Report 2026",
-      "Harvard Business Review: How AI Is Used in Business Today"
-    ],
-    "emoji": "🤖"
-  },
-  {
-    "id": 214,
-    "date": "2026-03-25",
-    "title": "10 ситуаций, где ИИ уже работает: практическое руководство",
-    "category": "ai_tools",
-    "tags": [
-      "AI",
-      "практическое применение",
-      "нейросети",
-      "инструменты"
-    ],
-    "description": "ai_tools: AI, практическое применение, нейросети, инструменты",
+    "content": "",
     "telegraph_url": "https://telegra.ph/10-situacij-gde-II-uzhe-rabotaet-prakticheskoe-rukovodstvo-03-25-13",
     "telegram_id": 18,
     "status": "опубликован (полная версия, 10 разделов)",
@@ -4746,7 +4936,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 215,
+    "id": 214,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 1)",
     "category": "ai_tools",
@@ -4758,6 +4948,7 @@
       "продукты"
     ],
     "description": "ai_tools: AI, типы ИИ, классификация, генеративный ИИ, продукты",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Tipy-i-vidy-II-polnyj-gid-po-AI-produktam-2026-CHast-1-03-25-3",
     "telegram_id": 19,
     "status": "опубликован (часть 1 из 3)",
@@ -4765,7 +4956,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 216,
+    "id": 215,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 2)",
     "category": "ai_tools",
@@ -4778,6 +4969,7 @@
       "GitHub Copilot"
     ],
     "description": "ai_tools: AI, продукты 2026, ChatGPT, Claude, Midjourney",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Tipy-i-vidy-II-polnyj-gid-po-AI-produktam-2026-CHast-2-03-25",
     "telegram_id": 20,
     "status": "опубликован (часть 2 из 3)",
@@ -4785,7 +4977,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 217,
+    "id": 216,
     "date": "2026-03-25",
     "title": "Типы и виды ИИ: полный гид по AI-продуктам 2026 (Часть 3)",
     "category": "ai_tools",
@@ -4798,6 +4990,7 @@
       "AGI"
     ],
     "description": "ai_tools: AI, специализация, открытые модели, тренды, прогнозы",
+    "content": "",
     "telegraph_url": "https://telegra.ph/Tipy-i-vidy-II-polnyj-gid-po-AI-produktam-2026-CHast-3-03-25",
     "telegram_id": 21,
     "status": "опубликован (часть 3 из 3 — ФИНАЛ)",
@@ -4805,7 +4998,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 218,
+    "id": 217,
     "date": "2026-03-24",
     "title": "10 ситуаций, где ИИ уже работает",
     "category": "ai_tools",
@@ -4816,6 +5009,7 @@
       "инструменты"
     ],
     "description": "ai_tools: AI, практическое применение, нейросети, инструменты",
+    "content": "",
     "telegraph_url": "https://telegra.ph/10-situacij-gde-II-uzhe-rabotaet-prakticheskoe-rukovodstvo-03-25-2",
     "telegram_id": 8,
     "status": "опубликован (версия 2, исправлено форматирование списков)",
@@ -4827,7 +5021,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 219,
+    "id": 218,
     "date": "2026-03-24",
     "title": "Xray-core 1.8.24: улучшенная обфускация VLESS",
     "category": "vpn_security",
@@ -4838,6 +5032,7 @@
       "memory leak"
     ],
     "description": "vpn_security: xray, vless, reality, memory leak",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12344,
     "status": "опубликован",
@@ -4847,7 +5042,7 @@
     "emoji": "🔒"
   },
   {
-    "id": 220,
+    "id": 219,
     "date": "2026-03-23",
     "title": "Tailwind CSS v4.0: новинки и миграция с v3",
     "category": "css",
@@ -4858,6 +5053,7 @@
       "oxide engine"
     ],
     "description": "css: tailwind, css, migration, oxide engine",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12343,
     "status": "опубликован",
@@ -4868,7 +5064,7 @@
     "emoji": "🎨"
   },
   {
-    "id": 221,
+    "id": 220,
     "date": "2026-03-22",
     "title": "Дайджест за 22 марта 2026",
     "category": "javascript",
@@ -4879,6 +5075,7 @@
       "react"
     ],
     "description": "javascript: nodejs, typescript, bun, react",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12342,
     "status": "опубликован",
@@ -4890,7 +5087,7 @@
     "emoji": "🟨"
   },
   {
-    "id": 222,
+    "id": 221,
     "date": "2026-03-21",
     "title": "PostgreSQL 17: новые возможности",
     "category": "databases",
@@ -4901,6 +5098,7 @@
       "performance"
     ],
     "description": "databases: postgresql, sql, database, performance",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12341,
     "status": "опубликован",
@@ -4910,7 +5108,7 @@
     "emoji": "🗄️"
   },
   {
-    "id": 223,
+    "id": 222,
     "date": "2026-03-20",
     "title": "Kubernetes 1.30: что нового",
     "category": "devops",
@@ -4921,6 +5119,7 @@
       "containers"
     ],
     "description": "devops: kubernetes, k8s, docker, containers",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12340,
     "status": "опубликован",
@@ -4930,7 +5129,7 @@
     "emoji": "🐳"
   },
   {
-    "id": 224,
+    "id": 223,
     "date": "2026-03-19",
     "title": "SOLID принципы на примерах PHP",
     "category": "patterns",
@@ -4941,6 +5140,7 @@
       "cleancode"
     ],
     "description": "patterns: solid, php, patterns, cleancode",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12339,
     "status": "опубликован",
@@ -4951,7 +5151,7 @@
     "emoji": "📐"
   },
   {
-    "id": 225,
+    "id": 224,
     "date": "2026-03-18",
     "title": "MacBook Pro M4: обзор для разработчика",
     "category": "hardware",
@@ -4962,6 +5162,7 @@
       "hardware"
     ],
     "description": "hardware: macbook, m4, apple, hardware",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12338,
     "status": "опубликован",
@@ -4972,7 +5173,7 @@
     "emoji": "💻"
   },
   {
-    "id": 226,
+    "id": 225,
     "date": "2026-03-17",
     "title": "Cursor 2.0: AI-first IDE",
     "category": "ai_tools",
@@ -4983,6 +5184,7 @@
       "copilot"
     ],
     "description": "ai_tools: cursor, ai, ide, copilot",
+    "content": "",
     "telegraph_url": "",
     "telegram_id": 12337,
     "status": "опубликован",
@@ -4992,7 +5194,7 @@
     "emoji": "🤖"
   },
   {
-    "id": 227,
+    "id": 226,
     "date": "2026-03-15",
     "title": "TypeScript 5.8: новые фичи",
     "category": "javascript",
@@ -5003,6 +5205,7 @@
       "microsoft"
     ],
     "description": "javascript: typescript, javascript, types, microsoft",
+    "content": "",
     "telegraph_url": "https://telegra.ph/10-situacij-gde-II-uzhe-rabotaet-prakticheskoe-rukovodstvo-03-25",
     "telegram_id": 12336,
     "status": "опубликован",

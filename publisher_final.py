@@ -555,21 +555,23 @@ def publish_to_telegram(text: str) -> Dict[str, Any]:
 # ЗАПИСЬ В ИСТОРИЮ
 # ============================================================================
 
-def write_to_history(title: str, telegraph_url: str, telegram_message_id: int, hashtags: List[str], sources: List[str]):
-    """Записать публикацию в историю с использованием HistoryManager."""
+def write_to_history(title: str, telegraph_url: str, telegram_message_id: int,
+                     hashtags: List[str], sources: List[str], content: str = ""):
+    """Write publication to history using HistoryManager."""
     category = hashtags[0] if hashtags else "general"
     
-    # Используем HistoryManager для добавления поста в месячный файл
+    # Use HistoryManager to add post to monthly file
     monthly_file = history_manager.add_post(
         title=title,
         category=category,
         hashtags=hashtags,
         sources=sources,
+        content=content,
         telegraph_url=telegraph_url,
         telegram_message_id=str(telegram_message_id)
     )
     
-    # Добавляем тему в topics_covered.md
+    # Add topic to topics_covered.md
     history_manager.add_topic(title, category)
 
 
@@ -879,7 +881,7 @@ def main():
     # Записываем в историю
     if telegraph_url and telegram_message_id:
         print("\n📝 Запись в историю...")
-        write_to_history(title, telegraph_url, telegram_message_id, hashtags, sources)
+        write_to_history(title, telegraph_url, telegram_message_id, hashtags, sources, content)
         print("✅ История обновлена!")
         
         # Push в GitHub

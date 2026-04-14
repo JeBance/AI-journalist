@@ -1,25 +1,26 @@
 /* ============================================
    AI Journalist -- Application Logic
+   Shows full article content from JSON
    ============================================ */
 
-const ARTICLES_URL = '/articles.json';
-const BATCH_SIZE = 20;
+var ARTICLES_URL = '/articles.json';
+var BATCH_SIZE = 20;
 
-let allArticles = [];
-let filteredArticles = [];
-let displayedCount = 0;
-let currentFilter = 'all';
-let searchQuery = '';
+var allArticles = [];
+var filteredArticles = [];
+var displayedCount = 0;
+var currentFilter = 'all';
+var searchQuery = '';
 
 // ====== INITIALIZATION ======
 
 async function init() {
     try {
-        const response = await fetch(ARTICLES_URL);
+        var response = await fetch(ARTICLES_URL);
         if (!response.ok) throw new Error('Failed to load articles');
 
         allArticles = await response.json();
-        filteredArticles = [...allArticles];
+        filteredArticles = allArticles.slice();
 
         updateArticleCount();
         renderFilters();
@@ -38,24 +39,53 @@ async function init() {
 // ====== RENDERING ======
 
 function renderArticleCard(article) {
-    const tagsHtml = article.tags.slice(0, 3).map(tag =>
-        '<span class="card-tag">' + escapeHtml(tag) + '</span>'
-    ).join('');
+    var tagsHtml = article.tags.slice(0, 3).map(function(tag) {
+        return '<span class="card-tag">' + escapeHtml(tag) + '</span>';
+    }).join('');
 
-    const card = document.createElement('article');
+    var card = document.createElement('article');
     card.className = 'article-card';
     card.dataset.id = article.id;
-    card.innerHTML =
-        '<div class="card-header">' +
-            '<span class="card-emoji">' + article.emoji + '</span>' +
-            '<h3 class="card-title">' + escapeHtml(article.title) + '</h3>' +
-        '</div>' +
-        '<div class="card-meta">' +
-            '<span class="card-date">' + formatDate(article.date) + '</span>' +
-            '<span class="card-category">' + escapeHtml(article.category) + '</span>' +
-        '</div>' +
-        '<p class="card-description">' + escapeHtml(article.description) + '</p>' +
-        '<div class="card-tags">' + tagsHtml + '</div>';
+
+    var header = document.createElement('div');
+    header.className = 'card-header';
+
+    var emoji = document.createElement('span');
+    emoji.className = 'card-emoji';
+    emoji.textContent = article.emoji;
+
+    var h3 = document.createElement('h3');
+    h3.className = 'card-title';
+    h3.textContent = article.title;
+
+    header.appendChild(emoji);
+    header.appendChild(h3);
+
+    var meta = document.createElement('div');
+    meta.className = 'card-meta';
+
+    var dateSpan = document.createElement('span');
+    dateSpan.textContent = formatDate(article.date);
+
+    var catSpan = document.createElement('span');
+    catSpan.className = 'card-category';
+    catSpan.textContent = article.category;
+
+    meta.appendChild(dateSpan);
+    meta.appendChild(catSpan);
+
+    var desc = document.createElement('p');
+    desc.className = 'card-description';
+    desc.textContent = article.description;
+
+    var tagsDiv = document.createElement('div');
+    tagsDiv.className = 'card-tags';
+    tagsDiv.innerHTML = tagsHtml;
+
+    card.appendChild(header);
+    card.appendChild(meta);
+    card.appendChild(desc);
+    card.appendChild(tagsDiv);
 
     card.addEventListener('click', function() { openArticle(article.id); });
 
@@ -63,15 +93,15 @@ function renderArticleCard(article) {
 }
 
 function renderBatch() {
-    const grid = document.getElementById('articles-grid');
+    var grid = document.getElementById('articles-grid');
 
     if (displayedCount === 0) {
         grid.innerHTML = '';
     }
 
-    const end = Math.min(displayedCount + BATCH_SIZE, filteredArticles.length);
+    var end = Math.min(displayedCount + BATCH_SIZE, filteredArticles.length);
 
-    for (let i = displayedCount; i < end; i++) {
+    for (var i = displayedCount; i < end; i++) {
         grid.appendChild(renderArticleCard(filteredArticles[i]));
     }
 
@@ -134,7 +164,8 @@ function applyFilters() {
             return a.title.toLowerCase().indexOf(q) !== -1 ||
                 a.tags.some(function(t) { return t.toLowerCase().indexOf(q) !== -1; }) ||
                 a.category.toLowerCase().indexOf(q) !== -1 ||
-                a.description.toLowerCase().indexOf(q) !== -1;
+                a.description.toLowerCase().indexOf(q) !== -1 ||
+                (a.content && a.content.toLowerCase().indexOf(q) !== -1);
         });
     }
 
@@ -183,49 +214,56 @@ function setupInfiniteScroll() {
 
 // ====== ARTICLE MODAL ======
 
-async function openArticle(id) {
+function openArticle(id) {
     var article = allArticles.find(function(a) { return a.id === id; });
     if (!article) return;
 
     var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
 
-    body.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading article...</p></div>';
-    modal.showModal();
+    // Show content from JSON if available
+    if (article.content) {
+        renderArticleFromContent(article);
+    } else if (article.telegraph_url) {
+        // Fallback: try Telegra.ph API
+        body.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading from Telegra.ph...</p></div>';
+        modal.showModal();
+        loadFromTelegraph(article);
+    } else {
+        renderArticleFallback(article);
+    }
 
-    if (article.telegraph_url) {
-        try {
-            var path = article.telegraph_url.replace('https://telegra.ph/', '');
-            var apiUrl = 'https://telegra.ph/api/getPage/' + path + '?return_content=true';
+    if (!document.getElementById('article-modal').open) {
+        modal.showModal();
+    }
+}
 
-            var response = await fetch(apiUrl);
-            var data = await response.json();
+async function loadFromTelegraph(article) {
+    var body = document.getElementById('modal-body');
+    try {
+        var path = article.telegraph_url.replace('https://telegra.ph/', '');
+        var apiUrl = 'https://telegra.ph/api/getPage/' + path + '?return_content=true';
+        var response = await fetch(apiUrl);
+        var data = await response.json();
 
-            if (data.ok && data.result && data.result.content) {
-                renderArticleContent(article, data.result.content);
-            } else {
-                renderArticleFallback(article);
-            }
-        } catch (e) {
+        if (data.ok && data.result && data.result.content) {
+            renderArticleContent(article, data.result.content);
+        } else {
             renderArticleFallback(article);
         }
-    } else {
+    } catch (e) {
         renderArticleFallback(article);
     }
 }
 
-function renderArticleContent(article, content) {
+function renderArticleFromContent(article) {
+    var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
-    var htmlContent = '';
 
-    if (Array.isArray(content)) {
-        content.forEach(function(node) {
-            htmlContent += telegraphNodeToHtml(node);
-        });
-    }
+    var html = markdownToHtml(article.content);
 
     var sourcesHtml = '';
-    if (article.sources.length > 0) {
+    if (article.sources && article.sources.length > 0) {
         sourcesHtml = '<div class="modal-sources"><h3>Sources</h3><ul>' +
             article.sources.map(function(s) {
                 var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
@@ -245,6 +283,36 @@ function renderArticleContent(article, content) {
                 '<span>' + escapeHtml(article.category) + '</span>' +
             '</div>' +
         '</div>' +
+        '<div class="modal-body">' + html + '</div>' +
+        sourcesHtml +
+        '<div class="modal-actions">' +
+            (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
+            '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
+        '</div>';
+
+    modal.showModal();
+}
+
+function renderArticleContent(article, content) {
+    var body = document.getElementById('modal-body');
+    var htmlContent = '';
+
+    if (Array.isArray(content)) {
+        content.forEach(function(node) {
+            htmlContent += telegraphNodeToHtml(node);
+        });
+    }
+
+    var sourcesHtml = buildSourcesHtml(article);
+
+    body.innerHTML =
+        '<div class="modal-header">' +
+            '<h1 class="modal-title">' + article.emoji + ' ' + escapeHtml(article.title) + '</h1>' +
+            '<div class="modal-meta">' +
+                '<span>' + formatDate(article.date) + '</span>' +
+                '<span>' + escapeHtml(article.category) + '</span>' +
+            '</div>' +
+        '</div>' +
         '<div class="modal-body">' + htmlContent + '</div>' +
         sourcesHtml +
         '<div class="modal-actions">' +
@@ -254,24 +322,14 @@ function renderArticleContent(article, content) {
 }
 
 function renderArticleFallback(article) {
+    var modal = document.getElementById('article-modal');
     var body = document.getElementById('modal-body');
 
     var tagsHtml = article.tags.map(function(tag) {
         return '<span class="card-tag" style="display:inline-block;margin:0.25rem;">' + escapeHtml(tag) + '</span>';
     }).join('');
 
-    var sourcesHtml = '';
-    if (article.sources.length > 0) {
-        sourcesHtml = '<div class="modal-sources"><h3>Sources</h3><ul>' +
-            article.sources.map(function(s) {
-                var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
-                if (urlMatch) {
-                    var name = s.replace(/\s*\(.*\)/, '');
-                    return '<li><a href="' + escapeHtml(urlMatch[1]) + '" target="_blank" rel="noopener">' + escapeHtml(name || s) + '</a></li>';
-                }
-                return '<li>' + escapeHtml(s) + '</li>';
-            }).join('') + '</ul></div>';
-    }
+    var sourcesHtml = buildSourcesHtml(article);
 
     body.innerHTML =
         '<div class="modal-header">' +
@@ -291,7 +349,93 @@ function renderArticleFallback(article) {
             (article.telegraph_url ? '<a href="' + escapeHtml(article.telegraph_url) + '" target="_blank" rel="noopener">Read on Telegra.ph</a>' : '') +
             '<a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener" class="secondary">Telegram channel</a>' +
         '</div>';
+
+    modal.showModal();
 }
+
+function buildSourcesHtml(article) {
+    if (!article.sources || article.sources.length === 0) return '';
+    return '<div class="modal-sources"><h3>Sources</h3><ul>' +
+        article.sources.map(function(s) {
+            var urlMatch = s.match(/\((https?:\/\/[^)]+)\)/);
+            if (urlMatch) {
+                var name = s.replace(/\s*\(.*\)/, '');
+                return '<li><a href="' + escapeHtml(urlMatch[1]) + '" target="_blank" rel="noopener">' + escapeHtml(name || s) + '</a></li>';
+            }
+            return '<li>' + escapeHtml(s) + '</li>';
+        }).join('') + '</ul></div>';
+}
+
+// ====== MARKDOWN TO HTML (simple) ======
+
+function markdownToHtml(md) {
+    if (!md) return '';
+
+    var lines = md.split('\n');
+    var html = '';
+    var inList = false;
+    var inOl = false;
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+
+        // Headings
+        if (line.match(/^#{1,3}\s+/)) {
+            if (inList) { html += inOl ? '</ol>' : '</ul>'; inList = false; inOl = false; }
+            var level = line.match(/^(#{1,3})/)[1].length;
+            var tag = 'h' + (level + 1);
+            html += '<' + tag + '>' + inlineFormat(line.replace(/^#{1,3}\s+/, '')) + '</' + tag + '>';
+        }
+        // Unordered list
+        else if (line.match(/^[-*]\s+/)) {
+            if (inOl) { html += '</ol>'; inOl = false; }
+            if (!inList) { html += '<ul>'; inList = true; }
+            html += '<li>' + inlineFormat(line.replace(/^[-*]\s+/, '')) + '</li>';
+        }
+        // Ordered list
+        else if (line.match(/^\d+\.\s+/)) {
+            if (inList) { html += '</ul>'; inList = false; }
+            if (!inOl) { html += '<ol>'; inOl = true; }
+            html += '<li>' + inlineFormat(line.replace(/^\d+\.\s+/, '')) + '</li>';
+        }
+        // Horizontal rule
+        else if (line.match(/^---+$/)) {
+            if (inList) { html += '</ul>'; inList = false; }
+            if (inOl) { html += '</ol>'; inOl = false; }
+            html += '<hr>';
+        }
+        // Empty line
+        else if (line.trim() === '') {
+            if (inList) { html += '</ul>'; inList = false; }
+            if (inOl) { html += '</ol>'; inOl = false; }
+        }
+        // Paragraph
+        else {
+            if (inList) { html += '</ul>'; inList = false; }
+            if (inOl) { html += '</ol>'; inOl = false; }
+            html += '<p>' + inlineFormat(line) + '</p>';
+        }
+    }
+
+    if (inList) html += '</ul>';
+    if (inOl) html += '</ol>';
+
+    return html;
+}
+
+function inlineFormat(text) {
+    // Bold
+    text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    // Italic
+    text = text.replace(/_(.+?)_/g, '<em>$1</em>');
+    // Inline code
+    text = text.replace(/`(.+?)`/g, '<code>$1</code>');
+    // Links
+    text = text.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    return text;
+}
+
+// ====== TELEGRAPH NODE TO HTML ======
 
 function telegraphNodeToHtml(node) {
     if (!node || !node.tag) return '';
@@ -304,20 +448,16 @@ function telegraphNodeToHtml(node) {
             return '<h2>' + processNodeContent(node.children || node) + '</h2>';
         case 'ul':
             if (Array.isArray(node.children)) {
-                var items = node.children.map(function(child) {
-                    if (child.tag === 'li') return '<li>' + processNodeContent(child.children || child) + '</li>';
-                    return '';
-                }).join('');
-                return '<ul>' + items + '</ul>';
+                return '<ul>' + node.children.map(function(c) {
+                    return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : '';
+                }).join('') + '</ul>';
             }
             return '<ul>' + processNodeContent(node) + '</ul>';
         case 'ol':
             if (Array.isArray(node.children)) {
-                var items2 = node.children.map(function(child) {
-                    if (child.tag === 'li') return '<li>' + processNodeContent(child.children || child) + '</li>';
-                    return '';
-                }).join('');
-                return '<ol>' + items2 + '</ol>';
+                return '<ol>' + node.children.map(function(c) {
+                    return c.tag === 'li' ? '<li>' + processNodeContent(c.children || c) + '</li>' : '';
+                }).join('') + '</ol>';
             }
             return '<ol>' + processNodeContent(node) + '</ol>';
         case 'a':
@@ -350,10 +490,9 @@ function telegraphNodeToHtml(node) {
 function processNodeContent(node) {
     if (typeof node === 'string') return node;
     if (Array.isArray(node)) return node.map(processNodeContent).join('');
-    if (node.children) return node.children.map(processNodeContent).join('');
+    if (node && node.children) return node.children.map(processNodeContent).join('');
     if (typeof node === 'object' && node !== null) {
-        var text = Object.values(node).filter(function(v) { return typeof v === 'string'; }).join(' ');
-        return text || '';
+        return Object.values(node).filter(function(v) { return typeof v === 'string'; }).join(' ');
     }
     return String(node || '');
 }
@@ -390,8 +529,7 @@ function updateArticleCount() {
 
 function updateLastUpdated() {
     if (allArticles.length > 0) {
-        var latest = allArticles[0].date;
-        document.getElementById('last-updated').textContent = formatDate(latest);
+        document.getElementById('last-updated').textContent = formatDate(allArticles[0].date);
     }
 }
 
@@ -400,7 +538,7 @@ function updateLastUpdated() {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
-            .then(function(reg) { console.log('SW registered'); })
+            .then(function() { console.log('SW registered'); })
             .catch(function(err) { console.log('SW registration failed:', err); });
     }
 }

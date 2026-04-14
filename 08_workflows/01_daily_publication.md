@@ -1,201 +1,84 @@
-# Сценарий: Ежедневная публикация
+# Workflow: Daily Publication
 
-## 📋 Цель
+## Goal
 
-Опубликовать один качественный пост (или дайджест) в Telegram-канал на основе свежих новостей за последние 24-48 часов.
+Publish one quality post (or digest) to the Telegram channel based on fresh news from the last 24-48 hours.
 
-**Время выполнения:** 10-15 минут  
-**Частота:** Ежедневно  
-**Сложность:** Низкая
+**Execution time:** 10-15 minutes
+**Frequency:** Daily
 
 ---
 
-## 🔄 Шаги выполнения
+## Steps
 
-### Шаг 1: Инициализация (1 минута)
+### Step 1: Init (1 min)
 
-1. Прочитай `01_system_prompts/01_role_and_mission.md` (если не читал в этой сессии)
-2. Открой `06_history/01_published_posts.md` — запомни последние публикации
-3. Открой `06_history/02_topics_covered.md` — запомни, что недавно освещалось
+1. Read `01_system_prompts/01_role_and_mission.md`
+2. Open `06_history/01_published_posts.md` -- check recent publications
+3. Open `06_history/02_topics_covered.md` -- check recently covered topics
 
-### Шаг 2: Исследование (5-7 минут)
+### Step 2: Research (5-7 min)
 
-Следуй протоколу из `01_system_prompts/02_research_protocol.md`:
+Follow the protocol from `01_system_prompts/02_research_protocol.md`
 
-#### 2.1. GitHub (2 минуты)
+### Step 3: Selection (2 min)
 
-1. Открой `02_sources/02_github_repos.md`
-2. Проверь критические репозитории:
-   - XTLS/Xray-core
-   - php/php-src
-   - nodejs/node
-   - tailwindlabs/tailwindcss
-3. Запиши находки в `07_research_cache/03_temp_notes.md`
+1. Collect findings in `07_research_cache/03_temp_notes.md`
+2. Prioritize: critical > important > optional
+3. Check uniqueness in `06_history/02_topics_covered.md`
 
-#### 2.2. RSS-ленты (2 минуты)
+### Step 4: Writing (3-5 min)
 
-1. Открой `02_sources/01_rss_feeds.md`
-2. Проверь приоритетные:
-   - PHP Weekly
-   - JavaScript Weekly
-   - CSS Weekly
-   - Node.js Blog
-3. Найди статьи за последние 48 часов
+1. Use templates from `03_templates/`
+2. Follow rules from `04_style/`
+3. Add source links and tags from `05_categories/`
 
-#### 2.3. Telegram-каналы (1 минута)
+### Step 5: Publish (1 min)
 
-1. Открой `02_sources/03_telegram_channels.md`
-2. Просмотри последние посты
-3. Выдели уникальную информацию
+Run `publisher_final.py` with the article data. It will:
+- Publish to Telegra.ph
+- Publish announcement to Telegram
+- Record history with full content
+- Generate articles.json
+- Git push to GitHub
 
-#### 2.4. Технические блоги (2 минуты)
+### Step 6: History (automatic)
 
-1. Открой `02_sources/04_technical_blogs.md`
-2. Проверь новые статьи в официальных блогах
+`publisher_final.py` handles this automatically:
 
-### Шаг 3: Отбор (2 минуты)
-
-1. Собери все находки в `07_research_cache/03_temp_notes.md`
-2. Оцени по приоритетам:
-   - **Критическое:** security-патчи, breaking changes
-   - **Важное:** major/minor релизы, новые фичи
-   - **Опциональное:** туториалы, мнения
-3. Выбери **одну главную новость** для одиночного поста
-4. Если нет доминирующей новости — выбери **2-3 новости** для дайджеста
-5. Проверь уникальность в `06_history/02_topics_covered.md`
-
-### Шаг 4: Написание (3-5 минут)
-
-1. Используй шаблон:
-   - Если одна новость: `03_templates/01_single_post.md`
-   - Если 2-3 новости: `03_templates/02_daily_digest.md`
-2. Следуй правилам из `04_style/`
-3. Обязательно добавь ссылки на источники
-4. Добавь теги из `05_categories/`
-
-### Шаг 5: Автоматическая публикация (1 минута)
-
-**Публикуй автоматически через библиотеку:**
-
-```python
-import sys
-sys.path.insert(0, '/root/git/AI-journalist/lib')
-
-from ai_journalist import TelegramClient, format_post
-
-tg = TelegramClient()
-
-post = format_post(
-    title="Заголовок",
-    content="Текст новости",
-    hashtags=["теги"],
-    emoji="🔥"
-)
-
-result = tg.send_message(post)
-
-if result["success"]:
-    telegram_id = result["message_id"]
-    print(f"✅ Опубликовано! Message ID: {telegram_id}")
-```
-
-**Или через скрипт:**
-```bash
-python3 /root/git/AI-journalist-bot/publisher.py "{текст}"
-```
-
-### Шаг 6: Запись в историю (1 минута)
-
-1. Открой `06_history/01_published_posts.md`
-2. Добавь запись по формату:
+1. Adds entry to monthly file `06_history/published_posts_YYYY-MM.md`
+2. Entry format:
 
 ```markdown
-### [YYYY-MM-DD] {Заголовок поста}
-- **Категория:** {категория}
-- **Шаблон:** {шаблон}
-- **Ключевые темы:** {теги}
-- **Источники:** 
-  - {название} ({URL})
+### [YYYY-MM-DD] {Title}
+
+- **Category:** {category}
+- **Template:** {template}
+- **Key topics:** {tags}
+- **Sources:**
+  - {name} ({URL})
+- **Telegra.ph URL:** {url}
 - **Telegram ID:** {id}
-- **Статус:** опубликован
+- **Status:** published
+
+<!-- CONTENT_START -->
+{full article content in markdown}
+<!-- CONTENT_END -->
+
 ---
 ```
 
-3. Открой `06_history/02_topics_covered.md`
-4. Добавь тему с датой следующего повтора (+30 дней):
-
-```markdown
-- **Тема:** {тема} | **Дата публикации:** YYYY-MM-DD | **Повторять можно не ранее:** YYYY-MM-DD
-```
-
-5. Обнови `07_research_cache/02_processed_urls.md` — добавь обработанные URL
-
-### Шаг 8: Завершение (1 минута)
-
-1. Обнови `07_research_cache/01_last_session.md`:
-   - Дата сессии
-   - Исследованные источники
-   - Выбранные темы
-   - Заметки
-2. Очисти `07_research_cache/03_temp_notes.md`
-3. Сообщи пользователю: **«Пост опубликован. ID сообщения: {id}»**
+3. Updates `02_topics_covered.md` with the topic and next repeat date.
 
 ---
 
-## ✅ Чек-лист сценария
+## Checklist
 
-- [ ] Прочитаны инструкции по роли
-- [ ] Проверена история публикаций
-- [ ] Исследованы GitHub, RSS, Telegram, блоги
-- [ ] Выбрана тема (уникальная, актуальная)
-- [ ] Написан пост по шаблону
-- [ ] Пост соответствует стилю (`04_style/`)
-- [ ] ✅ Автоматическая публикация выполнена
-- [ ] Запись добавлена в историю
-- [ ] Research cache обновлён
-- [ ] Пользователь уведомлён: «Пост опубликован. ID: {id}»
-
----
-
-## 📊 Ожидаемые результаты
-
-| Результат | Значение |
-|-----------|----------|
-| Время выполнения | 8-12 минут (без ожидания подтверждения) |
-| Количество постов | 1 (single или digest) |
-| Количество источников | 5-10 проверенных |
-| Уникальность темы | 100% (проверено по истории) |
-
----
-
-## ⚠️ Возможные проблемы
-
-### Проблема: Нет свежих новостей
-
-**Решение:**
-1. Расширь поиск до 7 дней
-2. Проверь дополнительные источники (Hacker News, Reddit)
-3. Напиши обзорный пост (туториал, сравнение)
-
-### Проблема: Тема повторяется
-
-**Решение:**
-1. Проверь `06_history/02_topics_covered.md`
-2. Если прошло < 30 дней — выбери другую тему
-3. Если это развитие темы — укажи «обновление»
-
-### Проблема: Недостаточно информации
-
-**Решение:**
-1. Проверь больше источников
-2. Используй `02_topic_research.md` для глубокого исследования
-3. Отложи публикацию до появления информации
-
----
-
-## 💡 Советы
-
-- **Автоматизируй исследование:** используй RSS-ридер для быстрого просмотра
-- **Сохраняй ссылки:** всегда записывай URL для источников
-- **Проверяй уникальность:** это предотвращает повторы
-- **Не спеши:** лучше пропустить день, чем опубликовать непроверенное
+- [ ] Read role instructions
+- [ ] Check publication history
+- [ ] Research GitHub, RSS, Telegram, blogs
+- [ ] Select unique topic
+- [ ] Write post by template
+- [ ] Auto-publish via `publisher_final.py`
+- [ ] History recorded automatically
+- [ ] User notified: "Post published. ID: {id}"
