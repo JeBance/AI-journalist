@@ -1,7 +1,7 @@
 {
   "name": "AI Journalist",
   "short_name": "AI Journalist",
-  "description": "IT-новости и обзоры от AI-journalist",
+  "description": "IT news and reviews from AI-journalist",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f0f1a",
@@ -9,7 +9,7 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>",
+      "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

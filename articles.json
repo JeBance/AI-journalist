@@ -295,7 +295,7 @@
       "Kubernetes Blog (https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/)",
       "Kubernetes Dev Group (https://groups.google.com/a/kubernetes.io/g/dev/c/22f8Kdc_VfA)"
     ],
-    "emoji": "🐳"
+    "emoji": "⎈️"
   },
   {
     "id": 14,
@@ -364,7 +364,7 @@
       "The New Stack — Cursor 3 Demotes IDE (https://thenewstack.io/cursor-3-demotes-ide/)",
       "Medium — Cursor 3 Is Not an IDE Update (https://medium.com/@han.heloir/cursor-3-is-not-an-ide-update-its-a-bet-that-you-ll-manage-agents-not-write-code-0d2bc51f0dcb)"
     ],
-    "emoji": "📖"
+    "emoji": "🛠️"
   },
   {
     "id": 17,
@@ -387,7 +387,7 @@
       "Kubernetes GitHub Repository (https://github.com/kubernetes/kubernetes)",
       "CVE-2020-8554 Details (https://www.cvedetails.com/cve/CVE-2020-8554/)"
     ],
-    "emoji": "🐳"
+    "emoji": "⎈️"
   },
   {
     "id": 18,
@@ -453,7 +453,7 @@
     "sources": [
       "JetBrains Blog: Rider 2026.1 Released (https://blog.jetbrains.com/dotnet/2026/03/30/rider-2026-1-released/)"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 21,
@@ -476,7 +476,7 @@
       "MLX Framework (https://ml-explore.github.io/mlx/)",
       "Ollama Documentation (https://ollama.com/docs)"
     ],
-    "emoji": "📖"
+    "emoji": "🦙"
   },
   {
     "id": 22,
@@ -497,7 +497,7 @@
     "sources": [
       "GitHub Blog (https://github.blog/)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 23,
@@ -519,7 +519,7 @@
       "Hugging Face Transformers v5.4.0 Release (https://github.com/huggingface/transformers/releases)",
       "Hugging Face Release Notes March 2026 (https://releasebot.io/updates/huggingface)"
     ],
-    "emoji": "📖"
+    "emoji": "🤗"
   },
   {
     "id": 24,
@@ -542,7 +542,7 @@
       "80.lv (https://80.lv/articles/second-development-snapshot-of-godot-4-7-released)",
       "Godot Download (https://godotengine.org/download/archive/4.7-dev3/)"
     ],
-    "emoji": "📖"
+    "emoji": "👾"
   },
   {
     "id": 25,
@@ -677,7 +677,7 @@
       "TechSoften Daily Tech Digest (https://techsoften.com/daily-tech-digest-saturday-march-28-2026/)",
       "Dev.to: VS Code 1.111 AI Upgrade (https://dev.to/hamidrazadev/vs-code-1111-just-dropped-and-your-ai-agent-got-a-massive-upgrade-17dc)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 31,
@@ -700,7 +700,7 @@
       "Zenodo WASI Release (https://zenodo.org/records/19037719)",
       "WebAssembly Component Model (https://github.com/WebAssembly/component-model)"
     ],
-    "emoji": "📖"
+    "emoji": "📦"
   },
   {
     "id": 32,
@@ -723,7 +723,7 @@
       "HyperAI: Bluesky launches Attie AI for custom feeds (https://hyper.ai/en/stories/63c0fcbc22231b8b26c812f91d5c4939)",
       "MLQ.AI: Bluesky Introduces Attie AI Tool (https://mlq.ai/news/bluesky-introduces-attie-ai-tool-for-building-personalized-feeds/)"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 33,
@@ -746,7 +746,7 @@
       "Mean CEO: AI Model Releases March 2026 (https://blog.mean.ceo/new-ai-model-releases-news-march-2026/)",
       "Digital Applied: 12 AI Models Released in One Week (https://www.digitalapplied.com/blog/12-ai-models-released-one-week-march-2026-developer-guide)"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 34,
@@ -768,7 +768,7 @@
       "Visual Studio Code Updates (https://code.visualstudio.com/updates/v1_114)",
       "VS Code GitHub Repository (https://github.com/microsoft/vscode)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 35,
@@ -813,7 +813,7 @@
       "Figma Release Notes — March 2026 (https://releasebot.io/updates/figma)",
       "Figma Desktop App для macOS (https://figma.com/downloads)"
     ],
-    "emoji": "📖"
+    "emoji": "🎨"
   },
   {
     "id": 37,
@@ -836,7 +836,7 @@
       "Fast-Report: Overview of .NET 10 (https://www.fast-report.com/blogs/overview-net-10)",
       "Microsoft .NET Documentation (https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-14)"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 38,
@@ -859,7 +859,7 @@
       "DevClass: Ruby 4.0 released (https://www.devclass.com/development/2026/01/06/ruby-40-released-but-its-best-new-features-are-not-production-ready/4079592)",
       "Dev Newsletter: State of Ruby 2026 (https://devnewsletter.com/p/state-of-ruby-2026/)"
     ],
-    "emoji": "📖"
+    "emoji": "💎"
   },
   {
     "id": 39,
@@ -882,7 +882,7 @@
       "Cohere Release Notes — March 2026 (https://releasebot.io/updates/cohere)",
       "TechCrunch: Cohere open source voice model (https://tech.yahoo.com/ai/deals/articles/cohere-launches-open-source-voice-133000132.html)"
     ],
-    "emoji": "📖"
+    "emoji": "🎙️"
   },
   {
     "id": 40,
@@ -928,7 +928,7 @@
       "Figma MCP Server Documentation (https://fig-events.figma.com/feb-rn-2026/)",
       "Medium: Figma's 2026 Updates (https://medium.com/@Rythmuxdesigner/figmas-2026-updates-quietly-redefine-design-dev-handoff-and-not-everyone-s-ready-98307f2ea2a8)"
     ],
-    "emoji": "📖"
+    "emoji": "🎨"
   },
   {
     "id": 42,
@@ -951,7 +951,7 @@
       "Meilisearch on LinkedIn (https://www.linkedin.com/posts/meilisearch_meilisearch-march-updates-activity-7437857528958586880-lEDV)",
       "daily.dev — Meilisearch March (https://app.daily.dev/posts/meilisearch-march-updates-rhtsedncz)"
     ],
-    "emoji": "📖"
+    "emoji": "🔍"
   },
   {
     "id": 43,
@@ -973,7 +973,7 @@
       "JetBrains Blog (https://blog.jetbrains.com/kotlin/2026/03/kotlin-2-3-20-released/)",
       "Kotlin GitHub Releases (https://github.com/JetBrains/kotlin/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🟠"
   },
   {
     "id": 44,
@@ -996,7 +996,7 @@
       "SQLite Release History (https://www.sqlite.org/changes.html)",
       "CVE-2025-70873 (https://github.com/conan-io/conan-center-index/issues/29794)"
     ],
-    "emoji": "📖"
+    "emoji": "📑"
   },
   {
     "id": 45,
@@ -1019,7 +1019,7 @@
       "Cloudflare Page Shield Docs (https://developers.cloudflare.com/page-shield/)",
       "Cloudflare Threat Report 2026 (https://www.cloudflare.com/threat-report/)"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 46,
@@ -1042,7 +1042,7 @@
       "Gigazine: FFmpeg 8.1 release (https://gigazine.net/gsc_news/en/20260317-ffmpeg-8-1-hoare/)",
       "FFmpeg official (https://ffmpeg.org/)"
     ],
-    "emoji": "📖"
+    "emoji": "🎬"
   },
   {
     "id": 47,
@@ -1087,7 +1087,7 @@
       "Figma Release Notes (https://www.figma.com/release-notes/)",
       "Figma Blog (https://www.figma.com/blog/skills-for-the-ai-era/)"
     ],
-    "emoji": "📖"
+    "emoji": "🎨"
   },
   {
     "id": 49,
@@ -1110,7 +1110,7 @@
       "VS Code 1.110 Release Notes (https://code.visualstudio.com/updates/v1_110)",
       "Pawan Patra (https://pawanpatra.com/microsoft-accelerates-vs-code-updates-for-devs/)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 50,
@@ -1132,7 +1132,7 @@
       "Symfony Blog (https://symfony.com/blog/symfony-8-0-7-released)",
       "SensioLabs (https://sensiolabs.com/blog/2026/symfony-8-stability-security-innovation-for-developers/)"
     ],
-    "emoji": "📖"
+    "emoji": "🎵"
   },
   {
     "id": 51,
@@ -1155,7 +1155,7 @@
       "Microsoft Tech Community: AI Toolkit March 2026 Update (https://techcommunity.microsoft.com/blog/azuredevcommunityblog/🚀-ai-toolkit-for-vs-code-—-march-2026-update/4502517)",
       "GitHub Copilot Documentation (https://docs.github.com/en/copilot)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 52,
@@ -1179,7 +1179,7 @@
       "The New Stack (https://thenewstack.io/kubernetes-1-35-features-that-change-day-2-operations/)",
       "Metal Bear (https://metalbear.com/blog/kubernetes-1-35/)"
     ],
-    "emoji": "🐳"
+    "emoji": "⎈️"
   },
   {
     "id": 53,
@@ -1225,7 +1225,7 @@
       "CVE Details (https://www.cvedetails.com/cve/CVE-2026-29057/)",
       "Miggo Security Analysis (https://www.miggo.io/vulnerability-database/cve/CVE-2026-29057)"
     ],
-    "emoji": "📖"
+    "emoji": "▲"
   },
   {
     "id": 55,
@@ -1247,7 +1247,7 @@
       "JetBrains Blog (https://blog.jetbrains.com/idea/2026/03/intellij-idea-2026-1/)",
       "JetBrains Official (https://www.jetbrains.com/idea/)"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 56,
@@ -1269,7 +1269,7 @@
       "Bun Blog: v1.3.11 Release (https://bun.com/blog/bun-v1.3.11)",
       "Bun GitHub Repository (https://github.com/oven-sh/bun/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🍞"
   },
   {
     "id": 57,
@@ -1291,7 +1291,7 @@
       "GitHub Blog: GitHub Actions 2026 Security Roadmap (https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/)",
       "GitHub Changelog: Advanced Security Setup (https://github.blog/changelog/2026-03-17-github-advanced-security-setup-made-simple/)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 58,
@@ -1314,7 +1314,7 @@
       "Redis.io: What is Valkey? (https://redis.io/blog/what-is-valkey/)",
       "Valkey GitHub (https://github.com/valkey-io/valkey)"
     ],
-    "emoji": "📖"
+    "emoji": "🔑"
   },
   {
     "id": 59,
@@ -1336,7 +1336,7 @@
       "Prisma Releases (https://github.com/prisma/prisma/releases)",
       "Prisma Blog (https://www.prisma.io/blog)"
     ],
-    "emoji": "📖"
+    "emoji": "🔮"
   },
   {
     "id": 60,
@@ -1382,7 +1382,7 @@
       "CVE-2025-69264 (https://nvd.nist.gov/vuln/detail/CVE-2025-69264)",
       "pnpm in 2025 (https://pnpm.io/blog/2025/12/29/pnpm-in-2025)"
     ],
-    "emoji": "📖"
+    "emoji": "📦"
   },
   {
     "id": 62,
@@ -1448,7 +1448,7 @@
       "Deno Releases (https://github.com/denoland/deno/releases/tag/v2.7.9)",
       "Deno Blog (https://deno.com/blog)"
     ],
-    "emoji": "📖"
+    "emoji": "🦕"
   },
   {
     "id": 65,
@@ -1494,7 +1494,7 @@
       "phpMyAdmin 6.0 Changelog (https://github.com/phpmyadmin/phpmyadmin/blob/master/CHANGELOG-6.0.md)",
       "PHP Weekly Archive (https://www.phpweekly.com/archive/latest.html)"
     ],
-    "emoji": "📖"
+    "emoji": "🐘"
   },
   {
     "id": 67,
@@ -1517,7 +1517,7 @@
       "Discord Developer Portal (https://discord.com/developers/applications)",
       "Discord Documentation (https://docs.discord.com/)"
     ],
-    "emoji": "📖"
+    "emoji": "🎮"
   },
   {
     "id": 68,
@@ -1540,7 +1540,7 @@
       "GitHub Svelte Repository (https://github.com/sveltejs/svelte)",
       "SvelteKit Changelog (https://github.com/sveltejs/kit/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🔥"
   },
   {
     "id": 69,
@@ -1585,7 +1585,7 @@
       "Svelte Blog (https://svelte.dev/blog)",
       "daily.dev — What's new in Svelte March 2026 (https://app.daily.dev/posts/what-s-new-in-svelte-march-2026-vhr0vc2mr)"
     ],
-    "emoji": "📖"
+    "emoji": "🔥"
   },
   {
     "id": 71,
@@ -1606,7 +1606,7 @@
     "sources": [
       "GitHub Changelog (https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates/)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 72,
@@ -1629,7 +1629,7 @@
       "Nuxt Documentation (https://nuxt.com/docs)",
       "Vue Router v5 (https://router.vuejs.org/)"
     ],
-    "emoji": "📖"
+    "emoji": "🞩"
   },
   {
     "id": 73,
@@ -1699,7 +1699,7 @@
       "GitHub Repository (https://github.com/cloudflare/vinext)",
       "TechCrunch (https://techcrunch.com/2026/02/25/cloudflare-vinext/)"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 76,
@@ -1721,7 +1721,7 @@
       "Marketing Profs (https://www.marketingprofs.com/opinions/2026/54473/ai-update-march-27-2026-ai-news-and-views-from-the-past-week)",
       "OpenAI Official (https://openai.com/)"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 77,
@@ -1744,7 +1744,7 @@
       "Syncfusion 2026 Volume 1 Release (https://www.syncfusion.com/blogs/post/essential-studio-2026-volume-1)",
       "My Visual Studio Benefits (https://my.visualstudio.com/benefits)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 78,
@@ -1788,7 +1788,7 @@
       "JetBrains Blog: Sunsetting Code With Me (https://blog.jetbrains.com/platform/2026/03/sunsetting-code-with-me/)",
       "JetBrains Platform Blog (https://blog.jetbrains.com/platform/)"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 80,
@@ -1811,7 +1811,7 @@
       "Overclock3D (https://overclock3d.net/news/cpu_mainboard/amd-says-stay-tuned-when-asked-about-the-ryzen-9-9950x3d2-at-ces/)",
       "Coaio News (https://coaio.com/news/2026/03/breaking-tech-news-on-march-27-2026-ai-breakthroughs-hardware-2kkc/)"
     ],
-    "emoji": "📖"
+    "emoji": "🔴"
   },
   {
     "id": 81,
@@ -1834,7 +1834,7 @@
       "OpenAI Help Center — Model Release Notes (https://help.openai.com/en/articles/9624314-model-release-notes)",
       "Tech Daily Shot — OpenAI March 2026 Update (https://techdailyshot.com/blog/openai-march-2026-update)"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 82,
@@ -1902,7 +1902,7 @@
       "GitHub Docs — Keeping API credentials secure (https://docs.github.com/en/rest/authentication/keeping-your-api-credentials-secure)",
       "GitHub Changelog Twitter (https://x.com/GHchangelog/status/2037239427529855321)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 85,
@@ -1924,7 +1924,7 @@
       "GitHub Trending (https://github.com/trending)",
       "Clauday GitHub Stars (https://clauday.com/zh/article/ee6b2e2a-2778-41a5-8a95-9360b27afe1f)"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 86,
@@ -1948,7 +1948,7 @@
       "Elastic Past Releases (https://www.elastic.co/downloads/past-releases?product=elasticsearch)",
       "InfoQ: Elastic 9.3 GPU Vector Indexing (https://www.infoq.com/news/2026/03/elastic-9-3-gpu-vector-indexing/)"
     ],
-    "emoji": "📖"
+    "emoji": "🔍"
   },
   {
     "id": 87,
@@ -2018,7 +2018,7 @@
       "SolidJS GitHub Discussion #2425 (https://github.com/solidjs/solid/discussions/2425)",
       "SolidStart 1.3.0 Release Notes (https://github.com/solidjs/solidstart/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🧊"
   },
   {
     "id": 90,
@@ -2086,7 +2086,7 @@
       "Zig Type Resolution Redesign 2026",
       "Zig Official GitHub"
     ],
-    "emoji": "📖"
+    "emoji": "💥"
   },
   {
     "id": 93,
@@ -2108,7 +2108,7 @@
       "Help Net Security: Android March 2026 security patch",
       "Android Security Bulletin"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 94,
@@ -2131,7 +2131,7 @@
       "Next.js 16 Documentation",
       "Vercel Changelog"
     ],
-    "emoji": "📖"
+    "emoji": "▲"
   },
   {
     "id": 95,
@@ -2153,7 +2153,7 @@
       "Cloudflare Blog: AI Gateway DLP Announcement",
       "Cloudflare Zero Trust Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 96,
@@ -2198,7 +2198,7 @@
       "Svelte 5.4 Release Notes",
       "Svelte Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "🔥"
   },
   {
     "id": 98,
@@ -2221,7 +2221,7 @@
       "Moonshot AI Kimi K2.5 Announcement",
       "Cloudflare Agents SDK"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 99,
@@ -2244,7 +2244,7 @@
       "VS Code GitHub Repository (https://github.com/microsoft/vscode)",
       "VS Code 1.112 Iteration Plan (https://github.com/microsoft/vscode/issues/300108)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 100,
@@ -2265,7 +2265,7 @@
       "https://nginx.org/2026.html",
       "https://community.nginx.org/t/nginx-1-29-6-mainline-released/"
     ],
-    "emoji": "📖"
+    "emoji": "🛡️"
   },
   {
     "id": 101,
@@ -2287,7 +2287,7 @@
       "Intel Official",
       "AnandTech"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 102,
@@ -2309,7 +2309,7 @@
       "Visual Studio Code 1.113 Release Notes (https://code.visualstudio.com/updates/v1_113)",
       "Dev.to: VS Code 1.113 Review (https://dev.to/hamidrazadev/vs-code-1113-just-dropped-and-its-quietly-changing-how-developers-work-b2l)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 103,
@@ -2331,7 +2331,7 @@
       "Grafana Labs Press Release",
       "Grafana Cloud Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "📊"
   },
   {
     "id": 104,
@@ -2354,7 +2354,7 @@
       "Vitalik Buterin Roadmap 2026",
       "Ethereum.org Roadmap"
     ],
-    "emoji": "📖"
+    "emoji": "💰"
   },
   {
     "id": 105,
@@ -2377,7 +2377,7 @@
       "CNBC",
       "Yahoo Finance"
     ],
-    "emoji": "📖"
+    "emoji": "🟩"
   },
   {
     "id": 106,
@@ -2400,7 +2400,7 @@
       "Hugging Face Documentation",
       "GitHub"
     ],
-    "emoji": "📖"
+    "emoji": "🤗"
   },
   {
     "id": 107,
@@ -2445,7 +2445,7 @@
       "The Deep View: Mistral voice AI updates",
       "HuggingFace Model Card"
     ],
-    "emoji": "📖"
+    "emoji": "🌫️"
   },
   {
     "id": 109,
@@ -2468,7 +2468,7 @@
       "Nginx GitHub Releases",
       "F5 Security Advisory"
     ],
-    "emoji": "📖"
+    "emoji": "🛡️"
   },
   {
     "id": 110,
@@ -2491,7 +2491,7 @@
       "HashiCorp Terraform Changelog",
       "Terraform 1.14.8 Release Notes"
     ],
-    "emoji": "📖"
+    "emoji": "🏗️"
   },
   {
     "id": 111,
@@ -2514,7 +2514,7 @@
       "GitHub Copilot Documentation",
       "VS Code Release Notes"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 112,
@@ -2559,7 +2559,7 @@
       "AWS Dev.to Highlights",
       "AWS YouTube What's New"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 114,
@@ -2575,7 +2575,7 @@
     "telegram_id": 38,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 115,
@@ -2591,7 +2591,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 116,
@@ -2607,7 +2607,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 117,
@@ -2623,7 +2623,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 118,
@@ -2639,7 +2639,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 119,
@@ -2655,7 +2655,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 120,
@@ -2671,7 +2671,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 121,
@@ -2687,7 +2687,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 122,
@@ -2703,7 +2703,7 @@
     "telegram_id": 0,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 123,
@@ -2719,7 +2719,7 @@
     "telegram_id": 40,
     "status": "опубликовано (AI-generated)",
     "sources": [],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 124,
@@ -2764,7 +2764,7 @@
       "https://nodejs.org/uk/blog/vulnerability/march-2026-security-releases",
       "https://nodejs.org/fr/blog/vulnerability/march-2026-security-releases"
     ],
-    "emoji": "📖"
+    "emoji": "🟩"
   },
   {
     "id": 126,
@@ -2785,7 +2785,7 @@
       "Chrome Releases Blog",
       "Google Security Blog"
     ],
-    "emoji": "📖"
+    "emoji": "🌐"
   },
   {
     "id": 127,
@@ -2803,7 +2803,7 @@
     "sources": [
       "Тест"
     ],
-    "emoji": "📖"
+    "emoji": "🧪"
   },
   {
     "id": 128,
@@ -2821,7 +2821,7 @@
     "sources": [
       "Тест"
     ],
-    "emoji": "📖"
+    "emoji": "🧪"
   },
   {
     "id": 129,
@@ -2842,7 +2842,7 @@
       "Microsoft TypeScript Blog",
       "GitHub Releases"
     ],
-    "emoji": "🟨"
+    "emoji": "🔵"
   },
   {
     "id": 130,
@@ -2864,7 +2864,7 @@
       "Microsoft TypeScript Blog",
       "GitHub Releases"
     ],
-    "emoji": "🟨"
+    "emoji": "🔵"
   },
   {
     "id": 131,
@@ -2887,7 +2887,7 @@
       "GitHub Releases",
       "TypeScript 6.0 Release Notes"
     ],
-    "emoji": "🟨"
+    "emoji": "🔵"
   },
   {
     "id": 132,
@@ -2905,7 +2905,7 @@
     "sources": [
       "Тест"
     ],
-    "emoji": "📖"
+    "emoji": "🧪"
   },
   {
     "id": 133,
@@ -2928,7 +2928,7 @@
       "TechCrunch: Sora App Pivot",
       "OpenAI Official Announcement"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 134,
@@ -2951,7 +2951,7 @@
       "GitHub Changelog: Copilot Improvements",
       "Microsoft AI Toolkit for VS Code — March 2026 Update"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 135,
@@ -2974,7 +2974,7 @@
       "Node.js GitHub Repository",
       "CVE Details"
     ],
-    "emoji": "📖"
+    "emoji": "🟩"
   },
   {
     "id": 136,
@@ -2997,7 +2997,7 @@
       "Oracle Java Releases",
       "OpenJDK JEP Index"
     ],
-    "emoji": "📖"
+    "emoji": "☕"
   },
   {
     "id": 137,
@@ -3042,7 +3042,7 @@
       "PostgreSQL Official Announcement",
       "PostgreSQL Global Development Group"
     ],
-    "emoji": "🗄️"
+    "emoji": "🐘"
   },
   {
     "id": 139,
@@ -3065,7 +3065,7 @@
       "GitLab Duo AI Features",
       "GitLab Security Updates"
     ],
-    "emoji": "📖"
+    "emoji": "🦊"
   },
   {
     "id": 140,
@@ -3111,7 +3111,7 @@
       "Node.js GitHub Repository (https://github.com/nodejs/node)",
       "CVE Details (https://www.cvedetails.com/)"
     ],
-    "emoji": "📖"
+    "emoji": "🟩"
   },
   {
     "id": 142,
@@ -3179,7 +3179,7 @@
       "GitHub Changelog — Secret Scanning Updates March 2026",
       "GitHub Docs — Secret Scanning Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 145,
@@ -3202,7 +3202,7 @@
       "Bun GitHub Repository",
       "Bun Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "🍞"
   },
   {
     "id": 146,
@@ -3248,7 +3248,7 @@
       "Swift Forums",
       "Xcode 26.4 Release Notes"
     ],
-    "emoji": "📖"
+    "emoji": "🕊️"
   },
   {
     "id": 148,
@@ -3315,7 +3315,7 @@
       "Go Official Blog",
       "Microsoft Build of Go"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 151,
@@ -3361,7 +3361,7 @@
       "Redis Documentation",
       "GitHub Releases"
     ],
-    "emoji": "📖"
+    "emoji": "🔴"
   },
   {
     "id": 153,
@@ -3407,7 +3407,7 @@
       "Git Project Roadmap 2026",
       "InfoWorld — Git 3.0 Preview"
     ],
-    "emoji": "📖"
+    "emoji": "📉"
   },
   {
     "id": 155,
@@ -3430,7 +3430,7 @@
       "Samsung Newsroom Official",
       "Windows Central: Samsung Browser AI features"
     ],
-    "emoji": "📖"
+    "emoji": "📱"
   },
   {
     "id": 156,
@@ -3452,7 +3452,7 @@
       "Bun 1.2 Release Notes (https://bun.sh/blog/bun-v1.2)",
       "Bun GitHub Repository (https://github.com/oven-sh/bun)"
     ],
-    "emoji": "📖"
+    "emoji": "🍞"
   },
   {
     "id": 157,
@@ -3519,7 +3519,7 @@
       "Cloudflare Changelog — March 23, 2026 (https://developers.cloudflare.com/changelog/)",
       "Cloudflare R2 SQL Documentation (https://developers.cloudflare.com/r2-sql/)"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 160,
@@ -3542,7 +3542,7 @@
       "GitHub Releases",
       "Vite Changelog"
     ],
-    "emoji": "📖"
+    "emoji": "⚡"
   },
   {
     "id": 161,
@@ -3565,7 +3565,7 @@
       "CNN: OpenAI is shutting down its Sora video app just months after launch",
       "The Neuron: AI News Digest March 25 2026"
     ],
-    "emoji": "📖"
+    "emoji": "🤖"
   },
   {
     "id": 162,
@@ -3588,7 +3588,7 @@
       "Laravel 13 released: features and upgrade guide (benjamincrozat.com)",
       "Laravel Daily: Laravel 13 Release (laraveldaily.com)"
     ],
-    "emoji": "📖"
+    "emoji": "🔺"
   },
   {
     "id": 163,
@@ -3610,7 +3610,7 @@
       "Visual Studio Code Release Notes",
       "GitHub Blog"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 164,
@@ -3655,7 +3655,7 @@
       "Laravel AI SDK Documentation",
       "Laravel 13: Complete Guide"
     ],
-    "emoji": "📖"
+    "emoji": "🔺"
   },
   {
     "id": 166,
@@ -3676,7 +3676,7 @@
       "React Official Blog",
       "GitHub"
     ],
-    "emoji": "📖"
+    "emoji": "⚛️"
   },
   {
     "id": 167,
@@ -3698,7 +3698,7 @@
       "JetBrains Blog: Java 26 in IntelliJ IDEA",
       "IntelliJ IDEA 2026.1 EAP Release Notes"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 168,
@@ -3742,7 +3742,7 @@
       "VS Code 1.112 Release Notes",
       "Microsoft Tech Community"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 170,
@@ -3764,7 +3764,7 @@
       "Linux Kernel Newbies",
       "Phoronix"
     ],
-    "emoji": "📖"
+    "emoji": "🟧"
   },
   {
     "id": 171,
@@ -3786,7 +3786,7 @@
       "AWS in March 2026: The Biggest Updates Developers Can't Ignore",
       "Amazon S3 Account Regional Namespaces"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 172,
@@ -3808,7 +3808,7 @@
       "Fedora Magazine: Announcing Fedora Linux 44 Beta",
       "Linux Teck: Fedora 44 Beta Review"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 173,
@@ -3830,7 +3830,7 @@
       "GitHub Security Blog",
       "GitHub Docs"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 174,
@@ -3852,7 +3852,7 @@
       "https://github.com/datalab-to/chandra",
       "https://github.com/datalab-to/chandra/releases"
     ],
-    "emoji": "📖"
+    "emoji": "📝"
   },
   {
     "id": 175,
@@ -3875,7 +3875,7 @@
       "The Globe and Mail: Arm launches first Arm-designed data center CPU",
       "Futurum Group: Arm's $15 Billion CPU Opportunity"
     ],
-    "emoji": "📖"
+    "emoji": "🔧"
   },
   {
     "id": 176,
@@ -3920,7 +3920,7 @@
       "https://euperspectives.eu/2026/03/meps-extend-chat-control-limit-scanning/",
       "https://www.linkedin.com/posts/devan-jones_finding-the-right-evidence-is-often-harder-activity-7437527534650646528-63Y3"
     ],
-    "emoji": "🔒"
+    "emoji": "🕶️"
   },
   {
     "id": 178,
@@ -3965,7 +3965,7 @@
       "StepSecurity Threat Intel",
       "The Hacker News"
     ],
-    "emoji": "📖"
+    "emoji": "📦"
   },
   {
     "id": 180,
@@ -4010,7 +4010,7 @@
       "GitHub Changelog — March 26, 2026",
       "GitHub Blog — New Pull Requests Dashboard"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 182,
@@ -4033,7 +4033,7 @@
       "Daily Repo Status — March 26, 2026",
       "Release Notes 10.0.51"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 183,
@@ -4056,7 +4056,7 @@
       "Security Affairs",
       "The Cyber Express"
     ],
-    "emoji": "📖"
+    "emoji": "🛡️"
   },
   {
     "id": 184,
@@ -4079,7 +4079,7 @@
       "GitHub vuejs/core",
       "Vue.js Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "🞩"
   },
   {
     "id": 185,
@@ -4101,7 +4101,7 @@
       "OpenTelemetry Blog",
       "OpenTelemetry Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 186,
@@ -4124,7 +4124,7 @@
       "Flutter Release Notes",
       "Dart 3.6 Announcement"
     ],
-    "emoji": "📖"
+    "emoji": "🦋"
   },
   {
     "id": 187,
@@ -4170,7 +4170,7 @@
       "Go Release Notes",
       "NIST PQC"
     ],
-    "emoji": "📖"
+    "emoji": "🔵"
   },
   {
     "id": 189,
@@ -4193,7 +4193,7 @@
       "Firefox Release Notes",
       "Gigazine"
     ],
-    "emoji": "📖"
+    "emoji": "🦊"
   },
   {
     "id": 190,
@@ -4215,7 +4215,7 @@
       "Cloudflare Changelog",
       "InfoWorld"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 191,
@@ -4237,7 +4237,7 @@
       "VS Code 1.112 Release Notes (https://code.visualstudio.com/updates/v1_112)",
       "Releasebot (https://releasebot.io/updates/microsoft/visual-studio-code)"
     ],
-    "emoji": "📖"
+    "emoji": "💻"
   },
   {
     "id": 192,
@@ -4259,7 +4259,7 @@
       "Vite 8 Announcement",
       "Vite GitHub Changelog"
     ],
-    "emoji": "📖"
+    "emoji": "⚡"
   },
   {
     "id": 193,
@@ -4281,7 +4281,7 @@
       "Cloudflare Blog: Markdown for Agents",
       "Cloudflare Workers AI Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "☁️"
   },
   {
     "id": 194,
@@ -4327,7 +4327,7 @@
       "WebAssembly Specification 2.0",
       "Chrome Platform Status"
     ],
-    "emoji": "📖"
+    "emoji": "📦"
   },
   {
     "id": 196,
@@ -4350,7 +4350,7 @@
       "Google I/O 2026",
       "Impeller Engine Documentation"
     ],
-    "emoji": "📖"
+    "emoji": "🦋"
   },
   {
     "id": 197,
@@ -4373,7 +4373,7 @@
       "Svelte GitHub Releases (https://github.com/sveltejs/svelte/releases)",
       "SvelteKit Changelog (https://github.com/sveltejs/kit/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🔥"
   },
   {
     "id": 198,
@@ -4418,7 +4418,7 @@
       "Astro Blog (https://astro.build/blog/astro-6/)",
       "Astro Documentation (https://docs.astro.build/)"
     ],
-    "emoji": "📖"
+    "emoji": "✨"
   },
   {
     "id": 200,
@@ -4440,7 +4440,7 @@
       "Security Affairs: Critical Nginx UI flaw CVE-2026-27944",
       "Cyber Daily: Nginx UI vulnerability exploitation warning"
     ],
-    "emoji": "📖"
+    "emoji": "🛡️"
   },
   {
     "id": 201,
@@ -4462,7 +4462,7 @@
       "Deno 2.7 Release Notes (https://deno.com/blog/v2.7)",
       "Deno 2.7.6 GitHub Releases (https://github.com/denoland/deno/releases)"
     ],
-    "emoji": "📖"
+    "emoji": "🦕"
   },
   {
     "id": 202,
@@ -4484,7 +4484,7 @@
       "Supabase Release Notes — March 2026",
       "Supabase Developer Update — March 2026 (GitHub Discussions)"
     ],
-    "emoji": "📖"
+    "emoji": "🟢"
   },
   {
     "id": 203,
@@ -4528,7 +4528,7 @@
       "JetBrains Blog — Java Annotated Monthly March 2026",
       "JetBrains Blog — Java 26 in IntelliJ IDEA"
     ],
-    "emoji": "📖"
+    "emoji": "💡"
   },
   {
     "id": 205,
@@ -4548,7 +4548,7 @@
     "sources": [
       "GitHub Changelog — Agent Activity in Issues and Projects"
     ],
-    "emoji": "📖"
+    "emoji": "🐱"
   },
   {
     "id": 206,
@@ -4901,7 +4901,7 @@
       "Martin Fowler (https://martinfowler.com/)",
       "PHP.net Manual (https://www.php.net/manual/ru/)"
     ],
-    "emoji": "📖"
+    "emoji": "📐"
   },
   {
     "id": 223,

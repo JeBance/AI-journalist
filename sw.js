@@ -1,75 +1,78 @@
 /* ============================================
-   AI Journalist — Service Worker
-   Кэширует всё для оффлайн работы
+   AI Journalist -- Service Worker
+   Lazy cache: articles.json fetched on-demand,
+   not pre-cached (too large for mobile).
    ============================================ */
 
-const CACHE_NAME = 'ai-journalist-v1';
-const ASSETS_TO_CACHE = [
+var CACHE_NAME = 'ai-journalist-v2';
+var ASSETS_TO_CACHE = [
     '/',
     '/index.html',
     '/styles.css',
     '/app.js',
-    '/manifest.json',
-    '/articles.json'
+    '/manifest.json'
+    // articles.json NOT pre-cached -- loaded on demand
 ];
 
-// Установка — кэшируем основные файлы
-self.addEventListener('install', (event) => {
+// Install -- cache core assets only
+self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then((cache) => {
-                console.log('✅ Кэширование основных файлов');
+            .then(function(cache) {
+                console.log('Caching core assets');
                 return cache.addAll(ASSETS_TO_CACHE);
             })
-            .catch((err) => console.log('⚠️ Не все файлы кэшированы:', err))
+            .catch(function(err) { console.log('Some assets not cached:', err); })
     );
     self.skipWaiting();
 });
 
-// Активация — удаляем старые кэши
-self.addEventListener('activate', (event) => {
+// Activate -- remove old caches
+self.addEventListener('activate', function(event) {
     event.waitUntil(
-        caches.keys().then((cacheNames) => {
+        caches.keys().then(function(cacheNames) {
             return Promise.all(
                 cacheNames
-                    .filter((name) => name !== CACHE_NAME)
-                    .map((name) => caches.delete(name))
+                    .filter(function(name) { return name !== CACHE_NAME; })
+                    .map(function(name) { return caches.delete(name); })
             );
         })
     );
     self.clients.claim();
 });
 
-// Fetch — стратегия: сеть с fallback на кэш
-self.addEventListener('fetch', (event) => {
-    // articles.json — всегда пробуем сеть, но fallback на кэш
+// Fetch -- network-first for articles.json, cache-first for rest
+self.addEventListener('fetch', function(event) {
     if (event.request.url.endsWith('/articles.json')) {
+        // Network-first for articles.json
         event.respondWith(
             fetch(event.request)
-                .then((response) => {
-                    // Обновляем кэш
-                    const clonedResponse = response.clone();
-                    caches.open(CACHE_NAME)
-                        .then((cache) => cache.put(event.request, clonedResponse));
+                .then(function(response) {
+                    if (response.ok) {
+                        var clone = response.clone();
+                        caches.open(CACHE_NAME).then(function(cache) {
+                            cache.put(event.request, clone);
+                        });
+                    }
                     return response;
                 })
-                .catch(() => caches.match(event.request))
+                .catch(function() { return caches.match(event.request); })
         );
         return;
     }
-    
-    // Остальные ресурсы — cache first
+
+    // Cache-first for everything else
     event.respondWith(
         caches.match(event.request)
-            .then((cached) => {
+            .then(function(cached) {
                 if (cached) return cached;
-                
-                return fetch(event.request).then((response) => {
-                    // Кэшируем только свои ресурсы
-                    if (response.ok && event.request.url.startsWith(self.location.origin)) {
-                        const clonedResponse = response.clone();
-                        caches.open(CACHE_NAME)
-                            .then((cache) => cache.put(event.request, clonedResponse));
+
+                return fetch(event.request).then(function(response) {
+                    if (response.ok && event.request.url.indexOf(self.location.origin) === 0) {
+                        var clone = response.clone();
+                        caches.open(CACHE_NAME).then(function(cache) {
+                            cache.put(event.request, clone);
+                        });
                     }
                     return response;
                 });

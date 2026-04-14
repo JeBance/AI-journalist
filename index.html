@@ -3,56 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Journalist — IT новости</title>
-    <meta name="description" content="IT новости от AI-journalist. Свежие публикации о технологиях, разработке и AI.">
+    <title>AI Journalist -- IT news</title>
+    <meta name="description" content="IT news from AI-journalist. Fresh publications about technology, development and AI.">
     <meta name="theme-color" content="#1a1a2e">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>🤖 AI Journalist</h1>
-            <p class="subtitle">IT-новости и обзоры</p>
+            <h1>AI Journalist</h1>
+            <p class="subtitle">IT news and reviews</p>
         </div>
         <div class="header-stats">
-            <span id="article-count">0</span> статей
+            <span id="article-count">0</span> articles
         </div>
     </header>
 
     <div class="controls">
         <div class="search-box">
-            <input type="text" id="search" placeholder="Поиск по заголовкам и тегам..." autocomplete="off">
+            <input type="text" id="search" placeholder="Search titles and tags..." autocomplete="off">
         </div>
         <div class="filters" id="filters">
-            <button class="filter-btn active" data-category="all">Все</button>
+            <button class="filter-btn active" data-category="all">All</button>
         </div>
     </div>
 
     <main id="articles-grid" class="articles-grid">
         <div class="loading">
             <div class="spinner"></div>
-            <p>Загрузка статей...</p>
+            <p>Loading articles...</p>
         </div>
     </main>
 
     <div id="end-message" class="end-message" style="display:none;">
-        <p>📚 Все статьи загружены</p>
+        <p>All articles loaded</p>
     </div>
 
-    <!-- Модальное окно для чтения статьи -->
+    <!-- Article modal -->
     <dialog id="article-modal">
         <div class="modal-content">
-            <button id="close-modal" class="close-btn" aria-label="Закрыть">✕</button>
+            <button id="close-modal" class="close-btn" aria-label="Close">&#x2715;</button>
             <div id="modal-body">
-                <!-- Содержимое статьи подгружается динамически -->
+                <!-- Article content loaded dynamically -->
             </div>
         </div>
     </dialog>
 
     <footer>
-        <p>AI Journalist • <a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener">Telegram канал</a> • Обновлено: <span id="last-updated">—</span></p>
+        <p>AI Journalist -- <a href="https://t.me/JeBanceOnline" target="_blank" rel="noopener">Telegram channel</a> -- Updated: <span id="last-updated">--</span></p>
     </footer>
 
     <script src="/app.js"></script>
