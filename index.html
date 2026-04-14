@@ -55,11 +55,13 @@
     <div class="page-layout">
         <!-- Desktop: sidebar with filters -->
         <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h3>🏷️ Теги</h3>
-            </div>
+            <!-- Search first -->
             <div class="search-box sidebar-search">
                 <input type="text" id="search-desktop" placeholder="Поиск..." autocomplete="off">
+            </div>
+            <!-- Then tags heading -->
+            <div class="sidebar-header">
+                <h3>🏷️ Теги</h3>
             </div>
             <div class="filters" id="filters-desktop">
                 <button class="filter-btn active" data-category="all">Все</button>
@@ -68,16 +70,13 @@
 
         <!-- Main content -->
         <main class="main-content">
-            <div class="mobile-active-filters" id="mobile-active-filters"></div>
             <div id="articles-grid" class="articles-grid">
                 <div class="loading">
                     <div class="spinner"></div>
                     <p>Загрузка статей...</p>
                 </div>
             </div>
-            <div id="end-message">
-                <p>Все статьи загружены</p>
-            </div>
+            <div id="end-message"></div>
         </main>
     </div>
 
