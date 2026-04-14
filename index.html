@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <div class="header-left">
             <h1>AI Journalist</h1>
             <p class="subtitle">IT-новости и обзоры</p>
         </div>
@@ -24,24 +24,61 @@
         </div>
     </header>
 
-    <div class="controls">
+    <!-- Mobile: search + filter button -->
+    <div class="mobile-controls">
         <div class="search-box">
-            <input type="text" id="search" placeholder="Поиск по заголовкам и тегам..." autocomplete="off">
+            <input type="text" id="search-mobile" placeholder="Поиск..." autocomplete="off">
         </div>
-        <div class="filters" id="filters">
-            <button class="filter-btn active" data-category="all">Все</button>
+        <button class="filter-toggle-btn" id="filter-toggle-btn" aria-label="Фильтры">
+            🏷️ Теги
+        </button>
+    </div>
+
+    <!-- Mobile: filter drawer overlay -->
+    <div class="filter-overlay" id="filter-overlay">
+        <div class="filter-drawer" id="filter-drawer">
+            <div class="filter-drawer-header">
+                <h2>Фильтры по тегам</h2>
+                <button class="filter-close-btn" id="filter-close-btn" aria-label="Закрыть">✕</button>
+            </div>
+            <div class="filter-drawer-content">
+                <div class="search-box filter-search">
+                    <input type="text" id="search-drawer" placeholder="Поиск по тегам..." autocomplete="off">
+                </div>
+                <div class="filters" id="filters-drawer">
+                    <button class="filter-btn active" data-category="all">Все</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main id="articles-grid" class="articles-grid">
-        <div class="loading">
-            <div class="spinner"></div>
-            <p>Загрузка статей...</p>
-        </div>
-    </main>
+    <div class="page-layout">
+        <!-- Desktop: sidebar with filters -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>🏷️ Теги</h3>
+            </div>
+            <div class="search-box sidebar-search">
+                <input type="text" id="search-desktop" placeholder="Поиск..." autocomplete="off">
+            </div>
+            <div class="filters" id="filters-desktop">
+                <button class="filter-btn active" data-category="all">Все</button>
+            </div>
+        </aside>
 
-    <div id="end-message">
-        <p>Все статьи загружены</p>
+        <!-- Main content -->
+        <main class="main-content">
+            <div class="mobile-active-filters" id="mobile-active-filters"></div>
+            <div id="articles-grid" class="articles-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Загрузка статей...</p>
+                </div>
+            </div>
+            <div id="end-message">
+                <p>Все статьи загружены</p>
+            </div>
+        </main>
     </div>
 
     <!-- Модальное окно статьи -->

@@ -1,5 +1,6 @@
 /* ============================================
    AI Journalist — Логика приложения
+   Адаптивный: sidebar (десктоп) / drawer (мобильный)
    ============================================ */
 
 var ARTICLES_URL = '/articles.json';
@@ -38,10 +39,37 @@ function updateThemeIcon() {
     btn.title = isLight ? 'Включить тёмную тему' : 'Включить светлую тему';
 }
 
+// ====== МОБИЛЬНЫЙ DRAWER ======
+
+function openFilterDrawer() {
+    var overlay = document.getElementById('filter-overlay');
+    if (overlay) overlay.classList.add('open');
+}
+
+function closeFilterDrawer() {
+    var overlay = document.getElementById('filter-overlay');
+    if (overlay) overlay.classList.remove('open');
+}
+
+function setupFilterDrawer() {
+    var btn = document.getElementById('filter-toggle-btn');
+    var closeBtn = document.getElementById('filter-close-btn');
+    var overlay = document.getElementById('filter-overlay');
+
+    if (btn) btn.addEventListener('click', openFilterDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeFilterDrawer);
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeFilterDrawer();
+        });
+    }
+}
+
 // ====== ИНИЦИАЛИЗАЦИЯ ======
 
 async function init() {
     initTheme();
+    setupFilterDrawer();
 
     try {
         var response = await fetch(ARTICLES_URL);
@@ -149,7 +177,7 @@ function renderBatch() {
 
 // ====== ФИЛЬТРЫ ======
 
-function renderFilters() {
+function buildFilterButtons() {
     var categories = {};
 
     allArticles.forEach(function(article) {
@@ -158,29 +186,60 @@ function renderFilters() {
     });
 
     var sorted = Object.entries(categories).sort(function(a, b) { return b[1] - a[1]; });
+    var allCount = allArticles.length;
 
-    var container = document.getElementById('filters');
-    container.innerHTML = '<button class="filter-btn active" data-category="all">Все (' + allArticles.length + ')</button>';
+    var html = '<button class="filter-btn active" data-category="all">' +
+        '<span>Все</span><span class="count">' + allCount + '</span></button>';
 
     sorted.forEach(function(entry) {
         var cat = entry[0];
         var count = entry[1];
-        var btn = document.createElement('button');
-        btn.className = 'filter-btn';
-        btn.dataset.category = cat;
-        btn.textContent = cat + ' (' + count + ')';
-        btn.addEventListener('click', function() { setFilter(cat); });
-        container.appendChild(btn);
+        html += '<button class="filter-btn" data-category="' + escapeHtml(cat) + '">' +
+            '<span>' + escapeHtml(cat) + '</span><span class="count">' + count + '</span></button>';
     });
+
+    return html;
+}
+
+function setupFilterEvents(container) {
+    if (!container) return;
+    container.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var cat = btn.dataset.category;
+            setFilter(cat);
+
+            // Sync all containers
+            document.querySelectorAll('.filter-btn').forEach(function(b) {
+                b.classList.toggle('active', b.dataset.category === cat);
+            });
+
+            // Close drawer on mobile
+            closeFilterDrawer();
+        });
+    });
+}
+
+function renderFilters() {
+    var html = buildFilterButtons();
+
+    // Desktop sidebar
+    var desktop = document.getElementById('filters-desktop');
+    if (desktop) {
+        desktop.innerHTML = html;
+        setupFilterEvents(desktop);
+    }
+
+    // Mobile drawer
+    var drawer = document.getElementById('filters-drawer');
+    if (drawer) {
+        drawer.innerHTML = html;
+        setupFilterEvents(drawer);
+    }
 }
 
 function setFilter(category) {
     currentFilter = category;
     applyFilters();
-
-    document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.category === category);
-    });
 }
 
 function applyFilters() {
@@ -218,15 +277,26 @@ function applyFilters() {
 // ====== ПОИСК ======
 
 function setupSearch() {
-    var input = document.getElementById('search');
-    var debounceTimer;
+    var inputs = [
+        document.getElementById('search-desktop'),
+        document.getElementById('search-mobile'),
+        document.getElementById('search-drawer')
+    ];
 
-    input.addEventListener('input', function(e) {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(function() {
-            searchQuery = e.target.value.trim();
-            applyFilters();
-        }, 250);
+    inputs.forEach(function(input) {
+        if (!input) return;
+        var debounceTimer;
+        input.addEventListener('input', function(e) {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(function() {
+                searchQuery = e.target.value.trim();
+                // Sync all search inputs
+                inputs.forEach(function(other) {
+                    if (other && other !== input) other.value = searchQuery;
+                });
+                applyFilters();
+            }, 250);
+        });
     });
 }
 
