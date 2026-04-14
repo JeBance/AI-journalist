@@ -651,7 +651,52 @@ footer a {
 }
 
 footer a:hover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    color: var(--text-muted);
+    transition: all var(--transition);
+}
+
+    color: var(--accent);
+    background: var(--tag-bg);
+    text-decoration: none;
+}
     text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    color: var(--text-muted);
+    transition: all var(--transition);
+}
+
+    color: var(--accent);
+    background: var(--tag-bg);
+    text-decoration: none;
+}
+}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    color: var(--text-muted);
+    transition: all var(--transition);
+}
+
+    color: var(--accent);
+    background: var(--tag-bg);
+    text-decoration: none;
 }
 
 /* ====== BLOCKQUOTE ====== */
@@ -822,4 +867,23 @@ footer a:hover {
     .card-title {
         font-size: 0.9rem;
     }
+}
+
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    color: var(--text-muted);
+    transition: all var(--transition);
+    vertical-align: middle;
+}
+
+.footer-icon:hover {
+    color: var(--accent);
+    background: var(--tag-bg);
+    text-decoration: none;
 }
