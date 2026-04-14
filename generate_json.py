@@ -253,7 +253,7 @@ def main():
             print(f"  Parsed {filepath.name}: {len(articles)} articles")
 
     # Sort by date (newest first)
-    all_articles.sort(key=lambda a: a["date"], reverse=True)
+    all_articles.sort(key=lambda a: (a["date"], a.get("telegram_id", 0)), reverse=True)
 
     # Assign IDs
     for i, article in enumerate(all_articles, 1):
