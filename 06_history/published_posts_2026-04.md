@@ -1791,3 +1791,91 @@ Claude для Word — часть единой экосистемы надстр
 
 ---
 
+### [2026-04-14] Кризис ИИ-инфраструктуры: 50% дата-центров США заморожены, GPU подорожали на 40%
+
+- **Category:** hardware
+- **Template:** telegra.ph article
+- **Key topics:** hardware, ai, nvidia, дата_центры, инфраструктура
+- **Sources:**
+  - Tom's Hardware (https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers)
+  - SemiAnalysis via Seeking Alpha (https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)
+  - Fusion Worldwide (https://www.fusionww.com/insights/gpu-shortage-and-price-increases-in-2026)
+  - Morgan Stanley (https://www.morganstanley.com/insights/articles/powering-ai-energy-market-outlook-2026)
+- **Telegra.ph URL:** https://telegra.ph/Krizis-II-infrastruktury-50-data-centrov-SSHA-zamorozheny-GPU-podorozhali-na-40-04-14
+- **Telegram ID:** 485
+- **Status:** published
+
+<!-- CONTENT_START -->
+Индустрия искусственного интеллекта столкнулась с беспрецедентным кризисом инфраструктуры. Рост спроса на вычислительные мощности опережает возможности энергосетей и цепочек поставок, что приводит к задержкам и отменам масштабных проектов.
+
+## Задержки строительства дата-центров
+
+По данным **Tom's Hardware** и аналитиков **Bloomberg**, около **50% запланированных в США дата-центров** на 2026 год будут задержаны или полностью отменены. Из ожидаемых к вводу **12 ГВт** новых мощностей лишь **~33%** находятся в активной стадии строительства.
+
+Крупнейшие технологические компании — **Alphabet**, **Amazon**, **Meta** и **Microsoft** — инвестируют более **$650 млрд** в ИИ-инфраструктуру в 2026 году, однако физические ограничения замедляют реализацию планов.
+
+## Рост цен на GPU
+
+Параллельно наблюдается резкий рост стоимости вычислительных ресурсов:
+
+· **NVIDIA H100**: аренда выросла на **~40%** за шесть месяцев — с $1,70/час до **$2,35/час** (данные SemiAnalysis, март 2026)
+
+· **NVIDIA Blackwell**: рост цен на **15–23%**, сроки ожидания растягиваются до **середины 2026 года**
+
+· **Ada Lovelace**: подорожание на **5–10%**
+
+Спрос со стороны агентных ИИ-систем и крупных языковых моделей превращает доступ к топ-инфраструктуре в конкурентное преимущество для гигантов и непреодолимый барьер для стартапов.
+
+## Энергетический bottleneck
+
+Ключевая проблема — **критическая нехватка электрооборудования**:
+
+· **Высоковольтные трансформаторы**: сроки поставки выросли с **24–30 месяцев** (до 2020 г.) до **5 лет** сегодня
+
+· Стандартный цикл развёртывания ИИ-инфраструктуры — **менее 18 месяцев**, что создаёт катастрофический разрыв
+
+· Энергосети дополнительно перегружены массовым внедрением **электромобилей** и электрических систем отопления
+
+· Электроинфраструктура составляет **менее 10%** от общей стоимости дата-центра, но задержка любого компонента полностью останавливает проект
+
+## Зависимость от цепочек поставок
+
+Отдельную проблему представляет зависимость от импорта критических компонентов:
+
+· Импорт трансформаторов из Китая вырос с **менее 1 500 единиц** (2022) до **более 8 000 единиц** (2025)
+
+· Китай обеспечивает **более 40%** импорта аккумуляторов и **~30%** трансформаторов для США
+
+· Новые ключевые поставщики: **Канада**, **Мексика**, **Южная Корея**
+
+## Прогнозы
+
+Международное энергетическое агентство (**IEA**) прогнозирует, что глобальные дата-центры будут потреблять более **1 000 ТВт·ч** к 2026 году — это сопоставимо с энергопотреблением целых стран вроде Японии.
+
+Спрос на электроэнергию в США может достичь **150 ГВт** к 2028 году, что потребует беспрецентного расширения энергетической инфраструктуры.
+
+## Что это значит для разработчиков
+
+Для инди-разработчиков и небольших команд ситуация осложняется:
+
+· **Доступ к мощным GPU** становится привилегией крупных компаний
+
+· **Локальный инференс** (Ollama, llama.cpp, LiteRT-LM) набирает популярность как альтернатива облаку
+
+· **Оптимизация моделей** (квантование, дистилляция) становится критическим навыком
+
+· Стартапы вынуждены искать **нишевые решения** вместо тренировки моделей с нуля
+
+Кризис инфраструктуры может ускорить переход к более эффективным архитектурам моделей и распределённым вычислениям, что в долгосрочной перспективе окажется позитивным для всей индустрии.
+
+---
+
+Источники:
+· [Tom's Hardware — Half of planned US data center builds delayed or canceled](https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers)
+· [SemiAnalysis — NVIDIA H100 GPU rental prices surge nearly 40%](https://seekingalpha.com/news/4572260-nvidias-h100-gpu-rental-prices-surge-nearly-40-in-6-months-semianalysis)
+· [Fusion Worldwide — GPU Shortage and Price Increases in 2026](https://www.fusionww.com/insights/gpu-shortage-and-price-increases-in-2026)
+· [Morgan Stanley — Energy Markets Race to Solve the AI Power Bottleneck](https://www.morganstanley.com/insights/articles/powering-ai-energy-market-outlook-2026)
+<!-- CONTENT_END -->
+
+---
+
